@@ -3,10 +3,10 @@ name: Publish NPM Package
 on:
     push:
         branches:
-        - main
+        - dev
 jobs:
-    publish-npm:
-        environment: production
+    publish-npm-beta:
+        environment: staging
         url: https://www.npmjs.com/package/@solidchain/badge-buddy-common
         runs-on: ubuntu-latest
         steps:
@@ -33,3 +33,4 @@ jobs:
           with:
             token: ${{ secrets.NPM_PUBLISH_TOKEN }}
             access: 'public'
+            tag: 'beta'
