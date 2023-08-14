@@ -29,7 +29,7 @@ jobs:
         - run: |
             git config --global user.name "Github Actions"
             git config --global user.email "patinobrian@gmail.com"
-            pnpm release -p
+            npm run release -p
             git push --follow-tags
     publish-npm-beta:
         needs: pre-release
