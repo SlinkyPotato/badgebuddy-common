@@ -5,10 +5,23 @@ on:
         branches:
         - dev
 jobs:
+    set_environment:
+      outputs:
+        environment_url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: Retrieve Package Version
+          id: package-version
+          uses: notiz-dev/github-action-json-property@v0.2.0
+          with:
+            path: 'package.json'
+            prop_path: 'version'
     publish-npm-beta:
+        needs: set_environment
         environment:
           name: staging
-          url: https://www.npmjs.com/package/@solidchain/badge-buddy-common
+          url: ${{ needs.set_environment.outputs.environment_url }}
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v3
