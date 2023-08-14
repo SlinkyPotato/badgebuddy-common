@@ -1,2 +1,22 @@
-# Badge Buddy Common
+# Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### 0.0.2 (2023-08-14)
+
+
+### Features
+
+* setup staging pipeline ([bf81bd4](https://github.com/SolidChain-org/badge-buddy-common/commit/bf81bd492421850df37dfef94a4c0ffee340c946))
+
+
+### Bug Fixes
+
+* add standard-version ([70e2755](https://github.com/SolidChain-org/badge-buddy-common/commit/70e2755f05f8f76860e1939f0c3d82b295adad36))
+* enhance deployment and add CHANGELOG.md ([3ba85da](https://github.com/SolidChain-org/badge-buddy-common/commit/3ba85daae8e3d3ed2a065abba934c90ee7c9f52d))
+* github action deploy ([4d23d7f](https://github.com/SolidChain-org/badge-buddy-common/commit/4d23d7f894cde7a683ed9aa9b9e854bcfa7260d6))
+* github action deploy ([ffbc3fc](https://github.com/SolidChain-org/badge-buddy-common/commit/ffbc3fcb4d06592fda1c1fff0d7e17aba0d3cabe))
+* set access to public ([8680c3c](https://github.com/SolidChain-org/badge-buddy-common/commit/8680c3c4ef5a39dc5f821ea227d5cd0f61c33c8b))
+* update version to beta ([348341d](https://github.com/SolidChain-org/badge-buddy-common/commit/348341df9e6e4e6ef804b90ef053d90974217b8a))
+
+# Badge Buddy Common
