@@ -6,8 +6,9 @@ on:
         - main
 jobs:
     publish-npm:
-        environment: production
-        url: https://www.npmjs.com/package/@solidchain/badge-buddy-common
+        environment:
+          name: production
+          url: https://www.npmjs.com/package/@solidchain/badge-buddy-common
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v3
