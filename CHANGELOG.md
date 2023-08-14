@@ -19,4 +19,3 @@ All notable changes to this project will be documented in this file. See [standa
 * set access to public ([8680c3c](https://github.com/SolidChain-org/badge-buddy-common/commit/8680c3c4ef5a39dc5f821ea227d5cd0f61c33c8b))
 * update version to beta ([348341d](https://github.com/SolidChain-org/badge-buddy-common/commit/348341df9e6e4e6ef804b90ef053d90974217b8a))
 
-# Badge Buddy Common
