@@ -1,0 +1,27 @@
+#file: noinspection YAMLSchemaValidation
+name: Publish NPM Package
+on:
+    push:
+        branches:
+        - main
+jobs:
+    publish-qa:
+        environment: production
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v3
+        - name: Retrieve Node Version
+          id: node-version
+          uses: notiz-dev/github-action-json-property@v0.2.0
+          with:
+            path: 'package.json'
+            prop_path: 'engines.node'
+        - uses: actions/setup-node@v3
+          with:
+            node-version: ${{ steps.node-version.outputs.prop }}
+        - run: npm install -g pnpm@${{ steps.pnpm-version.outputs.prop }}
+        - run: pnpm install
+        - run: pnpm run build
+        - uses: JS-DevTools/npm-publish@v2
+          with:
+            token: ${{ secrets.NPM_PUBLISH_TOKEN }}
