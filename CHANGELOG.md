@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.3-1 (2023-08-14)
+
+
+### Bug Fixes
+
+* enhance github action for main branch ([de6ecee](https://github.com/SolidChain-org/badge-buddy-common/commit/de6ecee42598d2896b98d8d293f10613b2817ace))
+
 ### 0.0.3-0 (2023-08-14)
 
 
