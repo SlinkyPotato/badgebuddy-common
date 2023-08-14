@@ -4,8 +4,9 @@ on:
     push:
         branches:
         - dev
-env:
-  GITHUB_TOKEN: ${{ secrets.GHACTION_TOKEN }}
+
+permissions:
+  contents: write
 
 jobs:
     prepare-versions:
