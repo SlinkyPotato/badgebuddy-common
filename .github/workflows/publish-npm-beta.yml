@@ -29,7 +29,9 @@ jobs:
         - run: |
             git config --global user.name "Github Actions"
             git config --global user.email "patinobrian@gmail.com"
-            npm run release -p
+            npm install -g pnpm@${{ steps.pnpm-version.outputs.prop }}
+            pnpm install
+            pnpm release -p
             git push --follow-tags
     publish-npm-beta:
         needs: pre-release
