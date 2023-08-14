@@ -5,7 +5,7 @@ on:
         branches:
         - main
 jobs:
-    publish-qa:
+    publish-npm:
         environment: production
         runs-on: ubuntu-latest
         steps:
@@ -16,6 +16,12 @@ jobs:
           with:
             path: 'package.json'
             prop_path: 'engines.node'
+        - name: Retrieve PNPM Version
+          id: pnpm-version
+          uses: notiz-dev/github-action-json-property@v0.2.0
+          with:
+            path: 'package.json'
+            prop_path: 'engines.pnpm'
         - uses: actions/setup-node@v3
           with:
             node-version: ${{ steps.node-version.outputs.prop }}
