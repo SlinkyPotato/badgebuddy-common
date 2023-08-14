@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.3-0 (2023-08-14)
+
+
+### Bug Fixes
+
+* allow write permission ([b0565f5](https://github.com/SolidChain-org/badge-buddy-common/commit/b0565f59ff76b0150851bc2a78dcd1674010f208))
+
 ### 0.0.2 (2023-08-14)
 
 
@@ -18,4 +25,3 @@ All notable changes to this project will be documented in this file. See [standa
 * github action deploy ([ffbc3fc](https://github.com/SolidChain-org/badge-buddy-common/commit/ffbc3fcb4d06592fda1c1fff0d7e17aba0d3cabe))
 * set access to public ([8680c3c](https://github.com/SolidChain-org/badge-buddy-common/commit/8680c3c4ef5a39dc5f821ea227d5cd0f61c33c8b))
 * update version to beta ([348341d](https://github.com/SolidChain-org/badge-buddy-common/commit/348341df9e6e4e6ef804b90ef053d90974217b8a))
-
