@@ -2,6 +2,67 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4-9](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-8...v0.0.4-9) (2023-08-15)
+
+
+### Bug Fixes
+
+* point to corret gh close branch ([ceca0ae](https://github.com/SolidChain-org/badge-buddy-common/commit/ceca0ae0d56326fb6b6dbe348e0164063431b9a1))
+
+### [0.0.4-8](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-7...v0.0.4-8) (2023-08-15)
+
+
+### Bug Fixes
+
+* continue pr execution even on failure ([cd5e416](https://github.com/SolidChain-org/badge-buddy-common/commit/cd5e4166b90621dd0ab1706c6363a05fc13ca6d3))
+
+### [0.0.4-7](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-6...v0.0.4-7) (2023-08-15)
+
+
+### Bug Fixes
+
+* add version in PR title ([8c9cb73](https://github.com/SolidChain-org/badge-buddy-common/commit/8c9cb73dff6ab7a1aad8f31f449cd5e983a0b1a4))
+
+### [0.0.4-6](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-5...v0.0.4-6) (2023-08-15)
+
+
+### Bug Fixes
+
+* add fetch-depth:0 ([96991c4](https://github.com/SolidChain-org/badge-buddy-common/commit/96991c44d79e27b772a463c17cf57f00ef184901))
+* set correct fetch-depth value ([e9985b3](https://github.com/SolidChain-org/badge-buddy-common/commit/e9985b3ba3fb6a19e54c60d430d60f936c28ccc6))
+
+### 0.0.4-5 (2023-08-15)
+
+
+### Bug Fixes
+
+* continue gh pr close step on failure ([ab13a74](https://github.com/SolidChain-org/badge-buddy-common/commit/ab13a74c09f508e950424f85f0f49d473d02ff29))
+
+### 0.0.4-4 (2023-08-15)
+
+
+### Bug Fixes
+
+* fix publish-npm-qa.yml ([58f1911](https://github.com/SolidChain-org/badge-buddy-common/commit/58f19113230be73912b3dddd8909cb4cb7729c06))
+
+### 0.0.4-3 (2023-08-15)
+
+### 0.0.4-2 (2023-08-15)
+
+### 0.0.4-1 (2023-08-15)
+
+
+### Bug Fixes
+
+* gh command for qa and prod github action ([a74b2ae](https://github.com/SolidChain-org/badge-buddy-common/commit/a74b2aea3ad6f4364446a862567ddc0a976e0f62))
+
+### 0.0.4-0 (2023-08-15)
+
+
+### Features
+
+* add release/main and release/dev branches ([729981b](https://github.com/SolidChain-org/badge-buddy-common/commit/729981b3e7b00fe6993f76ecf5c133188170191a))
+
 ### 0.0.3 (2023-08-14)
 
 ### 0.0.3-1 (2023-08-14)
