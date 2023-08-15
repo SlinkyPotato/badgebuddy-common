@@ -12,7 +12,7 @@ env:
   GH_TOKEN: ${{ github.token }}
 
 jobs:
-    prepare-versions:
+    prepare-versions-qa:
       outputs:
         pnpm_version: ${{ steps.pnpm-version.outputs.prop }}
         node_version: ${{ steps.node-version.outputs.prop }}
@@ -31,7 +31,7 @@ jobs:
           with:
             path: 'package.json'
             prop_path: 'engines.pnpm'
-    publish-npm:
+    publish-npm-qa:
       needs: prepare-versions
       environment:
         name: staging
@@ -46,7 +46,7 @@ jobs:
         - run: git config --global user.email "patinobrian@gmail.com"
         - run: npm install -g pnpm@${{ needs.prepare-versions.outputs.pnpm_version }}
         - run: pnpm install
-        - run: pnpm release -p
+        - run: pnpm release --prerelease
         - name: Retrieve Package Version
           id: package-version
           uses: notiz-dev/github-action-json-property@v0.2.0
@@ -65,3 +65,18 @@ jobs:
             files: dist/ CHANGELOG.md LICENSE.md README.md package.json
             dest: dist.zip
         - run: gh release create --generate-notes -p --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
+    post-release-sync-dev:
+      needs: publish-npm
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-node@v3
+          with:
+            node-version: ${{ needs.prepare-versions.outputs.node_version }}
+        - run: git config --global user.name "Github Actions"
+        - run: git config --global user.email "patinobrian@gmail.com"
+        - run: gh pr close release/main
+        - run: gh pr create --base dev --fill --title "Sync release/dev into dev"
+        - run: gh pr merge --auto -m
+        - run: gh pr create --base release/main --fill --title "Release to production"
+
