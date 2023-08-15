@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.4-4 (2023-08-15)
+
+
+### Bug Fixes
+
+* fix publish-npm-qa.yml ([58f1911](https://github.com/SolidChain-org/badge-buddy-common/commit/58f19113230be73912b3dddd8909cb4cb7729c06))
+
 ### 0.0.4-3 (2023-08-15)
 
 ### 0.0.4-2 (2023-08-15)
