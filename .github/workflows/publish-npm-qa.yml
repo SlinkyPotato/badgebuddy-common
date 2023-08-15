@@ -38,6 +38,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ needs.prepare-versions-qa.outputs.node_version }}
@@ -72,13 +74,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ needs.prepare-versions-qa.outputs.node_version }}
       - run: git config user.name "Github Actions"
       - run: git config user.email "<>"
-      - run: gh pr close release/main
       - run: gh pr create --base dev --fill --title "Sync release/dev into dev"
       - run: gh pr merge --auto -m
+      - run: gh pr close release/main | exit 0
       - run: gh pr create --base release/main --fill --title "Release to production"
 
