@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.4-1 (2023-08-15)
+
+
+### Bug Fixes
+
+* gh command for qa and prod github action ([a74b2ae](https://github.com/SolidChain-org/badge-buddy-common/commit/a74b2aea3ad6f4364446a862567ddc0a976e0f62))
+
 ### 0.0.4-0 (2023-08-15)
 
 
