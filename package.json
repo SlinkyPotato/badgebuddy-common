@@ -1,6 +1,6 @@
 {
   "name": "@solidchain/badge-buddy-common",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A collection of common objects and utils.",
   "author": "SlinkyPotato <patinobrian@gmail.com>",
   "private": false,
@@ -18,8 +18,7 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix",
-    "release": "standard-version"
+    "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix"
   },
   "dependencies": {
     "class-transformer": "^0.5.1",
