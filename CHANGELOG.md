@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4-6](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-5...v0.0.4-6) (2023-08-15)
+
+
+### Bug Fixes
+
+* add fetch-depth:0 ([96991c4](https://github.com/SolidChain-org/badge-buddy-common/commit/96991c44d79e27b772a463c17cf57f00ef184901))
+* set correct fetch-depth value ([e9985b3](https://github.com/SolidChain-org/badge-buddy-common/commit/e9985b3ba3fb6a19e54c60d430d60f936c28ccc6))
+
 ### 0.0.4-5 (2023-08-15)
 
 
