@@ -3,10 +3,13 @@ name: Publish NPM QA Package
 on:
     push:
         branches:
-        - dev
+        - release/dev
 
 permissions:
   contents: write
+
+env:
+  GH_TOKEN: ${{ github.token }}
 
 jobs:
     prepare-versions:
@@ -43,6 +46,12 @@ jobs:
         - run: npm install -g pnpm@${{ needs.prepare-versions.outputs.pnpm_version }}
         - run: pnpm install
         - run: pnpm release -p
+        - name: Retrieve Package Version
+          id: package-version
+          uses: notiz-dev/github-action-json-property@v0.2.0
+          with:
+            path: 'package.json'
+            prop_path: 'version'
         - run: git push --follow-tags
         - run: pnpm build
         - uses: JS-DevTools/npm-publish@v2
@@ -50,3 +59,13 @@ jobs:
             token: ${{ secrets.NPM_PUBLISH_TOKEN }}
             access: 'public'
             tag: 'next'
+        - uses: vimtor/action-zip@v1
+          with:
+            files: dist/ CHANGELOG.md LICENSE.md README.md package.json
+            dest: dist.zip
+        - run: gh release create \
+                --generate-notes \
+                -p \
+                --verify-tag \ 
+                v${{ secrets.steps.package-version.outputs.props }} \ 
+                dist.zip \
