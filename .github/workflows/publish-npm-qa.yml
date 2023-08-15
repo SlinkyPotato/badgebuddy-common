@@ -29,7 +29,7 @@ jobs:
           path: 'package.json'
           prop_path: 'engines.pnpm'
   publish-npm-qa:
-    needs: prepare-versions
+    needs: prepare-versions-qa
     environment:
       name: staging
       url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
@@ -65,7 +65,7 @@ jobs:
           dest: dist.zip
       - run: gh release create --generate-notes -p --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
   post-release-sync-dev:
-    needs: publish-npm
+    needs: publish-npm-qa
     permissions:
       pull-requests: write
       contents: write
