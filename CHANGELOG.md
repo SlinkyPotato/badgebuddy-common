@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5-2](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.5-1...v0.0.5-2) (2023-08-15)
+
+
+### Features
+
+* add common-pino-logger ([2f92d5c](https://github.com/SolidChain-org/badge-buddy-common/commit/2f92d5ca8d7471cde28ee07971bdfba5b64d74a7))
+
+
+### Bug Fixes
+
+* add pnpm test to workflows ([35c986c](https://github.com/SolidChain-org/badge-buddy-common/commit/35c986cc534c0af8445730b4298e5e6e2afabf79))
+
 ### [0.0.5-1](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.5-0...v0.0.5-1) (2023-08-15)
 
 ### [0.0.4](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-9...v0.0.4) (2023-08-15)
