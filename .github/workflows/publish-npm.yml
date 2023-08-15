@@ -66,6 +66,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ needs.prepare-versions.outputs.node_version }}
