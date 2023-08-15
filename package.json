@@ -1,6 +1,6 @@
 {
   "name": "@solidchain/badge-buddy-common",
-  "version": "0.0.4-0",
+  "version": "0.0.4-1",
   "description": "A collection of common objects and utils.",
   "author": "SlinkyPotato <patinobrian@gmail.com>",
   "private": false,
