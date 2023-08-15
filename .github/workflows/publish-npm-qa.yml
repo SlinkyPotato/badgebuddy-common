@@ -63,9 +63,4 @@ jobs:
           with:
             files: dist/ CHANGELOG.md LICENSE.md README.md package.json
             dest: dist.zip
-        - run: gh release create \
-                --generate-notes \
-                -p \
-                --verify-tag \ 
-                v${{ secrets.steps.package-version.outputs.props }} \ 
-                dist.zip \
+        - run: gh release create --generate-notes -p --verify-tag v${{ secrets.steps.package-version.outputs.prop }} dist.zip
