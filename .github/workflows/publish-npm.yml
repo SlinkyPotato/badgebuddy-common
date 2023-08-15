@@ -6,7 +6,7 @@ on:
       - release/main
 
 permissions:
-  contents: write | read
+  contents: read|write
 
 env:
   GH_TOKEN: ${{ github.token }}
