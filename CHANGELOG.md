@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.4-5 (2023-08-15)
+
+
+### Bug Fixes
+
+* continue gh pr close step on failure ([ab13a74](https://github.com/SolidChain-org/badge-buddy-common/commit/ab13a74c09f508e950424f85f0f49d473d02ff29))
+
 ### 0.0.4-4 (2023-08-15)
 
 
