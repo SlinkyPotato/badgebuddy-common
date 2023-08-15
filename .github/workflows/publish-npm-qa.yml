@@ -5,78 +5,80 @@ on:
         branches:
         - release/dev
 
-permissions:
-  contents: read|write
-
 env:
   GH_TOKEN: ${{ github.token }}
 
 jobs:
-    prepare-versions-qa:
-      outputs:
-        pnpm_version: ${{ steps.pnpm-version.outputs.prop }}
-        node_version: ${{ steps.node-version.outputs.prop }}
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - name: Retrieve Node Version
-          id: node-version
-          uses: notiz-dev/github-action-json-property@v0.2.0
-          with:
-            path: 'package.json'
-            prop_path: 'engines.node'
-        - name: Retrieve PNPM Version
-          id: pnpm-version
-          uses: notiz-dev/github-action-json-property@v0.2.0
-          with:
-            path: 'package.json'
-            prop_path: 'engines.pnpm'
-    publish-npm-qa:
-      needs: prepare-versions
-      environment:
-        name: staging
-        url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - uses: actions/setup-node@v3
-          with:
-            node-version: ${{ needs.prepare-versions.outputs.node_version }}
-        - run: git config user.name "Github Actions"
-        - run: git config user.email "<>"
-        - run: npm install -g pnpm@${{ needs.prepare-versions.outputs.pnpm_version }}
-        - run: pnpm install
-        - run: pnpm release --prerelease
-        - name: Retrieve Package Version
-          id: package-version
-          uses: notiz-dev/github-action-json-property@v0.2.0
-          with:
-            path: 'package.json'
-            prop_path: 'version'
-        - run: git push --follow-tags
-        - run: pnpm build
-        - uses: JS-DevTools/npm-publish@v2
-          with:
-            token: ${{ secrets.NPM_PUBLISH_TOKEN }}
-            access: 'public'
-            tag: 'next'
-        - uses: vimtor/action-zip@v1
-          with:
-            files: dist/ CHANGELOG.md LICENSE.md README.md package.json
-            dest: dist.zip
-        - run: gh release create --generate-notes -p --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
-    post-release-sync-dev:
-      needs: publish-npm
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - uses: actions/setup-node@v3
-          with:
-            node-version: ${{ needs.prepare-versions.outputs.node_version }}
-        - run: git config user.name "Github Actions"
-        - run: git config user.email "<>"
-        - run: gh pr close release/main
-        - run: gh pr create --base dev --fill --title "Sync release/dev into dev"
-        - run: gh pr merge --auto -m
-        - run: gh pr create --base release/main --fill --title "Release to production"
+  prepare-versions-qa:
+    outputs:
+      pnpm_version: ${{ steps.pnpm-version.outputs.prop }}
+      node_version: ${{ steps.node-version.outputs.prop }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Retrieve Node Version
+        id: node-version
+        uses: notiz-dev/github-action-json-property@v0.2.0
+        with:
+          path: 'package.json'
+          prop_path: 'engines.node'
+      - name: Retrieve PNPM Version
+        id: pnpm-version
+        uses: notiz-dev/github-action-json-property@v0.2.0
+        with:
+          path: 'package.json'
+          prop_path: 'engines.pnpm'
+  publish-npm-qa:
+    needs: prepare-versions
+    environment:
+      name: staging
+      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ needs.prepare-versions.outputs.node_version }}
+      - run: git config user.name "Github Actions"
+      - run: git config user.email "<>"
+      - run: npm install -g pnpm@${{ needs.prepare-versions.outputs.pnpm_version }}
+      - run: pnpm install
+      - run: npx standard-version --prerelease
+      - name: Retrieve Package Version
+        id: package-version
+        uses: notiz-dev/github-action-json-property@v0.2.0
+        with:
+          path: 'package.json'
+          prop_path: 'version'
+      - run: git push --follow-tags
+      - run: pnpm build
+      - uses: JS-DevTools/npm-publish@v2
+        with:
+          token: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          access: 'public'
+          tag: 'next'
+      - uses: vimtor/action-zip@v1
+        with:
+          files: dist/ CHANGELOG.md LICENSE.md README.md package.json
+          dest: dist.zip
+      - run: gh release create --generate-notes -p --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
+  post-release-sync-dev:
+    needs: publish-npm
+    permissions:
+      pull-requests: write
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ needs.prepare-versions.outputs.node_version }}
+      - run: git config user.name "Github Actions"
+      - run: git config user.email "<>"
+      - run: gh pr close release/main
+      - run: gh pr create --base dev --fill --title "Sync release/dev into dev"
+      - run: gh pr merge --auto -m
+      - run: gh pr create --base release/main --fill --title "Release to production"
 
