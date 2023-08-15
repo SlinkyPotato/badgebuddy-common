@@ -85,6 +85,6 @@ jobs:
       - run: git config user.email "<>"
       - run: gh pr create --base dev --fill --title "v${{ needs.publish-npm-qa.outputs.package_version }} sync release/dev into dev" | exit 0
       - run: gh pr merge --auto -m | exit 0
-      - run: gh pr close release/main | exit 0
+      - run: gh pr close release/dev | exit 0
       - run: gh pr create --base release/main --fill --title "v${{ needs.publish-npm-qa.outputs.package_version }} release to production"
 
