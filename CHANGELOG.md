@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.4-0 (2023-08-15)
+
+
+### Features
+
+* add release/main and release/dev branches ([729981b](https://github.com/SolidChain-org/badge-buddy-common/commit/729981b3e7b00fe6993f76ecf5c133188170191a))
+
 ### 0.0.3 (2023-08-14)
 
 ### 0.0.3-1 (2023-08-14)
