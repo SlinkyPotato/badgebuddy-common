@@ -49,6 +49,7 @@ jobs:
       - run: git config user.email "<>"
       - run: npm install -g pnpm@${{ needs.prepare-versions.outputs.pnpm_version }}
       - run: pnpm install
+      - run: pnpm test
       - run: npx standard-version
       - name: Retrieve Package Version
         id: package-version

@@ -46,5 +46,6 @@ jobs:
       - run: npm install -g pnpm@${{ needs.prepare-versions.outputs.pnpm_version }}
       - run: pnpm install
       - run: pnpm build
+      - run: pnpm test
       - run: gh pr close release/dev | exit 0
       - run: gh pr create --base release/dev --fill --title "dev -> release/dev"
