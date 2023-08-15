@@ -33,8 +33,9 @@ jobs:
           prop_path: 'engines.pnpm'
   publish-npm:
     needs: prepare-versions
-    outputs:
-      environment_url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
+    environment:
+      name: production
+      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
