@@ -45,7 +45,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ needs.prepare-versions-qa.outputs.node_version }}
-      - run: git config user.name "Github Actions"
+      - run: git config user.name "github-action[bot]"
       - run: git config user.email "<>"
       - run: npm install -g pnpm@${{ needs.prepare-versions-qa.outputs.pnpm_version }}
       - run: pnpm install
@@ -81,7 +81,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ needs.prepare-versions-qa.outputs.node_version }}
-      - run: git config user.name "Github Actions"
+      - run: git config user.name "github-action[bot]"
       - run: git config user.email "<>"
       - run: gh pr create --base dev --fill --title "v${{ needs.publish-npm-qa.outputs.package_version }} sync release/dev into dev" | exit 0
       - run: gh pr merge --auto -m | exit 0
