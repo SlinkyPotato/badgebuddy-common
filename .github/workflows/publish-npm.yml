@@ -5,9 +5,6 @@ on:
     branches:
       - release/main
 
-permissions:
-  contents: write | read
-
 env:
   GH_TOKEN: ${{ github.token }}
 
@@ -36,6 +33,8 @@ jobs:
     environment:
       name: production
       url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -46,7 +45,7 @@ jobs:
       - run: git config user.email "<>"
       - run: npm install -g pnpm@${{ needs.prepare-versions.outputs.pnpm_version }}
       - run: pnpm install
-      - run: pnpm release
+      - run: npx standard-version
       - run: git push --follow-tags
       - run: pnpm build
       - uses: JS-DevTools/npm-publish@v2
@@ -61,6 +60,9 @@ jobs:
       - run: gh release create --generate-notes --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
   post-release-sync:
     needs: publish-npm
+    permissions:
+      pull-requests: write
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
