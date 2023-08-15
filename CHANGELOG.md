@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4-8](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-7...v0.0.4-8) (2023-08-15)
+
+
+### Bug Fixes
+
+* continue pr execution even on failure ([cd5e416](https://github.com/SolidChain-org/badge-buddy-common/commit/cd5e4166b90621dd0ab1706c6363a05fc13ca6d3))
+
 ### [0.0.4-7](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-6...v0.0.4-7) (2023-08-15)
 
 
