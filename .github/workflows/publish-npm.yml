@@ -30,6 +30,8 @@ jobs:
           prop_path: 'engines.pnpm'
   publish-npm:
     needs: prepare-versions
+    outputs:
+      package_version: ${{ steps.package-version.outputs.prop }}
     environment:
       name: production
       url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
@@ -48,6 +50,12 @@ jobs:
       - run: npm install -g pnpm@${{ needs.prepare-versions.outputs.pnpm_version }}
       - run: pnpm install
       - run: npx standard-version
+      - name: Retrieve Package Version
+        id: package-version
+        uses: notiz-dev/github-action-json-property@v0.2.0
+        with:
+          path: 'package.json'
+          prop_path: 'version'
       - run: git push --follow-tags
       - run: pnpm build
       - uses: JS-DevTools/npm-publish@v2
@@ -75,7 +83,7 @@ jobs:
           node-version: ${{ needs.prepare-versions.outputs.node_version }}
       - run: git config user.name "Github Actions"
       - run: git config user.email "<>"
-      - run: gh pr create --base main --fill --title "Sync release/main into main"
+      - run: gh pr create --base main --fill --title "v${{ needs.publish-npm.outputs.package_version }} sync release/main into main"
       - run: gh pr merge --auto -m
-      - run: gh pr create --base dev --fill --title "Sync release/main into dev"
+      - run: gh pr create --base dev --fill --title ""v${{ needs.publish-npm.outputs.package_version }} sync release/main into dev"
       - run: gh pr merge --auto -m
