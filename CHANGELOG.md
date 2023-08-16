@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5-6](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-5...v0.0.5-6) (2023-08-16)
+
+
+### Bug Fixes
+
+* decouple create-pr workflow ([3b0c279](https://github.com/solidchain-tech/badge-buddy-common/commit/3b0c279a2f4fd8fc6e9b2293974dcc702a8e82cf))
+* reorg workflow ([af5fc79](https://github.com/solidchain-tech/badge-buddy-common/commit/af5fc79540112b6bdef6efaee1d7419d22b736af))
+
 ### [0.0.5-5](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-4...v0.0.5-5) (2023-08-16)
 
 
