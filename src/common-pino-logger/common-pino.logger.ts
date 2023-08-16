@@ -1,11 +1,12 @@
 import { PinoLogger } from 'nestjs-pino';
-import { NodeEnvs } from '../../enums/node-envs.enum';
 import { Injectable } from '@nestjs/common';
+import { NodeEnvs } from '../enums/node-envs.enum';
 
 @Injectable()
 export class CommonPinoLogger extends PinoLogger {
   constructor(appName: string) {
     console.log('creating logger...');
+
     const targets = [];
     targets.push({
       level: 'info', // all logs printed since info does not map
@@ -39,6 +40,7 @@ export class CommonPinoLogger extends PinoLogger {
     }
     if (process.env.NODE_ENV !== NodeEnvs.PRODUCTION) {
       // https://github.com/pinojs/pino-pretty
+      // skip printing to console for production
       targets.push({
         target: 'pino/file',
         options: {},
