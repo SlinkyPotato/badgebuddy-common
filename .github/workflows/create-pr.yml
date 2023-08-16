@@ -10,7 +10,6 @@ env:
 
 jobs:
   prepare-versions:
-    environment: development
     outputs:
       pnpm_version: ${{ steps.pnpm-version.outputs.prop }}
       node_version: ${{ steps.node-version.outputs.prop }}
@@ -30,7 +29,6 @@ jobs:
           path: 'package.json'
           prop_path: 'engines.pnpm'
   build-and-test:
-    environment: development
     needs: prepare-versions
     runs-on: ubuntu-latest
     steps:
@@ -55,6 +53,7 @@ jobs:
           fetch-depth: 0
       - run: git config user.name "github-action[bot]"
       - run: git config user.email "<>"
+      - run: git fetch origin
       - run: gh pr close dev | exit 0
       - run: gh pr create --base release/dev --fill --title "dev -> release/dev" | exit 0
 
