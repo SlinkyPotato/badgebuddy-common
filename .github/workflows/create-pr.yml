@@ -33,8 +33,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ needs.prepare-versions.outputs.node_version }}
@@ -49,6 +47,9 @@ jobs:
       contents: read
       pull-requests: write
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - run: git config user.name "github-action[bot]"
       - run: git config user.email "<>"
       - run: gh pr close release/dev | exit 0
