@@ -32,9 +32,6 @@ jobs:
     needs: prepare-versions-qa
     outputs:
       package_version: ${{ steps.package-version.outputs.prop }}
-    environment:
-      name: staging
-      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -71,6 +68,9 @@ jobs:
       - run: gh release create --generate-notes -p --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
   post-release-sync-qa:
     needs: publish-npm-qa
+    environment:
+      name: staging
+      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ needs.publish-npm-qa.outputs.package-version }}"
     permissions:
       pull-requests: write
       contents: write
@@ -88,6 +88,6 @@ jobs:
       - run: git pull origin release/dev
       - run: gh pr create --base dev --fill --title "v${{ needs.publish-npm-qa.outputs.package_version }} sync release/dev into dev" | exit 0
       - run: gh pr merge --auto -m | exit 0
-      - run: gh pr close release/main | exit 0
+      - run: gh pr close release/dev | exit 0
       - run: gh pr create --base release/main --fill --title "v${{ needs.publish-npm-qa.outputs.package_version }} release to production"
 

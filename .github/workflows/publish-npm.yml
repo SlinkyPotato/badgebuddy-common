@@ -32,9 +32,6 @@ jobs:
     needs: prepare-versions
     outputs:
       package_version: ${{ steps.package-version.outputs.prop }}
-    environment:
-      name: production
-      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -71,6 +68,9 @@ jobs:
       - run: gh release create --generate-notes --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
   post-release-sync:
     needs: publish-npm
+    environment:
+      name: production
+      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ needs.publish-npm.outputs.package-version }}"
     permissions:
       pull-requests: write
       contents: write
