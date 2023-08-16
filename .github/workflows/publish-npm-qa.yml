@@ -32,9 +32,6 @@ jobs:
     needs: prepare-versions-qa
     outputs:
       package_version: ${{ steps.package-version.outputs.prop }}
-    environment:
-      name: staging
-      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
     permissions:
       contents: write
     runs-on: ubuntu-latest
