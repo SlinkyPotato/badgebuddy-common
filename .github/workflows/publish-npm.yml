@@ -10,6 +10,7 @@ env:
 
 jobs:
   prepare-versions:
+    environment: production
     outputs:
       pnpm_version: ${{ steps.pnpm-version.outputs.prop }}
       node_version: ${{ steps.node-version.outputs.prop }}
@@ -30,6 +31,7 @@ jobs:
           prop_path: 'engines.pnpm'
   publish-npm:
     needs: prepare-versions
+    environment: production
     outputs:
       package_version: ${{ steps.package-version.outputs.prop }}
     permissions:

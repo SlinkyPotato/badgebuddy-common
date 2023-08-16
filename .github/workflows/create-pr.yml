@@ -10,6 +10,7 @@ env:
 
 jobs:
   prepare-versions:
+    environment: development
     outputs:
       pnpm_version: ${{ steps.pnpm-version.outputs.prop }}
       node_version: ${{ steps.node-version.outputs.prop }}
@@ -29,6 +30,7 @@ jobs:
           path: 'package.json'
           prop_path: 'engines.pnpm'
   build-and-test:
+    environment: development
     needs: prepare-versions
     runs-on: ubuntu-latest
     steps:
@@ -41,6 +43,7 @@ jobs:
       - run: pnpm build
       - run: pnpm test
   create-pr:
+    environment: development
     needs: build-and-test
     runs-on: ubuntu-latest
     permissions:
