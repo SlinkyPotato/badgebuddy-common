@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5-7](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-6...v0.0.5-7) (2023-08-16)
+
+
+### Bug Fixes
+
+* add environment urls to last jobs ([68bf37d](https://github.com/solidchain-tech/badge-buddy-common/commit/68bf37dbdd6a8caaa1cae6c76796437d69e00e23))
+* close base pr in workflow ([e14dd22](https://github.com/solidchain-tech/badge-buddy-common/commit/e14dd22f53bb0451a6819141c48a14d00c547a61))
+* have env details on last job only ([9d9261c](https://github.com/solidchain-tech/badge-buddy-common/commit/9d9261ced1ead582e67fdd44c016cdeb150aef86))
+
 ### [0.0.5-6](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-5...v0.0.5-6) (2023-08-16)
 
 
