@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5-3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-2...v0.0.5-3) (2023-08-16)
+
+
+### Bug Fixes
+
+* export CommonPinoLogger ([b7ce22b](https://github.com/solidchain-tech/badge-buddy-common/commit/b7ce22b6392b60b20122579b046035244f49e46c))
+
 ### [0.0.5-2](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.5-1...v0.0.5-2) (2023-08-15)
 
 
