@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5-9](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-8...v0.0.5-9) (2023-08-16)
+
+
+### Bug Fixes
+
+* add git fetch command ([0072c6e](https://github.com/solidchain-tech/badge-buddy-common/commit/0072c6ed6d78b364fa16d7e1ef67b48779cb447e))
+* set env only for last workflow job ([18bca0b](https://github.com/solidchain-tech/badge-buddy-common/commit/18bca0b6326265ec66593b1ac26370d76d4952ad))
+
 ### [0.0.5-8](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-7...v0.0.5-8) (2023-08-16)
 
 
