@@ -48,4 +48,4 @@ jobs:
       - run: pnpm build
       - run: pnpm test
       - run: gh pr close release/dev | exit 0
-      - run: gh pr create --base release/dev --fill --title "dev -> release/dev"
+      - run: gh pr create --base release/dev --fill --title "dev -> release/dev" | exit 0
