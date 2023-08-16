@@ -1,9 +1,9 @@
 #file: noinspection YAMLSchemaValidation
 name: Publish NPM QA Package
 on:
-    push:
-        branches:
-        - release/dev
+  push:
+    branches:
+      - release/dev
 
 env:
   GH_TOKEN: ${{ github.token }}
@@ -30,6 +30,9 @@ jobs:
           prop_path: 'engines.pnpm'
   publish-npm-qa:
     needs: prepare-versions-qa
+    environment:
+      name: staging
+      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
     outputs:
       package_version: ${{ steps.package-version.outputs.prop }}
     permissions:
@@ -68,9 +71,6 @@ jobs:
       - run: gh release create --generate-notes -p --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
   post-release-sync-qa:
     needs: publish-npm-qa
-    environment:
-      name: staging
-      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ needs.publish-npm-qa.outputs.package_version }}"
     permissions:
       pull-requests: write
       contents: write
