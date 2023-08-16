@@ -71,6 +71,9 @@ jobs:
       - run: gh release create --generate-notes -p --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
   post-release-sync-qa:
     needs: publish-npm-qa
+    environment:
+      name: staging
+      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ needs.publish-npm-qa.outputs.package-version }}"
     permissions:
       pull-requests: write
       contents: write
