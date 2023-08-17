@@ -83,6 +83,7 @@ jobs:
       - run: git config user.name "github-action[bot]"
       - run: git config user.email "<>"
       - run: git fetch origin
-      - run: git pull origin main
-      - run: gh pr create --base dev --fill --title "v${{ needs.publish-npm.outputs.package_version }} sync main into dev" | exit 0
-      - run: gh pr merge --auto -m | exit 0
+      - run: git pull origin
+      - run: git checkout dev
+      - run: git merge --no-ff main -m "Sync branch main v${{ needs.publish-npm-qa.outputs.package_version }} into dev" | exit 0
+      - run: git push origin
