@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5-11](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-10...v0.0.5-11) (2023-08-17)
+
+
+### Bug Fixes
+
+* enhance publish-deploy-qa.yml ([7b211ac](https://github.com/solidchain-tech/badge-buddy-common/commit/7b211ace02b4e143b92a0322128f7b07cd2c0d0c))
+* gh pr generate description ([99d10b3](https://github.com/solidchain-tech/badge-buddy-common/commit/99d10b3896350d2232dd9c26873fe781fd0032ea))
+
 ### [0.0.5-10](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-9...v0.0.5-10) (2023-08-16)
 
 
