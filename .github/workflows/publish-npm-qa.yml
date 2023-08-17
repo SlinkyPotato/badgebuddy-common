@@ -69,22 +69,20 @@ jobs:
           files: dist/ CHANGELOG.md LICENSE.md README.md package.json
           dest: dist.zip
       - run: gh release create --generate-notes -p --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
-  post-release-sync-qa:
+  create-pr:
     needs: publish-npm-qa
     permissions:
-      pull-requests: write
       contents: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ needs.prepare-versions-qa.outputs.node_version }}
+          fetch-tags: true
+      - run: git fetch origin
       - run: git config user.name "github-action[bot]"
       - run: git config user.email "<>"
-      - run: git fetch origin
       - run: git pull origin release/dev
       - run: gh pr create --base dev --fill --title "v${{ needs.publish-npm-qa.outputs.package_version }} sync release/dev into dev" | exit 0
       - run: gh pr merge --auto -m | exit 0
