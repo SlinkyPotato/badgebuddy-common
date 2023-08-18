@@ -2,6 +2,114 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5-14](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-13...v0.0.5-14) (2023-08-18)
+
+
+### Bug Fixes
+
+* enhance prod workflow and remove sync PRs ([43cdcb7](https://github.com/solidchain-tech/badge-buddy-common/commit/43cdcb7640ce53b37d76127f0b1717f5ca47d917))
+* try several enhancements in create-pr, publish-npm, publish-npm-qa ([62d390d](https://github.com/solidchain-tech/badge-buddy-common/commit/62d390de703c64ad11d65f7c262390c831eda5c0))
+
+### [0.0.5-13](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-12...v0.0.5-13) (2023-08-17)
+
+
+### Bug Fixes
+
+* small rename of pr title ([d5e050e](https://github.com/solidchain-tech/badge-buddy-common/commit/d5e050ee95557a20a81f7bdf0ddffabcfc504561))
+
+### [0.0.5-12](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-11...v0.0.5-12) (2023-08-17)
+
+
+### Bug Fixes
+
+* remove release/main ([a70a2b1](https://github.com/solidchain-tech/badge-buddy-common/commit/a70a2b1c75762559aaecc127c763b5d66f3af96c))
+
+### [0.0.5-11](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-10...v0.0.5-11) (2023-08-17)
+
+
+### Bug Fixes
+
+* enhance publish-deploy-qa.yml ([7b211ac](https://github.com/solidchain-tech/badge-buddy-common/commit/7b211ace02b4e143b92a0322128f7b07cd2c0d0c))
+* gh pr generate description ([99d10b3](https://github.com/solidchain-tech/badge-buddy-common/commit/99d10b3896350d2232dd9c26873fe781fd0032ea))
+
+### [0.0.5-10](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-9...v0.0.5-10) (2023-08-16)
+
+
+### Bug Fixes
+
+* set env only when deploying ([4c97699](https://github.com/solidchain-tech/badge-buddy-common/commit/4c976999d14044a0ca63c1a1562d3b8869478474))
+
+### [0.0.5-9](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-8...v0.0.5-9) (2023-08-16)
+
+
+### Bug Fixes
+
+* add git fetch command ([0072c6e](https://github.com/solidchain-tech/badge-buddy-common/commit/0072c6ed6d78b364fa16d7e1ef67b48779cb447e))
+* set env only for last workflow job ([18bca0b](https://github.com/solidchain-tech/badge-buddy-common/commit/18bca0b6326265ec66593b1ac26370d76d4952ad))
+
+### [0.0.5-8](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-7...v0.0.5-8) (2023-08-16)
+
+
+### Bug Fixes
+
+* set environment for all jobs ([94def6b](https://github.com/solidchain-tech/badge-buddy-common/commit/94def6bbf7802b99c701128c2d3376a1c49167ca))
+
+### [0.0.5-7](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-6...v0.0.5-7) (2023-08-16)
+
+
+### Bug Fixes
+
+* add environment urls to last jobs ([68bf37d](https://github.com/solidchain-tech/badge-buddy-common/commit/68bf37dbdd6a8caaa1cae6c76796437d69e00e23))
+* close base pr in workflow ([e14dd22](https://github.com/solidchain-tech/badge-buddy-common/commit/e14dd22f53bb0451a6819141c48a14d00c547a61))
+* have env details on last job only ([9d9261c](https://github.com/solidchain-tech/badge-buddy-common/commit/9d9261ced1ead582e67fdd44c016cdeb150aef86))
+
+### [0.0.5-6](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-5...v0.0.5-6) (2023-08-16)
+
+
+### Bug Fixes
+
+* decouple create-pr workflow ([3b0c279](https://github.com/solidchain-tech/badge-buddy-common/commit/3b0c279a2f4fd8fc6e9b2293974dcc702a8e82cf))
+* reorg workflow ([af5fc79](https://github.com/solidchain-tech/badge-buddy-common/commit/af5fc79540112b6bdef6efaee1d7419d22b736af))
+
+### [0.0.5-5](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-4...v0.0.5-5) (2023-08-16)
+
+
+### Bug Fixes
+
+* add checks for git refs ([24d40be](https://github.com/solidchain-tech/badge-buddy-common/commit/24d40bef006d1686fe65387c316b8ff846ea9f62))
+
+### [0.0.5-4](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-3...v0.0.5-4) (2023-08-16)
+
+
+### Bug Fixes
+
+* enhance github action workflow ([02d6727](https://github.com/solidchain-tech/badge-buddy-common/commit/02d6727c78452409e1644784c2f995779fae8b4b))
+
+### [0.0.5-3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-2...v0.0.5-3) (2023-08-16)
+
+
+### Bug Fixes
+
+* export CommonPinoLogger ([b7ce22b](https://github.com/solidchain-tech/badge-buddy-common/commit/b7ce22b6392b60b20122579b046035244f49e46c))
+
+### [0.0.5-2](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.5-1...v0.0.5-2) (2023-08-15)
+
+
+### Features
+
+* add common-pino-logger ([2f92d5c](https://github.com/SolidChain-org/badge-buddy-common/commit/2f92d5ca8d7471cde28ee07971bdfba5b64d74a7))
+
+
+### Bug Fixes
+
+* add pnpm test to workflows ([35c986c](https://github.com/SolidChain-org/badge-buddy-common/commit/35c986cc534c0af8445730b4298e5e6e2afabf79))
+
+### [0.0.5-1](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.5-0...v0.0.5-1) (2023-08-15)
+
+### [0.0.4](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-9...v0.0.4) (2023-08-15)
+
+### [0.0.5-0](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-9...v0.0.5-0) (2023-08-15)
+
 ### [0.0.4](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-9...v0.0.4) (2023-08-15)
 
 ### [0.0.4-9](https://github.com/SolidChain-org/badge-buddy-common/compare/v0.0.4-8...v0.0.4-9) (2023-08-15)
