@@ -62,11 +62,6 @@ jobs:
           token: ${{ secrets.NPM_PUBLISH_TOKEN }}
           access: 'public'
           tag: 'next'
-      - uses: vimtor/action-zip@v1
-        with:
-          files: dist/ CHANGELOG.md LICENSE.md README.md package.json
-          dest: dist.zip
-      - run: gh release create --generate-notes -p --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
   create-pr:
     needs: publish-npm-qa
     permissions:
