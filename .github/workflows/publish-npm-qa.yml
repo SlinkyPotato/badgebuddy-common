@@ -4,10 +4,8 @@ on:
   push:
     branches:
       - release/dev
-
 env:
   GH_TOKEN: ${{ github.token }}
-
 jobs:
   prepare-versions-qa:
     outputs:
