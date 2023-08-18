@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5...v0.0.6-0) (2023-08-18)
+
+
+### Bug Fixes
+
+* remove extra spacing ([271abb0](https://github.com/solidchain-tech/badge-buddy-common/commit/271abb03f49f86c234037f23d549dedabe36b4fa))
+* remove extra spacing and format ([2a30e95](https://github.com/solidchain-tech/badge-buddy-common/commit/2a30e95a59165037efb7713513bd888b9b5bafec))
+
 ### [0.0.5](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-14...v0.0.5) (2023-08-18)
 
 ### [0.0.5-14](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-13...v0.0.5-14) (2023-08-18)
