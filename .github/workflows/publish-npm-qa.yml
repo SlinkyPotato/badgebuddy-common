@@ -4,10 +4,8 @@ on:
   push:
     branches:
       - release/dev
-
 env:
   GH_TOKEN: ${{ github.token }}
-
 jobs:
   prepare-versions-qa:
     outputs:
@@ -86,6 +84,6 @@ jobs:
       - run: gh pr close release/dev | exit 0
       - run: gh pr create --base main --fill --title "deploy v${{ needs.publish-npm-qa.outputs.package }} to production"
       - run: git checkout dev
-      - run: git merge --no-ff release/dev -m "Sync branch release/dev v${{ needs.publish-npm-qa.outputs.package }} into dev" | exit 0
+      - run: git merge --no-ff release/dev -m "sync branch release/dev v${{ needs.publish-npm-qa.outputs.package }} into dev" | exit 0
       - run: git push
 
