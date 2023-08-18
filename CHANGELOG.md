@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5-14](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-13...v0.0.5-14) (2023-08-18)
+
+
+### Bug Fixes
+
+* enhance prod workflow and remove sync PRs ([43cdcb7](https://github.com/solidchain-tech/badge-buddy-common/commit/43cdcb7640ce53b37d76127f0b1717f5ca47d917))
+* try several enhancements in create-pr, publish-npm, publish-npm-qa ([62d390d](https://github.com/solidchain-tech/badge-buddy-common/commit/62d390de703c64ad11d65f7c262390c831eda5c0))
+
 ### [0.0.5-13](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-12...v0.0.5-13) (2023-08-17)
 
 
