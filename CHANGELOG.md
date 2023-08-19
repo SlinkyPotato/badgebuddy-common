@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6-2](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6-1...v0.0.6-2) (2023-08-19)
+
+
+### Features
+
+* display colorized development logs ([b50cc3d](https://github.com/solidchain-tech/badge-buddy-common/commit/b50cc3d866a04700d5094b2c52db8fc4700e62d6))
+* import common dependencies ([74eb7f0](https://github.com/solidchain-tech/badge-buddy-common/commit/74eb7f0854e476ea4c23d6a323fae37939a44563))
+
+
+### Bug Fixes
+
+* maximum compatibility ([4567f0e](https://github.com/solidchain-tech/badge-buddy-common/commit/4567f0e954a180e73feca7bf26606aef4e42961d))
+* pnpm dev install pino-pretty ([797d5ce](https://github.com/solidchain-tech/badge-buddy-common/commit/797d5ce07fe5b8a05add3fb387b0f7e461767850))
+
 ### [0.0.6-1](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6-0...v0.0.6-1) (2023-08-18)
 
 
