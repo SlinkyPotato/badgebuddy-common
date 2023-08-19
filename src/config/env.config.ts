@@ -1,6 +1,6 @@
-import Joi from 'joi';
+import * as Joi from 'joi';
 
-export const EnvConfig = {
+export const EnvConfig = () => ({
   NODE_ENV: process.env.NODE_ENV,
   REDIS_HOST: process.env.REDIS_HOST,
   REDIS_PORT: process.env.REDIS_PORT,
@@ -10,7 +10,7 @@ export const EnvConfig = {
   DISCORD_BOT_APPLICATION_ID: process.env.DISCORD_BOT_APPLICATION_ID,
   DISCORD_BOT_PUBLIC_KEY: process.env.DISCORD_BOT_PUBLIC_KEY,
   DISCORD_OWNER_ID: process.env.DISCORD_OWNER_ID,
-};
+});
 
 export const validationSchema = () => {
   return Joi.object({

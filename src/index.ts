@@ -11,5 +11,6 @@ export { CommonPinoLoggerModule } from './common-pino-logger/common-pino-logger.
 export { CommonPinoLoggerService } from './common-pino-logger/common-pino-logger.service';
 
 // Config
-export { configureCache } from './config/redis.config';
 export { EnvConfig } from './config/env.config';
+export { validationSchema } from './config/env.config';
+export { configureCache } from './config/redis.config';
