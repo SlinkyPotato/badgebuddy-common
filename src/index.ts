@@ -9,3 +9,7 @@ export { CommunityEvent } from './schemas/community-event.schema';
 export { CommonPinoLogger } from './common-pino-logger/common-pino.logger';
 export { CommonPinoLoggerModule } from './common-pino-logger/common-pino-logger.module';
 export { CommonPinoLoggerService } from './common-pino-logger/common-pino-logger.service';
+
+// Config
+export { configureCache } from './config/redis.config';
+export { EnvConfig } from './config/env.config';
