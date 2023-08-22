@@ -88,5 +88,16 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "standard-version": {
+    "types": [
+      {"type":"feat","section":"Features"},
+      {"type":"fix","section":"Bug Fixes"},
+      {"type":"chore","hidden":true},
+      {"type":"docs","section": "Docs"},
+      {"type":"style","hidden":true},
+      {"type":"refactor","section": "Refactor"},
+      {"type":"perf","hidden":true},
+      {"type":"test","section": "Tests"}]
   }
 }
