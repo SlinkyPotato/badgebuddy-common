@@ -2,7 +2,8 @@
 import { readFileSync } from 'fs';
 import { writeFileSync } from 'fs';
 
-export const parseChangelog = (inputFile: string) => {
+export const parseChangesFile = (inputFile?: string) => {
+  inputFile = inputFile || 'changes.md';
   const text = readFileSync(inputFile, { encoding: 'utf-8' });
   const lines = text.split('\n');
 
@@ -22,6 +23,6 @@ export const parseChangelog = (inputFile: string) => {
   }
 
   // write changes to file
-  writeFileSync('./parsed.md', changes.join('\n'));
+  writeFileSync('./release.md', changes.join('\n'));
   return changes;
 };

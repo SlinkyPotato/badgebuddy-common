@@ -42,3 +42,7 @@ lerna-debug.log*
 # Certs
 /certs/*
 !/certs/.gitkeep
+
+# Utils
+changes.md
+release.md

@@ -16,4 +16,4 @@ export { validationSchema } from './config/env.config';
 export { configureCache } from './config/redis.config';
 
 // Utils
-export { parseChangelog } from './utils/parse-changelog';
+export { parseChangesFile } from './utils/parse-changes-file';

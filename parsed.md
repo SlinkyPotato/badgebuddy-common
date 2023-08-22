@@ -1,1 +1,0 @@
-### [0.0.6](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6-2...v0.0.6) (2023-08-22)
