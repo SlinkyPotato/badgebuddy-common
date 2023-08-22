@@ -15,17 +15,19 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
           node-version-file: 'package.json'
-      - uses: pnpm/action-setup@v2
+          cache: 'pnpm'
+          cache-dependency-path: 'pnpm-lock.yaml'
       - name: Retrieve package version
         id: package-version
         uses: notiz-dev/github-action-json-property@v0.2.0
         with:
           path: 'package.json'
           prop_path: 'version'
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
       - run: pnpm build
       - run: pnpm test
       - run: git fetch
