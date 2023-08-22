@@ -1,6 +1,6 @@
 {
   "name": "@solidchain/badge-buddy-common",
-  "version": "0.1.0",
+  "version": "0.1.1-0",
   "description": "A collection of common objects and utils.",
   "author": "SlinkyPotato <patinobrian@gmail.com>",
   "private": false,
@@ -91,13 +91,38 @@
   },
   "standard-version": {
     "types": [
-      {"type":"feat","section":"Features"},
-      {"type":"fix","section":"Bug Fixes"},
-      {"type":"chore","hidden":true},
-      {"type":"docs","section": "Docs"},
-      {"type":"style","hidden":true},
-      {"type":"refactor","section": "Refactor"},
-      {"type":"perf","hidden":true},
-      {"type":"test","section": "Tests"}]
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "chore",
+        "hidden": true
+      },
+      {
+        "type": "docs",
+        "section": "Docs"
+      },
+      {
+        "type": "style",
+        "hidden": true
+      },
+      {
+        "type": "refactor",
+        "section": "Refactor"
+      },
+      {
+        "type": "perf",
+        "hidden": true
+      },
+      {
+        "type": "test",
+        "section": "Tests"
+      }
+    ]
   }
 }

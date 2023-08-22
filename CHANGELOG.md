@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.0...v0.1.1-0) (2023-08-22)
+
+
+### Bug Fixes
+
+* add standard-version package.json config ([bcdb809](https://github.com/solidchain-tech/badge-buddy-common/commit/bcdb809649259603537fad7ae856c3e1d7a311fe))
+* enhance workflow by removing git fetch tags ([07f9b1e](https://github.com/solidchain-tech/badge-buddy-common/commit/07f9b1e196a34f73703d4125838d1839da811728))
+* remove --generate-notes flag ([3b121c0](https://github.com/solidchain-tech/badge-buddy-common/commit/3b121c0caf1faabcd76fd676e5db00b5b2ee4e05))
+* set fetch-depth to 0 for build-dev workflow ([6572d4a](https://github.com/solidchain-tech/badge-buddy-common/commit/6572d4ad38501b25b69e78700c7fb4cff2838e6c))
+
 ## [0.1.0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6...v0.1.0) (2023-08-22)
 
 
