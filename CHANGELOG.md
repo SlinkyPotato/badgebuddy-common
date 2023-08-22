@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0-4](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.0-3...v0.1.0-4) (2023-08-22)
+
+
+### Bug Fixes
+
+* add missing curly brace } ([f1917f0](https://github.com/solidchain-tech/badge-buddy-common/commit/f1917f0b6a6f8ddcb0c5bbd2a4e5465aa2034914))
+
 ## [0.1.0-3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.0-2...v0.1.0-3) (2023-08-22)
 
 ## [0.1.0-2](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.0-1...v0.1.0-2) (2023-08-22)
