@@ -42,8 +42,11 @@ export class CommonPinoLogger extends PinoLogger {
       // https://github.com/pinojs/pino-pretty
       // skip printing to console for production
       targets.push({
-        target: 'pino/file',
-        options: {},
+        target: 'pino-pretty',
+        options: {
+          colorize: true,
+          colorizeObjects: true,
+        },
       });
     }
     super({

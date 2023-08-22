@@ -1,0 +1,36 @@
+#file: noinspection YAMLSchemaValidation
+name: Create PR for dev
+on:
+  push:
+    branches:
+      - dev
+env:
+  GH_TOKEN: ${{ github.token }}
+jobs:
+  build-dev:
+    runs-on: ubuntu-latest
+    environment: development
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: 'package.json'
+      - uses: pnpm/action-setup@v2
+      - name: Retrieve package version
+        id: package-version
+        uses: notiz-dev/github-action-json-property@v0.2.0
+        with:
+          path: 'package.json'
+          prop_path: 'version'
+      - run: pnpm install
+      - run: pnpm build
+      - run: pnpm test
+      - run: git fetch
+      - run: git pull --tags
+      - run: git config user.name "github-action[bot]"
+      - run: git config user.email "<>"
+      - run: gh pr close dev | exit 0
+      - run: gh pr create --base release/dev --fill --title "deploy dev -> release/dev" | exit 0
