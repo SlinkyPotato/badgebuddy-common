@@ -2,48 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0-3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.0-2...v0.1.0-3) (2023-08-22)
+
+## [0.1.0-2](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.0-1...v0.1.0-2) (2023-08-22)
+
+
+### Bug Fixes
+
+* add caching to workflow ([72e4424](https://github.com/solidchain-tech/badge-buddy-common/commit/72e4424c77a28f11f7f725a9568ad1ab8f13fd25))
+
+## [0.1.0-1](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6...v0.1.0-1) (2023-08-22)
+
+
+### Bug Fixes
+
+* add --generate-notes flag to prod deploy workflow ([53683d6](https://github.com/solidchain-tech/badge-buddy-common/commit/53683d6af15c5e3bb0d6ed859c6bb5a246c96c92))
+* rename files ([c9df30d](https://github.com/solidchain-tech/badge-buddy-common/commit/c9df30d658cf8c0a4f7be581911d39dd698d4e67)) 
+
+## [0.1.0-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6...v0.1.0-0) (2023-08-22)
+
+
+### Bug Fixes
+
+* rename files ([c9df30d](https://github.com/solidchain-tech/badge-buddy-common/commit/c9df30d658cf8c0a4f7be581911d39dd698d4e67))
+
 ### [0.0.6](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6-3...v0.0.6) (2023-08-22)
-
-### [0.0.6-3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6-2...v0.0.6-3) (2023-08-22)
-
 
 ### Features
 
 * introduce utils ([b78326c](https://github.com/solidchain-tech/badge-buddy-common/commit/b78326cd333f2f00289f39d4f2a938b7752f7f3e))
-
+* display colorized development logs ([b50cc3d](https://github.com/solidchain-tech/badge-buddy-common/commit/b50cc3d866a04700d5094b2c52db8fc4700e62d6))
+* import common dependencies ([74eb7f0](https://github.com/solidchain-tech/badge-buddy-common/commit/74eb7f0854e476ea4c23d6a323fae37939a44563))
 
 ### Bug Fixes
 
 * enhance parseChangesFile util ([726c59a](https://github.com/solidchain-tech/badge-buddy-common/commit/726c59ab694fa9930a975101c551bffdcd70efff))
-
-### [0.0.6-2](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6-1...v0.0.6-2) (2023-08-19)
-
-
-### Features
-
-* display colorized development logs ([b50cc3d](https://github.com/solidchain-tech/badge-buddy-common/commit/b50cc3d866a04700d5094b2c52db8fc4700e62d6))
-* import common dependencies ([74eb7f0](https://github.com/solidchain-tech/badge-buddy-common/commit/74eb7f0854e476ea4c23d6a323fae37939a44563))
-
-
-### Bug Fixes
-
 * maximum compatibility ([4567f0e](https://github.com/solidchain-tech/badge-buddy-common/commit/4567f0e954a180e73feca7bf26606aef4e42961d))
 * pnpm dev install pino-pretty ([797d5ce](https://github.com/solidchain-tech/badge-buddy-common/commit/797d5ce07fe5b8a05add3fb387b0f7e461767850))
-
-### [0.0.6-1](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6-0...v0.0.6-1) (2023-08-18)
-
-
-### Bug Fixes
-
 * github release only production ([96ac9d6](https://github.com/solidchain-tech/badge-buddy-common/commit/96ac9d6856ae54317db9e4b876e23df4d9e78dd5))
-
-### [0.0.6-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5...v0.0.6-0) (2023-08-18)
-
-
-### Bug Fixes
-
 * remove extra spacing ([271abb0](https://github.com/solidchain-tech/badge-buddy-common/commit/271abb03f49f86c234037f23d549dedabe36b4fa))
 * remove extra spacing and format ([2a30e95](https://github.com/solidchain-tech/badge-buddy-common/commit/2a30e95a59165037efb7713513bd888b9b5bafec))
+
 
 ### [0.0.5](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.5-14...v0.0.5) (2023-08-18)
 

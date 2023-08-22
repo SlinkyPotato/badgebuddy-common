@@ -19,15 +19,27 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
           node-version-file: 'package.json'
-      - uses: pnpm/action-setup@v2
+          cache: 'pnpm'
+          cache-dependency-path: 'pnpm-lock.yaml'
       - run: git config user.name "github-action[bot]"
       - run: git config user.email "<>"
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
       - run: pnpm test
-      - run: npx standard-version > changes.md
+      - run: git fetch
+      - name: Retrieve Package Version
+        id: prerelease-version
+        uses: notiz-dev/github-action-json-property@v0.2.0
+        with:
+          path: 'package.json'
+          prop_path: 'version'
+      - name: Remove prerelease tags
+        run: git tag -d $(git tag -l "v$(node -e "console.log('${{steps.prerelease-version.outputs.prop}}'.split('-')[0]);")-*")
+      - name: Tag release
+        run: npx standard-version > changes.md
       - name: Retrieve Package Version
         id: package-version
         uses: notiz-dev/github-action-json-property@v0.2.0
@@ -46,7 +58,7 @@ jobs:
         with:
           files: dist/ CHANGELOG.md LICENSE.md README.md package.json
           dest: dist.zip
-      - run: gh release create -F release.md --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
+      - run: gh release create -F release.md -t "v${{ steps.package-version.outputs.prop } Release" --verify-tag v${{ steps.package-version.outputs.prop }} --generate-notes dist.zip
       - run: git fetch
       - run: git pull --tags
       - run: git checkout dev
