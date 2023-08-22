@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6-3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6-2...v0.0.6-3) (2023-08-22)
+
+
+### Features
+
+* introduce utils ([b78326c](https://github.com/solidchain-tech/badge-buddy-common/commit/b78326cd333f2f00289f39d4f2a938b7752f7f3e))
+
+
+### Bug Fixes
+
+* enhance parseChangesFile util ([726c59a](https://github.com/solidchain-tech/badge-buddy-common/commit/726c59ab694fa9930a975101c551bffdcd70efff))
+
 ### [0.0.6-2](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6-1...v0.0.6-2) (2023-08-19)
 
 
