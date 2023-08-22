@@ -56,7 +56,7 @@ jobs:
         with:
           files: dist/ CHANGELOG.md LICENSE.md README.md package.json
           dest: dist.zip
-      - run: gh release create -F release.md -t "v${{ steps.package-version.outputs.prop } Release" --verify-tag v${{ steps.package-version.outputs.prop }} dist.zip
+      - run: gh release create -F release.md -t "v${{ steps.package-version.outputs.prop } Release" --verify-tag v${{ steps.package-version.outputs.prop }} --generate-notes dist.zip
       - run: git fetch
       - run: git pull --tags
       - run: git checkout dev
