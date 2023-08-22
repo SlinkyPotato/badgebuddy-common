@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.0.6...v0.1.0) (2023-08-22)
+
+
+### Bug Fixes
+
+* add --generate-notes flag to prod deploy workflow ([53683d6](https://github.com/solidchain-tech/badge-buddy-common/commit/53683d6af15c5e3bb0d6ed859c6bb5a246c96c92))
+* add caching to workflow ([72e4424](https://github.com/solidchain-tech/badge-buddy-common/commit/72e4424c77a28f11f7f725a9568ad1ab8f13fd25))
+* add missing curly brace } ([f1917f0](https://github.com/solidchain-tech/badge-buddy-common/commit/f1917f0b6a6f8ddcb0c5bbd2a4e5465aa2034914))
+* rename files ([c9df30d](https://github.com/solidchain-tech/badge-buddy-common/commit/c9df30d658cf8c0a4f7be581911d39dd698d4e67))
+
 ## [0.1.0-4](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.0-3...v0.1.0-4) (2023-08-22)
 
 
