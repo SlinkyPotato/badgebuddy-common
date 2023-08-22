@@ -43,8 +43,6 @@ jobs:
           token: ${{ secrets.NPM_PUBLISH_TOKEN }}
           access: 'public'
           tag: 'next'
-      - run: git fetch
-      - run: git pull --tags
       - run: gh pr close release/dev | exit 0
       - run: gh pr create --base main --fill --title "deploy v${{ steps.package-version.outputs.prop }} to production"
       - run: git checkout dev
