@@ -118,7 +118,7 @@
       },
       {
         "type": "perf",
-        "hidden": true
+        "section": "Performance"
       },
       {
         "type": "test",
