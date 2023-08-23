@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      repository-projects: read
     environment:
       name: staging
       url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package-version.outputs.prop }}"
@@ -28,8 +29,10 @@ jobs:
       - run: git config user.name "github-action[bot]"
       - run: git config user.email "<>"
       - run: pnpm install --frozen-lockfile
+      - run: pnpm standard-version --prerelease --dry-run > changes.md | exit 0
+      - run: pnpm standard-version --prerelease
+      - run: pnpm build
       - run: pnpm test
-      - run: npx standard-version --prerelease
       - name: Retrieve Package Version
         id: package-version
         uses: notiz-dev/github-action-json-property@v0.2.0
@@ -37,16 +40,13 @@ jobs:
           path: 'package.json'
           prop_path: 'version'
       - run: git push --follow-tags
-      - run: pnpm build
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_PUBLISH_TOKEN }}
           access: 'public'
           tag: 'next'
-      - run: git fetch
-      - run: git pull --tags
-      - run: gh pr close release/dev | exit 0
-      - run: gh pr create --base main --fill --title "deploy v${{ steps.package-version.outputs.prop }} to production"
+      - run: gh pr edit -F release.md | exit 0
+      - run: gh pr create --base main -F release.md --title "deploy release/dev to production" | exit 0
       - run: git checkout dev
       - run: git merge --no-ff release/dev -m "sync branch release/dev v${{ steps.package-version.outputs.prop }} into dev" | exit 0
       - run: git push

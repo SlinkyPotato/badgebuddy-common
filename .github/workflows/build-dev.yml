@@ -13,26 +13,23 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      repository-projects: read
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
           node-version-file: 'package.json'
           cache: 'pnpm'
           cache-dependency-path: 'pnpm-lock.yaml'
-      - name: Retrieve package version
-        id: package-version
-        uses: notiz-dev/github-action-json-property@v0.2.0
-        with:
-          path: 'package.json'
-          prop_path: 'version'
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
       - run: pnpm test
-      - run: git fetch
-      - run: git pull --tags
       - run: git config user.name "github-action[bot]"
       - run: git config user.email "<>"
-      - run: gh pr close dev | exit 0
-      - run: gh pr create --base release/dev --fill --title "deploy dev -> release/dev" | exit 0
+      - run: pnpm standard-version --prerelease --dry-run > changes.md | exit 0
+      - run: node -e "require('./dist/index.js')['parseChangesFile']();"
+      - run: gh pr edit -F release.md | exit 0
+      - run: gh pr create --base release/dev -F release.md --title "deploy dev -> release/dev" | exit 0
