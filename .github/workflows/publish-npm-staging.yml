@@ -29,7 +29,7 @@ jobs:
       - run: git config user.email "<>"
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
-      - run: npx standard-version --prerelease
+      - run: pnpm dlx standard-version --prerelease
       - name: Retrieve Package Version
         id: package-version
         uses: notiz-dev/github-action-json-property@v0.2.0
