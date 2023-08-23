@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1-1](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.1-0...v0.1.1-1) (2023-08-23)
+
+
+### Bug Fixes
+
+* name performance section ([9f06f9f](https://github.com/solidchain-tech/badge-buddy-common/commit/9f06f9fad0bb5bb08154e89d3c5c20b7658ede31))
+* use pnpm dlx instead of npx ([d3ab211](https://github.com/solidchain-tech/badge-buddy-common/commit/d3ab2117ffd057e1319e9188667a63215ff66fe0))
+
+
+### Performance
+
+* add engines strict ([8a44609](https://github.com/solidchain-tech/badge-buddy-common/commit/8a44609e4c6c2e349b3e51e7d782a7ebc860620c))
+* enhance workflows to print changes in prs ([abd9c28](https://github.com/solidchain-tech/badge-buddy-common/commit/abd9c2819d0cd4a2a91dc5e010cec9317cff3959))
+* remove package.json step for build-dev ([c6e738d](https://github.com/solidchain-tech/badge-buddy-common/commit/c6e738d746fa3585350a0c00ecf3b94daafcd57c))
+
 ### [0.1.1-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.0...v0.1.1-0) (2023-08-22)
 
 
