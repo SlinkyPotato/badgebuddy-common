@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1-2](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.1-1...v0.1.1-2) (2023-08-23)
+
+
+### Bug Fixes
+
+* add missing exit 0 ([5672bf5](https://github.com/solidchain-tech/badge-buddy-common/commit/5672bf5fa7d7c723eb7d4c83a237d5e7c4e7354e))
+* add missing repository-projects ([37aec89](https://github.com/solidchain-tech/badge-buddy-common/commit/37aec893f88df09bd96a68e7aaf6cea2a43e98e6))
+* properly set pr title for staging ([c9b6455](https://github.com/solidchain-tech/badge-buddy-common/commit/c9b6455c4630007d61cb861d5f3f9b631c50cff5))
+
 ### [0.1.1-1](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.1-0...v0.1.1-1) (2023-08-23)
 
 
