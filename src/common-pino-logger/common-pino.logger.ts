@@ -5,7 +5,7 @@ import { NodeEnvs } from '../enums/node-envs.enum';
 @Injectable()
 export class CommonPinoLogger extends PinoLogger {
   constructor(appName: string) {
-    console.log('creating logger...');
+    process.stdout.write('creating logger...');
 
     const targets = [];
     targets.push({
