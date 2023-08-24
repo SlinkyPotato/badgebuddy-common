@@ -50,6 +50,7 @@ export class CommonPinoLogger extends PinoLogger {
         },
       });
     }
+    console.log('done');
     super({
       pinoHttp: {
         name: appName,
