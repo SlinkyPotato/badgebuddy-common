@@ -49,12 +49,14 @@ export const configureBull = (
       return {
         redis: {
           path: REDIS_SOCKET_PATH,
+          db: 0,
         },
       };
     case NodeEnvs.STAGING.toString():
       return {
         redis: {
           path: REDIS_SOCKET_PATH,
+          db: 1,
         },
       };
     default:

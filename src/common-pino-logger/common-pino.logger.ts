@@ -46,6 +46,7 @@ export class CommonPinoLogger extends PinoLogger {
         options: {
           colorize: true,
           colorizeObjects: true,
+          singleLine: true,
         },
       });
     }
