@@ -21,7 +21,7 @@ export class DiscordParticipant {
   @Prop({ required: false })
   endDate: Date;
 
-  @Prop({ required: false })
+  @Prop({ required: true, default: 0 })
   durationInMinutes: number;
 }
 
