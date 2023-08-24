@@ -2,6 +2,19 @@ import { Prop, raw, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { EventType } from '../enums/event-type.enum';
 import { HydratedDocument } from 'mongoose';
 
+/**
+ * @class CommunityEvent
+ * @description Mongoose schema for Community Events by manual tracking only
+ * @property {string} eventName - Name of event
+ * @property {string} organizerId - Discord ID of organizer
+ * @property {string} voiceChannelId - Discord ID of voice channel
+ * @property {string} guildId - Discord ID of guild
+ * @property {Date} startDate - Start date of event
+ * @property {Date} endDate - End date of event
+ * @property {boolean} isActive - true if active, false otherwise
+ * @property {CommunityEventParticipant[]} participants - Array of CommunityEventParticipants
+ *
+ */
 @Schema({ collection: 'communityEvents' })
 export class CommunityEvent {
   @Prop({ required: true })
@@ -21,9 +34,6 @@ export class CommunityEvent {
 
   @Prop({ required: true })
   endDate: Date;
-
-  @Prop({ required: true })
-  eventType: EventType;
 
   @Prop({ required: true, default: true })
   isActive: boolean;
