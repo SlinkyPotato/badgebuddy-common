@@ -1,5 +1,4 @@
 import { Prop, raw, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { EventType } from '../enums/event-type.enum';
 import { HydratedDocument } from 'mongoose';
 
 /**
