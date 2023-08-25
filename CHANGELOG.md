@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.1...v0.1.2-0) (2023-08-25)
+
+
+### Features
+
+* add bull configuration ([5a4cf82](https://github.com/solidchain-tech/badge-buddy-common/commit/5a4cf8270550b2dd4e991410de62d472514d2bbf))
+* import common schemas ([658a441](https://github.com/solidchain-tech/badge-buddy-common/commit/658a4417787e1b95e4c8a15b0005eb69fde301a5))
+
+
+### Bug Fixes
+
+* add .iml to .gitignore ([159d004](https://github.com/solidchain-tech/badge-buddy-common/commit/159d004b5aaae2a948a16255536a227b973b199e))
+* print dev logs in single line and set redis bull db ([91fc0c5](https://github.com/solidchain-tech/badge-buddy-common/commit/91fc0c5362d549e381dcdc6aeba05c2efa9d4ca3))
+* remove .iml from git ([1189c4f](https://github.com/solidchain-tech/badge-buddy-common/commit/1189c4f4efee72b83ed6589f311301f26e1d6c05))
+
+
+### Refactor
+
+* remove unused enum eventType ([425d682](https://github.com/solidchain-tech/badge-buddy-common/commit/425d6828fcfe0d6951ded8f90fda0baee0690911))
+
+
+### Performance
+
+* add done msg to common logger constructor ([1b89455](https://github.com/solidchain-tech/badge-buddy-common/commit/1b89455979ebb202e7ff286e918bc8c8cb3a4d7c))
+* format log creation print ([6d81b89](https://github.com/solidchain-tech/badge-buddy-common/commit/6d81b89ed29ac7e03e77f2c5ad2e7f7a5213e974))
+* set default value to durationInMinutes ([ebefc60](https://github.com/solidchain-tech/badge-buddy-common/commit/ebefc60adb8b078beca64d3672fe5c7d58c6ea22))
+
 ### [0.1.1](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.0...v0.1.1) (2023-08-23)
 
 
