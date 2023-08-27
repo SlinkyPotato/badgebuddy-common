@@ -1,19 +1,22 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import * as mongoose from 'mongoose';
 import { HydratedDocument } from 'mongoose';
+import { CommunityEvent } from './community-event.schema';
 
 @Schema({ collection: 'discordParticipants' })
 export class DiscordParticipant {
-  @Prop({ required: true, unique: true })
-  guildId: string;
+  @Prop({
+    ref: 'CommunityEvent',
+    type: mongoose.Schema.Types.ObjectId,
+    unique: false,
+  })
+  communityEvent: CommunityEvent;
 
-  @Prop({ required: true, unique: true })
+  @Prop({ required: true, index: true })
   userId: string;
 
   @Prop({ required: false })
   userTag: string;
-
-  @Prop({ required: true, unique: true })
-  voiceChannelId: string;
 
   @Prop({ required: true })
   startDate: Date;
