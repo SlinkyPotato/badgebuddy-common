@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2-1](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.2-0...v0.1.2-1) (2023-08-27)
+
+
+### Features
+
+* upgrade node and pnpm -> 8.7.0 ([ddf5f3d](https://github.com/solidchain-tech/badge-buddy-common/commit/ddf5f3d49c7e08c552701b33860bfc032965ac35))
+
+
+### Bug Fixes
+
+* enhance DiscordParticipants Schema ([5d90d5e](https://github.com/solidchain-tech/badge-buddy-common/commit/5d90d5e04342ef9659f995539c32cca59e4e6ce4))
+
 ### [0.1.2-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.1...v0.1.2-0) (2023-08-25)
 
 
