@@ -22,7 +22,12 @@ export const parseChangesFile = (inputFile?: string) => {
     }
   }
 
+  if (changes.length === 0) {
+    console.warn('No changes found in changes.md file');
+  }
+
   // write changes to file
   writeFileSync('./release.md', changes.join('\n'));
+  console.log('release.md file created');
   return changes;
 };
