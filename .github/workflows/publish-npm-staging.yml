@@ -45,7 +45,7 @@ jobs:
           access: 'public'
           tag: 'next'
       - name: Remove prerelease tags
-        run: git tag -d $(git tag -l "v$(node -e "console.log('${{steps.prerelease-version.outputs.prop}}'.split('-')[0]);")-*")
+        run: git tag -d $(git tag -l "v$(node -e "console.log('${{steps.package-version.outputs.prop}}'.split('-')[0]);")-*")
       - run: pnpm standard-version --dry-run > changes.md | exit 0
       - run: node -e "require('./dist/index.js')['parseChangesFile']();"
       - run: gh pr edit -F release.md | exit 0
