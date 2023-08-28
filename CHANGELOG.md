@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3-2](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-1...v0.1.3-2) (2023-08-28)
+
+
+### Bug Fixes
+
+* set mongoose types to DiscordParticipants ([6296ee7](https://github.com/solidchain-tech/badge-buddy-common/commit/6296ee779c1eea7f781124f95c32ef3f3b65b9d5))
+
 ### [0.1.3-1](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-0...v0.1.3-1) (2023-08-28)
 
 
