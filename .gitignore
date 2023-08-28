@@ -1,6 +1,8 @@
 # compiled output
 /dist
 /node_modules
+changes.md
+release.md
 
 # Logs
 logs
@@ -43,7 +45,3 @@ badge-buddy-common.iml
 # Certs
 /certs/*
 !/certs/.gitkeep
-
-# Utils
-changes.md
-release.md
