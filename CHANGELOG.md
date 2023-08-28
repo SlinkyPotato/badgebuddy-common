@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.2...v0.1.3-0) (2023-08-28)
+
+
+### Refactor
+
+* release.md notes ([8f52611](https://github.com/solidchain-tech/badge-buddy-common/commit/8f52611d6c4f5d225b8dde083e846a165bd0fe73))
+
 ### [0.1.2](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.1...v0.1.2) (2023-08-28)
 
 
