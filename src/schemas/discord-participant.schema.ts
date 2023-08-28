@@ -10,7 +10,7 @@ export class DiscordParticipant {
     type: mongoose.Schema.Types.ObjectId,
     unique: false,
   })
-  communityEvent: CommunityEvent;
+  communityEvent: CommunityEvent | mongoose.Types.ObjectId;
 
   @Prop({ required: true, index: true })
   userId: string;
@@ -18,13 +18,13 @@ export class DiscordParticipant {
   @Prop({ required: false })
   userTag: string;
 
-  @Prop({ required: true })
+  @Prop({ required: true, type: Date })
   startDate: Date;
 
-  @Prop({ required: false })
+  @Prop({ required: false, type: Date })
   endDate: Date;
 
-  @Prop({ required: true, default: 0 })
+  @Prop({ required: true, default: 0.0, type: Number })
   durationInMinutes: number;
 }
 
