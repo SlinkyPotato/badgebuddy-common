@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2-4](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.2-3...v0.1.2-4) (2023-08-28)
+
+
+### Performance
+
+* add logging files to parseChangesFile script ([8a1275d](https://github.com/solidchain-tech/badge-buddy-common/commit/8a1275dbbd35ea927d3dc5d8370197d0d5ce8fd2))
+
 ### [0.1.2-3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.2-2...v0.1.2-3) (2023-08-28)
 
 
