@@ -4,6 +4,16 @@ export { NodeEnvs } from './enums/node-envs.enum';
 
 // Schemas
 export { CommunityEvent } from './schemas/community-event.schema';
+export { CommunityEventDocument } from './schemas/community-event.schema';
+export { CommunityEventSchema } from './schemas/community-event.schema';
+
+export { DiscordGuild } from './schemas/discord-guild.schema';
+export { DiscordGuildDocument } from './schemas/discord-guild.schema';
+export { DiscordGuildSchema } from './schemas/discord-guild.schema';
+
+export { DiscordParticipant } from './schemas/discord-participant.schema';
+export { DiscordParticipantDocument } from './schemas/discord-participant.schema';
+export { DiscordParticipantSchema } from './schemas/discord-participant.schema';
 
 // Common Pino Logger
 export { CommonPinoLogger } from './common-pino-logger/common-pino.logger';
@@ -14,6 +24,7 @@ export { CommonPinoLoggerService } from './common-pino-logger/common-pino-logger
 export { EnvConfig } from './config/env.config';
 export { validationSchema } from './config/env.config';
 export { configureCache } from './config/redis.config';
+export { configureBull } from './config/redis.config';
 
 // Utils
 export { parseChangesFile } from './utils/parse-changes-file';

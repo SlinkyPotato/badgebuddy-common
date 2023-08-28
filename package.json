@@ -1,6 +1,6 @@
 {
   "name": "@solidchain/badge-buddy-common",
-  "version": "0.1.1",
+  "version": "0.1.2-4",
   "description": "A collection of common objects and utils.",
   "author": "SlinkyPotato <patinobrian@gmail.com>",
   "private": false,
@@ -12,11 +12,11 @@
     "*.md"
   ],
   "engines": {
-    "node": "20.3.1",
-    "pnpm": "8.6.10"
+    "node": "20.5.1",
+    "pnpm": "8.7.0"
   },
   "engineStrict": true,
-  "packageManager": "pnpm@8.6.10",
+  "packageManager": "pnpm@8.7.0",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\"",
@@ -49,7 +49,9 @@
     "cache-manager-redis-yet": "^4.1.2",
     "cache-manager": "^5.2.3",
     "@nestjs/cache-manager": "^2.1.0",
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "bull": "^4.11.3",
+    "@nestjs/bull": "^10.0.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.1.11",
