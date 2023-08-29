@@ -28,7 +28,8 @@ jobs:
       - run: git config user.name "github-action[bot]"
       - run: git config user.email "<>"
       - run: pnpm install --frozen-lockfile
-      - id: pre-release
+      - name: Retrieve pre-release package.json
+        id: pre-release
         run: |
           echo PRERELEASE_VERSION=$(node -e "console.log(require('./package.json').version)") >> "$GITHUB_OUTPUT"
       - name: Remove prerelease tags
@@ -37,7 +38,8 @@ jobs:
       - run: pnpm standard-version
       - run: pnpm build
       - run: pnpm test
-      - id: package
+      - name: Retrieve package.json
+        id: package
         run: |
           echo PACKAGE_VERSION=$(node -e "console.log(require('./package.json').version)") >> "$GITHUB_OUTPUT"
       - run: git push --follow-tags
