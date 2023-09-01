@@ -32,7 +32,8 @@ jobs:
       - run: pnpm standard-version --prerelease
       - run: pnpm build
       - run: pnpm test
-      - id: package
+      - name: Retrieve package.json
+        id: package
         run: echo PACKAGE_VERSION=$(node -e "console.log(require('./package.json').version)") >> "$GITHUB_OUTPUT"
       - run: git push --follow-tags
       - uses: JS-DevTools/npm-publish@v2

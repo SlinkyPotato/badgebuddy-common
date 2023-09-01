@@ -28,3 +28,6 @@ export { configureBull } from './config/redis.config';
 
 // Utils
 export { parseChangesFile } from './utils/parse-changes-file';
+
+// DTOs
+export { CommunityEventDto } from './dto/community-event.dto';
