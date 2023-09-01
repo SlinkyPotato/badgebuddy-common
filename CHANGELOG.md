@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3-4](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-3...v0.1.3-4) (2023-09-01)
+
+
+### Features
+
+* add CommunityEventDTO ([fd5f0d5](https://github.com/solidchain-tech/badge-buddy-common/commit/fd5f0d5051995a6e66bf2775f8b6c25b14bdfc30))
+
+
+### Refactor
+
+* add name to ga step ([a865b8f](https://github.com/solidchain-tech/badge-buddy-common/commit/a865b8fb084b40ac26c79ad11df22e5089fc3ce1))
+
 ### [0.1.3-3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-2...v0.1.3-3) (2023-08-29)
 
 
