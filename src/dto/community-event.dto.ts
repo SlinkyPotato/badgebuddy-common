@@ -1,5 +1,6 @@
+import mongoose from "mongoose";
 export class CommunityEventDto {
-  eventId: string;
+  eventId: mongoose.Types.ObjectId;
   eventName: string;
   organizerId: string;
   voiceChannelId: string;

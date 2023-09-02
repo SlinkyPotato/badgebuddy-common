@@ -31,3 +31,4 @@ export { parseChangesFile } from './utils/parse-changes-file';
 
 // DTOs
 export { CommunityEventDto } from './dto/community-event.dto';
+export { DiscordParticipantDto } from './dto/discord-participant.dto';
