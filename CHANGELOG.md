@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3-5](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-4...v0.1.3-5) (2023-09-02)
+
+
+### Features
+
+* update deps and introduce discord-participant.dto.ts ([16688e2](https://github.com/solidchain-tech/badge-buddy-common/commit/16688e20d2ddeb85287c4e1328e17c0e96198c1b))
+
 ### [0.1.3-4](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-3...v0.1.3-4) (2023-09-01)
 
 
