@@ -15,14 +15,14 @@ export class DiscordParticipant {
   @Prop({ required: true, index: true })
   userId: string;
 
-  @Prop({ required: false })
+  @Prop({ required: true })
   userTag: string;
 
   @Prop({ required: true, type: Date })
   startDate: Date;
 
   @Prop({ required: false, type: Date })
-  endDate: Date;
+  endDate?: Date;
 
   @Prop({ required: true, default: 0.0, type: Number })
   durationInMinutes: number;
