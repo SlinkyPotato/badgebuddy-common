@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import redis from 'redis';
+import * as redis from 'redis';
 import {
   DiscordParticipant,
   DiscordParticipantSchema,
