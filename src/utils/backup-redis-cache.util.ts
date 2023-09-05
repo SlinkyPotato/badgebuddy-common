@@ -55,7 +55,6 @@ const backupRedisCacheUtil = async () => {
   console.log('connected to redis');
 
   const bulkWriteOps = [];
-  const endDate = new Date();
 
   for (const event of communityEvents) {
     const keys = await redisClient.keys(
@@ -75,11 +74,8 @@ const backupRedisCacheUtil = async () => {
       discordParticipant.userId = participant.userId;
       discordParticipant.userTag = participant.userTag;
       discordParticipant.startDate = new Date(participant.startDate);
-      discordParticipant.endDate = endDate;
-      discordParticipant.durationInMinutes =
-        (endDate.getTime() - discordParticipant.startDate.getTime()) /
-        1000 /
-        60;
+      discordParticipant.endDate = participant.endDate;
+      discordParticipant.durationInMinutes = participant.durationInMinutes;
 
       bulkWriteOps.push({
         updateOne: {
