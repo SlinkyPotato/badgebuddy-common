@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import * as mongoose from 'mongoose';
 import redis from 'redis';
 import { DiscordParticipantSchema } from '../schemas/discord-participant.schema';
@@ -36,9 +35,11 @@ const loadRedisCacheUtil = async () => {
   }
 
   const redisClient = redis.createClient({
-    host: process.env.REDIS_HOST,
-    port: parseInt(process.env.REDIS_PORT),
-  } as any);
+    socket: {
+      host: process.env.REDIS_HOST,
+      port: parseInt(process.env.REDIS_PORT),
+    },
+  });
 
   redisClient.on('error', (err) => {
     console.error('Redis error: ', err);
