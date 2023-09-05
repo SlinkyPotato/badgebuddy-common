@@ -34,12 +34,16 @@ const loadRedisCacheUtil = async () => {
     process.exit(0);
   }
 
-  const redisClient = redis.createClient({
-    socket: {
-      host: process.env.REDIS_HOST,
-      port: parseInt(process.env.REDIS_PORT),
-    },
-  });
+  const redisSocket = process.env.REDIS_SOCKET
+    ? { socket: { path: process.env.REDIS_SOCKET } }
+    : {
+        socket: {
+          host: process.env.REDIS_HOST,
+          port: parseInt(process.env.REDIS_PORT),
+        },
+      };
+
+  const redisClient = redis.createClient(redisSocket);
 
   redisClient.on('error', (err) => {
     console.error('Redis error: ', err);
