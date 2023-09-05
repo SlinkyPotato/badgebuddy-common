@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3-7](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-6...v0.1.3-7) (2023-09-05)
+
+
+### Features
+
+* create cache utils for processor downage ([054d045](https://github.com/solidchain-tech/badge-buddy-common/commit/054d0459551d1b35fa276e350887955c13bb5ea3))
+
+
+### Bug Fixes
+
+* add dotenv and dotenv-vault ([2a03e5e](https://github.com/solidchain-tech/badge-buddy-common/commit/2a03e5eb85c6861e4c1f3a4b9dd0a379026c689e))
+
 ### [0.1.3-6](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-5...v0.1.3-6) (2023-09-04)
 
 
