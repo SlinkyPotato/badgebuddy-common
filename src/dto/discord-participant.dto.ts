@@ -1,7 +1,5 @@
-import mongoose from 'mongoose';
-
 export class DiscordParticipantDto {
-  eventId: mongoose.Types.ObjectId;
+  eventId: string;
   userId: string;
   userTag: string;
   startDate: Date;
