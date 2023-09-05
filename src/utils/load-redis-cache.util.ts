@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import redis from 'redis';
+import * as redis from 'redis';
 import { DiscordParticipantSchema } from '../schemas/discord-participant.schema';
 import { CommunityEventSchema } from '../schemas/community-event.schema';
 import { DiscordParticipantDto } from '../dto/discord-participant.dto';
