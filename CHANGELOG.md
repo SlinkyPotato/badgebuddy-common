@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3-9](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-8...v0.1.3-9) (2023-09-05)
+
+
+### Bug Fixes
+
+* remove dotenv and properly import redis ([46f7a01](https://github.com/solidchain-tech/badge-buddy-common/commit/46f7a011c7f5febc8f6fafffb5351ad13a474da8))
+
 ### [0.1.3-8](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-7...v0.1.3-8) (2023-09-05)
 
 
