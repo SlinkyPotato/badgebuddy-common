@@ -1,6 +1,5 @@
-import { Prop, raw, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
-import * as mongoose from 'mongoose';
 
 /**
  * @class CommunityEvent
@@ -12,7 +11,6 @@ import * as mongoose from 'mongoose';
  * @property {Date} startDate - Start date of event
  * @property {Date} endDate - End date of event
  * @property {boolean} isActive - true if active, false otherwise
- * @property {CommunityEventParticipant[]} participants - Array of CommunityEventParticipants
  *
  */
 @Schema({ collection: 'communityEvents' })
@@ -37,23 +35,7 @@ export class CommunityEvent {
 
   @Prop({ required: true, default: true })
   isActive: boolean;
-
-  @Prop({
-    raw: raw({
-      userId: String,
-      duration: Number,
-      hasClaimed: Boolean,
-    }),
-    required: false,
-  })
-  participants: CommunityEventParticipant[];
 }
-
-type CommunityEventParticipant = {
-  userId: string;
-  duration: number;
-  hasClaimed: boolean;
-};
 
 export type CommunityEventDocument = HydratedDocument<CommunityEvent>;
 
