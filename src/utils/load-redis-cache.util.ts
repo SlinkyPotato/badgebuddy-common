@@ -13,81 +13,92 @@ import { DiscordParticipantDto } from '../dto/discord-participant.dto';
  */
 const loadRedisCacheUtil = async () => {
   console.log('attempting to load redis cache');
-  const mongoConn = await mongoose.connect(process.env.MONGODB_URI);
-  const discordParticipantModel = mongoConn.model(
-    'discordParticipant',
-    DiscordParticipantSchema,
-  );
-  const communityEventModel = mongoConn.model(
-    'communityEvent',
-    CommunityEventSchema,
-  );
-  const communityEvents = await communityEventModel
-    .find({
-      isActive: true,
-    })
-    .exec();
-  console.log(`found ${communityEvents.length} active community events`);
+  let mongoConn;
+  let redisClient;
+  let exitCode = 0;
 
-  if (communityEvents.length === 0) {
-    console.log('no active community events found');
-    process.exit(0);
-  }
-
-  const redisSocket = process.env.REDIS_SOCKET
-    ? { socket: { path: process.env.REDIS_SOCKET } }
-    : {
-        socket: {
-          host: process.env.REDIS_HOST,
-          port: parseInt(process.env.REDIS_PORT),
-        },
-      };
-
-  const redisClient = redis.createClient(redisSocket);
-
-  redisClient.on('error', (err) => {
-    console.error('Redis error: ', err);
-  });
-
-  await redisClient.connect();
-  console.log('connected to redis');
-
-  for (const event of communityEvents) {
-    const participants = await discordParticipantModel
+  try {
+    mongoConn = await mongoose.connect(process.env.MONGODB_URI);
+    const discordParticipantModel = mongoConn.model(
+      'discordParticipant',
+      DiscordParticipantSchema,
+    );
+    const communityEventModel = mongoConn.model(
+      'communityEvent',
+      CommunityEventSchema,
+    );
+    const communityEvents = await communityEventModel
       .find({
-        communityEvent: event._id,
+        isActive: true,
       })
       .exec();
+    console.log(`found ${communityEvents.length} active community events`);
 
-    console.log(
-      `found ${
-        participants.length
-      } participants for event ${event._id.toString()}`,
-    );
-    for (const participant of participants) {
-      console.log(JSON.stringify(participant));
-
-      const cacheParticipant = new DiscordParticipantDto();
-      cacheParticipant.eventId = participant.communityEvent.toString();
-      cacheParticipant.userId = participant.userId;
-      cacheParticipant.userTag = participant.userTag;
-      cacheParticipant.startDate = participant.startDate;
-      cacheParticipant.endDate = participant.endDate;
-      cacheParticipant.durationInMinutes = participant.durationInMinutes;
-
-      await redisClient.set(
-        `tracking:events:${event._id.toString()}:participants:${
-          cacheParticipant.userId
-        }`,
-        JSON.stringify(cacheParticipant),
-      );
+    if (communityEvents.length === 0) {
+      console.log('no active community events found');
+      throw new Error('no active community events found');
     }
+
+    const redisSocket = process.env.REDIS_SOCKET
+      ? { socket: { path: process.env.REDIS_SOCKET } }
+      : {
+          socket: {
+            host: process.env.REDIS_HOST,
+            port: parseInt(process.env.REDIS_PORT),
+          },
+        };
+
+    redisClient = redis.createClient(redisSocket);
+
+    redisClient.on('error', (err) => {
+      console.error('Redis error: ', err);
+      throw new Error('failed to backup redis cache');
+    });
+
+    await redisClient.connect();
+    console.log('connected to redis');
+
+    for (const event of communityEvents) {
+      const participants = await discordParticipantModel
+        .find({
+          communityEvent: event._id,
+        })
+        .exec();
+
+      console.log(
+        `found ${
+          participants.length
+        } participants for event ${event._id.toString()}`,
+      );
+      for (const participant of participants) {
+        console.log(JSON.stringify(participant));
+
+        const cacheParticipant = new DiscordParticipantDto();
+        cacheParticipant.eventId = participant.communityEvent.toString();
+        cacheParticipant.userId = participant.userId;
+        cacheParticipant.userTag = participant.userTag;
+        cacheParticipant.startDate = participant.startDate;
+        cacheParticipant.endDate = participant.endDate;
+        cacheParticipant.durationInMinutes = participant.durationInMinutes;
+
+        await redisClient.set(
+          `tracking:events:${event._id.toString()}:participants:${
+            cacheParticipant.userId
+          }`,
+          JSON.stringify(cacheParticipant),
+        );
+      }
+    }
+
+    console.log('load redis cache complete');
+  } catch (e) {
+    console.error(e);
+    exitCode = 1;
+  } finally {
+    if (mongoConn) await mongoConn.close();
+    if (redisClient) await redisClient.disconnect();
+    process.exit(exitCode);
   }
-
-  await mongoConn.disconnect();
-  await redisClient.disconnect();
-
-  console.log('load redis cache complete');
 };
 
 export { loadRedisCacheUtil };
