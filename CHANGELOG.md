@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3-16](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-15...v0.1.3-16) (2023-09-06)
+
+
+### Tests
+
+* add @jest/globals and test for schemas ([5290340](https://github.com/solidchain-tech/badge-buddy-common/commit/52903405f7928f220cd2a6422facdab827c32cae))
+
 ### [0.1.3-15](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-14...v0.1.3-15) (2023-09-06)
 
 
