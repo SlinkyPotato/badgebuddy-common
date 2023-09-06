@@ -1,4 +1,5 @@
 import { parseChangesFile } from './parse-changes-file';
+import { describe, it, expect } from '@jest/globals';
 
 describe('parseChangelog', () => {
   it('should be defined', () => {
