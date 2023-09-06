@@ -113,7 +113,7 @@ const backupRedisCacheUtil = async () => {
     console.error(e);
     exitCode = 1;
   } finally {
-    if (mongoConn) await mongoConn.close();
+    if (mongoConn) await mongoConn.connection.close();
     if (redisClient) await redisClient.disconnect();
     process.exit(exitCode);
   }
