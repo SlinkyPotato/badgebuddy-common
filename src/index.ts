@@ -32,5 +32,5 @@ export { backupRedisCacheUtil } from './utils/backup-redis-cache.util';
 export { loadRedisCacheUtil } from './utils/load-redis-cache.util';
 
 // DTOs
-export { CommunityEventDto } from './dto/community-event.dto';
-export { DiscordParticipantDto } from './dto/discord-participant.dto';
+export { CommunityEventDto } from './dto/redis/community-event.dto';
+export { DiscordParticipantDto } from './dto/redis/discord-participant.dto';
