@@ -38,7 +38,8 @@ const backupRedisCacheUtil = async () => {
 
     if (communityEvents.length === 0) {
       console.log('no active community events found');
-      throw new Error('no active community events found');
+      mongoConn.connection.close();
+      process.exit(0);
     }
 
     const redisSocket = process.env.REDIS_SOCKET
