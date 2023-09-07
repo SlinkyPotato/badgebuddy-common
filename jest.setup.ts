@@ -7,3 +7,4 @@ process.env.DISCORD_BOT_TOKEN = 'discord-bot-token';
 process.env.DISCORD_BOT_APPLICATION_ID = 'discord-bot-application-id';
 process.env.DISCORD_BOT_PUBLIC_KEY = 'discord-bot-public-key';
 process.env.DISCORD_OWNER_ID = 'discord-owner-id';
+process.env.LOG_LEVEL = 'trace';

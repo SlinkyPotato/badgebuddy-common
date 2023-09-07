@@ -1,5 +1,5 @@
 {
-  "setupFiles": ["../jest.setup.js"],
+  "setupFiles": ["../jest.setup.ts"],
   "moduleFileExtensions": [
     "js",
     "json",
