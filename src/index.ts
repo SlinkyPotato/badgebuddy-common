@@ -26,7 +26,7 @@ export { configureCacheOptions } from './config/redis.config';
 export { configureBullOptions } from './config/redis.config';
 
 // Utils
-export { parseChangesFile } from './utils/parse-changes-file';
+export { parseReleaseUtil } from './utils/parse-release.util';
 export { backupRedisCacheUtil } from './utils/backup-redis-cache.util';
 export { loadRedisCacheUtil } from './utils/load-redis-cache.util';
 
