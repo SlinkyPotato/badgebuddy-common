@@ -9,7 +9,6 @@ describe('DiscordGuildSchema', () => {
     discordGuild.guildId = '850840267082563596';
     discordGuild.guildName = 'Test guild';
     discordGuild.privateChannelId = '850840267082563600';
-    discordGuild.newsChannelId = '1130525131937161286';
     discordGuild.poapManagerRoleId = '1130525129131167786';
   });
 
@@ -30,7 +29,13 @@ describe('DiscordGuildSchema', () => {
   });
 
   it('should have newsChannelId', () => {
+    discordGuild.newsChannelId = '1130525131937161286';
     expect(discordGuild.newsChannelId).toBeDefined();
+  });
+
+  it('should not have newsChannelId', () => {
+    delete discordGuild.newsChannelId;
+    expect(discordGuild.newsChannelId).not.toBeDefined();
   });
 
   it('should have poapManagerRoleId', () => {

@@ -21,10 +21,9 @@ export { CommonPinoLoggerModule } from './common-pino-logger/common-pino-logger.
 export { CommonPinoLoggerService } from './common-pino-logger/common-pino-logger.service';
 
 // Config
-export { EnvConfig } from './config/env.config';
-export { validationSchema } from './config/env.config';
-export { configureCache } from './config/redis.config';
-export { configureBull } from './config/redis.config';
+export { joiValidationConfig } from './config/joi-validation.config';
+export { configureCacheOptions } from './config/redis.config';
+export { configureBullOptions } from './config/redis.config';
 
 // Utils
 export { parseChangesFile } from './utils/parse-changes-file';

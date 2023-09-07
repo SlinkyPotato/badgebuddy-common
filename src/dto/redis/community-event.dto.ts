@@ -6,5 +6,5 @@ export class CommunityEventDto {
   guildId: string;
   startDate: string;
   endDate: string;
-  isActive?: boolean | null;
+  isActive?: boolean;
 }

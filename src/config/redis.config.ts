@@ -1,70 +1,54 @@
 import { redisStore } from 'cache-manager-redis-yet';
-import { CacheManagerOptions } from '@nestjs/cache-manager';
 import { ConfigService } from '@nestjs/config';
 import { NodeEnvs } from '../enums/node-envs.enum';
 import { BullRootModuleOptions } from '@nestjs/bull';
-import { RedisClientOptions } from 'redis';
 
 const REDIS_SOCKET_PATH = '/app/redis/redis.sock';
 
-export const configureCache = (
+export const configureCacheOptions = (
   configService: ConfigService,
-): CacheManagerOptions & RedisClientOptions => {
+  options: any = {},
+) => {
+  options.store = redisStore;
+  options.socket ??= {};
   switch (configService.get<string>('NODE_ENV')) {
-    case NodeEnvs.PRODUCTION.toString():
-      return {
-        store: redisStore,
-        socket: {
-          path: REDIS_SOCKET_PATH,
-        },
-        database: 0,
-        ttl: 1000 * 60 * 60 * 24, // 1 day
-      };
-    case NodeEnvs.STAGING.toString():
-      return {
-        store: redisStore,
-        socket: {
-          path: REDIS_SOCKET_PATH,
-        },
-        database: 1,
-        ttl: 1000 * 60 * 60, // 1 hour
-      };
+    case NodeEnvs.PRODUCTION:
+      options.socket.path ??= REDIS_SOCKET_PATH;
+      options.database = 0;
+      options.ttl ??= 1000 * 60 * 60 * 24; // 1 day
+      break;
+    case NodeEnvs.STAGING:
+      options.socket.path ??= REDIS_SOCKET_PATH;
+      options.database = 1;
+      options.ttl = options.ttl ?? 1000 * 60 * 60; // 1 hour
+      break;
     default:
-      return {
-        store: redisStore,
-        socket: {
-          host: configService.get<string>('REDIS_HOST', { infer: true }),
-          port: configService.get<number>('REDIS_PORT', { infer: true }),
-        },
-        ttl: 1000 * 60, // 1 minute
-      };
+      options.socket.host ??= configService.get<string>('REDIS_HOST');
+      options.socket.port ??= configService.get<number>('REDIS_PORT');
+      options.ttl = options.ttl ?? 1000 * 60; // 1 minute
+      break;
   }
+  return options;
 };
 
-export const configureBull = (
+export const configureBullOptions = (
   configService: ConfigService,
+  options: any = {},
 ): BullRootModuleOptions => {
+  options.redis ??= {};
   switch (configService.get<string>('NODE_ENV')) {
-    case NodeEnvs.PRODUCTION.toString():
-      return {
-        redis: {
-          path: REDIS_SOCKET_PATH,
-          db: 0,
-        },
-      };
-    case NodeEnvs.STAGING.toString():
-      return {
-        redis: {
-          path: REDIS_SOCKET_PATH,
-          db: 1,
-        },
-      };
+    case NodeEnvs.PRODUCTION:
+      options.redis.path ??= REDIS_SOCKET_PATH;
+      options.redis.db = 0;
+      break;
+    case NodeEnvs.STAGING:
+      options.redis.path ??= REDIS_SOCKET_PATH;
+      options.redis.db = 1;
+      break;
     default:
-      return {
-        redis: {
-          host: configService.get<string>('REDIS_HOST', { infer: true }),
-          port: configService.get<number>('REDIS_PORT', { infer: true }),
-        },
-      };
+      options.redis.host ??= configService.get<string>('REDIS_HOST');
+      options.redis.port ??= configService.get<number>('REDIS_PORT');
+      break;
   }
+  return options;
 };
