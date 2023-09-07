@@ -13,4 +13,13 @@ describe('parseChangelog', () => {
     ];
     expect(result).toEqual(expected);
   });
+
+  it('should throw no changes error', () => {
+    try {
+      parseChangesFile('./src/utils/test-empty-changes.md');
+    } catch (e) {
+      expect(e).toBeInstanceOf(Error);
+      expect(e.message).toEqual('No changes found in changes.md file');
+    }
+  });
 });
