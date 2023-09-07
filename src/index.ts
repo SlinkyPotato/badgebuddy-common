@@ -28,3 +28,9 @@ export { configureBull } from './config/redis.config';
 
 // Utils
 export { parseChangesFile } from './utils/parse-changes-file';
+export { backupRedisCacheUtil } from './utils/backup-redis-cache.util';
+export { loadRedisCacheUtil } from './utils/load-redis-cache.util';
+
+// DTOs
+export { CommunityEventDto } from './dto/redis/community-event.dto';
+export { DiscordParticipantDto } from './dto/redis/discord-participant.dto';
