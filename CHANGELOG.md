@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3...v1.0.0) (2023-09-07)
+
+
+### Features
+
+* 1.0.0 release ([140feb6](https://github.com/solidchain-tech/badge-buddy-common/commit/140feb644de86aa1ced2d1ea185a2f7799aa53d6))
+
+
+### Tests
+
+* add full coverage for files excluding redis utils: ([39132ed](https://github.com/solidchain-tech/badge-buddy-common/commit/39132ed44efcb42a22c2c19f504c6b845ba4dacb))
+
+
+### Refactor
+
+* rename workflow build-dev ([17d1962](https://github.com/solidchain-tech/badge-buddy-common/commit/17d1962f2820fd04b3a5aaedbd5c615b88feca99))
+
 ### [0.1.3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.2...v0.1.3) (2023-09-07)
 
 
