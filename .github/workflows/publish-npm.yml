@@ -43,7 +43,7 @@ jobs:
         run: |
           echo PACKAGE_VERSION=$(node -e "console.log(require('./package.json').version)") >> "$GITHUB_OUTPUT"
       - run: git push --follow-tags
-      - run: node -e "require('./dist/index.js')['parseChangesFile']();"
+      - run: node -e "require('./dist/index.js')['parseReleaseUtil']();"
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_PUBLISH_TOKEN }}
