@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v1.0.0...v1.0.1-0) (2023-09-07)
+
+
+### Bug Fixes
+
+* parseChanges and build-dev workflow ([da246b0](https://github.com/solidchain-tech/badge-buddy-common/commit/da246b067f8658d5056b14a3d165cc7da099384b))
+* ts build ([a5cdc27](https://github.com/solidchain-tech/badge-buddy-common/commit/a5cdc2711298faab56c8470695c5aa848db2b0f3))
+
+
+### Docs
+
+* add build status badge ([415cb05](https://github.com/solidchain-tech/badge-buddy-common/commit/415cb05d585453626d86b822716656522870f935))
+
 ## [1.0.0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3...v1.0.0) (2023-09-07)
 
 
@@ -199,7 +212,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Performance
 
 * add done msg to common logger constructor ([1b89455](https://github.com/solidchain-tech/badge-buddy-common/commit/1b89455979ebb202e7ff286e918bc8c8cb3a4d7c))
-* add logging files to parseChangesFile script ([8a1275d](https://github.com/solidchain-tech/badge-buddy-common/commit/8a1275dbbd35ea927d3dc5d8370197d0d5ce8fd2))
+* add logging files to parseReleaseUtil script ([8a1275d](https://github.com/solidchain-tech/badge-buddy-common/commit/8a1275dbbd35ea927d3dc5d8370197d0d5ce8fd2))
 * format log creation print ([6d81b89](https://github.com/solidchain-tech/badge-buddy-common/commit/6d81b89ed29ac7e03e77f2c5ad2e7f7a5213e974))
 * set default value to durationInMinutes ([ebefc60](https://github.com/solidchain-tech/badge-buddy-common/commit/ebefc60adb8b078beca64d3672fe5c7d58c6ea22))
 
@@ -208,7 +221,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Performance
 
-* add logging files to parseChangesFile script ([8a1275d](https://github.com/solidchain-tech/badge-buddy-common/commit/8a1275dbbd35ea927d3dc5d8370197d0d5ce8fd2))
+* add logging files to parseReleaseUtil script ([8a1275d](https://github.com/solidchain-tech/badge-buddy-common/commit/8a1275dbbd35ea927d3dc5d8370197d0d5ce8fd2))
 
 ### [0.1.2-3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.2-2...v0.1.2-3) (2023-08-28)
 
@@ -378,7 +391,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* enhance parseChangesFile util ([726c59a](https://github.com/solidchain-tech/badge-buddy-common/commit/726c59ab694fa9930a975101c551bffdcd70efff))
+* enhance parseReleaseUtil util ([726c59a](https://github.com/solidchain-tech/badge-buddy-common/commit/726c59ab694fa9930a975101c551bffdcd70efff))
 * maximum compatibility ([4567f0e](https://github.com/solidchain-tech/badge-buddy-common/commit/4567f0e954a180e73feca7bf26606aef4e42961d))
 * pnpm dev install pino-pretty ([797d5ce](https://github.com/solidchain-tech/badge-buddy-common/commit/797d5ce07fe5b8a05add3fb387b0f7e461767850))
 * github release only production ([96ac9d6](https://github.com/solidchain-tech/badge-buddy-common/commit/96ac9d6856ae54317db9e4b876e23df4d9e78dd5))

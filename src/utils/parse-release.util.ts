@@ -1,9 +1,13 @@
 // const { readFileSync } = require('fs');
 import { readFileSync } from 'fs';
 import { writeFileSync } from 'fs';
+import { NodeEnvs } from '../enums/node-envs.enum';
 
-export const parseChangesFile = (inputFile?: string) => {
-  inputFile = inputFile || 'changes.md';
+/**
+ * Parse changes.md file and write ./release.md file
+ * @param inputFile
+ */
+export const parseReleaseUtil = (inputFile = 'changes.md') => {
   const text = readFileSync(inputFile, { encoding: 'utf-8' });
   const lines = text.split('\n');
 
@@ -23,11 +27,13 @@ export const parseChangesFile = (inputFile?: string) => {
   }
 
   if (changes.length === 0) {
-    console.warn('No changes found in changes.md file');
+    throw new Error('No changes found in changes.md file');
   }
 
-  // write changes to file
-  writeFileSync('./release.md', changes.join('\n'));
-  console.log('release.md file created');
+  if (process.env.NODE_ENV !== NodeEnvs.TEST) {
+    // write changes to file
+    writeFileSync('./release.md', changes.join('\n'));
+    console.log('release.md file created');
+  }
   return changes;
 };
