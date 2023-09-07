@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.2...v0.1.3) (2023-09-07)
+
+
+### Features
+
+* add CommunityEventDTO ([fd5f0d5](https://github.com/solidchain-tech/badge-buddy-common/commit/fd5f0d5051995a6e66bf2775f8b6c25b14bdfc30))
+* create cache utils for processor downage ([054d045](https://github.com/solidchain-tech/badge-buddy-common/commit/054d0459551d1b35fa276e350887955c13bb5ea3))
+* update deps and introduce discord-participant.dto.ts ([16688e2](https://github.com/solidchain-tech/badge-buddy-common/commit/16688e20d2ddeb85287c4e1328e17c0e96198c1b))
+
+
+### Bug Fixes
+
+* add dotenv and dotenv-vault ([2a03e5e](https://github.com/solidchain-tech/badge-buddy-common/commit/2a03e5eb85c6861e4c1f3a4b9dd0a379026c689e))
+* enhance error handling ([7897eae](https://github.com/solidchain-tech/badge-buddy-common/commit/7897eae9c94dc20f2a79f370411c97c2c0632143))
+* redis dto ([9183e9e](https://github.com/solidchain-tech/badge-buddy-common/commit/9183e9ed4e96433ca29f26ab52e5edbac129d26a))
+* remove dotenv and properly import redis ([46f7a01](https://github.com/solidchain-tech/badge-buddy-common/commit/46f7a011c7f5febc8f6fafffb5351ad13a474da8))
+* set mongoose types to DiscordParticipants ([6296ee7](https://github.com/solidchain-tech/badge-buddy-common/commit/6296ee779c1eea7f781124f95c32ef3f3b65b9d5))
+* set userTag as required ([a45d6d8](https://github.com/solidchain-tech/badge-buddy-common/commit/a45d6d81ce47387253eefb45e6ec1ef35bd46086))
+* use correct connection ([83c802e](https://github.com/solidchain-tech/badge-buddy-common/commit/83c802ebcf02601de5077e96a9b67fcca1771b08))
+* use correct redis socket options ([fdd0f32](https://github.com/solidchain-tech/badge-buddy-common/commit/fdd0f3284fcff085cf18a3a57bf68e3ea30ec2de))
+
+
+### Performance
+
+* remove github action dep ([da8d24d](https://github.com/solidchain-tech/badge-buddy-common/commit/da8d24d140ba4c813492393a9bdec8a9d3e92492))
+
+
+### Refactor
+
+* add name to ga step ([a865b8f](https://github.com/solidchain-tech/badge-buddy-common/commit/a865b8fb084b40ac26c79ad11df22e5089fc3ce1))
+* release.md notes ([8f52611](https://github.com/solidchain-tech/badge-buddy-common/commit/8f52611d6c4f5d225b8dde083e846a165bd0fe73))
+* remove manual release title ([9f629c2](https://github.com/solidchain-tech/badge-buddy-common/commit/9f629c264421ad12c58dd49cc333405a62154162))
+
+
+### Tests
+
+* add @jest/globals and test for schemas ([5290340](https://github.com/solidchain-tech/badge-buddy-common/commit/52903405f7928f220cd2a6422facdab827c32cae))
+
 ### [0.1.3-16](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3-15...v0.1.3-16) (2023-09-06)
 
 
