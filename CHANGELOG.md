@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v1.0.0...v1.0.1-0) (2023-09-07)
+
+
+### Bug Fixes
+
+* parseChanges and build-dev workflow ([da246b0](https://github.com/solidchain-tech/badge-buddy-common/commit/da246b067f8658d5056b14a3d165cc7da099384b))
+* ts build ([a5cdc27](https://github.com/solidchain-tech/badge-buddy-common/commit/a5cdc2711298faab56c8470695c5aa848db2b0f3))
+
+
+### Docs
+
+* add build status badge ([415cb05](https://github.com/solidchain-tech/badge-buddy-common/commit/415cb05d585453626d86b822716656522870f935))
+
 ## [1.0.0](https://github.com/solidchain-tech/badge-buddy-common/compare/v0.1.3...v1.0.0) (2023-09-07)
 
 
