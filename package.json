@@ -1,6 +1,6 @@
 {
   "name": "@solidchain/badge-buddy-common",
-  "version": "1.0.1-0",
+  "version": "1.0.1",
   "description": "A collection of common objects and utils.",
   "author": "SlinkyPotato <patinobrian@gmail.com>",
   "private": false,
@@ -52,7 +52,10 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
     "standard-version": "^9.5.0",
-    "@jest/globals": "^29.6.4"
+    "@jest/globals": "^29.6.4",
+    "discord.js": "^14.13.0",
+    "@discord-nestjs/common": "^5.2.8",
+    "@discord-nestjs/core": "^5.3.10"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.1.17",
@@ -75,41 +78,5 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.2.2"
-  },
-  "standard-version": {
-    "types": [
-      {
-        "type": "feat",
-        "section": "Features"
-      },
-      {
-        "type": "fix",
-        "section": "Bug Fixes"
-      },
-      {
-        "type": "chore",
-        "hidden": true
-      },
-      {
-        "type": "docs",
-        "section": "Docs"
-      },
-      {
-        "type": "style",
-        "hidden": true
-      },
-      {
-        "type": "refactor",
-        "section": "Refactor"
-      },
-      {
-        "type": "perf",
-        "section": "Performance"
-      },
-      {
-        "type": "test",
-        "section": "Tests"
-      }
-    ]
   }
 }
