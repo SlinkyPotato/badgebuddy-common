@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v1.0.1...v1.1.0-0) (2023-09-11)
+
+
+### Features
+
+* add discord.config.ts file and .versionrc.json ([a5a8563](https://github.com/solidchain-tech/badge-buddy-common/commit/a5a8563d1de62a2823e0b5cccf0c43a3ca0c8670))
+
 ### [1.0.1](https://github.com/solidchain-tech/badge-buddy-common/compare/v1.0.0...v1.0.1) (2023-09-07)
 
 
