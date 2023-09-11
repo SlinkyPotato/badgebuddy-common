@@ -24,6 +24,7 @@ export { CommonPinoLoggerService } from './common-pino-logger/common-pino-logger
 export { joiValidationConfig } from './config/joi-validation.config';
 export { configureCacheOptions } from './config/redis.config';
 export { configureBullOptions } from './config/redis.config';
+export { configureDiscordOptions } from './config/discord.config';
 
 // Utils
 export { parseReleaseUtil } from './utils/parse-release.util';
