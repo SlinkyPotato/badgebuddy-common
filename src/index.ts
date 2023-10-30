@@ -25,6 +25,7 @@ export { joiValidationConfig } from './config/joi-validation.config';
 export { configureCacheOptions } from './config/redis.config';
 export { configureBullOptions } from './config/redis.config';
 export { configureDiscordOptions } from './config/discord.config';
+export { CommonConfigModule } from './common-config/common-config.module';
 
 // Utils
 export { parseReleaseUtil } from './utils/parse-release.util';
@@ -34,3 +35,6 @@ export { loadRedisCacheUtil } from './utils/load-redis-cache.util';
 // DTOs
 export { CommunityEventDto } from './dto/redis/community-event.dto';
 export { DiscordParticipantDto } from './dto/redis/discord-participant.dto';
+
+// Entities
+export { CommonTypeOrmModule } from './common-typeorm/common-type-orm.module';
