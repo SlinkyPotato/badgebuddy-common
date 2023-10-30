@@ -12,13 +12,15 @@
     "*.md"
   ],
   "engines": {
-    "node": "20.5.1",
-    "pnpm": "8.7.4"
+    "node": "20.x",
+    "pnpm": "8.x",
+    "bun": "1.x"
   },
   "engineStrict": true,
-  "packageManager": "pnpm@8.7.4",
+  "packageManager": "pnpm@8.x",
   "scripts": {
     "build": "nest build",
+    "clean": "rm -rf dist && rm -rf coverage && rm -rf node_modules",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix",
     "test": "jest",
@@ -55,7 +57,10 @@
     "@jest/globals": "^29.6.4",
     "discord.js": "^14.13.0",
     "@discord-nestjs/common": "^5.2.8",
-    "@discord-nestjs/core": "^5.3.10"
+    "@discord-nestjs/core": "^5.3.10",
+    "typeorm": "^0.3.17",
+    "@nestjs/typeorm": "^10.0.0",
+    "mysql2": "^3.6.2"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.1.17",
