@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-1](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-0...v1.1.0-1) (2023-10-30)
+
+
+### Refactor
+
+* add typeorm entities ([5842e40](https://github.com/SlinkyPotato/badge-buddy-common/commit/5842e40937f2fe6f7f1e829251d49ce49e85c0e0))
+
 ## [1.1.0-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v1.0.1...v1.1.0-0) (2023-09-11)
 
 
