@@ -6,4 +6,3 @@
 ## Description
 
 A collection of common utils and objects for Badge Buddy.
-
