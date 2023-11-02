@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-2](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-1...v1.1.0-2) (2023-11-02)
+
+
+### Bug Fixes
+
+* add missing swc config ([de48c56](https://github.com/SlinkyPotato/badge-buddy-common/commit/de48c562f37781f37535223cf126b9c0a63e7989))
+* specify node and add swc build ([b46f9a9](https://github.com/SlinkyPotato/badge-buddy-common/commit/b46f9a9001196b9caa5da6556d68dd0481bf211f))
+* update pnpm 8.10.2 ([8ab446b](https://github.com/SlinkyPotato/badge-buddy-common/commit/8ab446bed89c345fe8b6a513c81c625117d8ab17))
+* use relation type in TypeORM ([fd0bb4a](https://github.com/SlinkyPotato/badge-buddy-common/commit/fd0bb4a2a7eb417bea199d6f51625fe9c3c66fbb))
+
 ## [1.1.0-1](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-0...v1.1.0-1) (2023-10-30)
 
 
