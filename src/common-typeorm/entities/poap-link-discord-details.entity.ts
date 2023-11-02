@@ -3,7 +3,7 @@ import {
   JoinColumn,
   ManyToOne,
   OneToOne,
-  PrimaryGeneratedColumn,
+  PrimaryGeneratedColumn, Relation,
 } from 'typeorm';
 import { DiscordUserEntity } from './discord-user.entity';
 import { PoapLinkEntity } from './poap-link.entity.entity';
@@ -19,15 +19,15 @@ export class PoapLinkDiscordDetailsEntity {
     cascade: true,
   })
   @JoinColumn({ name: 'poap_link_fkid' })
-  poapLink: PoapLinkEntity;
+  poapLink: Relation<PoapLinkEntity>;
 
   @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.id, {
     cascade: true,
   })
   @JoinColumn({ name: 'discord_user_fkid' })
-  discordUser: DiscordUserEntity;
+  discordUser: Relation<DiscordUserEntity>;
 
   @OneToOne(() => EventDiscordDetailsEntity, (discordEvent) => discordEvent.id)
   @JoinColumn({ name: 'event_discord_details_fkid' })
-  discordEvent: EventDiscordDetailsEntity;
+  discordEvent: Relation<EventDiscordDetailsEntity>;
 }
