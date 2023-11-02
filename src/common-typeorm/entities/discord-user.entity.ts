@@ -1,4 +1,4 @@
-import { Column, Entity, OneToMany } from 'typeorm';
+import { Column, Entity, OneToMany, Relation } from 'typeorm';
 import { PoapLinkDiscordDetailsEntity } from './poap-link-discord-details.entity';
 
 @Entity('discord_users')
@@ -21,5 +21,5 @@ export class DiscordUserEntity {
   tag?: string;
 
   @OneToMany(() => PoapLinkDiscordDetailsEntity, (poapLink) => poapLink.id)
-  poapLinks: PoapLinkDiscordDetailsEntity[];
+  poapLinks: Relation<PoapLinkDiscordDetailsEntity>[];
 }

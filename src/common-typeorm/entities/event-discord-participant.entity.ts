@@ -3,7 +3,7 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
-  PrimaryGeneratedColumn,
+  PrimaryGeneratedColumn, Relation,
 } from 'typeorm';
 import { DiscordUserEntity } from './discord-user.entity';
 import { EventDiscordDetailsEntity } from './event-discord-details.entity';
@@ -36,12 +36,12 @@ export class EventDiscordParticipantEntity {
 
   @ManyToOne(() => EventDiscordDetailsEntity, (event) => event.id, {})
   @JoinColumn({ name: 'event_discord_details_fkid' })
-  discordEvent: EventDiscordDetailsEntity;
+  discordEvent: Relation<EventDiscordDetailsEntity>;
 
   @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.id, {
     eager: true,
     cascade: true,
   })
   @JoinColumn({ name: 'discord_user_fkid' })
-  discordUser: DiscordUserEntity;
+  discordUser: Relation<DiscordUserEntity>;
 }
