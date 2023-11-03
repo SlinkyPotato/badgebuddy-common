@@ -13,6 +13,7 @@ export class RedisConfigModule {
         CacheModule.registerAsync({
           imports: [ConfigModule],
           inject: [ConfigService],
+          isGlobal: true,
           useFactory: async (configService: ConfigService) => {
             switch (configService.get<string>('NODE_ENV')) {
               case NodeEnvs.PRODUCTION:
@@ -50,7 +51,7 @@ export class RedisConfigModule {
         }),
       ],
       providers: [],
-      exports: [CacheModule],
+      exports: [RedisConfigModule],
     };
   }
 }

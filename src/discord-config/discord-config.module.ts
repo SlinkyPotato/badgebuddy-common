@@ -37,7 +37,7 @@ export class DiscordConfigModule {
           })
         })
       ],
-      exports: [],
+      exports: [DiscordModule],
     };
   }
 }
