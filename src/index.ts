@@ -25,6 +25,7 @@ export { CommonConfigModule } from './common-config/common-config.module';
 export { RedisConfigModule } from './redis-config/redis-config.module';
 export { RedisBullConfigModule } from './redis-bull-config/redis-bull-config.module';
 export { DiscordConfigModule } from './discord-config/discord-config.module';
+export { MongooseConfigModule } from './mongoose-config/mongoose-config.module';
 
 // Utils
 export { parseReleaseUtil } from './utils/parse-release.util';
