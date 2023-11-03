@@ -1,13 +1,15 @@
 import { DynamicModule, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigService } from '@nestjs/config';
-import { EventEntity } from './entities/event.entity';
-import { EventDiscordDetailsEntity } from './entities/event-discord-details.entity';
-import { EventDiscordParticipantEntity } from './entities/event-discord-participant.entity';
-import { DiscordGuildEntity } from './entities/discord-guild.entity';
-import { DiscordUserEntity } from './entities/discord-user.entity';
-import { PoapLinkEntity } from './entities/poap-link.entity.entity';
-import { PoapLinkDiscordDetailsEntity } from './entities/poap-link-discord-details.entity';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import {
+  DiscordGuildEntity,
+  DiscordUserEntity,
+  EventDiscordDetailsEntity,
+  EventDiscordParticipantEntity,
+  EventEntity,
+  PoapLinkDiscordDetailsEntity,
+  PoapLinkEntity
+} from './entities';
 @Module({})
 export class CommonTypeOrmModule {
   static forRootAsync(): DynamicModule {
@@ -16,6 +18,7 @@ export class CommonTypeOrmModule {
       imports: [
         TypeOrmModule.forRootAsync({
           name: process.env.MARIADB_DATABASE,
+          imports: [ConfigModule],
           inject: [ConfigService],
           useFactory: async (configService: ConfigService) => ({
             type: 'mysql',

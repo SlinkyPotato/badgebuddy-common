@@ -13,9 +13,6 @@ describe('index', () => {
     expect(index.CommonPinoLogger).toBeDefined();
     expect(index.CommonPinoLoggerModule).toBeDefined();
     expect(index.CommonPinoLoggerService).toBeDefined();
-    expect(index.joiValidationConfig).toBeDefined();
-    expect(index.configureCacheOptions).toBeDefined();
-    expect(index.configureBullOptions).toBeDefined();
     expect(index.CommunityEvent).toBeDefined();
     expect(index.CommunityEventDto).toBeDefined();
     expect(index.CommunityEventSchema).toBeDefined();

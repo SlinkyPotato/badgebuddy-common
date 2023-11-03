@@ -6,7 +6,7 @@ import {
   PrimaryGeneratedColumn, Relation,
 } from 'typeorm';
 import { DiscordUserEntity } from './discord-user.entity';
-import { PoapLinkEntity } from './poap-link.entity.entity';
+import { PoapLinkEntity } from './poap-link.entity';
 import { EventDiscordDetailsEntity } from './event-discord-details.entity';
 
 @Entity('poap_links_discord_details')
