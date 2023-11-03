@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-4](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-3...v1.1.0-4) (2023-11-03)
+
+
+### Performance
+
+* upgrade deps ([22d4530](https://github.com/SlinkyPotato/badge-buddy-common/commit/22d4530a9c4fe73c55ed8920f4a47765d137140c))
+
 ## [1.1.0-3](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-2...v1.1.0-3) (2023-11-03)
 
 
