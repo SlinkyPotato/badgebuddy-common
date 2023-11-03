@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-3](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-2...v1.1.0-3) (2023-11-03)
+
+
+### Refactor
+
+* create common config modules ([9e75840](https://github.com/SlinkyPotato/badge-buddy-common/commit/9e758402a038b38ee11ae4be22e49c3085be6de2))
+
 ## [1.1.0-2](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-1...v1.1.0-2) (2023-11-02)
 
 
