@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-5](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-4...v1.1.0-5) (2023-11-03)
+
+
+### Refactor
+
+* migrate from solidchain ([bad5723](https://github.com/SlinkyPotato/badge-buddy-common/commit/bad5723d96c5e6e13e7305dcf16c7a202babd412))
+* rename package name and version ([21ca4d1](https://github.com/SlinkyPotato/badge-buddy-common/commit/21ca4d13f19472c3d160431d48c0588e3a8e1284))
+
 ## [1.1.0-4](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-3...v1.1.0-4) (2023-11-03)
 
 
