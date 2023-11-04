@@ -16,7 +16,7 @@ export class MongooseConfigModule {
           }),
         }),
       ],
-      exports: [],
+      exports: [MongooseModule],
     };
   }
 }
