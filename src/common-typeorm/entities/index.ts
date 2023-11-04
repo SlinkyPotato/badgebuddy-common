@@ -5,3 +5,7 @@ export { EventDiscordDetailsEntity } from './event-discord-details.entity';
 export { EventDiscordParticipantEntity } from './event-discord-participant.entity';
 export { PoapLinkEntity } from './poap-link.entity';
 export { PoapLinkDiscordDetailsEntity } from './poap-link-discord-details.entity';
+export { AccountEntity } from './next-auth/account.entity';
+export { SessionEntity } from './next-auth/session.entity';
+export { UserEntity } from './next-auth/user.entity';
+export { VerificationTokenEntity } from './next-auth/verification-token.entity';
