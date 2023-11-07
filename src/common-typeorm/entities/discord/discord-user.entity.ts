@@ -1,5 +1,5 @@
 import { Column, Entity, OneToMany, Relation } from 'typeorm';
-import { PoapLinkDiscordDetailsEntity } from './poap-link-discord-details.entity';
+import { PoapLinkDiscordDetailsEntity } from '../poap/poap-link-discord-details.entity';
 
 @Entity('discord_users')
 export class DiscordUserEntity {

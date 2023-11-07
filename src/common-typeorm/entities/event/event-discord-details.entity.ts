@@ -7,8 +7,8 @@ import {
   PrimaryGeneratedColumn,
   Relation,
 } from 'typeorm';
-import { DiscordGuildEntity } from './discord-guild.entity';
-import { DiscordUserEntity } from './discord-user.entity';
+import { DiscordGuildEntity } from '../discord/discord-guild.entity';
+import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { EventEntity } from './event.entity';
 
 @Entity('events_discord_details')

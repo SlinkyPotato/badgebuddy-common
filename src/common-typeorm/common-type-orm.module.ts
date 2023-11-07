@@ -1,15 +1,7 @@
 import { DynamicModule, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import {
-  DiscordGuildEntity,
-  DiscordUserEntity,
-  EventDiscordDetailsEntity,
-  EventDiscordParticipantEntity,
-  EventEntity,
-  PoapLinkDiscordDetailsEntity,
-  PoapLinkEntity
-} from './entities';
+import * as entities from './entities';
 @Module({})
 export class CommonTypeOrmModule {
   static forRootAsync(): DynamicModule {
@@ -27,15 +19,7 @@ export class CommonTypeOrmModule {
             username: configService.get('MARIADB_USERNAME'),
             password: configService.get('MARIADB_PASSWORD'),
             database: configService.get('MARIADB_DATABASE'),
-            entities: [
-              EventEntity,
-              EventDiscordDetailsEntity,
-              EventDiscordParticipantEntity,
-              DiscordGuildEntity,
-              DiscordUserEntity,
-              PoapLinkEntity,
-              PoapLinkDiscordDetailsEntity,
-            ],
+            entities: entities,
             synchronize: configService.get<boolean>('MARIADB_SYNC'),
             autoLoadEntities: false,
           }),

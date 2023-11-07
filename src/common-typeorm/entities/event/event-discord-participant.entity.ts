@@ -3,9 +3,10 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
-  PrimaryGeneratedColumn, Relation,
+  PrimaryGeneratedColumn,
+  Relation,
 } from 'typeorm';
-import { DiscordUserEntity } from './discord-user.entity';
+import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { EventDiscordDetailsEntity } from './event-discord-details.entity';
 
 @Entity('events_discord_participants')

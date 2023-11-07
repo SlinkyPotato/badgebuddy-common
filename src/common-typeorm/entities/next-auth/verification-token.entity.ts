@@ -1,17 +1,30 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { transformer } from './transformer.helper';
+import { transformer } from './transformer.util';
 
 @Entity({ name: 'verification_tokens' })
 export class VerificationTokenEntity {
   @PrimaryGeneratedColumn('uuid')
-  id!: string;
+  id: string;
 
-  @Column()
-  token!: string;
+  @Column({
+    type: 'text',
+    nullable: false,
+    name: 'identifier',
+  })
+  identifier: string;
 
-  @Column()
-  identifier!: string;
+  @Column({
+    type: 'text',
+    nullable: false,
+    name: 'token',
+  })
+  token: string;
 
-  @Column({ transformer: transformer.date })
-  expires!: string;
+  @Column({
+    type: 'datetime',
+    nullable: false,
+    name: 'expires',
+    transformer: transformer.date,
+  })
+  expires: Date;
 }
