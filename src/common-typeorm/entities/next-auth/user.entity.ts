@@ -27,7 +27,6 @@ export class UserEntity {
     type: 'datetime',
     nullable: true,
     name: 'email_verified',
-    // transformer: transformer.date,
   })
   emailVerified: Date | null;
 
