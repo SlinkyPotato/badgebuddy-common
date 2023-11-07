@@ -3,11 +3,12 @@ import {
   JoinColumn,
   ManyToOne,
   OneToOne,
-  PrimaryGeneratedColumn, Relation,
+  PrimaryGeneratedColumn,
+  Relation,
 } from 'typeorm';
-import { DiscordUserEntity } from './discord-user.entity';
+import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { PoapLinkEntity } from './poap-link.entity';
-import { EventDiscordDetailsEntity } from './event-discord-details.entity';
+import { EventDiscordDetailsEntity } from '../event/event-discord-details.entity';
 
 @Entity('poap_links_discord_details')
 export class PoapLinkDiscordDetailsEntity {
