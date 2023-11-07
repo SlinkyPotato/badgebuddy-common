@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-11](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-10...v1.1.0-11) (2023-11-07)
+
+
+### Features
+
+* add next-auth entities ([dc4bee0](https://github.com/SlinkyPotato/badge-buddy-common/commit/dc4bee066c82ebda79b9ab73ef70a771292ac20b))
+
+
+### Bug Fixes
+
+* add joi as peer dependency ([2837c0b](https://github.com/SlinkyPotato/badge-buddy-common/commit/2837c0ba04285d764c2ee5a82893884f9531e25c))
+
+
+### Refactor
+
+* add next-auth ([796f729](https://github.com/SlinkyPotato/badge-buddy-common/commit/796f729d2bcccd3068e69feb23dcd732ca5c25f3))
+* move joi to peerDependency ([59d7891](https://github.com/SlinkyPotato/badge-buddy-common/commit/59d78915941900996c77ed3b64b577d9a61ca67b))
+
 ## [1.1.0-10](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-9...v1.1.0-10) (2023-11-03)
 
 
