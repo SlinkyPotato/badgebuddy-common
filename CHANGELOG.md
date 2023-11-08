@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-12](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-11...v1.1.0-12) (2023-11-08)
+
+
+### Bug Fixes
+
+* add userId to session table ([2fc0d59](https://github.com/SlinkyPotato/badge-buddy-common/commit/2fc0d5945c3a391d9414a95599fe8d1811e8f907))
+
 ## [1.1.0-11](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-10...v1.1.0-11) (2023-11-07)
 
 
