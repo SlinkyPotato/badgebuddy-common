@@ -1,9 +1,4 @@
-import {
-  Column,
-  Entity,
-  ManyToOne,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import type { Relation } from 'typeorm';
 import { UserEntity } from './user.entity';
 
@@ -24,10 +19,14 @@ export class SessionEntity {
     type: 'datetime',
     nullable: false,
     name: 'expires',
-    // transformer: transformer.date,
   })
   expires: Date;
 
-  @ManyToOne(() => UserEntity, (user) => user.sessions)
+  @Column({ type: 'uuid' })
+  userId!: string;
+
+  @ManyToOne(() => UserEntity, (user) => user.sessions, {
+    createForeignKeyConstraints: true,
+  })
   user: Relation<UserEntity>;
 }
