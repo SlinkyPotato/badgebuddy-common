@@ -10,7 +10,6 @@ export class CommonTypeOrmModule {
       module: CommonTypeOrmModule,
       imports: [
         TypeOrmModule.forRootAsync({
-          name: process.env.MARIADB_DATABASE,
           imports: [ConfigModule],
           inject: [ConfigService],
           useFactory: async (configService: ConfigService) => ({
@@ -26,7 +25,7 @@ export class CommonTypeOrmModule {
           }),
         }),
       ],
-      exports: [TypeOrmModule, CommonTypeOrmModule],
+      exports: [TypeOrmModule],
     };
   }
 }
