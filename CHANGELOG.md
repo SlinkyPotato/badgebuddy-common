@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-13](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-12...v1.1.0-13) (2023-11-24)
+
+
+### Features
+
+* add mariadb env keys ([3aef2d1](https://github.com/SlinkyPotato/badge-buddy-common/commit/3aef2d19b259beddd7b7de33588292a10d103bb7))
+
 ## [1.1.0-12](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-11...v1.1.0-12) (2023-11-08)
 
 
