@@ -26,7 +26,7 @@ export class CommonTypeOrmModule {
           }),
         }),
       ],
-      exports: [...TypeOrmModule.forFeature().providers],
+      exports: [TypeOrmModule],
     };
   }
 }
