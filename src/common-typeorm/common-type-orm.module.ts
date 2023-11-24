@@ -2,6 +2,7 @@ import { DynamicModule, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import * as entities from './entities';
+
 @Module({})
 export class CommonTypeOrmModule {
   static forRootAsync(): DynamicModule {
@@ -25,7 +26,7 @@ export class CommonTypeOrmModule {
           }),
         }),
       ],
-      exports: [TypeOrmModule],
+      exports: [...TypeOrmModule.forFeature().providers],
     };
   }
 }
