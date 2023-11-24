@@ -21,6 +21,11 @@ export class CommonConfigModule {
             DISCORD_BOT_APPLICATION_ID: Joi.string().required(),
             DISCORD_BOT_PUBLIC_KEY: Joi.string().required(),
             DISCORD_OWNER_ID: Joi.string().required(),
+            MARIADB_HOST: Joi.string().required(),
+            MARIADB_PORT: Joi.number().required(),
+            MARIADB_USERNAME: Joi.string().required(),
+            MARIADB_PASSWORD: Joi.string().required(),
+            MARIADB_DATABASE: Joi.string().required(),
             LOG_LEVEL: Joi.string()
               .required()
               .pattern(/^(fatal|error|warn|info|debug|trace)$/),
