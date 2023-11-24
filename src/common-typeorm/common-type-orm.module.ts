@@ -26,7 +26,7 @@ export class CommonTypeOrmModule {
           }),
         }),
       ],
-      exports: [TypeOrmModule],
+      exports: [TypeOrmModule, CommonTypeOrmModule],
     };
   }
 }
