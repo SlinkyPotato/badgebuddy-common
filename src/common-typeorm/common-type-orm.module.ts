@@ -11,6 +11,7 @@ export class CommonTypeOrmModule {
       imports: [
         TypeOrmModule.forRootAsync({
           imports: [ConfigModule],
+          name: 'default',
           inject: [ConfigService],
           useFactory: async (configService: ConfigService) => ({
             type: 'mysql',
