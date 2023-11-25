@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-19](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-18...v1.1.0-19) (2023-11-25)
+
+
+### Features
+
+* add password hash ([52b744c](https://github.com/SlinkyPotato/badge-buddy-common/commit/52b744ca187c6d2631ce29fcfb06187c9d3ed4e5))
+
+
+### Docs
+
+* add mysql setup script ([bcf0c3a](https://github.com/SlinkyPotato/badge-buddy-common/commit/bcf0c3af695bbe0b6d488f4183f17cd673cbd92a))
+
 ## [1.1.0-18](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-17...v1.1.0-18) (2023-11-25)
 
 
