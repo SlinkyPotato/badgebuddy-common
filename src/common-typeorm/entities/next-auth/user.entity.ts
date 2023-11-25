@@ -31,6 +31,13 @@ export class UserEntity {
   emailVerified: Date | null;
 
   @Column({
+    type: 'varchar',
+    nullable: true,
+    name: 'image',
+  })
+  passwordHash: string | null;
+
+  @Column({
     type: 'text',
     nullable: true,
     name: 'image',
