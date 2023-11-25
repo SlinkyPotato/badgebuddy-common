@@ -6,7 +6,8 @@ CREATE TABLE users
   id UUID PRIMARY KEY,
   name VARCHAR(255),
   email VARCHAR(320) UNIQUE,
-  email_verified VARCHAR(28),
+  email_verified BOOLEAN NOT NULL DEFAULT FALSE,
+  password_hash TEXT,
   image TEXT
 );
 
