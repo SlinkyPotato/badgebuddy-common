@@ -1,12 +1,19 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { CacheModule } from '@nestjs/cache-manager';
+import { CacheModule, CacheManagerOptions } from '@nestjs/cache-manager';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { redisStore } from 'cache-manager-redis-yet';
 import { NodeEnvs } from '../enums/node-envs.enum';
+import { RedisClientOptions } from 'redis';
 
+/**
+ * RedisConfigModule
+ * @export RedisConfigModule
+ * @class RedisConfigModule
+ * @description Configure the redis cache manager
+ */
 @Module({})
 export class RedisConfigModule {
-  static forRootAsync(options = {}): DynamicModule {
+  static forRootAsync(options: CacheManagerOptions & RedisClientOptions = {}): DynamicModule {
     return {
       module: RedisConfigModule,
       imports: [
