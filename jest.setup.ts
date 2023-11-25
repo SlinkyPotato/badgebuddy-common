@@ -13,3 +13,4 @@ process.env.MARIADB_USERNAME = 'test';
 process.env.MARIADB_PASSWORD = 'test';
 process.env.MARIADB_DATABASE = 'test';
 process.env.LOG_LEVEL = 'trace';
+process.env.REDIS_CACHE_MIN = '5';

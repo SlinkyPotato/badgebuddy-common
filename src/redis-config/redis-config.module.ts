@@ -1,12 +1,19 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { CacheModule } from '@nestjs/cache-manager';
+import { CacheModule, CacheManagerOptions } from '@nestjs/cache-manager';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { redisStore } from 'cache-manager-redis-yet';
 import { NodeEnvs } from '../enums/node-envs.enum';
+import { RedisClientOptions } from 'redis';
 
+/**
+ * RedisConfigModule
+ * @export RedisConfigModule
+ * @class RedisConfigModule
+ * @description Configure the redis cache manager
+ */
 @Module({})
 export class RedisConfigModule {
-  static forRootAsync(options = {}): DynamicModule {
+  static forRootAsync(options: CacheManagerOptions & RedisClientOptions = {}): DynamicModule {
     return {
       module: RedisConfigModule,
       imports: [
@@ -23,7 +30,7 @@ export class RedisConfigModule {
                     path: '/app/redis/redis.sock',
                   },
                   database: 0,
-                  ttl: 1000 * 60 * 60 * 24, // 1 day
+                  ttl: 1000 * 60 * configService.get<number>('REDIS_CACHE_MIN'),
                   ...options,
                 };
               case NodeEnvs.STAGING:
@@ -33,7 +40,7 @@ export class RedisConfigModule {
                     path: '/app/redis/redis.sock',
                   },
                   database: 1,
-                  ttl: 1000 * 60 * 60, // 1 hour
+                  ttl: 1000 * 60 * configService.get<number>('REDIS_CACHE_MIN'),
                   ...options,
                 };
               default:
@@ -43,7 +50,7 @@ export class RedisConfigModule {
                     host: configService.get<string>('REDIS_HOST'),
                     port: configService.get<number>('REDIS_PORT'),
                   },
-                  ttl: 1000 * 60, // 1 minute,
+                  ttl: 1000 * 60 * configService.get<number>('REDIS_CACHE_MIN'),
                   ...options,
                 };
             }

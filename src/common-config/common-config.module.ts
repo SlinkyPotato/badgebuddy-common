@@ -29,6 +29,7 @@ export class CommonConfigModule {
             LOG_LEVEL: Joi.string()
               .required()
               .pattern(/^(fatal|error|warn|info|debug|trace)$/),
+            REDIS_CACHE_MIN: Joi.number().required(),
           }),
           validationOptions: {},
         }),
