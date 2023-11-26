@@ -1,6 +1,7 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import type { Relation } from 'typeorm';
 import { UserEntity } from './user.entity';
+import { transformer } from './transformer.util';
 
 @Entity({ name: 'accounts' })
 export class AccountEntity {
@@ -47,10 +48,11 @@ export class AccountEntity {
 
   @Column({
     nullable: true,
-    type: 'bigint',
+    type: 'varchar',
     name: 'expires_at',
+    transformer: transformer.date,
   })
-  expires_at: bigint | null;
+  expires_at: Date | null;
 
   @Column({
     type: 'varchar',
