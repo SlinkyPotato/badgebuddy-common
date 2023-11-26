@@ -14,10 +14,10 @@ CREATE TABLE users
 CREATE TABLE verification_tokens
 (
   id UUID PRIMARY KEY,
-  identifier VARCHAR(320) NOT NULL,
+  user_id UUID NOT NULL,
+  token VARCHAR(64) NOT NULL UNIQUE,
   expires VARCHAR(28) NOT NULL,
-  token VARCHAR(64) NOT NULL,
-  UNIQUE(identifier, token)
+  FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
 CREATE TABLE accounts
@@ -29,7 +29,7 @@ CREATE TABLE accounts
   provider_account_id VARCHAR(255) NOT NULL,
   refresh_token TEXT,
   access_token TEXT,
-  expires_at BIGINT UNSIGNED,
+  expires_at VARCHAR(28),
   token_type VARCHAR(255),
   scope TEXT,
   id_token TEXT,

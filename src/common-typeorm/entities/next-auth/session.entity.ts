@@ -1,6 +1,7 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import type { Relation } from 'typeorm';
 import { UserEntity } from './user.entity';
+import { transformer } from './transformer.util';
 
 @Entity({ name: 'sessions' })
 export class SessionEntity {
@@ -16,9 +17,10 @@ export class SessionEntity {
   sessionToken: string;
 
   @Column({
-    type: 'datetime',
+    type: 'varchar',
     nullable: false,
     name: 'expires',
+    transformer: transformer.date,
   })
   expires: Date;
 

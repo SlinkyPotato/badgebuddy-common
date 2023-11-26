@@ -1,17 +1,14 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { transformer } from './transformer.util';
+import { UserEntity } from './user.entity';
 
 @Entity({ name: 'verification_tokens' })
 export class VerificationTokenEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({
-    type: 'text',
-    nullable: false,
-    name: 'identifier',
-  })
-  identifier: string;
+  @Column({ type: 'uuid' })
+  userId: string;
 
   @Column({
     type: 'text',
@@ -21,10 +18,15 @@ export class VerificationTokenEntity {
   token: string;
 
   @Column({
-    type: 'datetime',
+    type: 'varchar',
     nullable: false,
     name: 'expires',
     transformer: transformer.date,
   })
   expires: Date;
+
+  @ManyToOne(() => UserEntity, (user) => user.accounts, {
+    createForeignKeyConstraints: true,
+  })
+  user: Relation<UserEntity>;
 }

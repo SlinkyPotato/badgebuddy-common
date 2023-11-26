@@ -2,6 +2,7 @@ import { AccountEntity } from './account.entity';
 import { SessionEntity } from './session.entity';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import type { Relation } from 'typeorm';
+import { transformer } from './transformer.util';
 
 @Entity({ name: 'users' })
 export class UserEntity {
@@ -24,9 +25,10 @@ export class UserEntity {
   email: string | null;
 
   @Column({
-    type: 'datetime',
+    type: 'varchar',
     nullable: true,
     name: 'email_verified',
+    transformer: transformer.date,
   })
   emailVerified: Date | null;
 
