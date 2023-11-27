@@ -1,6 +1,4 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import type { Relation } from 'typeorm';
-import { UserEntity } from './user.entity';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { transformer } from './transformer.util';
 
 @Entity({ name: 'accounts' })
@@ -82,8 +80,8 @@ export class AccountEntity {
   })
   session_state: string | null;
 
-  @ManyToOne(() => UserEntity, (user) => user.accounts, {
-    createForeignKeyConstraints: true,
-  })
-  user: Relation<UserEntity>;
+  // @ManyToOne(() => UserEntity, (user) => user.accounts, {
+  //   createForeignKeyConstraints: true,
+  // })
+  // user: Relation<UserEntity>;
 }
