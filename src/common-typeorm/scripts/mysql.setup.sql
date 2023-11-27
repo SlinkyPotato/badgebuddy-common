@@ -11,15 +11,6 @@ CREATE TABLE users
   image TEXT
 );
 
-CREATE TABLE verification_tokens
-(
-  id UUID PRIMARY KEY,
-  user_id UUID NOT NULL,
-  token VARCHAR(64) NOT NULL UNIQUE,
-  expires VARCHAR(28) NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES users (id)
-);
-
 CREATE TABLE accounts
 (
   id UUID PRIMARY KEY,
