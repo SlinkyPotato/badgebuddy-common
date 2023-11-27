@@ -15,4 +15,3 @@ export { PoapLinkDiscordDetailsEntity } from './poap/poap-link-discord-details.e
 export { AccountEntity } from './next-auth/account.entity';
 export { SessionEntity } from './next-auth/session.entity';
 export { UserEntity } from './next-auth/user.entity';
-export { VerificationTokenEntity } from './next-auth/verification-token.entity';
