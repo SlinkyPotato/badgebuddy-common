@@ -1,12 +1,16 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { transformer } from './transformer.util';
+import { UserEntity } from './user.entity';
 
 @Entity({ name: 'accounts' })
 export class AccountEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'uuid' })
+  @Column({
+    type: 'uuid',
+    name: 'user_id',
+  })
   userId: string;
 
   @Column({
@@ -35,29 +39,29 @@ export class AccountEntity {
     nullable: true,
     name: 'refresh_token',
   })
-  refresh_token: string | null;
+  refreshToken: string | null;
 
   @Column({
     type: 'varchar',
     nullable: true,
     name: 'access_token',
   })
-  access_token: string | null;
+  accessToken: string | null;
 
   @Column({
     nullable: true,
     type: 'varchar',
-    name: 'expires_at',
+    name: 'expires_on',
     transformer: transformer.date,
   })
-  expires_at: Date | null;
+  expiresOn: Date | null;
 
   @Column({
     type: 'varchar',
     nullable: true,
     name: 'token_type',
   })
-  token_type: string | null;
+  tokenType: string | null;
 
   @Column({
     type: 'varchar',
@@ -71,17 +75,17 @@ export class AccountEntity {
     nullable: true,
     name: 'id_token',
   })
-  id_token: string | null;
+  idToken: string | null;
 
   @Column({
     type: 'varchar',
     nullable: true,
     name: 'session_state',
   })
-  session_state: string | null;
+  sessionState: string | null;
 
-  // @ManyToOne(() => UserEntity, (user) => user.accounts, {
-  //   createForeignKeyConstraints: true,
-  // })
-  // user: Relation<UserEntity>;
+  @ManyToOne(() => UserEntity, (user) => user.accounts, {
+    createForeignKeyConstraints: true,
+  })
+  user: Relation<UserEntity>;
 }
