@@ -34,7 +34,7 @@ export class UserEntity {
   @Column({
     type: 'varchar',
     nullable: true,
-    name: 'passwordHash',
+    name: 'password_hash',
   })
   passwordHash: string | null;
 
