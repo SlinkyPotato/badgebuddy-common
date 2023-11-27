@@ -1,5 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { transformer } from './transformer.util';
+import { UserEntity } from './user.entity';
 
 @Entity({ name: 'sessions' })
 export class SessionEntity {
@@ -17,16 +18,20 @@ export class SessionEntity {
   @Column({
     type: 'varchar',
     nullable: false,
-    name: 'expires',
+    name: 'expires_on',
     transformer: transformer.date,
   })
-  expires: Date;
+  expiresOn: Date;
 
-  @Column({ type: 'uuid' })
+  @Column({
+    type: 'uuid',
+    name: 'user_id',
+    
+  })
   userId!: string;
 
-  // @ManyToOne(() => UserEntity, (user) => user.sessions, {
-  //   createForeignKeyConstraints: true,
-  // })
-  // user: Relation<UserEntity>;
+  @ManyToOne(() => UserEntity, (user) => user.sessions, {
+    createForeignKeyConstraints: true,
+  })
+  user: Relation<UserEntity>;
 }

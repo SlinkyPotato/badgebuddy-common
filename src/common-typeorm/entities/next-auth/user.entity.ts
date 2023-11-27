@@ -1,5 +1,7 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { transformer } from './transformer.util';
+import { AccountEntity } from './account.entity';
+import { SessionEntity } from './session.entity';
 
 @Entity({ name: 'users' })
 export class UserEntity {
@@ -32,20 +34,20 @@ export class UserEntity {
   @Column({
     type: 'varchar',
     nullable: true,
-    name: 'image',
+    name: 'passwordHash',
   })
   passwordHash: string | null;
 
-  // @Column({
-  //   type: 'text',
-  //   nullable: true,
-  //   name: 'image',
-  // })
-  // image: string | null;
+  @Column({
+    type: 'text',
+    nullable: true,
+    name: 'image',
+  })
+  image: string | null;
 
-  // @OneToMany(() => SessionEntity, (session) => session.user.id)
-  // sessions!: Relation<SessionEntity[]>;
+  @OneToMany(() => SessionEntity, (session) => session.user.id)
+  sessions!: Relation<SessionEntity[]>;
 
-  // @OneToMany(() => AccountEntity, (account) => account.user.id)
-  // accounts!: Relation<AccountEntity[]>;
+  @OneToMany(() => AccountEntity, (account) => account.user.id)
+  accounts!: Relation<AccountEntity[]>;
 }
