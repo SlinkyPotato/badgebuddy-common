@@ -36,12 +36,12 @@ export class UserEntity {
   })
   passwordHash: string | null;
 
-  @Column({
-    type: 'text',
-    nullable: true,
-    name: 'image',
-  })
-  image: string | null;
+  // @Column({
+  //   type: 'text',
+  //   nullable: true,
+  //   name: 'image',
+  // })
+  // image: string | null;
 
   // @OneToMany(() => SessionEntity, (session) => session.user.id)
   // sessions!: Relation<SessionEntity[]>;
