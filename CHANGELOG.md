@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-25](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-24...v1.1.0-25) (2023-11-29)
+
+
+### Refactor
+
+* fix date column name ([eed6972](https://github.com/SlinkyPotato/badge-buddy-common/commit/eed69726a39f2e3e7cf5be612142a25f57ed378b))
+
 ## [1.1.0-24](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-23...v1.1.0-24) (2023-11-27)
 
 ## [1.1.0-23](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-22...v1.1.0-23) (2023-11-27)
