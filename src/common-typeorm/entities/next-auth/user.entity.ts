@@ -26,10 +26,10 @@ export class UserEntity {
   @Column({
     type: 'varchar',
     nullable: true,
-    name: 'email_verified',
+    name: 'email_verified_on',
     transformer: transformer.date,
   })
-  emailVerified: Date | null;
+  emailVerifiedOn: Date | null;
 
   @Column({
     type: 'varchar',
