@@ -12,15 +12,15 @@ export class UserEntity {
     nullable: true,
     name: 'name',
   })
-  name: string | null;
+  name?: string;
 
   @Column({
     type: 'varchar',
-    nullable: true,
+    nullable: false,
     unique: true,
     name: 'email',
   })
-  email: string | null;
+  email: string;
 
   @Column({
     type: 'varchar',
@@ -28,21 +28,21 @@ export class UserEntity {
     name: 'email_verified_on',
     transformer: transformer.date,
   })
-  emailVerifiedOn: Date | null;
+  emailVerifiedOn?: Date;
 
   @Column({
     type: 'varchar',
     nullable: true,
     name: 'password_hash',
   })
-  passwordHash: string | null;
+  passwordHash?: string;
 
   @Column({
     type: 'text',
     nullable: true,
     name: 'image',
   })
-  image: string | null;
+  image?: string;
 
   @OneToMany(() => AccountEntity, (account) => account.user.id)
   accounts!: Relation<AccountEntity[]>;
