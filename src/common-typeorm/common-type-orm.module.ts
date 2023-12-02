@@ -16,7 +16,7 @@ export class CommonTypeOrmModule {
           useFactory: async (configService: ConfigService) => ({
             type: 'mysql',
             host: configService.get('MARIADB_HOST'),
-            port: configService.get<number>('MARIADB_PORT'),
+            port: Number(configService.get('MARIADB_PORT')),
             username: configService.get('MARIADB_USERNAME'),
             password: configService.get('MARIADB_PASSWORD'),
             database: configService.get('MARIADB_DATABASE'),
