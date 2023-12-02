@@ -12,6 +12,6 @@ export { PoapLinkEntity } from './poap/poap-link.entity';
 export { PoapLinkDiscordDetailsEntity } from './poap/poap-link-discord-details.entity';
 
 // Next Auth
-export { AccountEntity } from './next-auth/account.entity';
-export { SessionEntity } from './next-auth/session.entity';
-export { UserEntity } from './next-auth/user.entity';
+export { AccountEntity } from './auth/account.entity';
+export { UserEntity } from './auth/user.entity';
+export { TokenEntity } from './auth/token.entity';
