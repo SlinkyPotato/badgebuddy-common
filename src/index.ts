@@ -40,3 +40,4 @@ export { DiscordParticipantDto } from './dto/redis/discord-participant.dto';
 export { CommonTypeOrmModule } from './common-typeorm/common-type-orm.module';
 export * as entities from './common-typeorm/entities';
 export * from './common-typeorm/entities';
+export type { TokenType } from './common-typeorm/entities/auth/token.entity';
