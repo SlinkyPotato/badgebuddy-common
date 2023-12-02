@@ -1,4 +1,4 @@
-import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { UserEntity } from './user.entity';
 import { TokenEntity } from './token.entity';
 
@@ -28,9 +28,8 @@ export class AccountEntity {
   })
   providerAccountId: string;
 
-  @ManyToOne(() => UserEntity, (user) => user.accounts, {
-    createForeignKeyConstraints: true,
-  })
+  @ManyToOne(() => UserEntity, (user) => user.accounts)
+  @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
   user: Relation<UserEntity>;
 
   @OneToMany(() => TokenEntity, (token) => token.accountId)
