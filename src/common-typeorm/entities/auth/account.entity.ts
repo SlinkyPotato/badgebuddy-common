@@ -31,7 +31,7 @@ export class AccountEntity {
   @ManyToOne(() => UserEntity, (user) => user.accounts, {
     createForeignKeyConstraints: true,
   })
-  user?: Relation<UserEntity>;
+  user: Relation<UserEntity>;
 
   @OneToMany(() => TokenEntity, (token) => token.accountId)
   tokens!: Relation<TokenEntity[]>;
