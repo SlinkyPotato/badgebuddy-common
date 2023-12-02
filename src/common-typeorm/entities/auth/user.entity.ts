@@ -1,7 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { transformer } from './transformer.util';
 import { AccountEntity } from './account.entity';
-import { SessionEntity } from './session.entity';
 
 @Entity({ name: 'users' })
 export class UserEntity {
@@ -44,9 +43,6 @@ export class UserEntity {
     name: 'image',
   })
   image: string | null;
-
-  @OneToMany(() => SessionEntity, (session) => session.user.id)
-  sessions!: Relation<SessionEntity[]>;
 
   @OneToMany(() => AccountEntity, (account) => account.user.id)
   accounts!: Relation<AccountEntity[]>;
