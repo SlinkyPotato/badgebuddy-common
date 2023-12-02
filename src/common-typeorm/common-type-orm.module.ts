@@ -23,6 +23,7 @@ export class CommonTypeOrmModule {
             entities: entities,
             synchronize: configService.get('MARIADB_SYNC') == 'true',
             autoLoadEntities: false,
+            logging: configService.get('MARIADB_LOGGING'),
           }),
         }),
       ],

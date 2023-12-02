@@ -1,4 +1,3 @@
--- Active: 1699630069601@@127.0.0.1@3306@badge_buddy
 CREATE DATABASE badge_buddy;
 DROP DATABASE badge_buddy;
 
