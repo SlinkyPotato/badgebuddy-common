@@ -42,5 +42,5 @@ export class TokenEntity {
   scope?: string;
 
   @ManyToOne(() => AccountEntity, (account) => account.tokens)
-  accounts?: Relation<AccountEntity>;
+  accounts!: Relation<AccountEntity>;
 }
