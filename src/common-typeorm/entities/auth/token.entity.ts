@@ -31,7 +31,6 @@ export class TokenEntity {
     type: 'enum',
     name: 'type',
     enum: ['access_token', 'refresh_token', 'id_token'],
-    default: 'access_token'
   })
   type: 'access_token' | 'refresh_token' | 'id_token';
 
