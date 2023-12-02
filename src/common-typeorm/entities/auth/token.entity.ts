@@ -2,7 +2,7 @@ import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typ
 import { transformer } from './transformer.util';
 import { AccountEntity } from './account.entity';
 
-@Entity({ name: 'accounts' })
+@Entity({ name: 'tokens' })
 export class TokenEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -29,10 +29,10 @@ export class TokenEntity {
 
   @Column({
     type: 'varchar',
-    name: 'token_type',
+    name: 'enum',
     enum: ['access_token', 'refresh_token', 'id_token'],
   })
-  tokenType: 'access_token' | 'refresh_token' | 'id_token';
+  type: 'access_token' | 'refresh_token' | 'id_token';
 
   @Column({
     type: 'varchar',
