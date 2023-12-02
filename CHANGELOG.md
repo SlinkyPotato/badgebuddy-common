@@ -2,6 +2,193 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-35](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-34...v1.1.0-35) (2023-12-02)
+
+## [1.1.0-34](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-33...v1.1.0-34) (2023-12-02)
+
+## [1.1.0-33](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-32...v1.1.0-33) (2023-12-02)
+
+## [1.1.0-32](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-31...v1.1.0-32) (2023-12-02)
+
+## [1.1.0-31](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-30...v1.1.0-31) (2023-12-02)
+
+## [1.1.0-30](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-29...v1.1.0-30) (2023-12-02)
+
+## [1.1.0-29](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-28...v1.1.0-29) (2023-12-02)
+
+## [1.1.0-28](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-27...v1.1.0-28) (2023-12-02)
+
+## [1.1.0-27](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-26...v1.1.0-27) (2023-12-02)
+
+
+### Refactor
+
+* try using nullish ([5a9f6f8](https://github.com/SlinkyPotato/badge-buddy-common/commit/5a9f6f8f4c418bb67c075fe7bebf96650e787dab))
+
+## [1.1.0-26](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-25...v1.1.0-26) (2023-12-02)
+
+## [1.1.0-25](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-24...v1.1.0-25) (2023-11-29)
+
+
+### Refactor
+
+* fix date column name ([eed6972](https://github.com/SlinkyPotato/badge-buddy-common/commit/eed69726a39f2e3e7cf5be612142a25f57ed378b))
+
+## [1.1.0-24](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-23...v1.1.0-24) (2023-11-27)
+
+## [1.1.0-23](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-22...v1.1.0-23) (2023-11-27)
+
+## [1.1.0-22](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-21...v1.1.0-22) (2023-11-27)
+
+## [1.1.0-21](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-20...v1.1.0-21) (2023-11-27)
+
+
+### Refactor
+
+* test ([39e08b3](https://github.com/SlinkyPotato/badge-buddy-common/commit/39e08b3e88bf5f0939abdc56b79d2cee4f141f49))
+
+## [1.1.0-20](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-19...v1.1.0-20) (2023-11-26)
+
+
+### Bug Fixes
+
+* adjust next-auth tables ([8f8dba1](https://github.com/SlinkyPotato/badge-buddy-common/commit/8f8dba150adb31fcc19c5a243276d5cf0717ee88))
+
+## [1.1.0-19](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-18...v1.1.0-19) (2023-11-25)
+
+
+### Features
+
+* add password hash ([52b744c](https://github.com/SlinkyPotato/badge-buddy-common/commit/52b744ca187c6d2631ce29fcfb06187c9d3ed4e5))
+
+
+### Docs
+
+* add mysql setup script ([bcf0c3a](https://github.com/SlinkyPotato/badge-buddy-common/commit/bcf0c3af695bbe0b6d488f4183f17cd673cbd92a))
+
+## [1.1.0-18](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-17...v1.1.0-18) (2023-11-25)
+
+
+### Features
+
+* add redis cache config ([b406cc9](https://github.com/SlinkyPotato/badge-buddy-common/commit/b406cc94af11fc8b6626faf279ec7a783c92ce5a))
+
+## [1.1.0-17](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-16...v1.1.0-17) (2023-11-24)
+
+## [1.1.0-16](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-15...v1.1.0-16) (2023-11-24)
+
+## [1.1.0-15](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-14...v1.1.0-15) (2023-11-24)
+
+## [1.1.0-14](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-13...v1.1.0-14) (2023-11-24)
+
+## [1.1.0-13](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-12...v1.1.0-13) (2023-11-24)
+
+
+### Features
+
+* add mariadb env keys ([3aef2d1](https://github.com/SlinkyPotato/badge-buddy-common/commit/3aef2d19b259beddd7b7de33588292a10d103bb7))
+
+## [1.1.0-12](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-11...v1.1.0-12) (2023-11-08)
+
+
+### Bug Fixes
+
+* add userId to session table ([2fc0d59](https://github.com/SlinkyPotato/badge-buddy-common/commit/2fc0d5945c3a391d9414a95599fe8d1811e8f907))
+
+## [1.1.0-11](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-10...v1.1.0-11) (2023-11-07)
+
+
+### Features
+
+* add next-auth entities ([dc4bee0](https://github.com/SlinkyPotato/badge-buddy-common/commit/dc4bee066c82ebda79b9ab73ef70a771292ac20b))
+
+
+### Bug Fixes
+
+* add joi as peer dependency ([2837c0b](https://github.com/SlinkyPotato/badge-buddy-common/commit/2837c0ba04285d764c2ee5a82893884f9531e25c))
+
+
+### Refactor
+
+* add next-auth ([796f729](https://github.com/SlinkyPotato/badge-buddy-common/commit/796f729d2bcccd3068e69feb23dcd732ca5c25f3))
+* move joi to peerDependency ([59d7891](https://github.com/SlinkyPotato/badge-buddy-common/commit/59d78915941900996c77ed3b64b577d9a61ca67b))
+
+## [1.1.0-10](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-9...v1.1.0-10) (2023-11-03)
+
+
+### Bug Fixes
+
+* set cache module as global ([c2ccb68](https://github.com/SlinkyPotato/badge-buddy-common/commit/c2ccb68e41360491b316c88abeba9cbc07f33f8c))
+
+## [1.1.0-9](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-8...v1.1.0-9) (2023-11-03)
+
+
+### Bug Fixes
+
+* revert to tsc build for types ([7b0d471](https://github.com/SlinkyPotato/badge-buddy-common/commit/7b0d471cf1e3ddff53fbf994c65d36cab5ed20c1))
+
+## [1.1.0-8](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-7...v1.1.0-8) (2023-11-03)
+
+
+### Refactor
+
+* add mongoose module ([55b9489](https://github.com/SlinkyPotato/badge-buddy-common/commit/55b94893da96eba11c73a02e531210ff36064469))
+
+## [1.1.0-7](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-6...v1.1.0-7) (2023-11-03)
+
+
+### Bug Fixes
+
+* update npm publish version ([95f978f](https://github.com/SlinkyPotato/badge-buddy-common/commit/95f978fb12e7a26461e89e40f578e11c3209cdd6))
+
+## [1.1.0-6](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-5...v1.1.0-6) (2023-11-03)
+
+## [1.1.0-5](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-4...v1.1.0-5) (2023-11-03)
+
+
+### Refactor
+
+* migrate from solidchain ([bad5723](https://github.com/SlinkyPotato/badge-buddy-common/commit/bad5723d96c5e6e13e7305dcf16c7a202babd412))
+* rename package name and version ([21ca4d1](https://github.com/SlinkyPotato/badge-buddy-common/commit/21ca4d13f19472c3d160431d48c0588e3a8e1284))
+
+## [1.1.0-4](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-3...v1.1.0-4) (2023-11-03)
+
+
+### Performance
+
+* upgrade deps ([22d4530](https://github.com/SlinkyPotato/badge-buddy-common/commit/22d4530a9c4fe73c55ed8920f4a47765d137140c))
+
+## [1.1.0-3](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-2...v1.1.0-3) (2023-11-03)
+
+
+### Refactor
+
+* create common config modules ([9e75840](https://github.com/SlinkyPotato/badge-buddy-common/commit/9e758402a038b38ee11ae4be22e49c3085be6de2))
+
+## [1.1.0-2](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-1...v1.1.0-2) (2023-11-02)
+
+
+### Bug Fixes
+
+* add missing swc config ([de48c56](https://github.com/SlinkyPotato/badge-buddy-common/commit/de48c562f37781f37535223cf126b9c0a63e7989))
+* specify node and add swc build ([b46f9a9](https://github.com/SlinkyPotato/badge-buddy-common/commit/b46f9a9001196b9caa5da6556d68dd0481bf211f))
+* update pnpm 8.10.2 ([8ab446b](https://github.com/SlinkyPotato/badge-buddy-common/commit/8ab446bed89c345fe8b6a513c81c625117d8ab17))
+* use relation type in TypeORM ([fd0bb4a](https://github.com/SlinkyPotato/badge-buddy-common/commit/fd0bb4a2a7eb417bea199d6f51625fe9c3c66fbb))
+
+## [1.1.0-1](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.1.0-0...v1.1.0-1) (2023-10-30)
+
+
+### Refactor
+
+* add typeorm entities ([5842e40](https://github.com/SlinkyPotato/badge-buddy-common/commit/5842e40937f2fe6f7f1e829251d49ce49e85c0e0))
+
+## [1.1.0-0](https://github.com/solidchain-tech/badge-buddy-common/compare/v1.0.1...v1.1.0-0) (2023-09-11)
+
+
+### Features
+
+* add discord.config.ts file and .versionrc.json ([a5a8563](https://github.com/solidchain-tech/badge-buddy-common/commit/a5a8563d1de62a2823e0b5cccf0c43a3ca0c8670))
+
 ### [1.0.1](https://github.com/solidchain-tech/badge-buddy-common/compare/v1.0.0...v1.0.1) (2023-09-07)
 
 

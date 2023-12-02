@@ -15,7 +15,7 @@ jobs:
       repository-projects: read
     environment:
       name: staging
-      url: "https://www.npmjs.com/package/@solidchain/badge-buddy-common/v/${{ steps.package.outputs.PACKAGE_VERSION }}"
+      url: "https://www.npmjs.com/package/@badgebuddy/common/v/${{ steps.package.outputs.PACKAGE_VERSION }}"
     steps:
       - uses: actions/checkout@v3
         with:
@@ -36,7 +36,7 @@ jobs:
         id: package
         run: echo PACKAGE_VERSION=$(node -e "console.log(require('./package.json').version)") >> "$GITHUB_OUTPUT"
       - run: git push --follow-tags
-      - uses: JS-DevTools/npm-publish@v2
+      - uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_PUBLISH_TOKEN }}
           access: 'public'
