@@ -15,7 +15,6 @@ export class TokenEntity {
 
   @Column({
     type: 'varchar',
-    nullable: true,
     name: 'token',
   })
   token: string;
@@ -26,22 +25,21 @@ export class TokenEntity {
     name: 'expires_on',
     transformer: transformer.date,
   })
-  expiresOn: Date;
+  expiresOn?: Date;
 
   @Column({
     type: 'varchar',
-    nullable: true,
     name: 'token_type',
     enum: ['access_token', 'refresh_token', 'id_token'],
   })
-  tokenType: string | null;
+  tokenType: string;
 
   @Column({
     type: 'varchar',
     nullable: true,
     name: 'scope',
   })
-  scope: string | null;
+  scope?: string;
 
   @ManyToOne(() => AccountEntity, (account) => account.tokens)
   accounts: Relation<AccountEntity>;
