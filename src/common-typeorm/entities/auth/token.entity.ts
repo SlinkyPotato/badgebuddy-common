@@ -2,6 +2,9 @@ import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typ
 import { transformer } from './transformer.util';
 import { AccountEntity } from './account.entity';
 
+const TokenType = ['access_token', 'refresh_token', 'id_token'] as const;
+export type TokenType = typeof TokenType;
+
 @Entity({ name: 'tokens' })
 export class TokenEntity {
   @PrimaryGeneratedColumn('uuid')
@@ -30,9 +33,9 @@ export class TokenEntity {
   @Column({
     type: 'enum',
     name: 'type',
-    enum: ['access_token', 'refresh_token', 'id_token'],
+    enum: [TokenType],
   })
-  type: 'access_token' | 'refresh_token' | 'id_token';
+  type: TokenType;
 
   @Column({
     type: 'varchar',
