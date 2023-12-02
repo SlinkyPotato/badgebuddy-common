@@ -19,7 +19,7 @@ export class AccountEntity {
     name: 'provider',
     enum: ['google', 'discord'],
   })
-  provider: string;
+  provider: 'google' | 'discord';
 
   @Column({
     type: 'varchar',
