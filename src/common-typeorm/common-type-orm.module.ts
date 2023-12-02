@@ -21,7 +21,7 @@ export class CommonTypeOrmModule {
             password: configService.get('MARIADB_PASSWORD'),
             database: configService.get('MARIADB_DATABASE'),
             entities: entities,
-            synchronize: false,
+            synchronize: configService.get<boolean>('MARIADB_SYNC'),
             autoLoadEntities: false,
           }),
         }),
