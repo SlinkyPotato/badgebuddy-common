@@ -34,5 +34,5 @@ export class AccountEntity {
   user: Relation<UserEntity>;
 
   @OneToMany(() => TokenEntity, (token) => token.accountId)
-  tokens!: Relation<TokenEntity[]>;
+  tokens?: Relation<TokenEntity[]>;
 }
