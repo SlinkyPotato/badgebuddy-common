@@ -17,7 +17,7 @@ export class TokenEntity {
   accountId: string;
 
   @Column({
-    type: 'varchar',
+    type: 'text',
     name: 'token',
   })
   token: string;
@@ -27,6 +27,7 @@ export class TokenEntity {
     type: 'varchar',
     name: 'expires_on',
     transformer: transformer.date,
+    length: 28,
   })
   expiresOn?: Date;
 
@@ -38,7 +39,7 @@ export class TokenEntity {
   type: TokenType;
 
   @Column({
-    type: 'varchar',
+    type: 'text',
     nullable: true,
     name: 'scope',
   })
