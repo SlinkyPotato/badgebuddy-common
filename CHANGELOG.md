@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-7](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-6...v1.2.0-7) (2023-12-02)
+
+
+### Features
+
+* add logging option ([9bf0c9c](https://github.com/SlinkyPotato/badge-buddy-common/commit/9bf0c9cc66b7fa04510fedd82aa04391ad89d643))
+
 ## [1.2.0-6](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-5...v1.2.0-6) (2023-12-02)
 
 ## [1.2.0-5](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-4...v1.2.0-5) (2023-12-02)
