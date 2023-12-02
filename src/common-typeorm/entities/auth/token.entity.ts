@@ -28,8 +28,8 @@ export class TokenEntity {
   expiresOn?: Date;
 
   @Column({
-    type: 'varchar',
-    name: 'enum',
+    type: 'enum',
+    name: 'type',
     enum: ['access_token', 'refresh_token', 'id_token'],
     default: 'access_token'
   })
