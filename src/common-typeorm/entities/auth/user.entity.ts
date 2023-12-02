@@ -45,5 +45,5 @@ export class UserEntity {
   image?: string;
 
   @OneToMany(() => AccountEntity, (account) => account.user.id)
-  accounts?: Relation<AccountEntity[]>;
+  accounts!: Relation<AccountEntity[]>;
 }
