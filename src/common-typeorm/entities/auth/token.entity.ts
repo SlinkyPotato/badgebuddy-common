@@ -32,7 +32,7 @@ export class TokenEntity {
     name: 'token_type',
     enum: ['access_token', 'refresh_token', 'id_token'],
   })
-  tokenType: string;
+  tokenType: 'access_token' | 'refresh_token' | 'id_token';
 
   @Column({
     type: 'varchar',
@@ -42,5 +42,5 @@ export class TokenEntity {
   scope?: string;
 
   @ManyToOne(() => AccountEntity, (account) => account.tokens)
-  accounts: Relation<AccountEntity>;
+  accounts?: Relation<AccountEntity>;
 }
