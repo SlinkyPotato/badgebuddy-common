@@ -1,4 +1,4 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { transformer } from './transformer.util';
 import { AccountEntity } from './account.entity';
 
@@ -46,5 +46,6 @@ export class TokenEntity {
   scope?: string;
 
   @ManyToOne(() => AccountEntity, (account) => account.tokens)
+  @JoinColumn({ name: 'account_id', referencedColumnName: 'id' })
   accounts: Relation<AccountEntity>;
 }
