@@ -31,6 +31,7 @@ export class TokenEntity {
     type: 'varchar',
     name: 'enum',
     enum: ['access_token', 'refresh_token', 'id_token'],
+    default: 'access_token'
   })
   type: 'access_token' | 'refresh_token' | 'id_token';
 
