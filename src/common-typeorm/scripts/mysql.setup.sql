@@ -25,7 +25,7 @@ CREATE TABLE tokens
   id UUID PRIMARY KEY,
   account_id UUID NOT NULL,
   token TEXT NOT NULL,
-  expires_on VARCHAR(28) NOT NULL,
+  expires_on VARCHAR(28),
   type ENUM('access_token', 'refresh_token', 'id_token') NOT NULL,
   scope TEXT,
   FOREIGN KEY (account_id) REFERENCES accounts (id)
