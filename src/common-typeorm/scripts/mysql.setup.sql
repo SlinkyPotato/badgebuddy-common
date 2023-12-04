@@ -99,6 +99,8 @@ CREATE TABLE poap_claims
   qr_code VARCHAR(255) NOT NULL,
   claim_url VARCHAR(255) NOT NULL,
   community_event_id UUID NOT NULL,
+  claimed_on VARCHAR(28),
+  expires_on VARCHAR(28) NOT NULL,
   FOREIGN KEY (community_event_id) REFERENCES community_events (id)
 );
 
