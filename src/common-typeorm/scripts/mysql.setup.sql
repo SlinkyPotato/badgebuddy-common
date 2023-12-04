@@ -1,4 +1,5 @@
 -- Active: 1699630069601@@127.0.0.1@3306@badge_buddy
+
 CREATE DATABASE badge_buddy;
 DROP DATABASE badge_buddy;
 
@@ -103,7 +104,7 @@ CREATE TABLE poap_claims
   claimed_on VARCHAR(28),
   claimed_by_discord_user_id uuid,
   expires_on VARCHAR(28) NOT NULL,
-  FOREIGN KEY (community_event_id) REFERENCES community_events (id)
+  FOREIGN KEY (community_event_id) REFERENCES community_events (id),
   FOREIGN KEY (claimed_by_discord_user_id) REFERENCES discord_users (id)
 );
 
@@ -117,6 +118,6 @@ CREATE TABLE community_participants_discord
   end_date VARCHAR(28),
   participation_length INT UNSIGNED, -- in seconds
   FOREIGN KEY (community_event_id) REFERENCES community_events_discord (community_event_id),
-  FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid),
+  FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid)
 );
 
