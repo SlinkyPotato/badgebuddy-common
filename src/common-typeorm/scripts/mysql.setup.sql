@@ -1,6 +1,7 @@
 CREATE DATABASE badge_buddy;
 DROP DATABASE badge_buddy;
 
+-- Auth
 CREATE TABLE users
 (
   id UUID PRIMARY KEY,
@@ -31,12 +32,36 @@ CREATE TABLE tokens
   FOREIGN KEY (account_id) REFERENCES accounts (id)
 );
 
--- CREATE TABLE sessions
--- (
---   id UUID PRIMARY KEY,
---   user_id UUID NOT NULL,
---   expires_on VARCHAR(28) NOT NULL,
---   session_token UUID NOT NULL UNIQUE,
---   FOREIGN KEY (user_id) REFERENCES users (id)
--- );
+-- Discord
+CREATE TABLE discord_guilds
+(
+  id UUID PRIMARY KEY,
+  guild_id BIGINT UNSIGNED NOT NULL UNIQUE,
+  name VARCHAR(255) NOT NULL,
+  icon TEXT,
+  owner_id BIGINT UNSIGNED NOT NULL,
+  description TEXT,
+  nsfw_level TINYINT UNSIGNED NOT NULL,
+)
+
+CREATE TABLE discord_guilds_bot_settings
+(
+  id UUID PRIMARY KEY,
+  guild_id UUID NOT NULL,
+  private_channel_id BIGINT UNSIGNED NOT NULL UNIQUE,
+  news_channel_id BIGINT UNSIGNED UNIQUE,
+  poap_manager_role_id BIGINT UNSIGNED UNIQUE NOT NULL,
+  FOREIGN KEY (guild_id) REFERENCES discord_guilds (id),
+)
+CREATE TABLE discord_users
+(
+  id UUID PRIMARY KEY,
+  user_id BIGINT UNSIGNED NOT NULL UNIQUE,
+  auth_account_id VARCHAR(255) UNIQUE,
+  username VARCHAR(255) NOT NULL,
+  discriminator VARCHAR(4) NOT NULL, -- tag
+  avatar TEXT,
+  FOREIGN KEY (guild_id) REFERENCES discord_guilds (id),
+  FOREIGN KEY (auth_account_id) REFERENCES accounts (provider_account_id),
+)
 
