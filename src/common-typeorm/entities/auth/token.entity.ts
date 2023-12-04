@@ -1,5 +1,5 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
-import { transformer } from './transformer.util';
+import { transformer } from '../transformer.util';
 import { AccountEntity } from './account.entity';
 
 const TokenType = ['access_token', 'refresh_token', 'id_token'] as const;
@@ -47,5 +47,5 @@ export class TokenEntity {
 
   @ManyToOne(() => AccountEntity, (account) => account.tokens)
   @JoinColumn({ name: 'account_id', referencedColumnName: 'id' })
-  accounts: Relation<AccountEntity>;
+  account: Relation<AccountEntity>;
 }

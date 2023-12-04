@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-11](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-10...v1.2.0-11) (2023-12-04)
+
+
+### Features
+
+* add discord and poap tables ([4e3909d](https://github.com/SlinkyPotato/badge-buddy-common/commit/4e3909dce9b789b5233f6d6f5553d3a4ada880be))
+
 ## [1.2.0-10](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-9...v1.2.0-10) (2023-12-04)
 
 ## [1.2.0-9](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-8...v1.2.0-9) (2023-12-03)

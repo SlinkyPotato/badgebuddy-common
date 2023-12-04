@@ -1,3 +1,4 @@
+-- Active: 1699630069601@@127.0.0.1@3306@badge_buddy
 CREATE DATABASE badge_buddy;
 DROP DATABASE badge_buddy;
 
@@ -40,7 +41,7 @@ CREATE TABLE discord_guilds
   guild_sid BIGINT UNSIGNED NOT NULL UNIQUE,
   name VARCHAR(255) NOT NULL,
   icon TEXT,
-  owner_sid BIGINT UNSIGNED NOT NULL,
+  owner_sid BIGINT UNSIGNED,
   description TEXT,
   nsfw_level TINYINT UNSIGNED NOT NULL
 );
@@ -48,7 +49,7 @@ CREATE TABLE discord_guilds
 CREATE TABLE discord_guilds_bot_settings
 (
   id UUID PRIMARY KEY,
-  guild_id UUID NOT NULL,
+  guild_id UUID NOT NULL unique,
   private_channel_sid BIGINT UNSIGNED NOT NULL UNIQUE,
   news_channel_sid BIGINT UNSIGNED UNIQUE,
   poap_manager_role_sid BIGINT UNSIGNED UNIQUE NOT NULL,
@@ -100,8 +101,10 @@ CREATE TABLE poap_claims
   claim_url VARCHAR(255) NOT NULL,
   community_event_id UUID NOT NULL,
   claimed_on VARCHAR(28),
+  claimed_by_discord_user_id uuid,
   expires_on VARCHAR(28) NOT NULL,
   FOREIGN KEY (community_event_id) REFERENCES community_events (id)
+  FOREIGN KEY (claimed_by_discord_user_id) REFERENCES discord_users (id)
 );
 
 -- POAPs Community Participants
@@ -113,9 +116,7 @@ CREATE TABLE community_participants_discord
   start_date VARCHAR(28) NOT NULL,
   end_date VARCHAR(28),
   participation_length INT UNSIGNED, -- in seconds
-  poap_claim_id UUID,
-  FOREIGN KEY (community_event_id) REFERENCES community_events (id),
+  FOREIGN KEY (community_event_id) REFERENCES community_events_discord (community_event_id),
   FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid),
-  FOREIGN KEY (poap_claim_id) REFERENCES poap_claims (id)
 );
 
