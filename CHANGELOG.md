@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-12](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-11...v1.2.0-12) (2023-12-04)
+
+
+### Features
+
+* add typeorm for discord, poaps, and community events ([9aa9ddd](https://github.com/SlinkyPotato/badge-buddy-common/commit/9aa9ddd66d38b08f7db33f541acdc8769fc6a3eb))
+
 ## [1.2.0-11](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-10...v1.2.0-11) (2023-12-04)
 
 

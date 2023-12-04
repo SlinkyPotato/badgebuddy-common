@@ -1,5 +1,5 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
-import { transformer } from './transformer.util';
+import { transformer } from '../transformer.util';
 import { AccountEntity } from './account.entity';
 
 @Entity({ name: 'users' })
