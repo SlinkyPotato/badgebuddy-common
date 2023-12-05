@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-14](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-13...v1.2.0-14) (2023-12-05)
+
+
+### Bug Fixes
+
+* remove read only const property ([97b40d3](https://github.com/SlinkyPotato/badge-buddy-common/commit/97b40d3ab43334c4ae2818af53c331c67c1b6b42))
+
 ## [1.2.0-13](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-12...v1.2.0-13) (2023-12-05)
 
 ## [1.2.0-12](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-11...v1.2.0-12) (2023-12-04)
