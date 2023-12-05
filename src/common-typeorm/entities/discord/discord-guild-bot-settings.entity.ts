@@ -17,8 +17,11 @@ export class DiscordGuildBotSettingsEntity {
   @Column(SnowFlakeOption('private_channel_sid'))
   privateChannelSId: string;
 
-  @Column(SnowFlakeOption('news_channel_sid'))
-  newsChannelSId: string;
+  @Column({
+    ...SnowFlakeOption('news_channel_sid'),
+    nullable: true,
+  })
+  newsChannelSId?: string;
 
   @Column(SnowFlakeOption('poap_manager_role_sid'))
   poapManagerRoleSId: string;

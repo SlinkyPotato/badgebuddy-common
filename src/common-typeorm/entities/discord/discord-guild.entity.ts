@@ -30,8 +30,9 @@ export class DiscordGuildEntity {
   @Column({
     name: 'description',
     type: 'text',
+    nullable: true,
   })
-  description: string;
+  description?: string;
 
   @Column({
     name: 'nsfw_level',
@@ -41,8 +42,8 @@ export class DiscordGuildEntity {
   nsfwLevel: number;
 
   @OneToOne(() => DiscordGuildBotSettingsEntity, (botSettings) => botSettings.guild)
-  botSettings: Relation<DiscordGuildBotSettingsEntity>;
+  botSettings?: Relation<DiscordGuildBotSettingsEntity>;
 
   @OneToMany(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.guild)
-  communityEvents: Relation<CommunityEventDiscordEntity[]>;
+  communityEvents?: Relation<CommunityEventDiscordEntity[]>;
 }
