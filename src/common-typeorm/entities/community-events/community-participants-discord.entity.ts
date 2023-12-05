@@ -2,7 +2,6 @@ import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation
 import { SnowFlakeOption } from '../discord/discord.util';
 import { CommunityEventDiscordEntity } from './community-event-discord.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
-import { PoapClaimsEntity } from '../poaps/poap-claims.entity';
 
 @Entity('community_participants_discord')
 export class CommunityParticipantsDiscordEntity {

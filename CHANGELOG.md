@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-15](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-14...v1.2.0-15) (2023-12-05)
+
+
+### Features
+
+* add repositories for entities ([1e7234d](https://github.com/SlinkyPotato/badge-buddy-common/commit/1e7234ded23ec7de19c5c97b9d5192373255d309))
+
 ## [1.2.0-14](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-13...v1.2.0-14) (2023-12-05)
 
 
