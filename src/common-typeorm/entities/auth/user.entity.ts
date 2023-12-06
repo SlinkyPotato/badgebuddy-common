@@ -23,11 +23,10 @@ export class UserEntity {
   email: string;
 
   @Column({
-    type: 'varchar',
+    type: 'datetime',
     nullable: true,
     name: 'email_verified_on',
     transformer: transformer.date,
-    length: 28,
   })
   emailVerifiedOn?: Date;
 

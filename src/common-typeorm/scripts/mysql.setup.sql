@@ -1,5 +1,6 @@
 -- Active: 1699630069601@@127.0.0.1@3306@badge_buddy
 
+
 CREATE DATABASE badge_buddy;
 DROP DATABASE badge_buddy;
 
@@ -9,7 +10,7 @@ CREATE TABLE users
   id UUID PRIMARY KEY,
   name VARCHAR(255),
   email VARCHAR(320) UNIQUE NOT NULL,
-  email_verified_on VARCHAR(28),
+  email_verified_on DATETIME,
   password_hash VARCHAR(255),
   image TEXT
 );
@@ -28,7 +29,7 @@ CREATE TABLE tokens
   id UUID PRIMARY KEY,
   account_id UUID NOT NULL,
   token TEXT NOT NULL,
-  expires_on VARCHAR(28),
+  expires_on DATETIME,
   type ENUM('access_token', 'refresh_token', 'id_token') NOT NULL,
   scope TEXT,
   FOREIGN KEY (account_id) REFERENCES accounts (id)
@@ -67,8 +68,8 @@ CREATE TABLE community_events
   id UUID PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
   description TEXT,
-  start_date VARCHAR(28) NOT NULL,
-  end_date VARCHAR(28) NOT NULL,
+  start_date DATETIME NOT NULL,
+  end_date DATETIME NOT NULL,
   image TEXT,
   website TEXT,
   poap_event_id INT -- https://documentation.poap.tech/reference/geteventsid
@@ -93,9 +94,9 @@ CREATE TABLE poap_claims
   qr_code VARCHAR(255) NOT NULL,
   claim_url VARCHAR(255) NOT NULL,
   community_event_id UUID NOT NULL,
-  claimed_on VARCHAR(28),
+  claimed_on DATETIME,
   claimed_by_discord_user_id uuid,
-  expires_on VARCHAR(28) NOT NULL,
+  expires_on DATETIME NOT NULL,
   FOREIGN KEY (community_event_id) REFERENCES community_events (id),
   FOREIGN KEY (claimed_by_discord_user_id) REFERENCES discord_users (id)
 );
@@ -106,8 +107,8 @@ CREATE TABLE community_participants_discord
   id UUID PRIMARY KEY,
   community_event_id UUID NOT NULL,
   discord_user_sid BIGINT UNSIGNED NOT NULL UNIQUE,
-  start_date VARCHAR(28) NOT NULL,
-  end_date VARCHAR(28),
+  start_date DATETIME NOT NULL,
+  end_date DATETIME,
   participation_length INT UNSIGNED, -- in seconds
   FOREIGN KEY (community_event_id) REFERENCES community_events_discord (community_event_id),
   FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid)

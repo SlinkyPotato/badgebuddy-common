@@ -33,8 +33,8 @@ export { backupRedisCacheUtil } from './utils/backup-redis-cache.util';
 export { loadRedisCacheUtil } from './utils/load-redis-cache.util';
 
 // DTOs
-export { CommunityEventDto } from './dto/redis/community-event.dto';
-export { DiscordParticipantDto } from './dto/redis/discord-participant.dto';
+export { RedisCommunityEventDto } from './dto/redis/community-event.dto';
+export { RedisDiscordParticipantDto } from './dto/redis/discord-participant.dto';
 
 // Entities - TypeORM
 export { CommonTypeOrmModule } from './common-typeorm/common-typeorm.module';

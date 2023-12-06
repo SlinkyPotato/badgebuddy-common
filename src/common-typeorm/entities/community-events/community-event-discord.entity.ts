@@ -8,7 +8,7 @@ import { CommunityParticipantsDiscordEntity } from './community-participants-dis
 @Entity('community_events_discord')
 export class CommunityEventDiscordEntity {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column({
     type: 'uuid',

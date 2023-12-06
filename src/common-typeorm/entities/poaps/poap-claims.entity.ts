@@ -28,8 +28,7 @@ export class PoapClaimsEntity {
 
   @Column({
     name: 'claimed_on',
-    type: 'varchar',
-    length: 28,
+    type: 'datetime',
     nullable: true,
     transformer: transformer.date,
   })
@@ -44,8 +43,7 @@ export class PoapClaimsEntity {
 
   @Column({
     name: 'expires_on',
-    type: 'varchar',
-    length: 28,
+    type: 'datetime',
     transformer: transformer.date,
   })
   expiresOn: Date;

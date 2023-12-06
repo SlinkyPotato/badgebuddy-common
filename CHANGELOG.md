@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-18](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-17...v1.2.0-18) (2023-12-06)
+
+
+### Bug Fixes
+
+* use mysql datetime ([7ee91d8](https://github.com/SlinkyPotato/badge-buddy-common/commit/7ee91d8234889cf485a6090f307e8ade57c9ae92))
+
+
+### Tests
+
+* adjust tests ([e621476](https://github.com/SlinkyPotato/badge-buddy-common/commit/e621476311e07266c027b5bdd50c2d04f96cb73f))
+
 ## [1.2.0-17](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-16...v1.2.0-17) (2023-12-06)
 
 

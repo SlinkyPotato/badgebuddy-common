@@ -24,10 +24,9 @@ export class TokenEntity {
 
   @Column({
     nullable: true,
-    type: 'varchar',
+    type: 'datetime',
     name: 'expires_on',
     transformer: transformer.date,
-    length: 28,
   })
   expiresOn?: Date;
 

@@ -2,7 +2,7 @@ import * as mongoose from 'mongoose';
 import * as redis from 'redis';
 import { DiscordParticipantSchema } from '../schemas/discord-participant.schema';
 import { CommunityEventSchema } from '../schemas/community-event.schema';
-import { DiscordParticipantDto } from '../dto/redis/discord-participant.dto';
+import { RedisDiscordParticipantDto } from '../dto/redis/discord-participant.dto';
 
 /**
  * Backup Redis Cache
@@ -74,7 +74,7 @@ const loadRedisCacheUtil = async () => {
       for (const participant of participants) {
         console.log(JSON.stringify(participant));
 
-        const cacheParticipant = new DiscordParticipantDto();
+        const cacheParticipant = new RedisDiscordParticipantDto();
         cacheParticipant.eventId = participant.communityEvent.toString();
         cacheParticipant.userId = participant.userId;
         cacheParticipant.userTag = participant.userTag;
