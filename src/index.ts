@@ -27,6 +27,7 @@ export { RedisBullConfigModule } from './redis-bull-config/redis-bull-config.mod
 export { DiscordConfigModule } from './discord-config/discord-config.module';
 export { MongooseConfigModule } from './mongoose-config/mongoose-config.module';
 export * from './redis-bull-config/redis-bull.constants';
+export * from './redis-config/redis-config.constants';
 
 // Utils
 export { parseReleaseUtil } from './utils/parse-release.util';
