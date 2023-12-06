@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-29](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-28...v1.2.0-29) (2023-12-06)
+
+
+### Bug Fixes
+
+* skip transforming bigint as it maps to a string ([57bc90f](https://github.com/SlinkyPotato/badge-buddy-common/commit/57bc90f0bbc3c08e32cec1367f90f15c1e5af1f5))
+
 ## [1.2.0-28](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-27...v1.2.0-28) (2023-12-06)
 
 
