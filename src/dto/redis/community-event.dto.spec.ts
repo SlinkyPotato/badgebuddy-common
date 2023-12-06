@@ -6,11 +6,11 @@ describe('CommunityEventDto', () => {
 
   beforeEach(() => {
     communityEventDto = new CommunityEventDto();
-    communityEventDto.eventId = '64e903cbac9d84d78747d109';
+    communityEventDto.id = '64e903cbac9d84d78747d109';
     communityEventDto.eventName = 'Test Event';
-    communityEventDto.organizerId = '159014522542096384';
-    communityEventDto.voiceChannelId = '123456789';
-    communityEventDto.guildId = '987654321';
+    communityEventDto.organizerSId = '159014522542096384';
+    communityEventDto.voiceChannelSId = '123456789';
+    communityEventDto.guildSId = '987654321';
     communityEventDto.startDate = '2023-08-28T22:35:38.189+00:00';
     communityEventDto.endDate = '2023-08-28T22:36:38.189+00:00';
   });

@@ -1,9 +1,9 @@
 export class CommunityEventDto {
-  eventId: string;
+  id: string;
   eventName: string;
-  organizerId: string;
-  voiceChannelId: string;
-  guildId: string;
+  organizerSId: string;
+  voiceChannelSId: string;
+  guildSId: string;
   startDate: string;
   endDate: string;
   isActive?: boolean;

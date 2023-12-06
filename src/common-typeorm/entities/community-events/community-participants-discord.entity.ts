@@ -19,16 +19,14 @@ export class CommunityParticipantsDiscordEntity {
 
   @Column({
     name: 'start_date',
-    type: 'varchar',
-    length: 28,
+    type: 'datetime',
   })
   startDate: Date;
 
   @Column({
     name: 'end_date',
     nullable: true,
-    type: 'varchar',
-    length: 28,
+    type: 'datetime',
   })
   endDate?: Date;
 

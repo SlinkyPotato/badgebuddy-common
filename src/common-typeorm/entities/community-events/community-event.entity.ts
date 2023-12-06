@@ -24,16 +24,14 @@ export class CommunityEventEntity {
   @Column({
     name: 'start_date',
     nullable: false,
-    type: 'varchar',
-    length: 28,
+    type: 'datetime',
     transformer: transformer.date,
   })
   startDate: Date;
 
   @Column({
     name: 'end_date',
-    type: 'varchar',
-    length: 28,
+    type: 'datetime',
     transformer: transformer.date,
   })
   endDate: Date;
