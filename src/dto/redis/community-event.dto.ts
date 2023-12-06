@@ -1,6 +1,6 @@
-export class CommunityEventDto {
+export class RedisCommunityEventDto {
   id: string;
-  eventName: string;
+  title: string;
   organizerSId: string;
   voiceChannelSId: string;
   guildSId: string;

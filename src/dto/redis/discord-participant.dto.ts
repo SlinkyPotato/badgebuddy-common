@@ -1,4 +1,4 @@
-export class DiscordParticipantDto {
+export class RedisDiscordParticipantDto {
   eventId: string;
   userId: string;
   userTag: string;

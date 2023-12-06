@@ -1,13 +1,13 @@
 import { beforeEach, describe, expect, it } from '@jest/globals';
-import { CommunityEventDto } from './community-event.dto';
+import { RedisCommunityEventDto } from './community-event.dto';
 
 describe('CommunityEventDto', () => {
-  let communityEventDto: CommunityEventDto;
+  let communityEventDto: RedisCommunityEventDto;
 
   beforeEach(() => {
-    communityEventDto = new CommunityEventDto();
+    communityEventDto = new RedisCommunityEventDto();
     communityEventDto.id = '64e903cbac9d84d78747d109';
-    communityEventDto.eventName = 'Test Event';
+    communityEventDto.title = 'Test Event';
     communityEventDto.organizerSId = '159014522542096384';
     communityEventDto.voiceChannelSId = '123456789';
     communityEventDto.guildSId = '987654321';
@@ -16,16 +16,16 @@ describe('CommunityEventDto', () => {
   });
 
   it('should have the correct values', () => {
-    expect(CommunityEventDto).toBeDefined();
-    expect(CommunityEventDto).toBeInstanceOf(Function);
+    expect(RedisCommunityEventDto).toBeDefined();
+    expect(RedisCommunityEventDto).toBeInstanceOf(Function);
   });
 
   it('should have the correct properties', () => {
-    expect(communityEventDto).toHaveProperty('eventId');
-    expect(communityEventDto).toHaveProperty('eventName');
-    expect(communityEventDto).toHaveProperty('organizerId');
-    expect(communityEventDto).toHaveProperty('voiceChannelId');
-    expect(communityEventDto).toHaveProperty('guildId');
+    expect(communityEventDto).toHaveProperty('id');
+    expect(communityEventDto).toHaveProperty('title');
+    expect(communityEventDto).toHaveProperty('organizerSId');
+    expect(communityEventDto).toHaveProperty('voiceChannelSId');
+    expect(communityEventDto).toHaveProperty('guildSId');
     expect(communityEventDto).toHaveProperty('startDate');
     expect(communityEventDto).toHaveProperty('endDate');
     expect(communityEventDto).not.toHaveProperty('isActive');
