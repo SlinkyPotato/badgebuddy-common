@@ -1,7 +1,7 @@
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { SnowFlakeOption } from '../discord/discord.util';
 import { CommunityEventEntity } from './community-event.entity';
-import { DiscordBotSettingsEntity } from '../discord/discord-guild.entity';
+import { DiscordBotSettingsEntity } from '../discord/discord-bot-settings.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { CommunityParticipantsDiscordEntity } from './community-participants-discord.entity';
 
