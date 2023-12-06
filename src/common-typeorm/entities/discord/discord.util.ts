@@ -6,7 +6,7 @@ export const SnowFlakeOption = (name: string): ColumnOptions => ({
   type: 'bigint',
   unsigned: true,
   transformer: {
-    from: (bigInt: bigint) => bigInt.toString(),
+    from: (bigInt: bigint | null) => bigInt && bigInt.toString(),
     to: (bigInt?: string) => BigInt(bigInt),
   }
 });
