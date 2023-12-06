@@ -2,7 +2,7 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typ
 import { SnowFlakeOption } from './discord.util';
 import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
 
-@Entity('discord_guilds')
+@Entity('discord_bot_settings')
 export class DiscordBotSettingsEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
