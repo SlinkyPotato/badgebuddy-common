@@ -2,7 +2,7 @@ import * as mongoose from 'mongoose';
 import * as redis from 'redis';
 import { DiscordParticipantSchema } from '../schemas/discord-participant.schema';
 import { CommunityEventSchema } from '../schemas/community-event.schema';
-import { RedisDiscordParticipantDto } from '../dto/redis/discord-participant.dto';
+import { RedisDiscordParticipantDto } from '../redis-config/dto/discord-participant.dto';
 
 /**
  * Backup Redis Cache
