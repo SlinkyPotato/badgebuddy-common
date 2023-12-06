@@ -4,8 +4,7 @@ export { UserEntity } from './auth/user.entity';
 export { TokenEntity } from './auth/token.entity';
 
 // Discord
-export { DiscordGuildBotSettingsEntity } from './discord/discord-guild-bot-settings.entity';
-export { DiscordGuildEntity } from './discord/discord-guild.entity';
+export { DiscordBotSettingsEntity as DiscordGuildEntity } from './discord/discord-guild.entity';
 export { DiscordUserEntity } from './discord/discord-user.entity';
 
 // Community Events

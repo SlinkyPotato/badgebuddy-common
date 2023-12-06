@@ -1,15 +1,15 @@
 import { DataSource } from 'typeorm';
 import { 
   AccountEntity, CommunityEventDiscordEntity, CommunityEventEntity, 
-  CommunityParticipantsDiscordEntity, DiscordGuildBotSettingsEntity, 
+  CommunityParticipantsDiscordEntity, 
   DiscordGuildEntity, DiscordUserEntity, PoapClaimsEntity, TokenEntity, 
   UserEntity 
 } from './entities';
 import { AUTH_ACCOUNT_REPOSITORY, AUTH_TOKEN_REPOSITORY, AUTH_USER_REPOSITORY, 
   COMMUNITY_EVENT_DISCORD_REPOSITORY, COMMUNITY_EVENT_PARTICIPANTS_DISCORD_REPOSITORY, 
-  COMMUNITY_EVENT_REPOSITORY, DISCORD_GUILD_BOT_SETTINGS_REPOSITORY,
-  DISCORD_GUILD_REPOSITORY, DISCORD_USER_REPOSITORY, POAP_CLAIMS_REPOSITORY 
+  COMMUNITY_EVENT_REPOSITORY, DISCORD_BOT_SETTINGS_REPOSITORY, DISCORD_USER_REPOSITORY, POAP_CLAIMS_REPOSITORY 
 } from './common-typeorm.constants';
+import { DiscordBotSettingsEntity } from './entities/discord/discord-guild.entity';
 
 export const UserRepositoryProvider = {
   provide: AUTH_USER_REPOSITORY,
@@ -53,15 +53,15 @@ export const DiscordUserRepsoitoryProvider = {
   inject: ['DATA_SOURCE'],
 };
 
-export const DiscordGuildRepositoryProvider = {
-  provide: DISCORD_GUILD_REPOSITORY,
+export const DiscordBotSettingsRepositoryProvider = {
+  provide: DISCORD_BOT_SETTINGS_REPOSITORY,
   useFactory: (dataSource: DataSource) => dataSource.getRepository(DiscordGuildEntity),
   inject: ['DATA_SOURCE'],
 };
 
 export const DiscordGuildBotSettingsRepositoryProvider = {
-  provide: DISCORD_GUILD_BOT_SETTINGS_REPOSITORY,
-  useFactory: (dataSource: DataSource) => dataSource.getRepository(DiscordGuildBotSettingsEntity),
+  provide: DISCORD_BOT_SETTINGS_REPOSITORY,
+  useFactory: (dataSource: DataSource) => dataSource.getRepository(DiscordBotSettingsEntity),
   inject: ['DATA_SOURCE'],
 };
 
