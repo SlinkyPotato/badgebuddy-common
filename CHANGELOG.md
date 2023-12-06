@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-21](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-20...v1.2.0-21) (2023-12-06)
+
+
+### Refactor
+
+* rename constants ([269fcba](https://github.com/SlinkyPotato/badge-buddy-common/commit/269fcba941cd631ec0bc577c5bc76d41866b168a))
+
 ## [1.2.0-20](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-19...v1.2.0-20) (2023-12-06)
 
 

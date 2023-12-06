@@ -13,7 +13,6 @@ describe('index', () => {
     expect(index.CommonPinoLogger).toBeDefined();
     expect(index.CommonPinoLoggerModule).toBeDefined();
     expect(index.CommonPinoLoggerService).toBeDefined();
-    expect(index.RedisCommunityEventDto).toBeDefined();
     expect(index.EventType).toBeDefined();
     expect(index.NodeEnvs).toBeDefined();
     expect(index.RedisDiscordParticipantDto).toBeDefined();
