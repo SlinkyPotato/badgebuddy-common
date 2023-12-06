@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-17](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-16...v1.2.0-17) (2023-12-06)
+
+
+### Refactor
+
+* merge discord guild and bot settings ([5692f56](https://github.com/SlinkyPotato/badge-buddy-common/commit/5692f56336b956c5c7e454612cde11e357b6fc09))
+
 ## [1.2.0-16](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-15...v1.2.0-16) (2023-12-05)
 
 

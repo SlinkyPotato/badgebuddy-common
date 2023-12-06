@@ -1,7 +1,7 @@
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { SnowFlakeOption } from '../discord/discord.util';
 import { CommunityEventEntity } from './community-event.entity';
-import { DiscordGuildEntity } from '../discord/discord-guild.entity';
+import { DiscordBotSettingsEntity } from '../discord/discord-guild.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { CommunityParticipantsDiscordEntity } from './community-participants-discord.entity';
 
@@ -35,9 +35,9 @@ export class CommunityEventDiscordEntity {
   @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
   communityEvent: Relation<CommunityEventEntity>;
 
-  @ManyToOne(() => DiscordGuildEntity, (discordGuild) => discordGuild.communityEvents)
+  @ManyToOne(() => DiscordBotSettingsEntity, (discordGuild) => discordGuild.communityEvents)
   @JoinColumn({ name: 'guild_id', referencedColumnName: 'id' })
-  guild: Relation<DiscordGuildEntity>;
+  guild: Relation<DiscordBotSettingsEntity>;
 
   @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.id)
   @JoinColumn({ name: 'organizer_id', referencedColumnName: 'id' })

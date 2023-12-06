@@ -36,7 +36,7 @@ CREATE TABLE tokens
 
 -- Discord
 
-CREATE TABLE discord_guilds
+CREATE TABLE discord_bot_settings
 (
   id UUID PRIMARY KEY,
   guild_sid BIGINT UNSIGNED NOT NULL UNIQUE,
@@ -44,17 +44,9 @@ CREATE TABLE discord_guilds
   icon TEXT,
   owner_sid BIGINT UNSIGNED,
   description TEXT,
-  nsfw_level TINYINT UNSIGNED NOT NULL
-);
-
-CREATE TABLE discord_guilds_bot_settings
-(
-  id UUID PRIMARY KEY,
-  guild_id UUID NOT NULL unique,
   private_channel_sid BIGINT UNSIGNED NOT NULL UNIQUE,
   news_channel_sid BIGINT UNSIGNED UNIQUE,
-  poap_manager_role_sid BIGINT UNSIGNED UNIQUE NOT NULL,
-  FOREIGN KEY (guild_id) REFERENCES discord_guilds (id)
+  poap_manager_role_sid BIGINT UNSIGNED UNIQUE NOT NULL
 );
 
 CREATE TABLE discord_users
@@ -86,11 +78,11 @@ CREATE TABLE community_events_discord
 (
   id UUID PRIMARY KEY,
   community_event_id UUID NOT NULL,
-  guild_id UUID NOT NULL,
+  bot_settings_id UUID NOT NULL,
   organizer_id UUID NOT NULL,
   voice_channel_sid BIGINT UNSIGNED NOT NULL UNIQUE,
   FOREIGN KEY (community_event_id) REFERENCES community_events (id),
-  FOREIGN KEY (guild_id) REFERENCES discord_guilds (id),
+  FOREIGN KEY (bot_settings_id) REFERENCES discord_bot_settings (id),
   FOREIGN KEY (organizer_id) REFERENCES discord_users (id)
 );
 

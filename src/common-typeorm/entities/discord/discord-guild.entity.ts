@@ -1,10 +1,9 @@
-import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { SnowFlakeOption } from './discord.util';
-import { DiscordGuildBotSettingsEntity } from './discord-guild-bot-settings.entity';
 import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
 
 @Entity('discord_guilds')
-export class DiscordGuildEntity {
+export class DiscordBotSettingsEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -34,15 +33,17 @@ export class DiscordGuildEntity {
   })
   description?: string;
 
-  @Column({
-    name: 'nsfw_level',
-    type: 'tinyint',
-    nullable: false,
-  })
-  nsfwLevel: number;
+  @Column(SnowFlakeOption('private_channel_sid'))
+  privateChannelSId: string;
 
-  @OneToOne(() => DiscordGuildBotSettingsEntity, (botSettings) => botSettings.guild)
-  botSettings?: Relation<DiscordGuildBotSettingsEntity>;
+  @Column({
+    ...SnowFlakeOption('news_channel_sid'),
+    nullable: true,
+  })
+  newsChannelSId?: string;
+
+  @Column(SnowFlakeOption('poap_manager_role_sid'))
+  poapManagerRoleSId: string;
 
   @OneToMany(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.guild)
   communityEvents?: Relation<CommunityEventDiscordEntity[]>;
