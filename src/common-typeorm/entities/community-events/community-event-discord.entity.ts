@@ -18,9 +18,9 @@ export class CommunityEventDiscordEntity {
 
   @Column({
     type: 'uuid',
-    name: 'guild_id'
+    name: 'bot_settings_id'
   })
-  guildId: string;
+  botSettingsId: string;
 
   @Column({
     type: 'uuid',
