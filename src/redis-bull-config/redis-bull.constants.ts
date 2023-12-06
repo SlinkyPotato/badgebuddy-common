@@ -1,1 +1,1 @@
-export const COMMUNITY_EVENTS_QUEUE = 'community_events';
+export const REDIS_COMMUNITY_EVENTS_QUEUE = 'community_events';
