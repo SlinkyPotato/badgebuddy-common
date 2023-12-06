@@ -5,8 +5,8 @@ export const SnowFlakeOption = (name: string): ColumnOptions => ({
   unique: true,
   type: 'bigint',
   unsigned: true,
-  transformer: {
-    from: (bigInt: bigint | null) => bigInt && bigInt.toString(),
-    to: (bigInt?: string) => BigInt(bigInt),
-  }
+  // transformer: {
+  //   from: (bigInt: bigint | null) => bigInt && bigInt.toString(),
+  //   to: (bigInt?: string) => bigInt,
+  // }
 });
