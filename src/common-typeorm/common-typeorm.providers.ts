@@ -2,7 +2,7 @@ import { DataSource } from 'typeorm';
 import { 
   AccountEntity, CommunityEventDiscordEntity, CommunityEventEntity, 
   CommunityParticipantsDiscordEntity, 
-  DiscordGuildEntity, DiscordUserEntity, PoapClaimsEntity, TokenEntity, 
+  DiscordUserEntity, PoapClaimsEntity, TokenEntity, 
   UserEntity 
 } from './entities';
 import { AUTH_ACCOUNT_REPOSITORY, AUTH_TOKEN_REPOSITORY, AUTH_USER_REPOSITORY, 
@@ -54,12 +54,6 @@ export const DiscordUserRepsoitoryProvider = {
 };
 
 export const DiscordBotSettingsRepositoryProvider = {
-  provide: DISCORD_BOT_SETTINGS_REPOSITORY,
-  useFactory: (dataSource: DataSource) => dataSource.getRepository(DiscordGuildEntity),
-  inject: ['DATA_SOURCE'],
-};
-
-export const DiscordGuildBotSettingsRepositoryProvider = {
   provide: DISCORD_BOT_SETTINGS_REPOSITORY,
   useFactory: (dataSource: DataSource) => dataSource.getRepository(DiscordBotSettingsEntity),
   inject: ['DATA_SOURCE'],
