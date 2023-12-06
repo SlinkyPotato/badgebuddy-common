@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-28](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-27...v1.2.0-28) (2023-12-06)
+
+
+### Bug Fixes
+
+* try adding null ([e0593a8](https://github.com/SlinkyPotato/badge-buddy-common/commit/e0593a876264671e0a1d6810782c1bcd51e4a4f3))
+
 ## [1.2.0-27](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-26...v1.2.0-27) (2023-12-06)
 
 
