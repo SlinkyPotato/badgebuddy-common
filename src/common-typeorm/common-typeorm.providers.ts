@@ -9,7 +9,7 @@ import { AUTH_ACCOUNT_REPOSITORY, AUTH_TOKEN_REPOSITORY, AUTH_USER_REPOSITORY,
   COMMUNITY_EVENT_DISCORD_REPOSITORY, COMMUNITY_EVENT_PARTICIPANTS_DISCORD_REPOSITORY, 
   COMMUNITY_EVENT_REPOSITORY, DISCORD_BOT_SETTINGS_REPOSITORY, DISCORD_USER_REPOSITORY, POAP_CLAIMS_REPOSITORY 
 } from './common-typeorm.constants';
-import { DiscordBotSettingsEntity } from './entities/discord/discord-guild.entity';
+import { DiscordBotSettingsEntity } from './entities/discord/discord-bot-settings.entity';
 
 export const UserRepositoryProvider = {
   provide: AUTH_USER_REPOSITORY,
