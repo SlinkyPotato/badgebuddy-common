@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-0](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-30...v2.0.0-0) (2023-12-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove mongo
+
+### Refactor
+
+* remove mongo ([7019cdf](https://github.com/SlinkyPotato/badge-buddy-common/commit/7019cdf3073c1f1e4431f187415f3f2632dcb9d3))
+
 ## [1.2.0-30](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-29...v1.2.0-30) (2023-12-07)
 
 
