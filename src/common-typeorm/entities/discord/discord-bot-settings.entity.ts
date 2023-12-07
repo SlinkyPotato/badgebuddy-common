@@ -45,6 +45,8 @@ export class DiscordBotSettingsEntity {
   @Column(SnowFlakeOption('poap_manager_role_sid'))
   poapManagerRoleSId: string;
 
-  @OneToMany(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.botSettings)
+  @OneToMany(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.botSettings, {
+    cascade: ['insert', 'update'],
+  })
   communityEvents?: Relation<CommunityEventDiscordEntity[]>;
 }

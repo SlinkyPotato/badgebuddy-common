@@ -42,16 +42,24 @@ export class DiscordUserEntity {
   })
   avatar?: string;
 
-  @OneToMany(() => AccountEntity, (account) => account.id)
+  @OneToMany(() => AccountEntity, (account) => account.id, {
+    cascade: ['insert', 'update'],
+  })
   @JoinColumn({ name: 'auth_user_id', referencedColumnName: 'id' })
   account?: Relation<AccountEntity>;
 
-  @OneToMany(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.organizer)
+  @OneToMany(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.organizer, {
+    cascade: ['insert', 'update'],
+  })
   organizedEvents?: Relation<CommunityEventDiscordEntity[]>;
 
-  @OneToMany(() => CommunityParticipantsDiscordEntity, (communityParticipantsDiscord) => communityParticipantsDiscord.id)
+  @OneToMany(() => CommunityParticipantsDiscordEntity, (communityParticipantsDiscord) => communityParticipantsDiscord.id, {
+    cascade: ['insert', 'update'],
+  })
   participatedEvents?: Relation<CommunityParticipantsDiscordEntity[]>;
 
-  @OneToMany(() => PoapClaimsEntity, (poapClaims) => poapClaims.id)
+  @OneToMany(() => PoapClaimsEntity, (poapClaims) => poapClaims.id, {
+    cascade: ['insert', 'update'],
+  })
   poapsClaimed?: Relation<PoapClaimsEntity[]>;
 }

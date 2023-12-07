@@ -45,7 +45,9 @@ export class CommunityParticipantsDiscordEntity {
   @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
   communityEvent: Relation<CommunityEventDiscordEntity>;
 
-  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.id)
+  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.id, {
+    cascade: ['insert', 'update'],
+  })
   @JoinColumn({ name: 'discord_user_sid', referencedColumnName: 'id' })
   discordUser: Relation<DiscordUserEntity>;
 }
