@@ -12,14 +12,11 @@ export { CommonConfigModule } from './common-config/common-config.module';
 export { RedisConfigModule } from './redis-config/redis-config.module';
 export { RedisBullConfigModule } from './redis-bull-config/redis-bull-config.module';
 export { DiscordConfigModule } from './discord-config/discord-config.module';
-export { MongooseConfigModule } from './mongoose-config/mongoose-config.module';
 export * from './redis-bull-config/redis-bull.constants';
 export * from './redis-config/redis-config.constants';
 
 // Utils
 export { parseReleaseUtil } from './utils/parse-release.util';
-export { backupRedisCacheUtil } from './utils/backup-redis-cache.util';
-export { loadRedisCacheUtil } from './utils/load-redis-cache.util';
 
 // DTOs
 export { RedisDiscordParticipantDto } from './redis-config/dto/discord-participant.dto';

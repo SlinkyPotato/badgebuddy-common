@@ -8,8 +8,6 @@ describe('index', () => {
 
   it('should have imports defined', () => {
     expect(index.parseReleaseUtil).toBeDefined();
-    expect(index.backupRedisCacheUtil).toBeDefined();
-    expect(index.loadRedisCacheUtil).toBeDefined();
     expect(index.CommonPinoLogger).toBeDefined();
     expect(index.CommonPinoLoggerModule).toBeDefined();
     expect(index.CommonPinoLoggerService).toBeDefined();
