@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-9](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-8...v2.0.0-9) (2023-12-08)
+
+
+### Refactor
+
+* remove transformer.utils ([d0fb44c](https://github.com/SlinkyPotato/badge-buddy-common/commit/d0fb44c0a1788b98af703348dd7d5d3a17196254))
+
 ## [2.0.0-8](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-7...v2.0.0-8) (2023-12-08)
 
 ## [2.0.0-7](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-6...v2.0.0-7) (2023-12-08)

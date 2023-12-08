@@ -1,7 +1,6 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { CommunityEventEntity } from '../community-events/community-event.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
-import { transformer } from '../transformer.util';
 
 @Entity('poap_claims')
 export class PoapClaimsEntity {
@@ -30,7 +29,6 @@ export class PoapClaimsEntity {
     name: 'claimed_on',
     type: 'datetime',
     nullable: true,
-    transformer: transformer.date,
   })
   claimedOn?: Date;
 
@@ -44,7 +42,6 @@ export class PoapClaimsEntity {
   @Column({
     name: 'expires_on',
     type: 'datetime',
-    transformer: transformer.date,
   })
   expiresOn: Date;
 

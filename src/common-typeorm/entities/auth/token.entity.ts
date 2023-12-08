@@ -1,5 +1,4 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
-import { transformer } from '../transformer.util';
 import { AccountEntity } from './account.entity';
 
 const TokenType = ['access_token', 'refresh_token', 'id_token'] as const;
@@ -26,7 +25,6 @@ export class TokenEntity {
     nullable: true,
     type: 'datetime',
     name: 'expires_on',
-    transformer: transformer.date,
   })
   expiresOn?: Date;
 

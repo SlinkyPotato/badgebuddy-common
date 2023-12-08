@@ -31,20 +31,23 @@ export class CommunityEventDiscordEntity {
   @Column(SnowFlakeOption('voice_channel_sid'))
   voiceChannelSId: string;
 
-  @OneToOne(() => CommunityEventEntity, (communityEvent) => communityEvent.discord, {
+  @OneToOne(() => CommunityEventEntity, (communityEvent) => communityEvent.discordEvent, {
     cascade: ['insert', 'update'],
+    eager: true,
   })
   @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
   communityEvent: Relation<CommunityEventEntity>;
 
   @ManyToOne(() => DiscordBotSettingsEntity, (discordGuild) => discordGuild.communityEvents, {
     cascade: ['insert', 'update'],
+    eager: true,
   })
   @JoinColumn({ name: 'bot_settings_id', referencedColumnName: 'id' })
   botSettings: Relation<DiscordBotSettingsEntity>;
 
   @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.id, {
     cascade: ['insert', 'update'],
+    eager: true,
   })
   @JoinColumn({ name: 'organizer_id', referencedColumnName: 'id' })
   organizer: Relation<DiscordUserEntity>;
