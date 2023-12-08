@@ -1,5 +1,4 @@
 import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
-import { transformer } from '../transformer.util';
 import { CommunityEventDiscordEntity } from './community-event-discord.entity';
 import { PoapClaimsEntity } from '../poaps/poap-claims.entity';
 
@@ -25,14 +24,12 @@ export class CommunityEventEntity {
     name: 'start_date',
     nullable: false,
     type: 'datetime',
-    // transformer: transformer.date,
   })
   startDate: Date;
 
   @Column({
     name: 'end_date',
     type: 'datetime',
-    // transformer: transformer.date,
   })
   endDate: Date;
 
@@ -63,7 +60,7 @@ export class CommunityEventEntity {
   @OneToOne(() => CommunityEventDiscordEntity, (discord) => discord.communityEvent, {
     cascade: true,
   })
-  discord?: Relation<CommunityEventDiscordEntity>;
+  discordEvent?: Relation<CommunityEventDiscordEntity>;
 
   @OneToMany(() => PoapClaimsEntity, (poapClaim) => poapClaim.communityEvent, {
     cascade: true,
