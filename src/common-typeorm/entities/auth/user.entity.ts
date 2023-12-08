@@ -1,6 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
-import { transformer } from '../transformer.util';
 import { AccountEntity } from './account.entity';
+import { transformer } from '../transformer.util';
 
 @Entity({ name: 'users' })
 export class UserEntity {

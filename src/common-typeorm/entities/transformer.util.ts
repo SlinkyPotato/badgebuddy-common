@@ -1,6 +1,4 @@
-import { ValueTransformer } from 'typeorm';
-
-export const transformer: Record<'date' | 'bigint', ValueTransformer> = {
+export const transformer = {
   date: {
     from: (date: string | null) => {
       if (date) {
@@ -8,10 +6,6 @@ export const transformer: Record<'date' | 'bigint', ValueTransformer> = {
         return new Date(dSplit[0], dSplit[1] - 1, dSplit[2], dSplit[3], dSplit[4], dSplit[5]);
       }
     },
-    to: (date?: string) => (date ? date.slice(0, 19).replace('T', ' ') : undefined),
-  },
-  bigint: {
-    from: (bigInt: string | null) => bigInt && parseInt(bigInt, 10),
-    to: (bigInt?: number) => bigInt?.toString(),
-  },
+    to: (date?: string | null) => (date ? date.slice(0, 19).replace('T', ' ') : undefined),
+  }
 };
