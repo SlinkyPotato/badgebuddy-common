@@ -8,10 +8,7 @@ export const transformer: Record<'date' | 'bigint', ValueTransformer> = {
         return new Date(dSplit[0], dSplit[1] - 1, dSplit[2], dSplit[3], dSplit[4], dSplit[5]);
       }
     },
-    to: (date?: Date) => {
-      console.log(date);
-      return (date ? date.toISOString().slice(0, 19).replace('T', ' ') : undefined)
-    },
+    to: (date?: string) => (date ? date.slice(0, 19).replace('T', ' ') : undefined),
   },
   bigint: {
     from: (bigInt: string | null) => bigInt && parseInt(bigInt, 10),
