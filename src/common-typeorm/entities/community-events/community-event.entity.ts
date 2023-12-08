@@ -25,14 +25,14 @@ export class CommunityEventEntity {
     name: 'start_date',
     nullable: false,
     type: 'datetime',
-    transformer: transformer.date,
+    // transformer: transformer.date,
   })
   startDate: Date;
 
   @Column({
     name: 'end_date',
     type: 'datetime',
-    transformer: transformer.date,
+    // transformer: transformer.date,
   })
   endDate: Date;
 
