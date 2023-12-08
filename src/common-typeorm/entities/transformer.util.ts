@@ -6,9 +6,6 @@ export const transformer = {
         return new Date(dSplit[0], dSplit[1] - 1, dSplit[2], dSplit[3], dSplit[4], dSplit[5]);
       }
     },
-    to: (date?: Date | null) => {
-      const dateStr = typeof date === 'string' ? date : typeof date === 'object' ? date.toISOString() : undefined;
-      return (dateStr ? dateStr.slice(0, 19).replace('T', ' ') : undefined);
-    },
+    to: (date?: Date) => (date ? date.toISOString().slice(0, 19).replace('T', ' ') : undefined),
   }
 };
