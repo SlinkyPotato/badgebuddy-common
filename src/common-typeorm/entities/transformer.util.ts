@@ -7,8 +7,8 @@ export const transformer = {
       }
     },
     to: (date?: Date | null) => {
-      console.log(typeof date);
-      return (date ? date.toISOString().slice(0, 19).replace('T', ' ') : undefined);
+      const dateStr = typeof date === 'string' ? date : typeof date === 'object' ? date.toISOString() : undefined;
+      return (dateStr ? dateStr.slice(0, 19).replace('T', ' ') : undefined);
     },
   }
 };
