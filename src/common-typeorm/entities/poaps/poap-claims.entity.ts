@@ -1,7 +1,7 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
-import { transformer } from '../transformer.util';
 import { CommunityEventEntity } from '../community-events/community-event.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
+import { transformer } from '../transformer.util';
 
 @Entity('poap_claims')
 export class PoapClaimsEntity {
