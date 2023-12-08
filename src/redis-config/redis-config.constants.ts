@@ -16,11 +16,12 @@ export const DISCORD_BOT_SETTINGS_GUILDSID = (guildSId: string) => `/discord/bot
 export const DISCORD_BOT_SETTINGS = (botSettingsId: string) => `/discord/bot/settings?botSettingsId=${botSettingsId}` as const;
 
 // Discord Community Events
-export const DISCORD_COMMUNITY_EVENTS_ACTIVE_ID = (id: string) => `/discord/community-events/active-by/id/${id}` as const;
-export const DISCORD_COMMUNITY_EVENTS_ACTIVE_GUILD = (guildSId: string) => `/events/active?guildSId=${guildSId}` as const;
-export const DISCORD_COMMUNITY_EVENTS_ACTIVE_VOICE_CHANNEL = (voiceChannelSId: string) => `/events/active?voiceChannelSId=${voiceChannelSId}` as const;
-export const DISCORD_COMMUNITY_EVENTS_ACTIVE_ORGANIZER = (organizerSId: string) => `/events/active?organizerSId=${organizerSId}`;
-export const DISCORD_COMMUNITY_EVENTS_ACTIVE_GUILD_ORGANIZER = ({organizerSId, guildSId}) => `/events/active?organizerSId=${organizerSId}&guildSId=${guildSId}`;
+export const DISCORD_COMMUNITY_EVENTS_ACTIVE = `/discord/community-events/active` as const;
+export const DISCORD_COMMUNITY_EVENTS_ACTIVE_ID = (id: string) => `/discord/community-events/active/id/${id}` as const;
+export const DISCORD_COMMUNITY_EVENTS_ACTIVE_GUILD = (guildSId: string) => `/discord/community-events/active/guild/${guildSId}` as const;
+export const DISCORD_COMMUNITY_EVENTS_ACTIVE_VOICE_CHANNEL = (voiceChannelSId: string) => `/discord/community-events/active/voice-channel/${voiceChannelSId}` as const;
+export const DISCORD_COMMUNITY_EVENTS_ACTIVE_ORGANIZER = (organizerSId: string) => `/discord/community-events/active/organizer/${organizerSId}`;
+export const DISCORD_COMMUNITY_EVENTS_ACTIVE_GUILD_ORGANIZER = ({organizerSId, guildSId}) => `/discord/community-events/active/guild/${guildSId}/organizer/${organizerSId}`;
 
 // Discord Processor
 export const TRACKING_EVENTS_ACTIVE_VOICE_CHANNEL = (voiceChannelSId: string) => `tracking:events:active:voiceChannelSId:${voiceChannelSId}` as const;
