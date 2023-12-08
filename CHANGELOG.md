@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-10](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-9...v2.0.0-10) (2023-12-08)
+
+
+### Bug Fixes
+
+* remove unique cconstraint ([e825145](https://github.com/SlinkyPotato/badge-buddy-common/commit/e825145172edb311a05677349a4b0210cb51cdc9))
+
 ## [2.0.0-9](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-8...v2.0.0-9) (2023-12-08)
 
 
