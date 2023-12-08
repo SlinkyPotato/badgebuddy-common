@@ -1,5 +1,6 @@
--- Active: 1699630069601@@127.0.0.1@3306@badge_buddy
+-- Active: 1702008448366@@127.0.0.1@3306@badge_buddy
 
+-- //TODO: Create indexes for unique columns
 
 CREATE DATABASE badge_buddy;
 DROP DATABASE badge_buddy;
@@ -81,7 +82,7 @@ CREATE TABLE community_events_discord
   community_event_id UUID NOT NULL,
   bot_settings_id UUID NOT NULL,
   organizer_id UUID NOT NULL,
-  voice_channel_sid BIGINT UNSIGNED NOT NULL UNIQUE,
+  voice_channel_sid BIGINT UNSIGNED NOT NULL,
   FOREIGN KEY (community_event_id) REFERENCES community_events (id),
   FOREIGN KEY (bot_settings_id) REFERENCES discord_bot_settings (id),
   FOREIGN KEY (organizer_id) REFERENCES discord_users (id)
@@ -106,7 +107,7 @@ CREATE TABLE community_participants_discord
 (
   id UUID PRIMARY KEY,
   community_event_id UUID NOT NULL,
-  discord_user_sid BIGINT UNSIGNED NOT NULL UNIQUE,
+  discord_user_sid BIGINT UNSIGNED NOT NULL,
   start_date DATETIME NOT NULL,
   end_date DATETIME,
   participation_length INT UNSIGNED, -- in seconds
@@ -114,3 +115,4 @@ CREATE TABLE community_participants_discord
   FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid)
 );
 
+-- CREATE INDEX community_participants_discord_community_event_id_discord_user_sid_idx ON community_participants_discord (community_event_id, discord_user_sid);
