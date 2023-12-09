@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-12](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-11...v2.0.0-12) (2023-12-09)
+
+
+### Performance
+
+* add eager loading to tokenEntity and remove cascase ([142f807](https://github.com/SlinkyPotato/badge-buddy-common/commit/142f8071ced287f962ed5f101b8888715285d7f6))
+
 ## [2.0.0-11](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-10...v2.0.0-11) (2023-12-08)
 
 
