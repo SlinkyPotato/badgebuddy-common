@@ -42,7 +42,9 @@ export class TokenEntity {
   })
   scope?: string;
 
-  @ManyToOne(() => AccountEntity, (account) => account.tokens)
+  @ManyToOne(() => AccountEntity, (account) => account.tokens, {
+    eager: true,
+  })
   @JoinColumn({ name: 'account_id', referencedColumnName: 'id' })
   account: Relation<AccountEntity>;
 }

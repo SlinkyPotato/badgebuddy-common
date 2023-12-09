@@ -46,7 +46,7 @@ export class DiscordBotSettingsEntity {
   poapManagerRoleSId: string;
 
   @OneToMany(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.botSettings, {
-    cascade: ['insert', 'update'],
+    cascade: ['insert', 'update', 'remove'],
   })
   communityEvents?: Relation<CommunityEventDiscordEntity[]>;
 }
