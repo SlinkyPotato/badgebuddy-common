@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-24](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-23...v2.0.0-24) (2023-12-10)
+
+
+### Refactor
+
+* move common dto objects ([4600a40](https://github.com/SlinkyPotato/badge-buddy-common/commit/4600a40737faede3b80c130ae374b2886203f4a3))
+
 ## [2.0.0-23](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-22...v2.0.0-23) (2023-12-10)
 
 
