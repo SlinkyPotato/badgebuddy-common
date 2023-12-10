@@ -1,8 +1,8 @@
-export class RedisDiscordParticipantDto {
-  eventId: string;
-  userId: string;
-  userTag: string;
+export class DiscordParticipantRedisDto {
+  communityEventId: string;
+  discordUserSId: string;
+  discordUserTag: string;
   startDate: string;
   endDate?: string;
-  durationInMinutes: number;
+  durationInSeconds: number;
 }

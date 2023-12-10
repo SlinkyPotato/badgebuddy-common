@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-15](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-14...v2.0.0-15) (2023-12-10)
+
+
+### Refactor
+
+* rename redis dto ([5294189](https://github.com/SlinkyPotato/badge-buddy-common/commit/5294189e46e74acf0592aaa5ce723ce850fb4359))
+* rename redis dto properties ([c670710](https://github.com/SlinkyPotato/badge-buddy-common/commit/c67071071df02692dd63ad86f8451ad0ebf3088c))
+
 ## [2.0.0-14](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-13...v2.0.0-14) (2023-12-10)
 
 
