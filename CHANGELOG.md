@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-20](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-19...v2.0.0-20) (2023-12-10)
+
+
+### Refactor
+
+* rename returned id to communityEventId ([abc6082](https://github.com/SlinkyPotato/badge-buddy-common/commit/abc60820beb91d1713529cc0940c08fe1f326c9d))
+
 ## [2.0.0-19](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-18...v2.0.0-19) (2023-12-10)
 
 
