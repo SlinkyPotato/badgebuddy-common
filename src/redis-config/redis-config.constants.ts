@@ -24,4 +24,5 @@ export const DISCORD_COMMUNITY_EVENTS_ACTIVE_ORGANIZER = (organizerSId: string) 
 export const DISCORD_COMMUNITY_EVENTS_ACTIVE_GUILD_ORGANIZER = ({organizerSId, guildSId}) => `/discord/community-events/active/guild/${guildSId}/organizer/${organizerSId}`;
 
 // Discord Processor
-export const TRACKING_EVENTS_ACTIVE_VOICE_CHANNEL = (voiceChannelSId: string) => `tracking:events:active:voiceChannelSId:${voiceChannelSId}` as const;
+export const TRACKING_EVENTS_ACTIVE = (voiceChannelSId: string) => `tracking:events:active:voiceChannelSId:${voiceChannelSId}` as const;
+export const TRACKING_EVENTS_PARTICIPANTS = (communityEventId: string, discordUserSId: string) => `tracking:events:${communityEventId}:participants:${discordUserSId}` as const;
