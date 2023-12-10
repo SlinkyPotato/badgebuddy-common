@@ -19,7 +19,7 @@ export * from './redis-config/redis-config.constants';
 export { parseReleaseUtil } from './utils/parse-release.util';
 
 // DTOs
-export { DiscordParticipantRedisDto as RedisDiscordParticipantDto } from './redis-config/dto/discord-participant.dto';
+export { DiscordParticipantRedisDto } from './redis-config/dto/discord-participant-redis.dto';
 
 // Entities - TypeORM
 export { CommonTypeOrmModule } from './common-typeorm/common-typeorm.module';
