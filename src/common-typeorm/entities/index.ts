@@ -10,7 +10,7 @@ export { DiscordUserEntity } from './discord/discord-user.entity';
 // Community Events
 export { CommunityEventEntity } from './community-events/community-event.entity';
 export { CommunityEventDiscordEntity } from './community-events/community-event-discord.entity';
-export { CommunityParticipantsDiscordEntity } from './community-events/community-participants-discord.entity';
+export { CommunityParticipantDiscordEntity as CommunityParticipantsDiscordEntity } from './community-events/community-participant-discord.entity';
 
 // POAPs
 export { PoapClaimsEntity } from './poaps/poap-claims.entity';

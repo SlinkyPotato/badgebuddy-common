@@ -4,7 +4,7 @@ import { CommunityEventDiscordEntity } from './community-event-discord.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 
 @Entity('community_participants_discord')
-export class CommunityParticipantsDiscordEntity {
+export class CommunityParticipantDiscordEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
