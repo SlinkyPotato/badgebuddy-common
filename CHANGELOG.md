@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-17](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-16...v2.0.0-17) (2023-12-10)
+
+
+### Performance
+
+* remove discordUserTag from redis dto ([baa4239](https://github.com/SlinkyPotato/badge-buddy-common/commit/baa423992c26fed11ed083a346a13b78e57ef86a))
+
 ## [2.0.0-16](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-15...v2.0.0-16) (2023-12-10)
 
 
