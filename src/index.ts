@@ -20,8 +20,6 @@ export { parseReleaseUtil } from './utils/parse-release.util';
 
 // DTOs
 export { DiscordParticipantRedisDto } from './redis-config/dto/discord-participant-redis.dto';
-export { DiscordActiveCommunityEventDto } from './common-dto/discord-active-community-event-get-response/discord-active-community-event.dto';
-export { DiscordActiveCommunityEventsGetResponseDto } from './common-dto/discord-active-community-event-get-response/discord-active-community-events-get-response.dto';
 
 // Entities - TypeORM
 export { CommonTypeOrmModule } from './common-typeorm/common-typeorm.module';
@@ -29,3 +27,6 @@ export * as entities from './common-typeorm/entities';
 export * from './common-typeorm/entities';
 export type { TokenType } from './common-typeorm/entities/auth/token.entity';
 export * from './common-typeorm/common-typeorm.constants';
+
+// API DTOs
+export * from './badge-buddy-api-dto';
