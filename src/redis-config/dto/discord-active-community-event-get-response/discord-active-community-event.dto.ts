@@ -7,7 +7,7 @@ export class DiscordActiveCommunityEventDto {
     description: 'The ID of the event',
   })
   @IsString()
-  id: string;
+  communityEventId: string;
 
   @ApiProperty({
     required: true,
