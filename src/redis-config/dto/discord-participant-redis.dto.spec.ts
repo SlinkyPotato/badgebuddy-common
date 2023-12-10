@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from '@jest/globals';
-import { DiscordParticipantRedisDto } from './discord-participant.dto';
+import { DiscordParticipantRedisDto } from './discord-participant-redis.dto';
 
 describe('DiscordParticipantRedisDto', () => {
   let discordParticipantDto: DiscordParticipantRedisDto;
