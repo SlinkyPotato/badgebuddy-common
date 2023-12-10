@@ -20,8 +20,8 @@ export { parseReleaseUtil } from './utils/parse-release.util';
 
 // DTOs
 export { DiscordParticipantRedisDto } from './redis-config/dto/discord-participant-redis.dto';
-export { DiscordActiveCommunityEventDto } from './redis-config/dto/discord-active-community-event-get-response/discord-active-community-event.dto';
-export { DiscordActiveCommunityEventsGetResponseDto } from './redis-config/dto/discord-active-community-event-get-response/discord-active-community-events-get-response.dto';
+export { DiscordActiveCommunityEventDto } from './common-dto/discord-active-community-event-get-response/discord-active-community-event.dto';
+export { DiscordActiveCommunityEventsGetResponseDto } from './common-dto/discord-active-community-event-get-response/discord-active-community-events-get-response.dto';
 
 // Entities - TypeORM
 export { CommonTypeOrmModule } from './common-typeorm/common-typeorm.module';
