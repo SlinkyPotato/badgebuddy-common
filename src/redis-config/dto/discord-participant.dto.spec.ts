@@ -1,21 +1,21 @@
 import { beforeEach, describe, expect, it } from '@jest/globals';
-import { RedisDiscordParticipantDto } from './discord-participant.dto';
+import { DiscordParticipantRedisDto } from './discord-participant.dto';
 
-describe('DiscordParticipantDto', () => {
-  let discordParticipantDto: RedisDiscordParticipantDto;
+describe('DiscordParticipantRedisDto', () => {
+  let discordParticipantDto: DiscordParticipantRedisDto;
 
   beforeEach(() => {
-    discordParticipantDto = new RedisDiscordParticipantDto();
+    discordParticipantDto = new DiscordParticipantRedisDto();
     discordParticipantDto.eventId = '64e903cbac9d84d78747d109';
     discordParticipantDto.userId = '159014522542096384';
     discordParticipantDto.userTag = 'slinkypotato';
     discordParticipantDto.startDate = '2023-08-28T22:35:38.189+00:00';
-    discordParticipantDto.durationInMinutes = 1;
+    discordParticipantDto.durationInSeconds = 1;
   });
 
   it('should have the correct values', () => {
-    expect(RedisDiscordParticipantDto).toBeDefined();
-    expect(RedisDiscordParticipantDto).toBeInstanceOf(Function);
+    expect(DiscordParticipantRedisDto).toBeDefined();
+    expect(DiscordParticipantRedisDto).toBeInstanceOf(Function);
   });
 
   it('should have the correct properties', () => {
