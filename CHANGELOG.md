@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-19](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-18...v2.0.0-19) (2023-12-10)
+
+
+### Refactor
+
+* add tracking participants key ([e678f11](https://github.com/SlinkyPotato/badge-buddy-common/commit/e678f11dc7649be1f3aebc7fd44d7d26d5651f3e))
+
 ## [2.0.0-18](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-17...v2.0.0-18) (2023-12-10)
 
 
