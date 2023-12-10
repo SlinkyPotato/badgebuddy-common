@@ -2,7 +2,7 @@ import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn, Relation
 import { SnowFlakeOption } from './discord.util';
 import { AccountEntity } from '../auth/account.entity';
 import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
-import { CommunityParticipantsDiscordEntity } from '../community-events/community-participants-discord.entity';
+import { CommunityParticipantDiscordEntity } from '../community-events/community-participant-discord.entity';
 import { PoapClaimsEntity } from '../poaps/poap-claims.entity';
 
 @Entity('discord_users')
@@ -53,10 +53,10 @@ export class DiscordUserEntity {
   })
   organizedEvents?: Relation<CommunityEventDiscordEntity[]>;
 
-  @OneToMany(() => CommunityParticipantsDiscordEntity, (communityParticipantsDiscord) => communityParticipantsDiscord.id, {
+  @OneToMany(() => CommunityParticipantDiscordEntity, (communityParticipantsDiscord) => communityParticipantsDiscord.id, {
     cascade: ['insert', 'update'],
   })
-  participatedEvents?: Relation<CommunityParticipantsDiscordEntity[]>;
+  participatedEvents?: Relation<CommunityParticipantDiscordEntity[]>;
 
   @OneToMany(() => PoapClaimsEntity, (poapClaims) => poapClaims.id, {
     cascade: ['insert', 'update'],

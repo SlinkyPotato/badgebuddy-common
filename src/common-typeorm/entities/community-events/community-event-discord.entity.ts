@@ -3,7 +3,7 @@ import { SnowFlakeOption } from '../discord/discord.util';
 import { CommunityEventEntity } from './community-event.entity';
 import { DiscordBotSettingsEntity } from '../discord/discord-bot-settings.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
-import { CommunityParticipantsDiscordEntity } from './community-participants-discord.entity';
+import { CommunityParticipantDiscordEntity } from './community-participant-discord.entity';
 
 @Entity('community_events_discord')
 export class CommunityEventDiscordEntity {
@@ -52,6 +52,6 @@ export class CommunityEventDiscordEntity {
   @JoinColumn({ name: 'organizer_id', referencedColumnName: 'id' })
   organizer: Relation<DiscordUserEntity>;
 
-  @OneToMany(() => CommunityParticipantsDiscordEntity, (communityParticipantsDiscord) => communityParticipantsDiscord.id)
-  participants: Relation<CommunityParticipantsDiscordEntity[]>;
+  @OneToMany(() => CommunityParticipantDiscordEntity, (communityParticipantsDiscord) => communityParticipantsDiscord.id)
+  participants: Relation<CommunityParticipantDiscordEntity[]>;
 }
