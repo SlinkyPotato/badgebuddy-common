@@ -1,7 +1,7 @@
 export class DiscordParticipantRedisDto {
-  eventId: string;
-  userId: string;
-  userTag: string;
+  communityEventId: string;
+  discordUserSId: string;
+  discordUserTag: string;
   startDate: string;
   endDate?: string;
   durationInSeconds: number;
