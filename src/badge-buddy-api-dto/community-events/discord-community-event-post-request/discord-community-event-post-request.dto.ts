@@ -20,13 +20,6 @@ export class DiscordCommunityEventPostRequestDto extends CommonManagementRequest
 
   @ApiProperty({
     required: true,
-    description: 'The snowflake ID of the tracking voice channel',
-  })
-  @IsNumberString()
-  voiceChannelSId: string;
-
-  @ApiProperty({
-    required: true,
     description: 'The end date of the event',
   })
   @IsISO8601()
