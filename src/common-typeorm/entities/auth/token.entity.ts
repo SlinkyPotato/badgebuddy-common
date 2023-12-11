@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, Relation } from 'typeorm';
 import { AccountEntity } from './account.entity';
 
 const TokenType = ['access_token', 'refresh_token', 'id_token'] as const;
@@ -6,14 +6,21 @@ export type TokenType = typeof TokenType[number];
 
 @Entity({ name: 'tokens' })
 export class TokenEntity {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
-
+  
+  @PrimaryColumn()
   @Column({
     type: 'uuid',
     name: 'account_id',
   })
   accountId: string;
+
+  @PrimaryColumn()
+  @Column({
+    type: 'enum',
+    name: 'type',
+    enum: [TokenType],
+  })
+  type: TokenType;
 
   @Column({
     type: 'text',
@@ -27,13 +34,6 @@ export class TokenEntity {
     name: 'expires_on',
   })
   expiresOn?: Date;
-
-  @Column({
-    type: 'enum',
-    name: 'type',
-    enum: [TokenType],
-  })
-  type: TokenType;
 
   @Column({
     type: 'text',
