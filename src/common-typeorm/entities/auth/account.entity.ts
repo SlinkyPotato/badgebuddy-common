@@ -3,7 +3,7 @@ import { UserEntity } from './user.entity';
 import { TokenEntity } from './token.entity';
 
 @Entity({ name: 'accounts' })
-@Index(['provider', 'providerAccountId'], { unique: true })
+@Index('unique_account_provider', ['provider', 'providerAccountId'], { unique: true })
 export class AccountEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -34,6 +34,6 @@ export class AccountEntity {
   @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
   user: Relation<UserEntity>;
 
-  @OneToMany(() => TokenEntity, (token) => token.accountId)
+  @OneToMany(() => TokenEntity, (token) => [token.accountId, token.type])
   tokens?: Relation<TokenEntity[]>;
 }
