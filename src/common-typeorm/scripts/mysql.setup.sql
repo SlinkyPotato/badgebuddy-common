@@ -57,12 +57,10 @@ CREATE TABLE discord_bot_settings
   guild_sid BIGINT UNSIGNED NOT NULL UNIQUE,
   name VARCHAR(255) NOT NULL,
   icon TEXT,
-  owner_sid BIGINT UNSIGNED,
   description TEXT,
   private_channel_sid BIGINT UNSIGNED NOT NULL UNIQUE,
   news_channel_sid BIGINT UNSIGNED UNIQUE,
   poap_manager_role_sid BIGINT UNSIGNED UNIQUE NOT NULL,
-  FOREIGN KEY (owner_sid) REFERENCES discord_users (user_sid)
 );
 
 
