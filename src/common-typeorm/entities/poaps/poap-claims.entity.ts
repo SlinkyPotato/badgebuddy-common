@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { CommunityEventEntity } from '../community-events/community-event.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 
@@ -11,6 +11,7 @@ export class PoapClaimsEntity {
     name: 'qr_code',
     type: 'varchar',
   })
+  @Index('qr_code_idx')
   qrCode: string;
 
   @Column({
