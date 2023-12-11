@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-39](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-38...v2.0.0-39) (2023-12-11)
+
+
+### Features
+
+* add DiscordBotTokenDto ([1903573](https://github.com/SlinkyPotato/badge-buddy-common/commit/19035733fc41adb4fb6cc672866c69ef9d53f6c3))
+
 ## [2.0.0-38](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-37...v2.0.0-38) (2023-12-11)
 
 
