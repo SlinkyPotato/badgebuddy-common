@@ -22,21 +22,34 @@ CREATE TABLE accounts
   user_id UUID NOT NULL,
   provider VARCHAR(255) NOT NULL,
   provider_account_id VARCHAR(255) NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES users (id)
+  FOREIGN KEY (user_id) REFERENCES users (id),
+  UNIQUE KEY unique_account_provider (provider, provider_account_id),
+  INDEX provider_account_idx (provider_account_id)
 );
 
 CREATE TABLE tokens
 (
-  id UUID PRIMARY KEY,
   account_id UUID NOT NULL,
   token TEXT NOT NULL,
   expires_on DATETIME,
   type ENUM('access_token', 'refresh_token', 'id_token') NOT NULL,
   scope TEXT,
-  FOREIGN KEY (account_id) REFERENCES accounts (id)
+  FOREIGN KEY (account_id) REFERENCES accounts (id),
+  PRIMARY KEY (account_id, type)
 );
 
 -- Discord
+
+CREATE TABLE discord_users
+(
+  id UUID PRIMARY KEY,
+  user_sid BIGINT UNSIGNED NOT NULL UNIQUE,
+  auth_user_id UUID UNIQUE,
+  username VARCHAR(255) NOT NULL,
+  discriminator VARCHAR(4) NOT NULL, -- tag
+  avatar TEXT,
+  FOREIGN KEY (auth_user_id) REFERENCES accounts (id)
+);
 
 CREATE TABLE discord_bot_settings
 (
@@ -48,18 +61,8 @@ CREATE TABLE discord_bot_settings
   description TEXT,
   private_channel_sid BIGINT UNSIGNED NOT NULL UNIQUE,
   news_channel_sid BIGINT UNSIGNED UNIQUE,
-  poap_manager_role_sid BIGINT UNSIGNED UNIQUE NOT NULL
-);
-
-CREATE TABLE discord_users
-(
-  id UUID PRIMARY KEY,
-  user_sid BIGINT UNSIGNED NOT NULL UNIQUE,
-  auth_user_id UUID UNIQUE,
-  username VARCHAR(255) NOT NULL,
-  discriminator VARCHAR(4) NOT NULL, -- tag
-  avatar TEXT,
-  FOREIGN KEY (auth_user_id) REFERENCES accounts (id)
+  poap_manager_role_sid BIGINT UNSIGNED UNIQUE NOT NULL,
+  FOREIGN KEY (owner_sid) REFERENCES discord_users (user_sid)
 );
 
 
@@ -85,7 +88,8 @@ CREATE TABLE community_events_discord
   voice_channel_sid BIGINT UNSIGNED NOT NULL,
   FOREIGN KEY (community_event_id) REFERENCES community_events (id),
   FOREIGN KEY (bot_settings_id) REFERENCES discord_bot_settings (id),
-  FOREIGN KEY (organizer_id) REFERENCES discord_users (id)
+  FOREIGN KEY (organizer_id) REFERENCES discord_users (id),
+  INDEX voice_channel_sid_idx (voice_channel_sid)
 );
 
 -- POAPs
@@ -99,7 +103,8 @@ CREATE TABLE poap_claims
   claimed_by_discord_user_id uuid,
   expires_on DATETIME NOT NULL,
   FOREIGN KEY (community_event_id) REFERENCES community_events (id),
-  FOREIGN KEY (claimed_by_discord_user_id) REFERENCES discord_users (id)
+  FOREIGN KEY (claimed_by_discord_user_id) REFERENCES discord_users (id),
+  INDEX qr_code_idx (qr_code)
 );
 
 -- POAPs Community Participants
