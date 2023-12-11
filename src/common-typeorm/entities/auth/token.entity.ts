@@ -7,15 +7,13 @@ export type TokenType = typeof TokenType[number];
 @Entity({ name: 'tokens' })
 export class TokenEntity {
   
-  @PrimaryColumn()
-  @Column({
+  @PrimaryColumn({
     type: 'uuid',
     name: 'account_id',
   })
   accountId: string;
 
-  @PrimaryColumn()
-  @Column({
+  @PrimaryColumn({
     type: 'enum',
     name: 'type',
     enum: [TokenType],
@@ -43,6 +41,8 @@ export class TokenEntity {
   scope?: string;
 
   @ManyToOne(() => AccountEntity, (account) => account.tokens)
-  @JoinColumn({ name: 'account_id', referencedColumnName: 'id' })
+  @JoinColumn(
+    { name: 'account_id', referencedColumnName: 'id' }
+  )
   account?: Relation<AccountEntity>;
 }
