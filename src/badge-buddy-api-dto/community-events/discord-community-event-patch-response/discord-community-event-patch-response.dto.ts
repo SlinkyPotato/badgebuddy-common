@@ -12,7 +12,35 @@ export class DiscordCommunityEventPatchResponseDto {
 
   @ApiProperty({
     required: true,
-    description: 'The endDate of the event',
+    description: 'The title of the event',
+  })
+  @IsString()
+  title: string;
+
+  @ApiProperty({
+    required: true,
+    description: 'The description of the event',
+  })
+  @IsString()
+  description: string;
+
+  @ApiProperty({
+    required: true,
+    description: 'The username of the organizer',
+  })
+  @IsString()
+  organizerUsername: string;
+
+  @ApiProperty({
+    required: true,
+    description: 'The start date of the event',
+  })
+  @IsISO8601()
+  startDate: string;
+
+  @ApiProperty({
+    required: true,
+    description: 'The end date of the event',
   })
   @IsISO8601()
   endDate: string;
