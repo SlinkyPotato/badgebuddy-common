@@ -1,6 +1,6 @@
 {
   "name": "@badgebuddy/common",
-  "version": "2.0.0-26",
+  "version": "2.0.0-27",
   "description": "A collection of common objects and utils.",
   "author": "SlinkyPotato <patinobrian@gmail.com>",
   "private": false,
@@ -26,7 +26,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "sync": "git fetch && git pull"
+    "sync": "git fetch && git pull && pnpm install"
   },
   "dependencies": {
     "@logtail/pino": "^0.4.17",
