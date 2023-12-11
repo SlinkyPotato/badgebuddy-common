@@ -17,6 +17,12 @@ export class DiscordCommunityEventPostRequestDto {
   organizerSId: string;
 
   @ApiProperty({
+    description: 'The snowflake ID of the tracking voice channel',
+  })
+  @IsNumberString()
+  voiceChannelSId: string;
+
+  @ApiProperty({
     required: true,
     description: 'The title of the event',
   })
