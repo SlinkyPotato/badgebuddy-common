@@ -60,7 +60,7 @@ CREATE TABLE discord_bot_settings
   description TEXT,
   private_channel_sid BIGINT UNSIGNED NOT NULL UNIQUE,
   news_channel_sid BIGINT UNSIGNED UNIQUE,
-  poap_manager_role_sid BIGINT UNSIGNED UNIQUE NOT NULL,
+  poap_manager_role_sid BIGINT UNSIGNED UNIQUE NOT NULL
 );
 
 
@@ -117,5 +117,3 @@ CREATE TABLE community_participants_discord
   FOREIGN KEY (community_event_id) REFERENCES community_events_discord (community_event_id),
   FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid)
 );
-
--- CREATE INDEX community_participants_discord_community_event_id_discord_user_sid_idx ON community_participants_discord (community_event_id, discord_user_sid);
