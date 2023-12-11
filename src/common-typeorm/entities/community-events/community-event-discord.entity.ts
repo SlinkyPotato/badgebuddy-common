@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, Index, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { SnowFlakeOption } from '../discord/discord.util';
 import { CommunityEventEntity } from './community-event.entity';
 import { DiscordBotSettingsEntity } from '../discord/discord-bot-settings.entity';
@@ -29,6 +29,7 @@ export class CommunityEventDiscordEntity {
   organizerId: string;
 
   @Column(SnowFlakeOption('voice_channel_sid'))
+  @Index('voice_channel_sid_idx')
   voiceChannelSId: string;
 
   @OneToOne(() => CommunityEventEntity, (communityEvent) => communityEvent.discordEvent, {

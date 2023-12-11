@@ -1,8 +1,9 @@
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, Index, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { UserEntity } from './user.entity';
 import { TokenEntity } from './token.entity';
 
 @Entity({ name: 'accounts' })
+@Index(['provider', 'providerAccountId'], { unique: true })
 export class AccountEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -26,6 +27,7 @@ export class AccountEntity {
     nullable: false,
     name: 'provider_account_id',
   })
+  @Index('provider_account_idx')
   providerAccountId: string;
 
   @ManyToOne(() => UserEntity, (user) => user.accounts)

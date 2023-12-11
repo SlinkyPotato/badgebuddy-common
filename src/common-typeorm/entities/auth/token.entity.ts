@@ -1,10 +1,11 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, Relation } from 'typeorm';
+import { Column, Entity, Index, JoinColumn, ManyToOne, PrimaryColumn, Relation } from 'typeorm';
 import { AccountEntity } from './account.entity';
 
 const TokenType = ['access_token', 'refresh_token', 'id_token'] as const;
 export type TokenType = typeof TokenType[number];
 
 @Entity({ name: 'tokens' })
+@Index(['accountId', 'type'], { unique: true })
 export class TokenEntity {
   
   @PrimaryColumn()
