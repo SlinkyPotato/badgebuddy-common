@@ -14,5 +14,3 @@ export { DiscordCommunityEventsActiveByGuildGetRequestDto } from './discord-comm
 export { DiscordCommunityEventsActiveByIdGetRequestDto } from './discord-community-events-active-by-id-get-request/discord-community-events-active-by-id-get-request.dto';
 export { DiscordCommunityEventsActiveByOrganizerGetRequestDto } from './discord-community-events-active-by-organizer-get-request/discord-community-events-active-by-organizer-get-request.dto';
 export { DiscordCommunityEventsActiveByVoiceChannelGetRequestDto } from './discord-community-events-active-by-voice-channel-get-request/discord-community-events-active-by-voice-channel-get-request.dto';
-
-export { CommonManagementRequestDto } from './common-management-request.dto';
