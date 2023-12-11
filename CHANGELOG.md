@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-29](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-28...v2.0.0-29) (2023-12-11)
+
+
+### Performance
+
+* add indexing to tables ([2e1198e](https://github.com/SlinkyPotato/badge-buddy-common/commit/2e1198e4389380f94e1d2f3f2082f9ccc7efce9a))
+
 ## [2.0.0-28](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-27...v2.0.0-28) (2023-12-11)
 
 
