@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-38](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-37...v2.0.0-38) (2023-12-11)
+
+
+### Refactor
+
+* add auth dtos ([c38bfa3](https://github.com/SlinkyPotato/badge-buddy-common/commit/c38bfa3bb70b5b46b95f385912b8b4f689c1a87b))
+* remove common request object ([3cb3c27](https://github.com/SlinkyPotato/badge-buddy-common/commit/3cb3c279c05c3d0d29e75a5937b5f5eee8c44599))
+
 ## [2.0.0-37](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-36...v2.0.0-37) (2023-12-11)
 
 ## [2.0.0-36](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-35...v2.0.0-36) (2023-12-11)
