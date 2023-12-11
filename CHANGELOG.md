@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-25](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-24...v2.0.0-25) (2023-12-10)
+
+
+### Refactor
+
+* add api dtos ([a3b3eb6](https://github.com/SlinkyPotato/badge-buddy-common/commit/a3b3eb622ccd6fe5ae7e8ade2d0fe4bd58e8ff0f))
+
 ## [2.0.0-24](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-23...v2.0.0-24) (2023-12-10)
 
 
