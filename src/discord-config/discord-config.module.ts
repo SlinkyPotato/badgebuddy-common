@@ -1,11 +1,11 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { DiscordModule } from '@discord-nestjs/core';
+import { DiscordModule, DiscordModuleOption } from '@discord-nestjs/core';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { GatewayIntentBits, Partials } from 'discord.js';
 
 @Module({})
 export class DiscordConfigModule {
-  static forRootAsync(): DynamicModule {
+  static forRootAsync(options?: DiscordModuleOption): DynamicModule {
     return {
       module: DiscordConfigModule,
       imports: [
@@ -34,6 +34,7 @@ export class DiscordConfigModule {
               ],
             },
             failOnLogin: true,
+            ...options,
           })
         })
       ],
