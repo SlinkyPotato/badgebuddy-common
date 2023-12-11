@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-28](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-27...v2.0.0-28) (2023-12-11)
+
+
+### Refactor
+
+* remove redis requirement from common ([9e574d9](https://github.com/SlinkyPotato/badge-buddy-common/commit/9e574d962f51fc8bd73fce03a7ec424cb769d8db))
+
 ## [2.0.0-27](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-26...v2.0.0-27) (2023-12-11)
 
 ## [2.0.0-26](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-25...v2.0.0-26) (2023-12-11)
