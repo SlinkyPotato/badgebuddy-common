@@ -8,7 +8,7 @@ export class DiscordCommunityEventPatchResponseDto {
   })
   @IsUUID()
   @IsString()
-  id: string;
+  communityEventId: string;
 
   @ApiProperty({
     required: true,
