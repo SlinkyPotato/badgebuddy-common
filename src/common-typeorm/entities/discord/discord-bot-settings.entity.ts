@@ -1,6 +1,7 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { SnowFlakeOption } from './discord.util';
 import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
+import { DiscordUserEntity } from './discord-user.entity';
 
 @Entity('discord_bot_settings')
 export class DiscordBotSettingsEntity {
@@ -24,7 +25,7 @@ export class DiscordBotSettingsEntity {
   icon?: string;
 
   @Column(SnowFlakeOption('owner_sid'))
-  ownerSid: string;
+  ownerSId: string;
 
   @Column({
     name: 'description',
@@ -49,4 +50,10 @@ export class DiscordBotSettingsEntity {
     cascade: ['insert', 'update', 'remove'],
   })
   communityEvents?: Relation<CommunityEventDiscordEntity[]>;
+
+  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.userSId, {
+    cascade: ['insert', 'update', 'remove'],
+  })
+  @JoinColumn({ name: 'owner_sid' })
+  discordOwner?: Relation<DiscordUserEntity>;
 }
