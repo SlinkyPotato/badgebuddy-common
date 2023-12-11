@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsISO8601, IsString, IsUUID } from 'class-validator';
+import { IsISO8601, IsOptional, IsString, IsUUID } from 'class-validator';
 
 export class DiscordCommunityEventPatchResponseDto {
   @ApiProperty({
@@ -18,11 +18,12 @@ export class DiscordCommunityEventPatchResponseDto {
   title: string;
 
   @ApiProperty({
-    required: true,
+    required: false,
     description: 'The description of the event',
   })
   @IsString()
-  description: string;
+  @IsOptional()
+  description?: string;
 
   @ApiProperty({
     required: true,
