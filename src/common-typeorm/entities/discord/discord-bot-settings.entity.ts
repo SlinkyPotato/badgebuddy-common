@@ -24,9 +24,6 @@ export class DiscordBotSettingsEntity {
   })
   icon?: string;
 
-  @Column(SnowFlakeOption('owner_sid'))
-  ownerSId: string;
-
   @Column({
     name: 'description',
     type: 'text',
@@ -51,9 +48,4 @@ export class DiscordBotSettingsEntity {
   })
   communityEvents?: Relation<CommunityEventDiscordEntity[]>;
 
-  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.userSId, {
-    cascade: ['insert', 'update', 'remove'],
-  })
-  @JoinColumn({ name: 'owner_sid' })
-  discordOwner?: Relation<DiscordUserEntity>;
 }
