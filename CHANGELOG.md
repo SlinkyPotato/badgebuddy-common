@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-43](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-42...v2.0.0-43) (2023-12-12)
+
+
+### Performance
+
+* add @nestjs/jwt@^10.2.0 to peerDeps ([58e0fec](https://github.com/SlinkyPotato/badge-buddy-common/commit/58e0fece4fc2e5f51804cb8d8d9c7595d65975aa))
+
 ## [2.0.0-42](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-41...v2.0.0-42) (2023-12-12)
 
 ## [2.0.0-41](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-40...v2.0.0-41) (2023-12-11)
