@@ -4,7 +4,6 @@ import { IsNumberString } from 'class-validator';
 export class DiscordCommunityEventPatchRequestDto {
 
   @ApiProperty({
-    required: true,
     description: 'The snowflake ID of the guild',
   })
   @IsNumberString()

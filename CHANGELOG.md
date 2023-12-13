@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-45](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-44...v2.0.0-45) (2023-12-13)
+
+
+### Bug Fixes
+
+* request/response objects property swagger ([8c098cc](https://github.com/SlinkyPotato/badge-buddy-common/commit/8c098cc07044d55317d285534f93651ab3de8c4c))
+
 ## [2.0.0-44](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-43...v2.0.0-44) (2023-12-13)
 
 
