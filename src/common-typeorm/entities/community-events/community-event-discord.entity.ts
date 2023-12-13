@@ -35,7 +35,7 @@ export class CommunityEventDiscordEntity {
     cascade: true,
     eager: true,
   })
-  @JoinColumn({ name: 'community_event_id', referencedColumnName: 'community_event_id' })
+  @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
   communityEvent: Relation<CommunityEventEntity>;
 
   @ManyToOne(() => DiscordBotSettingsEntity, (discordGuild) => discordGuild.communityEvents, {
