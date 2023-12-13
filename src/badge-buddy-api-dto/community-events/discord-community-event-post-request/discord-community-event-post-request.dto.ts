@@ -27,6 +27,12 @@ export class DiscordCommunityEventPostRequestDto {
   title: string;
 
   @ApiProperty({
+    description: 'The end date of the event',
+  })
+  @IsISO8601()
+  endDate: string;
+
+  @ApiProperty({
     required: false,
     description: 'The description of the event',
   })
@@ -35,8 +41,10 @@ export class DiscordCommunityEventPostRequestDto {
   description?: string;
 
   @ApiProperty({
-    description: 'The end date of the event',
+    required: false,
+    description: 'The links url to the POAPs of the event',
   })
-  @IsISO8601()
-  endDate: string;
+  @IsString()
+  @IsOptional()
+  poapLinksUrl?: string;
 }

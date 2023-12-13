@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNumberString } from 'class-validator';
+import { IsNumberString, IsOptional, IsString } from 'class-validator';
 
 export class DiscordCommunityEventPatchRequestDto {
 
@@ -14,4 +14,12 @@ export class DiscordCommunityEventPatchRequestDto {
   })
   @IsNumberString()
   voiceChannelSId: string;
+
+  @ApiProperty({
+    required: false,
+    description: 'The links url to the POAPs of the event',
+  })
+  @IsString()
+  @IsOptional()
+  poapLinksUrl?: string;
 }
