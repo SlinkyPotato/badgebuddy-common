@@ -50,6 +50,6 @@ export class PoapDiscordClaimsEntity {
   poapLink: Relation<PoapLinksEntity>;
 
   @ManyToOne(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.communityEventId)
-  @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
+  @JoinColumn({ name: 'community_event_id', referencedColumnName: 'community_event_id' })
   discordCommunityEvent: Relation<CommunityEventDiscordEntity>;
 }
