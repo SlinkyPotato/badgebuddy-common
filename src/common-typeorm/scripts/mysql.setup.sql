@@ -79,8 +79,7 @@ CREATE TABLE community_events
 
 CREATE TABLE community_events_discord
 (
-  id UUID PRIMARY KEY,
-  community_event_id UUID NOT NULL,
+  community_event_id UUID PRIMARY KEY,
   bot_settings_id UUID NOT NULL,
   organizer_id UUID NOT NULL,
   voice_channel_sid BIGINT UNSIGNED NOT NULL,
@@ -91,29 +90,36 @@ CREATE TABLE community_events_discord
 );
 
 -- POAPs
-CREATE TABLE poap_claims
+CREATE TABLE poap_links
 (
   id UUID PRIMARY KEY,
-  qr_code VARCHAR(255) NOT NULL,
+  qr_code VARCHAR(255) NOT NULL UNIQUE,
   claim_url VARCHAR(255) NOT NULL,
   community_event_id UUID NOT NULL,
-  claimed_on DATETIME,
-  claimed_by_discord_user_id uuid,
-  expires_on DATETIME NOT NULL,
   FOREIGN KEY (community_event_id) REFERENCES community_events (id),
-  FOREIGN KEY (claimed_by_discord_user_id) REFERENCES discord_users (id),
   INDEX qr_code_idx (qr_code)
+);
+
+CREATE TABLE poap_discord_claims
+(
+  poap_link_id UUID PRIMARY KEY,
+  assigned_to_discord_user_id UUID NOT NULL,
+  assigned_on DATETIME,
+  claimed_on DATETIME,
+  expires_on DATETIME NOT NULL,
+  FOREIGN KEY (poap_link_id) REFERENCES poap_links (id),
+  FOREIGN KEY (assigned_to_discord_user_id) REFERENCES discord_users (id)
 );
 
 -- POAPs Community Participants
 CREATE TABLE community_participants_discord
 (
-  id UUID PRIMARY KEY,
   community_event_id UUID NOT NULL,
   discord_user_sid BIGINT UNSIGNED NOT NULL,
   start_date DATETIME NOT NULL,
   end_date DATETIME,
   participation_length INT UNSIGNED, -- in seconds
   FOREIGN KEY (community_event_id) REFERENCES community_events_discord (community_event_id),
-  FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid)
+  FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid),
+  PRIMARY KEY (community_event_id, discord_user_sid)
 );

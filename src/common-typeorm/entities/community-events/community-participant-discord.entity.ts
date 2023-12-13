@@ -1,20 +1,21 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
-import { SnowFlakeOption } from '../discord/discord.util';
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, Relation } from 'typeorm';
 import { CommunityEventDiscordEntity } from './community-event-discord.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 
 @Entity('community_participants_discord')
 export class CommunityParticipantDiscordEntity {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
 
-  @Column({
+  @PrimaryColumn({
     name: 'community_event_id',
     type: 'uuid'
   })
   communityEventId: string;
 
-  @Column(SnowFlakeOption('discord_user_sid'))
+  @PrimaryColumn({
+    name: 'discord_user_sid',
+    type: 'bigint',
+    unsigned: true,
+  })
   discordUserSId: string;
 
   @Column({
@@ -41,9 +42,11 @@ export class CommunityParticipantDiscordEntity {
   })
   participationLength?: number;
 
-  @ManyToOne(() => CommunityEventDiscordEntity, (communityEventDiscord) => communityEventDiscord.id)
+  @ManyToOne(() => CommunityEventDiscordEntity, (communityEventDiscord) => communityEventDiscord.communityEventId, {
+    cascade: ['insert', 'update'],
+  })
   @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
-  communityEvent: Relation<CommunityEventDiscordEntity>;
+  discordCommunityEvent: Relation<CommunityEventDiscordEntity>;
 
   @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.id, {
     cascade: ['insert', 'update'],

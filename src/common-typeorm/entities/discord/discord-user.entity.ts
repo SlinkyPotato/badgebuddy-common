@@ -3,7 +3,7 @@ import { SnowFlakeOption } from './discord.util';
 import { AccountEntity } from '../auth/account.entity';
 import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
 import { CommunityParticipantDiscordEntity } from '../community-events/community-participant-discord.entity';
-import { PoapClaimsEntity } from '../poaps/poap-claims.entity';
+import { PoapDiscordClaimsEntity } from '../poaps/poap-discord-claims.entity';
 
 @Entity('discord_users')
 export class DiscordUserEntity {
@@ -53,13 +53,13 @@ export class DiscordUserEntity {
   })
   organizedEvents?: Relation<CommunityEventDiscordEntity[]>;
 
-  @OneToMany(() => CommunityParticipantDiscordEntity, (communityParticipantsDiscord) => communityParticipantsDiscord.id, {
+  @OneToMany(() => CommunityParticipantDiscordEntity, (communityParticipantsDiscord) => communityParticipantsDiscord.communityEventId, {
     cascade: ['insert', 'update'],
   })
   participatedEvents?: Relation<CommunityParticipantDiscordEntity[]>;
 
-  @OneToMany(() => PoapClaimsEntity, (poapClaims) => poapClaims.id, {
+  @OneToMany(() => PoapDiscordClaimsEntity, (poapClaims) => poapClaims.poapLinkId, {
     cascade: ['insert', 'update'],
   })
-  poapsClaimed?: Relation<PoapClaimsEntity[]>;
+  poapsClaimed?: Relation<PoapDiscordClaimsEntity[]>;
 }

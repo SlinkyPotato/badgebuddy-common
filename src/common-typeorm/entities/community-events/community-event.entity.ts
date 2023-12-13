@@ -1,6 +1,6 @@
 import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { CommunityEventDiscordEntity } from './community-event-discord.entity';
-import { PoapClaimsEntity } from '../poaps/poap-claims.entity';
+import { PoapLinksEntity } from '../poaps/poap-links.entity';
 
 @Entity('community_events')
 export class CommunityEventEntity {
@@ -60,10 +60,10 @@ export class CommunityEventEntity {
   @OneToOne(() => CommunityEventDiscordEntity, (discord) => discord.communityEvent, {
     cascade: true,
   })
-  discordEvent?: Relation<CommunityEventDiscordEntity>;
+  discordCommunityEvent?: Relation<CommunityEventDiscordEntity>;
 
-  @OneToMany(() => PoapClaimsEntity, (poapClaim) => poapClaim.communityEvent, {
+  @OneToMany(() => PoapLinksEntity, (poapClaim) => poapClaim.communityEvent, {
     cascade: true,
   })
-  poapClaims?: Relation<PoapClaimsEntity[]>;
+  poapLinks?: Relation<PoapLinksEntity[]>;
 }
