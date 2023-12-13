@@ -61,5 +61,5 @@ export class DiscordUserEntity {
   @OneToMany(() => PoapDiscordClaimsEntity, (poapClaims) => poapClaims.poapLinkId, {
     cascade: ['insert', 'update'],
   })
-  poapsClaimed?: Relation<PoapDiscordClaimsEntity[]>;
+  discordPoapsClaimed?: Relation<PoapDiscordClaimsEntity[]>;
 }
