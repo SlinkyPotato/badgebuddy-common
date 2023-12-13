@@ -31,31 +31,31 @@ export class CommunityEventDiscordEntity {
   @Index('voice_channel_sid_idx')
   voiceChannelSId: string;
 
-  @OneToOne(() => CommunityEventEntity, (communityEvent) => communityEvent.discordCommunityEvent, {
+  @OneToOne(() => CommunityEventEntity, {
     cascade: true,
     eager: true,
   })
   @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
   communityEvent: Relation<CommunityEventEntity>;
 
-  @ManyToOne(() => DiscordBotSettingsEntity, (discordGuild) => discordGuild.communityEvents, {
+  @ManyToOne(() => DiscordBotSettingsEntity, (discordBotSettings) => discordBotSettings.communityEvents, {
     cascade: ['insert', 'update'],
     eager: true,
   })
   @JoinColumn({ name: 'bot_settings_id', referencedColumnName: 'id' })
   botSettings: Relation<DiscordBotSettingsEntity>;
 
-  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.id, {
+  @ManyToOne(() => DiscordUserEntity, (organizer) => organizer.organizedEvents, {
     cascade: ['insert', 'update'],
     eager: true,
   })
   @JoinColumn({ name: 'organizer_id', referencedColumnName: 'id' })
   organizer: Relation<DiscordUserEntity>;
 
-  @OneToMany(() => CommunityParticipantDiscordEntity, (communityParticipantsDiscord) => [communityParticipantsDiscord.communityEventId, communityParticipantsDiscord.discordUserSId])
+  @OneToMany(() => CommunityParticipantDiscordEntity, (participant) => participant.discordCommunityEvent)
   participants?: Relation<CommunityParticipantDiscordEntity[]>;
 
-  @OneToMany(() => PoapDiscordClaimsEntity, (poapDiscordClaim) => poapDiscordClaim.poapLinkId, {
+  @OneToMany(() => PoapDiscordClaimsEntity, (poapDiscordClaim) => poapDiscordClaim.discordCommunityEvent, {
     cascade: true,
   })
   poapDiscordClaims?: Relation<PoapDiscordClaimsEntity[]>;

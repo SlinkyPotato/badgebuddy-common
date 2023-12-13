@@ -1,5 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { AccountEntity } from './account.entity';
+import { DiscordUserEntity } from '../discord/discord-user.entity';
 
 @Entity({ name: 'users' })
 export class UserEntity {
@@ -42,6 +43,9 @@ export class UserEntity {
   })
   image?: string;
 
-  @OneToMany(() => AccountEntity, (account) => account.user.id)
+  @OneToMany(() => AccountEntity, (account) => account.user)
   accounts?: Relation<AccountEntity[]>;
+
+  @OneToMany(() => DiscordUserEntity, (discordUser) => discordUser.authUser)
+  discordUser?: Relation<DiscordUserEntity[]>;
 }

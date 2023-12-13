@@ -57,12 +57,12 @@ export class CommunityEventEntity {
   })
   poapEventId?: number;
 
-  @OneToOne(() => CommunityEventDiscordEntity, (discord) => discord.communityEvent, {
+  @OneToOne(() => CommunityEventDiscordEntity, {
     cascade: true,
   })
   discordCommunityEvent?: Relation<CommunityEventDiscordEntity>;
 
-  @OneToMany(() => PoapLinksEntity, (poapClaim) => poapClaim.communityEvent, {
+  @OneToMany(() => PoapLinksEntity, (poapLinks) => poapLinks.communityEvent, {
     cascade: true,
   })
   poapLinks?: Relation<PoapLinksEntity[]>;

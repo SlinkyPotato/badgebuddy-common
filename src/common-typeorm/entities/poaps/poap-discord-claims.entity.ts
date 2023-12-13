@@ -38,18 +38,17 @@ export class PoapDiscordClaimsEntity {
   })
   expiresOn: Date;
 
-  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.id)
+  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.discordPoapsClaimed)
   @JoinColumn({ name: 'assigned_to_discord_user_id', referencedColumnName: 'id' })
   assignedToDiscordUser: Relation<DiscordUserEntity>;
 
-  @OneToOne(() => PoapLinksEntity, (poapLink) => poapLink.id, {
+  @OneToOne(() => PoapLinksEntity, {
     cascade: true,
     eager: true,
   })
   @JoinColumn({ name: 'poap_link_id', referencedColumnName: 'id' })
   poapLink: Relation<PoapLinksEntity>;
 
-  @ManyToOne(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.communityEventId)
-  @JoinColumn({ name: 'community_event_id', referencedColumnName: 'community_event_id' })
+  @ManyToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.poapDiscordClaims)
   discordCommunityEvent: Relation<CommunityEventDiscordEntity>;
 }
