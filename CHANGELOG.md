@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-44](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-43...v2.0.0-44) (2023-12-13)
+
+
+### Features
+
+* stringify error objects ([7db27b6](https://github.com/SlinkyPotato/badge-buddy-common/commit/7db27b64025f8bd1d3db71528ceb3fa3a98f04cc))
+
 ## [2.0.0-43](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-42...v2.0.0-43) (2023-12-12)
 
 

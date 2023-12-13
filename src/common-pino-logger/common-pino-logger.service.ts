@@ -7,9 +7,9 @@ export class CommonPinoLoggerService implements LoggerService {
 
   error(message: any, ...optionalParams: any[]): any {
     if (optionalParams.length > 0) {
-      this.pinoLogger.error({ ...optionalParams }, message);
+      this.pinoLogger.error({ ...optionalParams }, JSON.stringify(message));
     } else {
-      this.pinoLogger.error(message);
+      this.pinoLogger.error(JSON.stringify(message));
     }
   }
 
