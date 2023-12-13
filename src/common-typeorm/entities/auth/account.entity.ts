@@ -34,6 +34,6 @@ export class AccountEntity {
   @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
   user: Relation<UserEntity>;
 
-  @OneToMany(() => TokenEntity, (token) => [token.accountId, token.type])
+  @OneToMany(() => TokenEntity, (token) => token.account)
   tokens?: Relation<TokenEntity[]>;
 }
