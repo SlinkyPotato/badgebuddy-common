@@ -1,7 +1,6 @@
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { SnowFlakeOption } from './discord.util';
 import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
-import { DiscordUserEntity } from './discord-user.entity';
 
 @Entity('discord_bot_settings')
 export class DiscordBotSettingsEntity {
