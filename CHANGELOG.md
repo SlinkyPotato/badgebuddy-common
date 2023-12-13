@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-47](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-46...v2.0.0-47) (2023-12-13)
+
+
+### Refactor
+
+* restructure entity relations ([50776f2](https://github.com/SlinkyPotato/badge-buddy-common/commit/50776f2cba4b32d1c6a3115b35dd51562a5ccece))
+
 ## [2.0.0-46](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-45...v2.0.0-46) (2023-12-13)
 
 
