@@ -1,4 +1,14 @@
-import { Column, Entity, Index, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryColumn, Relation } from 'typeorm';
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryGeneratedColumn,
+  Relation
+} from 'typeorm';
 import { SnowFlakeOption } from '../discord/discord.util';
 import { CommunityEventEntity } from './community-event.entity';
 import { DiscordBotSettingsEntity } from '../discord/discord-bot-settings.entity';
@@ -7,8 +17,13 @@ import { CommunityParticipantDiscordEntity } from './community-participant-disco
 
 @Entity('community_events_discord')
 export class CommunityEventDiscordEntity {
+  @PrimaryGeneratedColumn({
+    type: 'int',
+    unsigned: true,
+  })
+  id: number;
 
-  @PrimaryColumn({
+  @Column({
     type: 'uuid',
     name: 'community_event_id'
   })
