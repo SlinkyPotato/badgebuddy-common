@@ -14,4 +14,4 @@ export { CommunityParticipantDiscordEntity } from './community-events/community-
 
 // POAPs
 export { PoapLinksEntity } from './poaps/poap-links.entity';
-// export { PoapDiscordClaimsEntity } from './poaps/poap-discord-claims.entity';
+export { PoapDiscordClaimsEntity } from './poaps/poap-discord-claims.entity';

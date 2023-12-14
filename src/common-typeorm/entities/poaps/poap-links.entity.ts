@@ -30,8 +30,6 @@ export class PoapLinksEntity {
   // @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
   // communityEvent: Relation<CommunityEventEntity>;
 
-  // @OneToOne(() => PoapDiscordClaimsEntity, (poapClaim) => poapClaim.poapLink, {
-  //   cascade: true,
-  // })
-  // poapDiscordClaim?: Relation<PoapDiscordClaimsEntity>;
+  @OneToOne(() => PoapDiscordClaimsEntity, (poapClaim) => poapClaim.poapLink)
+  poapDiscordClaim?: Relation<PoapDiscordClaimsEntity>;
 }
