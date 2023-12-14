@@ -13,6 +13,7 @@ import { CommunityEventEntity } from './community-event.entity';
 import { DiscordBotSettingsEntity } from '../discord/discord-bot-settings.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { CommunityParticipantDiscordEntity } from './community-participant-discord.entity';
+import { PoapLinksEntity } from '../poaps/poap-links.entity';
 
 @Entity('community_events_discord')
 export class CommunityEventDiscordEntity {
@@ -62,5 +63,8 @@ export class CommunityEventDiscordEntity {
 
   @OneToMany(() => CommunityParticipantDiscordEntity, (participant) => participant.discordCommunityEvent)
   participants?: Relation<CommunityParticipantDiscordEntity[]>;
+
+  @OneToMany(() => PoapLinksEntity, (poapLinks) => poapLinks.communityEvent)
+  poapLinks: Relation<PoapLinksEntity[]>;
 
 }
