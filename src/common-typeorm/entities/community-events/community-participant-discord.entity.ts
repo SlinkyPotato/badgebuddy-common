@@ -6,13 +6,13 @@ import { DiscordUserEntity } from '../discord/discord-user.entity';
 export class CommunityParticipantDiscordEntity {
 
   @PrimaryColumn({
-    name: 'community_event_id',
+    name: 'community_event_fkid',
     type: 'uuid'
   })
   communityEventId: string;
 
   @PrimaryColumn({
-    name: 'discord_user_sid',
+    name: 'discord_user_sfkid',
     type: 'bigint',
     unsigned: true,
   })
@@ -43,12 +43,14 @@ export class CommunityParticipantDiscordEntity {
   @ManyToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.participants, {
     cascade: ['insert', 'update'],
   })
-  // @JoinColumn({ name: 'community_event_id', referencedColumnName: 'community_event_id' })
+  @JoinColumn([
+    { name: 'community_event_fkid', referencedColumnName: 'community_event_id' },
+  ])
   discordCommunityEvent: Relation<CommunityEventDiscordEntity>;
 
   @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.userSId, {
     cascade: ['insert', 'update'],
   })
-  @JoinColumn({ name: 'discord_user_sid', referencedColumnName: 'id' })
+  @JoinColumn({ name: 'discord_user_sfkid', referencedColumnName: 'id' })
   discordUser: Relation<DiscordUserEntity>;
 }
