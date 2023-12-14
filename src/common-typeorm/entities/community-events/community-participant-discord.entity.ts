@@ -41,7 +41,7 @@ export class CommunityParticipantDiscordEntity {
   participationLength?: number;
 
   @ManyToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.participants)
-  @JoinColumn({ name: 'community_event_id', referencedColumnName: 'community_event_id' })
+  // @JoinColumn({ name: 'community_event_id', referencedColumnName: 'community_event_id' })
   discordCommunityEvent: Relation<CommunityEventDiscordEntity>;
 
   @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.userSId, {
