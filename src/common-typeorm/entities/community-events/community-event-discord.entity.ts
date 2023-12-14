@@ -31,7 +31,7 @@ export class CommunityEventDiscordEntity {
   @Index('voice_channel_sid_idx')
   voiceChannelSId: string;
 
-  @OneToOne(() => CommunityEventEntity, {
+  @OneToOne(() => CommunityEventEntity, (communityEvent) => communityEvent.discordCommunityEvent, {
     cascade: true,
     eager: true,
   })
