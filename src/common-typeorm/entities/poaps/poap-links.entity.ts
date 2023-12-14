@@ -26,11 +26,11 @@ export class PoapLinksEntity {
   })
   communityEventId: string;
 
-  @ManyToOne(() => CommunityEventEntity, (communityEvent) => communityEvent.poapLinks, {
-    cascade: ['insert', 'update']
-  })
-  // @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
-  communityEvent: Relation<CommunityEventEntity>;
+  // @ManyToOne(() => CommunityEventEntity, (communityEvent) => communityEvent.poapLinks, {
+  //   cascade: ['insert', 'update']
+  // })
+  // // @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
+  // communityEvent: Relation<CommunityEventEntity>;
 
   @OneToOne(() => PoapDiscordClaimsEntity, (poapClaim) => poapClaim.poapLink)
   poapDiscordClaim?: Relation<PoapDiscordClaimsEntity>;
