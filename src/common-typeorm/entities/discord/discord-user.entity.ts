@@ -59,8 +59,6 @@ export class DiscordUserEntity {
   })
   participatedEvents?: Relation<CommunityParticipantDiscordEntity[]>;
 
-  // @OneToMany(() => PoapDiscordClaimsEntity, (poapClaims) => poapClaims.assignedToDiscordUser, {
-  //   cascade: ['insert', 'update'],
-  // })
-  // discordPoapsClaimed?: Relation<PoapDiscordClaimsEntity[]>;
+  @OneToMany(() => PoapDiscordClaimsEntity, (poapClaims) => poapClaims.assignedToDiscordUser)
+  discordPoapsClaimed?: Relation<PoapDiscordClaimsEntity[]>;
 }
