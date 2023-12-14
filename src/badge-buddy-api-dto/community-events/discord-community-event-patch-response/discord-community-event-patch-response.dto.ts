@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsISO8601, IsOptional, IsString, IsUUID } from 'class-validator';
+import { IsISO8601, IsNumber, IsOptional, IsString, IsUUID } from 'class-validator';
 
 export class DiscordCommunityEventPatchResponseDto {
   @ApiProperty({
@@ -40,4 +40,10 @@ export class DiscordCommunityEventPatchResponseDto {
   })
   @IsISO8601()
   endDate: string;
+
+  @IsNumber()
+  @ApiProperty({
+    description: 'The number of available poaps',
+  })
+  availablePOAPs: number = 0;
 }
