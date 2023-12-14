@@ -62,8 +62,8 @@ export class CommunityEventEntity {
   })
   discordCommunityEvent?: Relation<CommunityEventDiscordEntity>;
 
-  @OneToMany(() => PoapLinksEntity, (poapLinks) => poapLinks.communityEvent, {
-    cascade: true,
-  })
-  poapLinks?: Relation<PoapLinksEntity[]>;
+  // @OneToMany(() => PoapLinksEntity, (poapLinks) => poapLinks.poapLinks, {
+  //   cascade: true,
+  // })
+  // poapLinks?: Relation<PoapLinksEntity[]>;
 }
