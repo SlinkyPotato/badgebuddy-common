@@ -42,13 +42,11 @@ export class PoapDiscordClaimsEntity {
   @JoinColumn({ name: 'assigned_to_discord_user_id', referencedColumnName: 'id' })
   assignedToDiscordUser: Relation<DiscordUserEntity>;
 
-  @OneToOne(() => PoapLinksEntity, {
+  @OneToOne(() => PoapLinksEntity, (poapLink) => poapLink.poapDiscordClaim, {
     cascade: true,
     eager: true,
   })
   @JoinColumn({ name: 'poap_link_id', referencedColumnName: 'id' })
   poapLink: Relation<PoapLinksEntity>;
 
-  @ManyToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.poapDiscordClaims)
-  discordCommunityEvent: Relation<CommunityEventDiscordEntity>;
 }
