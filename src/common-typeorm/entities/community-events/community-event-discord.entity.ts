@@ -52,7 +52,7 @@ export class CommunityEventDiscordEntity {
   @JoinColumn({ name: 'organizer_id', referencedColumnName: 'id' })
   organizer: Relation<DiscordUserEntity>;
 
-  // @OneToMany(() => CommunityParticipantDiscordEntity, (participant) => participant.discordCommunityEvent)
-  // participants?: Relation<CommunityParticipantDiscordEntity[]>;
+  @OneToMany(() => CommunityParticipantDiscordEntity, (participant) => participant.discordCommunityEvent)
+  participants?: Relation<CommunityParticipantDiscordEntity[]>;
 
 }
