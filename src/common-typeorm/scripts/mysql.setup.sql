@@ -87,8 +87,6 @@ CREATE TABLE community_events_discord
   INDEX voice_channel_sid_idx (voice_channel_sid)
 );
 
-DROP TABLE community_events_discord;
-
 -- POAPs
 CREATE TABLE poap_links
 (
@@ -123,5 +121,3 @@ CREATE TABLE community_participants_discord
   FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid),
   PRIMARY KEY (community_event_id, discord_user_sid)
 );
-
-DROP TABLE community_participants_discord;
