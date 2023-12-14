@@ -1,4 +1,11 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import {
+  Column,
+  Entity,
+  Index,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  Relation
+} from 'typeorm';
 import { AccountEntity } from './account.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 
