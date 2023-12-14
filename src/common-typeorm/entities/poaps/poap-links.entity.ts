@@ -26,7 +26,9 @@ export class PoapLinksEntity {
   })
   communityEventId: string;
 
-  @ManyToOne(() => CommunityEventEntity, (communityEvent) => communityEvent.poapLinks)
+  @ManyToOne(() => CommunityEventEntity, (communityEvent) => communityEvent.poapLinks, {
+    cascade: ['insert', 'update']
+  })
   @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
   communityEvent: Relation<CommunityEventEntity>;
 
