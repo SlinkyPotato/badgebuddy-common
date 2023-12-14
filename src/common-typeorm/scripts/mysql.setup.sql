@@ -78,15 +78,17 @@ CREATE TABLE community_events
 CREATE TABLE community_events_discord
 (
   id INT UNSIGNED PRIMARY KEY,
-  community_event_id UUID,
+  community_event_id UUID NOT NULL UNIQUE,
   bot_settings_id UUID NOT NULL,
   organizer_id UUID NOT NULL,
   voice_channel_sid BIGINT UNSIGNED NOT NULL,
-  FOREIGN KEY (community_event_id) REFERENCES community_events (id),
+#   FOREIGN KEY (community_event_id) REFERENCES community_events (id),
   FOREIGN KEY (bot_settings_id) REFERENCES discord_bot_settings (id),
   FOREIGN KEY (organizer_id) REFERENCES discord_users (id),
   INDEX voice_channel_sid_idx (voice_channel_sid)
 );
+
+DROP TABLE community_events_discord;
 
 -- POAPs
 CREATE TABLE poap_links
@@ -113,14 +115,15 @@ CREATE TABLE poap_discord_claims
 -- POAPs Community Participants
 CREATE TABLE community_participants_discord
 (
+  id UUID PRIMARY KEY,
   community_event_id UUID NOT NULL,
   discord_user_sid BIGINT UNSIGNED NOT NULL,
   start_date DATETIME NOT NULL,
   end_date DATETIME,
   participation_length INT UNSIGNED, -- in seconds
   FOREIGN KEY (community_event_id) REFERENCES community_events_discord (community_event_id),
-  FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid),
-  PRIMARY KEY (community_event_id, discord_user_sid)
+  FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid)
+#   PRIMARY KEY (community_event_id, discord_user_sid)
 );
 
 DROP TABLE community_participants_discord;
