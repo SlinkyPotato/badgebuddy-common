@@ -11,7 +11,7 @@ export class CommunityParticipantDiscordEntity {
   })
   communityEventId: string;
 
-  @PrimaryColumn({
+  @Column({
     name: 'discord_user_sid',
     type: 'bigint',
     unsigned: true,
@@ -40,9 +40,7 @@ export class CommunityParticipantDiscordEntity {
   })
   participationLength?: number;
 
-  @ManyToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.participants, {
-    cascade: ['insert', 'update'],
-  })
+  @ManyToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.participants)
   @JoinColumn({ name: 'community_event_id', referencedColumnName: 'community_event_id' })
   discordCommunityEvent: Relation<CommunityEventDiscordEntity>;
 
