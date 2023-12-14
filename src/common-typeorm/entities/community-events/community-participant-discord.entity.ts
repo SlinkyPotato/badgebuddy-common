@@ -31,9 +31,7 @@ export class CommunityParticipantDiscordEntity {
   })
   endDate?: Date;
 
-  /**
-   * Participation length in seconds
-   */
+  // in seconds
   @Column({
     name: 'participation_length',
     nullable: true,
@@ -42,11 +40,11 @@ export class CommunityParticipantDiscordEntity {
   })
   participationLength?: number;
 
-  // @ManyToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.participants, {
-  //   cascade: ['insert', 'update'],
-  // })
+  @ManyToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.participants, {
+    cascade: ['insert', 'update'],
+  })
   // @JoinColumn({ name: 'community_event_id', referencedColumnName: 'community_event_id' })
-  // discordCommunityEvent: Relation<CommunityEventDiscordEntity>;
+  discordCommunityEvent: Relation<CommunityEventDiscordEntity>;
 
   @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.userSId, {
     cascade: ['insert', 'update'],
