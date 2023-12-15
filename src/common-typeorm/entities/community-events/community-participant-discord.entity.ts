@@ -1,5 +1,4 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, Relation } from 'typeorm';
-import { CommunityEventDiscordEntity } from './community-event-discord.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 
 @Entity('community_participants_discord')
@@ -39,11 +38,6 @@ export class CommunityParticipantDiscordEntity {
     unsigned: true,
   })
   participationLength?: number;
-
-  // TODO: revisit this
-  @ManyToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.participants)
-  // @JoinColumn({ name: 'community_event_id', referencedColumnName: 'community_event_id' })
-  discordCommunityEvent: Relation<CommunityEventDiscordEntity>;
 
   @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.userSId, {
     cascade: ['insert', 'update'],

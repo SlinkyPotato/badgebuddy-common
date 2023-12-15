@@ -61,7 +61,7 @@ export class CommunityEventDiscordEntity {
   @JoinColumn({ name: 'organizer_id', referencedColumnName: 'id' })
   organizer: Relation<DiscordUserEntity>;
 
-  @OneToMany(() => CommunityParticipantDiscordEntity, (participant) => participant.discordCommunityEvent)
+  @OneToMany(() => CommunityParticipantDiscordEntity, (participant) => participant.communityEventId)
   participants?: Relation<CommunityParticipantDiscordEntity[]>;
 
   @OneToMany(() => PoapLinksEntity, (poapLinks) => poapLinks.communityEvent)
