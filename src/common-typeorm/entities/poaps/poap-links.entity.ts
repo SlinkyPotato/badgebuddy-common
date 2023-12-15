@@ -19,6 +19,7 @@ export class PoapLinksEntity {
   @Column({
     name: 'qr_code',
     type: 'varchar',
+    unique: true,
   })
   @Index('qr_code_idx')
   qrCode: string;
@@ -26,6 +27,8 @@ export class PoapLinksEntity {
   @Column({
     name: 'claim_url',
     type: 'varchar',
+    unique: true,
+    nullable: false,
   })
   claimUrl: string;
 
