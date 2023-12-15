@@ -91,8 +91,8 @@ CREATE TABLE community_events_discord
 CREATE TABLE poap_links
 (
   id UUID PRIMARY KEY,
-  qr_code VARCHAR(255) NOT NULL UNIQUE,
-  claim_url VARCHAR(255) NOT NULL,
+  qr_code VARCHAR(255) UNIQUE,
+  claim_url VARCHAR(255) NOT NULL UNIQUE,
   community_event_id UUID NOT NULL,
   FOREIGN KEY (community_event_id) REFERENCES community_events (id),
   INDEX qr_code_idx (qr_code)
