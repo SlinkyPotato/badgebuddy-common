@@ -5,7 +5,7 @@ export class UserDto {
   @IsString()
   @IsUUID()
   @ApiProperty({
-    description: 'The user id.',
+    description: 'The user id',
     type: String,
     required: true,
   })
@@ -14,7 +14,7 @@ export class UserDto {
   @IsString()
   @IsEmail()
   @ApiProperty({
-    description: 'The user email.',
+    description: 'The user email',
     type: String,
     required: true,
   })
@@ -23,7 +23,7 @@ export class UserDto {
   @IsString()
   @IsISO8601()
   @ApiProperty({
-    description: 'Email verification date.',
+    description: 'Email verification date',
     type: String,
   })
   emailVerifiedOn: string;
@@ -31,7 +31,7 @@ export class UserDto {
   @IsString()
   @IsOptional()
   @ApiProperty({
-    description: 'The name of the user.',
+    description: 'The name of the user',
     type: String,
     required: false,
   })

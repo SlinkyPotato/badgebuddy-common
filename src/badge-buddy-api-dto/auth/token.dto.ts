@@ -4,7 +4,7 @@ import { IsString } from 'class-validator';
 export class TokenDto {
   @IsString()
   @ApiProperty({
-    description: 'Access token or refresh token.',
+    description: 'Access token or refresh token',
     enum: ['access', 'refresh'],
     type: String,
   })
@@ -12,14 +12,14 @@ export class TokenDto {
 
   @IsString()
   @ApiProperty({
-    description: 'The token type.',
+    description: 'The token type',
     type: String,
   })
   type: string;
 
   @IsString()
   @ApiProperty({
-    description: 'The token expiration in seconds.',
+    description: 'The token expiration in seconds',
     type: Number,
   })
   expiresIn: number;
