@@ -1,46 +1,46 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
-import { transformer } from './transformer.util';
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, Relation } from 'typeorm';
 import { AccountEntity } from './account.entity';
+
+const TokenType = ['access_token', 'refresh_token', 'id_token'] as const;
+export type TokenType = typeof TokenType[number];
 
 @Entity({ name: 'tokens' })
 export class TokenEntity {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
-
-  @Column({
+  
+  @PrimaryColumn({
     type: 'uuid',
     name: 'account_id',
   })
   accountId: string;
 
+  @PrimaryColumn({
+    type: 'enum',
+    name: 'type',
+    enum: [TokenType],
+  })
+  type: TokenType;
+
   @Column({
-    type: 'varchar',
+    type: 'text',
     name: 'token',
   })
   token: string;
 
   @Column({
     nullable: true,
-    type: 'varchar',
+    type: 'datetime',
     name: 'expires_on',
-    transformer: transformer.date,
   })
   expiresOn?: Date;
 
   @Column({
-    type: 'enum',
-    name: 'type',
-    enum: ['access_token', 'refresh_token', 'id_token'],
-  })
-  type: 'access_token' | 'refresh_token' | 'id_token';
-
-  @Column({
-    type: 'varchar',
+    type: 'text',
     nullable: true,
     name: 'scope',
   })
   scope?: string;
 
   @ManyToOne(() => AccountEntity, (account) => account.tokens)
-  accounts: Relation<AccountEntity>;
+  @JoinColumn({ name: 'account_id', referencedColumnName: 'id' })
+  account?: Relation<AccountEntity>;
 }

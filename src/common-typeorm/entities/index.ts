@@ -1,17 +1,17 @@
-// Discord
-export { DiscordGuildEntity } from './discord/discord-guild.entity';
-export { DiscordUserEntity } from './discord/discord-user.entity';
-
-// Event
-export { EventEntity } from './event/event.entity';
-export { EventDiscordDetailsEntity } from './event/event-discord-details.entity';
-export { EventDiscordParticipantEntity } from './event/event-discord-participant.entity';
-
-// POAP
-export { PoapLinkEntity } from './poap/poap-link.entity';
-export { PoapLinkDiscordDetailsEntity } from './poap/poap-link-discord-details.entity';
-
-// Next Auth
+// Auth
 export { AccountEntity } from './auth/account.entity';
 export { UserEntity } from './auth/user.entity';
 export { TokenEntity } from './auth/token.entity';
+
+// Discord
+export { DiscordBotSettingsEntity } from './discord/discord-bot-settings.entity';
+export { DiscordUserEntity } from './discord/discord-user.entity';
+
+// Community Events
+export { CommunityEventEntity } from './community-events/community-event.entity';
+export { CommunityEventDiscordEntity } from './community-events/community-event-discord.entity';
+export { CommunityParticipantDiscordEntity } from './community-events/community-participant-discord.entity';
+
+// POAPs
+export { PoapLinksEntity } from './poaps/poap-links.entity';
+export { PoapDiscordClaimsEntity } from './poaps/poap-discord-claims.entity';

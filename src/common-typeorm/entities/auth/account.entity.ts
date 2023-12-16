@@ -1,8 +1,9 @@
-import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, Index, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
 import { UserEntity } from './user.entity';
 import { TokenEntity } from './token.entity';
 
 @Entity({ name: 'accounts' })
+@Index('unique_account_provider', ['provider', 'providerAccountId'], { unique: true })
 export class AccountEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -26,13 +27,13 @@ export class AccountEntity {
     nullable: false,
     name: 'provider_account_id',
   })
+  @Index('provider_account_idx')
   providerAccountId: string;
 
-  @ManyToOne(() => UserEntity, (user) => user.accounts, {
-    createForeignKeyConstraints: true,
-  })
+  @ManyToOne(() => UserEntity, (user) => user.accounts)
+  @JoinColumn({ name: 'user_id', referencedColumnName: 'id' })
   user: Relation<UserEntity>;
 
-  @OneToMany(() => TokenEntity, (token) => token.accountId)
+  @OneToMany(() => TokenEntity, (token) => token.account)
   tokens?: Relation<TokenEntity[]>;
 }

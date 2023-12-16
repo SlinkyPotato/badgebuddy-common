@@ -1,6 +1,13 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
-import { transformer } from './transformer.util';
+import {
+  Column,
+  Entity,
+  Index,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  Relation
+} from 'typeorm';
 import { AccountEntity } from './account.entity';
+import { DiscordUserEntity } from '../discord/discord-user.entity';
 
 @Entity({ name: 'users' })
 export class UserEntity {
@@ -23,10 +30,9 @@ export class UserEntity {
   email: string;
 
   @Column({
-    type: 'varchar',
+    type: 'datetime',
     nullable: true,
     name: 'email_verified_on',
-    transformer: transformer.date,
   })
   emailVerifiedOn?: Date;
 
@@ -44,6 +50,9 @@ export class UserEntity {
   })
   image?: string;
 
-  @OneToMany(() => AccountEntity, (account) => account.user.id)
+  @OneToMany(() => AccountEntity, (account) => account.user)
   accounts?: Relation<AccountEntity[]>;
+
+  @OneToMany(() => DiscordUserEntity, (discordUser) => discordUser.authUser)
+  discordUser?: Relation<DiscordUserEntity[]>;
 }
