@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-76](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-75...v2.0.0-76) (2023-12-16)
+
+
+### Features
+
+* add auth dtos ([173458d](https://github.com/SlinkyPotato/badge-buddy-common/commit/173458da222ab1b399cb7818fdd5619650ef5000))
+
 ## [2.0.0-75](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-74...v2.0.0-75) (2023-12-15)
 
 ## [2.0.0-74](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-73...v2.0.0-74) (2023-12-15)
