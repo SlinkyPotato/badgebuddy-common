@@ -4,7 +4,8 @@ import { IsString } from 'class-validator';
 export class TokenDto {
   @IsString()
   @ApiProperty({
-    description: 'The refresh token.',
+    description: 'Access token or refresh token.',
+    enum: ['access', 'refresh'],
     type: String,
   })
   token: string;
