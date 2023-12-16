@@ -2,6 +2,66 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-30...v2.0.0) (2023-12-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove mongo
+
+### Features
+
+* add DiscordActiveCommunityEvents response dto ([4393db8](https://github.com/SlinkyPotato/badge-buddy-common/commit/4393db877b215f463997913b8f9bf5cc469c73e6))
+* add DiscordBotTokenDto ([1903573](https://github.com/SlinkyPotato/badge-buddy-common/commit/19035733fc41adb4fb6cc672866c69ef9d53f6c3))
+* add options to CommonConfig ([0b3b0fb](https://github.com/SlinkyPotato/badge-buddy-common/commit/0b3b0fba300778ce27fe980b63c05365ed5227f2))
+* add poapLinks field ([99db484](https://github.com/SlinkyPotato/badge-buddy-common/commit/99db4846e9e7397b98bf21f239fdcce2719fe594))
+* stringify error objects ([7db27b6](https://github.com/SlinkyPotato/badge-buddy-common/commit/7db27b64025f8bd1d3db71528ceb3fa3a98f04cc))
+
+
+### Bug Fixes
+
+* cache indexes for active events ([beb0bff](https://github.com/SlinkyPotato/badge-buddy-common/commit/beb0bffeccf439b5749467b78fc38679b835bbad))
+* naming ([f2a9179](https://github.com/SlinkyPotato/badge-buddy-common/commit/f2a917915dd541cd380149ac08574928cc73759b))
+* naming ([fd7ad3b](https://github.com/SlinkyPotato/badge-buddy-common/commit/fd7ad3baa7b8d9ec68e8dac101ea5fe793ff997e))
+* nothing was actually wrong here ([95b6397](https://github.com/SlinkyPotato/badge-buddy-common/commit/95b6397a3faf837e45b021e36e6b43e180cfedaf))
+* remove unique ([9dd45bd](https://github.com/SlinkyPotato/badge-buddy-common/commit/9dd45bd9466d1f27c67585f094cd9778bd2f3d52))
+* remove unique cconstraint ([e825145](https://github.com/SlinkyPotato/badge-buddy-common/commit/e825145172edb311a05677349a4b0210cb51cdc9))
+* request/response objects property swagger ([8c098cc](https://github.com/SlinkyPotato/badge-buddy-common/commit/8c098cc07044d55317d285534f93651ab3de8c4c))
+* treat tranformer date as string ([11b3833](https://github.com/SlinkyPotato/badge-buddy-common/commit/11b3833e9abe5a519f7f02a9e698a3904f5962d4))
+
+
+### Tests
+
+* debug tranformer ([58afc66](https://github.com/SlinkyPotato/badge-buddy-common/commit/58afc66f761cf1ee57f95aa7c0aa333da22cdd1b))
+
+
+### Performance
+
+* add @nestjs/jwt@^10.2.0 to peerDeps ([58e0fec](https://github.com/SlinkyPotato/badge-buddy-common/commit/58e0fece4fc2e5f51804cb8d8d9c7595d65975aa))
+* add eager loading to tokenEntity and remove cascase ([142f807](https://github.com/SlinkyPotato/badge-buddy-common/commit/142f8071ced287f962ed5f101b8888715285d7f6))
+* add indexes to entities ([df3e449](https://github.com/SlinkyPotato/badge-buddy-common/commit/df3e449b5155f9933c7d3b98b3004cd8c909d515))
+* add indexing to tables ([2e1198e](https://github.com/SlinkyPotato/badge-buddy-common/commit/2e1198e4389380f94e1d2f3f2082f9ccc7efce9a))
+* remove discordUserTag from redis dto ([baa4239](https://github.com/SlinkyPotato/badge-buddy-common/commit/baa423992c26fed11ed083a346a13b78e57ef86a))
+* update deps ([8a7cae6](https://github.com/SlinkyPotato/badge-buddy-common/commit/8a7cae69c49b04b0d30b0d1bee1f04946e926e1e))
+
+
+### Refactor
+
+* add api dtos ([a3b3eb6](https://github.com/SlinkyPotato/badge-buddy-common/commit/a3b3eb622ccd6fe5ae7e8ade2d0fe4bd58e8ff0f))
+* add auth dtos ([c38bfa3](https://github.com/SlinkyPotato/badge-buddy-common/commit/c38bfa3bb70b5b46b95f385912b8b4f689c1a87b))
+* add tracking participants key ([e678f11](https://github.com/SlinkyPotato/badge-buddy-common/commit/e678f11dc7649be1f3aebc7fd44d7d26d5651f3e))
+* more renaming ([11aa6b4](https://github.com/SlinkyPotato/badge-buddy-common/commit/11aa6b455273ed90f16a138de480b38e3eb18dd7))
+* move common dto objects ([4600a40](https://github.com/SlinkyPotato/badge-buddy-common/commit/4600a40737faede3b80c130ae374b2886203f4a3))
+* remove common request object ([3cb3c27](https://github.com/SlinkyPotato/badge-buddy-common/commit/3cb3c279c05c3d0d29e75a5937b5f5eee8c44599))
+* remove mongo ([7019cdf](https://github.com/SlinkyPotato/badge-buddy-common/commit/7019cdf3073c1f1e4431f187415f3f2632dcb9d3))
+* remove redis requirement from common ([9e574d9](https://github.com/SlinkyPotato/badge-buddy-common/commit/9e574d962f51fc8bd73fce03a7ec424cb769d8db))
+* remove transformer.utils ([d0fb44c](https://github.com/SlinkyPotato/badge-buddy-common/commit/d0fb44c0a1788b98af703348dd7d5d3a17196254))
+* rename id ([8b68e6b](https://github.com/SlinkyPotato/badge-buddy-common/commit/8b68e6bd3a6a3678945365c6903e359f4d693bd8))
+* rename redis dto ([5294189](https://github.com/SlinkyPotato/badge-buddy-common/commit/5294189e46e74acf0592aaa5ce723ce850fb4359))
+* rename redis dto properties ([c670710](https://github.com/SlinkyPotato/badge-buddy-common/commit/c67071071df02692dd63ad86f8451ad0ebf3088c))
+* rename returned id to communityEventId ([abc6082](https://github.com/SlinkyPotato/badge-buddy-common/commit/abc60820beb91d1713529cc0940c08fe1f326c9d))
+* restructure entity relations ([50776f2](https://github.com/SlinkyPotato/badge-buddy-common/commit/50776f2cba4b32d1c6a3115b35dd51562a5ccece))
+
 ## [2.0.0-75](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-74...v2.0.0-75) (2023-12-15)
 
 ## [2.0.0-74](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0-73...v2.0.0-74) (2023-12-15)
