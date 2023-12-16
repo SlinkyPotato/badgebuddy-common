@@ -20,3 +20,5 @@ export { RegisterPostRequestDto } from './register-post-request/register-post-re
 export { RegisterPostResponseDto } from './register-post-response/register-post-response.dto';
 export { TokenGetRequestDto } from './token-get-request/token-get-request.dto';
 export { TokenGetResponseDto } from './token-get-response/token-get-response.dto';
+export { TokenDto } from './token.dto';
+export { UserDto } from './user.dto';
