@@ -1,8 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsString, IsUrl } from 'class-validator';
+import { IsNotEmpty, IsString, IsUrl } from 'class-validator';
 
 export class AuthorizeGoogleGetResponseDto {
   @IsString()
+  @IsNotEmpty()
   @IsUrl()
   @ApiProperty({
     description: 'URL to redirect to',
