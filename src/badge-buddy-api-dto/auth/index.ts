@@ -3,6 +3,7 @@ export { UserTokenDto } from './user-token/user-token.dto';
 export { DiscordBotTokenDto } from './discord-bot-token/discord-bot-token.dto';
 export { AuthorizeDiscordGetResponseDto } from './authorize-discord-get-response/authorize-discord-get-response.dto';
 export { AuthorizeEmailPostRequestDto } from './authorize-email-post-request/authorize-email-post-request.dto';
+export { AuthorizeEmailPostResponseDto } from './authorize-email-post-response/authorize-email-post-response.dto';
 export { AuthorizeGetRequestDto } from './authorize-get-request/authorize-get-request.dto';
 export { AuthorizeGetResponseDto } from './authorize-get-response/authorize-get-response.dto';
 export { AuthorizeGoogleGetResponseDto } from './authorize-google-get-response/authorize-google-get-response.dto';
