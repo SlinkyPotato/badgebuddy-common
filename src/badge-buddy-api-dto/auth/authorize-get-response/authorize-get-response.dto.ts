@@ -1,8 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsOptional, IsString } from 'class-validator';
+import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
 
 export class AuthorizeGetResponseDto {
   @IsString()
+  @IsNotEmpty()
   @ApiProperty({
     description: 'Authorization code',
     type: String,
@@ -10,6 +11,7 @@ export class AuthorizeGetResponseDto {
   code: string;
 
   @IsString()
+  @IsNotEmpty()
   @IsOptional()
   @ApiProperty({
     description: 'State',
