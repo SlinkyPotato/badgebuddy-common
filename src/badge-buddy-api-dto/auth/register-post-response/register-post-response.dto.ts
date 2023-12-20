@@ -8,5 +8,5 @@ export class RegisterPostResponseDto {
     description: 'The user ID',
     type: String,
   })
-  user: string;
+  userId: string;
 }
