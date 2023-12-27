@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-5](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-4...v2.1.0-5) (2023-12-27)
+
+
+### Refactor
+
+* remove eager loading for botSettings and organizer ([22fd4d7](https://github.com/SlinkyPotato/badge-buddy-common/commit/22fd4d7cd7561ea520ebc42afc4cca7336aedd88))
+
 ## [2.1.0-4](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-3...v2.1.0-4) (2023-12-20)
 
 ## [2.1.0-3](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-2...v2.1.0-3) (2023-12-17)
