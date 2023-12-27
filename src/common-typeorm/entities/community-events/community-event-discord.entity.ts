@@ -49,22 +49,20 @@ export class CommunityEventDiscordEntity {
 
   @ManyToOne(() => DiscordBotSettingsEntity, (discordBotSettings) => discordBotSettings.communityEvents, {
     cascade: ['insert', 'update'],
-    eager: true,
   })
   @JoinColumn({ name: 'bot_settings_id', referencedColumnName: 'id' })
-  botSettings: Relation<DiscordBotSettingsEntity>;
+  botSettings?: Relation<DiscordBotSettingsEntity>;
 
   @ManyToOne(() => DiscordUserEntity, (organizer) => organizer.organizedEvents, {
     cascade: ['insert', 'update'],
-    eager: true,
   })
   @JoinColumn({ name: 'organizer_id', referencedColumnName: 'id' })
-  organizer: Relation<DiscordUserEntity>;
+  organizer?: Relation<DiscordUserEntity>;
 
   @OneToMany(() => CommunityParticipantDiscordEntity, (participant) => participant.communityEventId)
   participants?: Relation<CommunityParticipantDiscordEntity[]>;
 
   @OneToMany(() => PoapLinksEntity, (poapLinks) => poapLinks.communityEvent)
-  poapLinks: Relation<PoapLinksEntity[]>;
+  poapLinks?: Relation<PoapLinksEntity[]>;
 
 }
