@@ -43,5 +43,5 @@ export class CommunityParticipantDiscordEntity {
     cascade: ['insert', 'update'],
   })
   @JoinColumn({ name: 'discord_user_sid', referencedColumnName: 'id' })
-  discordUser: Relation<DiscordUserEntity>;
+  discordUser?: Relation<DiscordUserEntity>;
 }
