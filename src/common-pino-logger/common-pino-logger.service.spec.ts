@@ -5,17 +5,16 @@ import { CommonPinoLoggerModule } from './common-pino-logger.module';
 import { describe, it, expect, beforeEach } from '@jest/globals';
 
 describe('CommonPinoLoggerService', () => {
-  const logger: any = {
-    error: jest.fn().mockReturnThis(),
-    info: jest.fn().mockReturnThis(),
-    warn: jest.fn().mockReturnThis(),
-    debug: jest.fn().mockReturnThis(),
-    trace: jest.fn().mockReturnThis(),
-  };
+  const logger = {
+    error: jest.fn(),
+    info: jest.fn(),
+    warn: jest.fn(),
+    debug: jest.fn(),
+  } as unknown as CommonPinoLogger;
 
   let service: CommonPinoLoggerService;
 
-  beforeEach(async () => {
+  beforeEach(() => {
     service = new CommonPinoLoggerService(logger);
   });
 

@@ -13,7 +13,7 @@ export class DiscordConfigModule {
           inject: [ConfigService],
           imports: [ConfigModule],
           useFactory: (configService: ConfigService) => ({
-            token: configService.get('DISCORD_BOT_TOKEN'),
+            token: configService.get<string>('DISCORD_BOT_TOKEN')!,
             discordClientOptions: {
               intents: [
                 GatewayIntentBits.Guilds,
@@ -35,8 +35,8 @@ export class DiscordConfigModule {
             },
             failOnLogin: true,
             ...options,
-          })
-        })
+          }),
+        }),
       ],
       exports: [DiscordModule],
     };

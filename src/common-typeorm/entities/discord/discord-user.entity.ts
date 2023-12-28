@@ -1,6 +1,13 @@
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  Relation,
+} from 'typeorm';
 import { SnowFlakeOption } from './discord.util';
-import { AccountEntity } from '../auth/account.entity';
 import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
 import { CommunityParticipantDiscordEntity } from '../community-events/community-participant-discord.entity';
 import { PoapDiscordClaimsEntity } from '../poaps/poap-discord-claims.entity';
@@ -49,16 +56,27 @@ export class DiscordUserEntity {
   @JoinColumn({ name: 'auth_user_id', referencedColumnName: 'id' })
   authUser?: Relation<UserEntity[]>;
 
-  @OneToMany(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.organizer, {
-    cascade: ['insert', 'update'],
-  })
+  @OneToMany(
+    () => CommunityEventDiscordEntity,
+    (communityEvent) => communityEvent.organizer,
+    {
+      cascade: ['insert', 'update'],
+    },
+  )
   organizedEvents?: Relation<CommunityEventDiscordEntity[]>;
 
-  @OneToMany(() => CommunityParticipantDiscordEntity, (communityParticipantsDiscord) => communityParticipantsDiscord.discordUser, {
-    cascade: ['insert', 'update'],
-  })
+  @OneToMany(
+    () => CommunityParticipantDiscordEntity,
+    (communityParticipantsDiscord) => communityParticipantsDiscord.discordUser,
+    {
+      cascade: ['insert', 'update'],
+    },
+  )
   participatedEvents?: Relation<CommunityParticipantDiscordEntity[]>;
 
-  @OneToMany(() => PoapDiscordClaimsEntity, (poapClaims) => poapClaims.assignedToDiscordUser)
+  @OneToMany(
+    () => PoapDiscordClaimsEntity,
+    (poapClaims) => poapClaims.assignedToDiscordUser,
+  )
   discordPoapsClaimed?: Relation<PoapDiscordClaimsEntity[]>;
 }

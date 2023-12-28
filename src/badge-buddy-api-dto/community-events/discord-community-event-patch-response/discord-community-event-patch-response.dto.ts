@@ -45,5 +45,5 @@ export class DiscordCommunityEventPatchResponseDto {
   @ApiProperty({
     description: 'The number of available poaps',
   })
-  availablePOAPs: number = 0;
+  availablePOAPs = 0;
 }
