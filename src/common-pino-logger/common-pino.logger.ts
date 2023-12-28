@@ -28,7 +28,7 @@ export class CommonPinoLogger extends PinoLogger {
         },
       },
     ];
-    if (process.env.LOGTAIL_TOKEN) {
+    if (process.env.LOGTAIL_ACTIVE === 'true') {
       targets = [
         ...targets,
         {
