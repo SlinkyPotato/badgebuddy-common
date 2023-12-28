@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-7](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-6...v2.1.0-7) (2023-12-28)
+
+
+### Refactor
+
+* make logtail opt-in ([4701111](https://github.com/SlinkyPotato/badge-buddy-common/commit/4701111097908b71fbd176a82da9fc7736c44d4e))
+
 ## [2.1.0-6](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-5...v2.1.0-6) (2023-12-27)
 
 ## [2.1.0-5](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-4...v2.1.0-5) (2023-12-27)

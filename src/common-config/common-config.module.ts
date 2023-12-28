@@ -22,6 +22,7 @@ export class CommonConfigModule {
               .required()
               .pattern(/^(fatal|error|warn|info|debug|trace)$/),
             ...options.validationSchema,
+            LOGTAIL_ACTIVE: Joi.boolean().optional(),
           }),
           validationOptions: {},
         }),

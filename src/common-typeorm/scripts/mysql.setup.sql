@@ -1,4 +1,4 @@
--- Active: 1701227116658@@localhost@3306@badge_buddy
+-- Active: 1703696789164@@127.0.0.1@3306@badge_buddy
 
 CREATE DATABASE badge_buddy;
 DROP DATABASE badge_buddy;
