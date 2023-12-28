@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-8](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-7...v2.1.0-8) (2023-12-28)
+
+
+### Features
+
+* add poaps dto ([7a58d6e](https://github.com/SlinkyPotato/badge-buddy-common/commit/7a58d6e0f19933098aaac9e01d6f1a803d6cfe9b))
+
 ## [2.1.0-7](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-6...v2.1.0-7) (2023-12-28)
 
 
