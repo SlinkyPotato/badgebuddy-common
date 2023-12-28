@@ -7,5 +7,5 @@ export class PoapsDistributeDiscordPostResponseDto {
     description: 'Number of available POAPs',
     example: 1,
   })
-  availablePoaps: number = 0;
+  availablePoaps = 0;
 }

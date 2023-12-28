@@ -4,7 +4,11 @@ import Joi, { SchemaMap } from 'joi';
 
 @Module({})
 export class CommonConfigModule {
-  static forRoot(options: {validationSchema: SchemaMap<any>} = {validationSchema: null}): DynamicModule {
+  static forRoot(
+    options: { validationSchema: SchemaMap | undefined } = {
+      validationSchema: undefined,
+    },
+  ): DynamicModule {
     return {
       module: CommonConfigModule,
       imports: [

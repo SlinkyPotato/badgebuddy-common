@@ -19,7 +19,9 @@ describe('parseChangelog', () => {
       parseReleaseUtil('./src/utils/test-empty-changes.md');
     } catch (e) {
       expect(e).toBeInstanceOf(Error);
-      expect(e.message).toEqual('No changes found in changes.md file');
+      if (e instanceof Error) {
+        expect(e.message).toEqual('No changes found in changes.md file');
+      }
     }
   });
 });

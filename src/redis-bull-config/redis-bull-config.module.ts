@@ -12,7 +12,7 @@ export class RedisBullConfigModule {
         BullModule.forRootAsync({
           imports: [ConfigModule],
           inject: [ConfigService],
-          useFactory: async (configService: ConfigService) => {
+          useFactory: (configService: ConfigService) => {
             switch (configService.get<string>('NODE_ENV')) {
               case NodeEnvs.PRODUCTION:
                 return {

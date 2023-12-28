@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-9](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-8...v2.1.0-9) (2023-12-28)
+
+
+### Refactor
+
+* integrate prettier and new eslint ([15466e3](https://github.com/SlinkyPotato/badge-buddy-common/commit/15466e352339703b0397fc3d0c395bdabb9ddecb))
+
 ## [2.1.0-8](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-7...v2.1.0-8) (2023-12-28)
 
 
