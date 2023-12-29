@@ -105,7 +105,7 @@ CREATE TABLE poap_discord_claims
   assigned_discord_user_id UUID,
   assigned_on DATETIME,
   claimed_on DATETIME,
-  expires_on DATETIME NOT NULL,
+  expires_on DATETIME,
   FOREIGN KEY (poap_link_id) REFERENCES poap_links (id),
   FOREIGN KEY (assigned_discord_user_id) REFERENCES discord_users (id)
 );

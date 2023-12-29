@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-17](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-16...v2.1.0-17) (2023-12-29)
+
+
+### Refactor
+
+* add poapsRemaining field in response ([04d7ae2](https://github.com/SlinkyPotato/badge-buddy-common/commit/04d7ae20b02578c4edfdb9ee1aeca7baaa669ff1))
+
 ## [2.1.0-16](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-15...v2.1.0-16) (2023-12-29)
 
 ## [2.1.0-15](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-14...v2.1.0-15) (2023-12-29)
