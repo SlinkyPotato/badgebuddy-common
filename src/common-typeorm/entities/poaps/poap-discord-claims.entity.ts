@@ -50,13 +50,9 @@ export class PoapDiscordClaimsEntity {
   })
   expiresOn?: Date;
 
-  @ManyToOne(
-    () => DiscordUserEntity,
-    (discordUser) => discordUser.discordPoapsClaimed,
-    {
-      cascade: ['insert', 'update'],
-    },
-  )
+  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.poaps, {
+    cascade: ['insert', 'update'],
+  })
   @JoinColumn({
     name: 'assigned_discord_user_id',
     referencedColumnName: 'id',

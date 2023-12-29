@@ -46,19 +46,16 @@ export class CommunityParticipantDiscordEntity {
   })
   participationLength?: number;
 
-  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.userSId, {
+  @ManyToOne(() => DiscordUserEntity, {
     cascade: ['insert', 'update'],
   })
   @JoinColumn({ name: 'discord_user_sid', referencedColumnName: 'user_sid' })
   discordUser?: Relation<DiscordUserEntity>;
 
-  @ManyToOne(
-    () => PoapDiscordClaimsEntity,
-    (poapDiscordClaims) => poapDiscordClaims.assignedDiscordUserSId,
-  )
+  @ManyToOne(() => PoapDiscordClaimsEntity)
   @JoinColumn({
     name: 'discord_user_sid',
     referencedColumnName: 'assigned_discord_user_sid',
   })
-  poapDiscordClaim?: Relation<PoapDiscordClaimsEntity>;
+  poap?: Relation<PoapDiscordClaimsEntity>;
 }
