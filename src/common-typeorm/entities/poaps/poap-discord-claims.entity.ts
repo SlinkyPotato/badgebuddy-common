@@ -19,7 +19,7 @@ export class PoapDiscordClaimsEntity {
   })
   poapLinkId: string;
 
-  @Column(SnowFlakeOption('assigned_to_discord_user_sid'))
+  @Column(SnowFlakeOption('assigned_discord_user_sid'))
   assignedToDiscordUserSId: string;
 
   @Column({

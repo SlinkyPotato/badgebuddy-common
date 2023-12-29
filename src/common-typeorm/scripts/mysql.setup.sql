@@ -101,13 +101,13 @@ CREATE TABLE poap_links
 CREATE TABLE poap_discord_claims
 (
   poap_link_id UUID PRIMARY KEY,
-  assigned_to_discord_user_sid BIGINT UNSIGNED NOT NULL,
-  assigned_to_discord_user_id UUID,
+  assigned_discord_user_sid BIGINT UNSIGNED NOT NULL,
+  assigned_discord_user_id UUID,
   assigned_on DATETIME,
   claimed_on DATETIME,
   expires_on DATETIME NOT NULL,
   FOREIGN KEY (poap_link_id) REFERENCES poap_links (id),
-  FOREIGN KEY (assigned_to_discord_user_id) REFERENCES discord_users (id)
+  FOREIGN KEY (assigned_discord_user_id) REFERENCES discord_users (id)
 );
 
 -- POAPs Community Participants
