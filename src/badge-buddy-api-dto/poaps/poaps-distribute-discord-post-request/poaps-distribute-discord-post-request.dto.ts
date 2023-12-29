@@ -13,9 +13,9 @@ export class PoapsDistributeDiscordPostRequestDto {
   @IsString()
   @IsUrl()
   @ApiProperty({
-    description: 'Poap URL',
-    example: 'https://poap.deli',
+    description: 'A downloadable link to a list of POAP claim codes',
+    example: 'https://discord.com/download-link',
   })
-  poapsLinkUrl: string;
+  poapClaimsUrl: string;
 
 }
