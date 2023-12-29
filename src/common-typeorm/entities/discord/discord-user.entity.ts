@@ -76,7 +76,7 @@ export class DiscordUserEntity {
 
   @OneToMany(
     () => PoapDiscordClaimsEntity,
-    (poapClaims) => poapClaims.assignedToDiscordUser,
+    (poapClaims) => poapClaims.assignedDiscordUser,
   )
   discordPoapsClaimed?: Relation<PoapDiscordClaimsEntity[]>;
 }

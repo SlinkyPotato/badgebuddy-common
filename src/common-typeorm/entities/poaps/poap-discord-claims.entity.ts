@@ -20,14 +20,14 @@ export class PoapDiscordClaimsEntity {
   poapLinkId: string;
 
   @Column(SnowFlakeOption('assigned_discord_user_sid'))
-  assignedToDiscordUserSId: string;
+  assignedDiscordUserSId: string;
 
   @Column({
     name: 'assigned_discord_user_id',
     type: 'uuid',
     nullable: true,
   })
-  assignedToDiscordUserId?: string;
+  assignedDiscordUserId?: string;
 
   @Column({
     name: 'assigned_on',
@@ -58,10 +58,10 @@ export class PoapDiscordClaimsEntity {
     },
   )
   @JoinColumn({
-    name: 'assigned_to_discord_user_id',
+    name: 'assigned_discord_user_id',
     referencedColumnName: 'id',
   })
-  assignedToDiscordUser?: Relation<DiscordUserEntity>;
+  assignedDiscordUser?: Relation<DiscordUserEntity>;
 
   @OneToOne(() => PoapLinksEntity, (poapLink) => poapLink.poapDiscordClaim, {
     cascade: true,
