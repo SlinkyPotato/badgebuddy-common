@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-14](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-13...v2.1.0-14) (2023-12-29)
+
+
+### Refactor
+
+* add assigned_to_discord_user_sid column to poap_discord_claims ([f412c50](https://github.com/SlinkyPotato/badge-buddy-common/commit/f412c50ee14bb84513d54115fc2e6597d3d14b29))
+
 ## [2.1.0-13](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-12...v2.1.0-13) (2023-12-29)
 
 ## [2.1.0-12](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-11...v2.1.0-12) (2023-12-29)
