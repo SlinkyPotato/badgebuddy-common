@@ -1,21 +1,33 @@
-import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryColumn, Relation } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToOne,
+  PrimaryColumn,
+  Relation,
+} from 'typeorm';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { PoapLinksEntity } from './poap-links.entity';
+import { SnowFlakeOption } from '../discord/discord.util';
 
 @Entity('poap_discord_claims')
 export class PoapDiscordClaimsEntity {
-
   @PrimaryColumn({
     name: 'poap_link_id',
     type: 'uuid',
   })
   poapLinkId: string;
 
+  @Column(SnowFlakeOption('assigned_to_discord_user_sid'))
+  assignedToDiscordUserSId: string;
+
   @Column({
-    name: 'assigned_to_discord_user_id',
+    name: 'assigned_discord_user_id',
     type: 'uuid',
+    nullable: true,
   })
-  assignedToDiscordUserId: string;
+  assignedToDiscordUserId?: string;
 
   @Column({
     name: 'assigned_on',
@@ -34,14 +46,22 @@ export class PoapDiscordClaimsEntity {
   @Column({
     name: 'expires_on',
     type: 'datetime',
+    nullable: true,
   })
-  expiresOn: Date;
+  expiresOn?: Date;
 
-  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.discordPoapsClaimed, {
-    cascade: ['insert', 'update'],
+  @ManyToOne(
+    () => DiscordUserEntity,
+    (discordUser) => discordUser.discordPoapsClaimed,
+    {
+      cascade: ['insert', 'update'],
+    },
+  )
+  @JoinColumn({
+    name: 'assigned_to_discord_user_id',
+    referencedColumnName: 'id',
   })
-  @JoinColumn({ name: 'assigned_to_discord_user_id', referencedColumnName: 'id' })
-  assignedToDiscordUser: Relation<DiscordUserEntity>;
+  assignedToDiscordUser?: Relation<DiscordUserEntity>;
 
   @OneToOne(() => PoapLinksEntity, (poapLink) => poapLink.poapDiscordClaim, {
     cascade: true,
@@ -49,5 +69,4 @@ export class PoapDiscordClaimsEntity {
   })
   @JoinColumn({ name: 'poap_link_id', referencedColumnName: 'id' })
   poapLink: Relation<PoapLinksEntity>;
-
 }

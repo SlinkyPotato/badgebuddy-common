@@ -101,7 +101,8 @@ CREATE TABLE poap_links
 CREATE TABLE poap_discord_claims
 (
   poap_link_id UUID PRIMARY KEY,
-  assigned_to_discord_user_id UUID NOT NULL,
+  assigned_to_discord_user_sid BIGINT UNSIGNED NOT NULL,
+  assigned_to_discord_user_id UUID,
   assigned_on DATETIME,
   claimed_on DATETIME,
   expires_on DATETIME NOT NULL,
