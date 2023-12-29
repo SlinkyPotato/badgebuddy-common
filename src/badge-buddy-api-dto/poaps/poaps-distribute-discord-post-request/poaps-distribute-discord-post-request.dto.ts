@@ -11,11 +11,15 @@ export class PoapsDistributeDiscordPostRequestDto {
   communityEventId: string;
 
   @IsString()
-  @IsUrl()
+  @IsUrl({
+    require_protocol: true,
+    require_valid_protocol: true,
+    protocols: ['https'],
+    host_whitelist: ['discord.com', 'discordapp.com'],
+  })
   @ApiProperty({
     description: 'A downloadable link to a list of POAP claim codes',
-    example: 'https://discord.com/download-link',
+    example: 'https://cdn.discordapp.com/attachments/',
   })
   poapClaimsUrl: string;
-
 }

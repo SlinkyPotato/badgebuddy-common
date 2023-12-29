@@ -4,8 +4,8 @@ import { ApiProperty } from '@nestjs/swagger';
 export class PoapsDistributeDiscordPostResponseDto {
   @IsNumber()
   @ApiProperty({
-    description: 'Number of available POAPs',
+    description: 'Number of POAPs distributed to participants',
     example: 1,
   })
-  availablePoaps = 0;
+  poapsDistributed = 0;
 }
