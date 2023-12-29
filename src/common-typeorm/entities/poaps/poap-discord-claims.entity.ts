@@ -61,7 +61,7 @@ export class PoapDiscordClaimsEntity {
     name: 'assigned_discord_user_id',
     referencedColumnName: 'id',
   })
-  assignedToDiscordUser?: Relation<DiscordUserEntity>;
+  assignedDiscordUser?: Relation<DiscordUserEntity>;
 
   @OneToOne(() => PoapLinksEntity, (poapLink) => poapLink.poapDiscordClaim, {
     cascade: true,
