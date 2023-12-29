@@ -78,5 +78,5 @@ export class DiscordUserEntity {
     () => PoapDiscordClaimsEntity,
     (poapClaims) => poapClaims.assignedDiscordUser,
   )
-  discordPoapsClaimed?: Relation<PoapDiscordClaimsEntity[]>;
+  poaps?: Relation<PoapDiscordClaimsEntity[]>;
 }
