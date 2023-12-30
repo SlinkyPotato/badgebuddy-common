@@ -67,7 +67,7 @@ export class CommunityEventEntity {
     type: 'datetime',
     nullable: true,
   })
-  disbandedDate?: Date;
+  disbandedDate?: Date; // set when event participants have been processed
 
   // Relations
 

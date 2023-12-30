@@ -9,7 +9,6 @@ import {
 } from 'typeorm';
 import { SnowFlakeOption } from './discord.util';
 import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
-import { PoapClaimDiscordEntity } from '../poaps/poap-claim-discord.entity';
 import { UserEntity } from '../auth/user.entity';
 
 @Entity('discord_users')
@@ -65,10 +64,4 @@ export class DiscordUserEntity {
     },
   )
   communityEventsOrganized?: Relation<CommunityEventDiscordEntity[]>;
-
-  @OneToMany(
-    () => PoapClaimDiscordEntity,
-    (poapClaims) => poapClaims.assignedDiscordUser,
-  )
-  poapClaims?: Relation<PoapClaimDiscordEntity[]>;
 }
