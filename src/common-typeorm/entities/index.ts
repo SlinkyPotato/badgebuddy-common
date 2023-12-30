@@ -10,8 +10,8 @@ export { DiscordUserEntity } from './discord/discord-user.entity';
 // Community Events
 export { CommunityEventEntity } from './community-events/community-event.entity';
 export { CommunityEventDiscordEntity } from './community-events/community-event-discord.entity';
-export { CommunityParticipantDiscordEntity } from './community-events/community-participant-discord.entity';
+export { CommunityEventParticipantDiscordEntity } from './community-events/community-event-participant-discord.entity';
 
 // POAPs
-export { PoapLinksEntity } from './poaps/poap-links.entity';
-export { PoapDiscordClaimsEntity } from './poaps/poap-discord-claims.entity';
+export { PoapClaimEntity } from './poaps/poap-claim.entity';
+export { PoapClaimDiscordEntity } from './poaps/poap-claim-discord.entity';

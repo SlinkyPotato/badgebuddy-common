@@ -1,6 +1,5 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { SnowFlakeOption } from './discord.util';
-import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
 
 @Entity('discord_bot_settings')
 export class DiscordBotSettingsEntity {
@@ -41,10 +40,5 @@ export class DiscordBotSettingsEntity {
 
   @Column(SnowFlakeOption('poap_manager_role_sid'))
   poapManagerRoleSId: string;
-
-  @OneToMany(() => CommunityEventDiscordEntity, (communityEvent) => communityEvent.botSettings, {
-    cascade: ['insert', 'update', 'remove'],
-  })
-  communityEvents?: Relation<CommunityEventDiscordEntity[]>;
 
 }
