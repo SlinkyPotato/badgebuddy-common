@@ -2,6 +2,125 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-25](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-24...v2.1.0-25) (2023-12-30)
+
+
+### Refactor
+
+* remove last relation from community events participants discord ([8e1b43b](https://github.com/SlinkyPotato/badge-buddy-common/commit/8e1b43ba85dfaf5ba80d50edcb2df056d0e8b55d))
+
+## [2.1.0-24](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-23...v2.1.0-24) (2023-12-30)
+
+
+### Refactor
+
+* remove discord_user_sid relation ([98a7298](https://github.com/SlinkyPotato/badge-buddy-common/commit/98a729848a052897f236352378d86e1a0dccf8fb))
+
+## [2.1.0-23](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-22...v2.1.0-23) (2023-12-30)
+
+## [2.1.0-22](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-21...v2.1.0-22) (2023-12-30)
+
+
+### Refactor
+
+* more relations ([e6c5e5d](https://github.com/SlinkyPotato/badge-buddy-common/commit/e6c5e5d4671ee1e39e24aa63bcd85037e25bbce1))
+* relations ([5e72022](https://github.com/SlinkyPotato/badge-buddy-common/commit/5e7202256f4879213d35066a47133f022ad039d4))
+
+## [2.1.0-21](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-20...v2.1.0-21) (2023-12-30)
+
+
+### Refactor
+
+* rename columns and entities ([3211a7e](https://github.com/SlinkyPotato/badge-buddy-common/commit/3211a7ef66d9e522308f2be7fcc71c2c4df45f7f))
+
+## [2.1.0-20](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-19...v2.1.0-20) (2023-12-30)
+
+## [2.1.0-19](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-18...v2.1.0-19) (2023-12-29)
+
+## [2.1.0-18](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-17...v2.1.0-18) (2023-12-29)
+
+## [2.1.0-17](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-16...v2.1.0-17) (2023-12-29)
+
+
+### Refactor
+
+* add poapsRemaining field in response ([04d7ae2](https://github.com/SlinkyPotato/badge-buddy-common/commit/04d7ae20b02578c4edfdb9ee1aeca7baaa669ff1))
+
+## [2.1.0-16](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-15...v2.1.0-16) (2023-12-29)
+
+## [2.1.0-15](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-14...v2.1.0-15) (2023-12-29)
+
+## [2.1.0-14](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-13...v2.1.0-14) (2023-12-29)
+
+
+### Refactor
+
+* add assigned_to_discord_user_sid column to poap_discord_claims ([f412c50](https://github.com/SlinkyPotato/badge-buddy-common/commit/f412c50ee14bb84513d54115fc2e6597d3d14b29))
+
+## [2.1.0-13](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-12...v2.1.0-13) (2023-12-29)
+
+## [2.1.0-12](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-11...v2.1.0-12) (2023-12-29)
+
+
+### Performance
+
+* update deps ([8d84e3d](https://github.com/SlinkyPotato/badge-buddy-common/commit/8d84e3d291cabcaae7f81f5da5281ecbea65f66b))
+
+## [2.1.0-11](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-10...v2.1.0-11) (2023-12-29)
+
+## [2.1.0-10](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-9...v2.1.0-10) (2023-12-29)
+
+## [2.1.0-9](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-8...v2.1.0-9) (2023-12-28)
+
+
+### Refactor
+
+* integrate prettier and new eslint ([15466e3](https://github.com/SlinkyPotato/badge-buddy-common/commit/15466e352339703b0397fc3d0c395bdabb9ddecb))
+
+## [2.1.0-8](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-7...v2.1.0-8) (2023-12-28)
+
+
+### Features
+
+* add poaps dto ([7a58d6e](https://github.com/SlinkyPotato/badge-buddy-common/commit/7a58d6e0f19933098aaac9e01d6f1a803d6cfe9b))
+
+## [2.1.0-7](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-6...v2.1.0-7) (2023-12-28)
+
+
+### Refactor
+
+* make logtail opt-in ([4701111](https://github.com/SlinkyPotato/badge-buddy-common/commit/4701111097908b71fbd176a82da9fc7736c44d4e))
+
+## [2.1.0-6](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-5...v2.1.0-6) (2023-12-27)
+
+## [2.1.0-5](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-4...v2.1.0-5) (2023-12-27)
+
+
+### Refactor
+
+* remove eager loading for botSettings and organizer ([22fd4d7](https://github.com/SlinkyPotato/badge-buddy-common/commit/22fd4d7cd7561ea520ebc42afc4cca7336aedd88))
+
+## [2.1.0-4](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-3...v2.1.0-4) (2023-12-20)
+
+## [2.1.0-3](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-2...v2.1.0-3) (2023-12-17)
+
+## [2.1.0-2](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-1...v2.1.0-2) (2023-12-17)
+
+## [2.1.0-1](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-0...v2.1.0-1) (2023-12-16)
+
+
+### Features
+
+* add userdto and tokendto ([d3e628c](https://github.com/SlinkyPotato/badge-buddy-common/commit/d3e628c0b0d171122e868bba115adfb7a3c0488b))
+
+## [2.1.0-0](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0...v2.1.0-0) (2023-12-16)
+
+
+### Features
+
+* add auth dtos ([ee98212](https://github.com/SlinkyPotato/badge-buddy-common/commit/ee982126a49bc2618a52e91c10c592bc65afd4db))
+* add auth dtos ([173458d](https://github.com/SlinkyPotato/badge-buddy-common/commit/173458da222ab1b399cb7818fdd5619650ef5000))
+
 ## [2.0.0](https://github.com/SlinkyPotato/badge-buddy-common/compare/v1.2.0-30...v2.0.0) (2023-12-16)
 
 

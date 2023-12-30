@@ -1,9 +1,8 @@
--- Active: 1701227116658@@localhost@3306@badge_buddy
-
 CREATE DATABASE badge_buddy;
 DROP DATABASE badge_buddy;
 
 -- Auth
+
 CREATE TABLE users
 (
   id UUID PRIMARY KEY,
@@ -63,6 +62,7 @@ CREATE TABLE discord_bot_settings
 
 
 -- Community Events
+
 CREATE TABLE community_events
 (
   id UUID PRIMARY KEY,
@@ -88,7 +88,8 @@ CREATE TABLE community_events_discord
 );
 
 -- POAPs
-CREATE TABLE poap_links
+
+CREATE TABLE poap_claims
 (
   id UUID PRIMARY KEY,
   qr_code VARCHAR(255) UNIQUE,
@@ -98,19 +99,22 @@ CREATE TABLE poap_links
   INDEX qr_code_idx (qr_code)
 );
 
-CREATE TABLE poap_discord_claims
+CREATE TABLE poap_claims_discord
 (
-  poap_link_id UUID PRIMARY KEY,
-  assigned_to_discord_user_id UUID NOT NULL,
+  poap_claim_id UUID PRIMARY KEY,
+  assigned_discord_user_sid BIGINT UNSIGNED NOT NULL,
+  assigned_discord_user_id UUID,
   assigned_on DATETIME,
   claimed_on DATETIME,
-  expires_on DATETIME NOT NULL,
-  FOREIGN KEY (poap_link_id) REFERENCES poap_links (id),
-  FOREIGN KEY (assigned_to_discord_user_id) REFERENCES discord_users (id)
+  expires_on DATETIME,
+  FOREIGN KEY (poap_claim_id) REFERENCES poap_claims (id),
+  FOREIGN KEY (assigned_discord_user_id) REFERENCES discord_users (id),
+  FOREIGN KEY (assigned_discord_user_sid) REFERENCES discord_users (user_sid)
 );
 
--- POAPs Community Participants
-CREATE TABLE community_participants_discord
+-- Community Participants
+
+CREATE TABLE community_events_participants_discord
 (
   community_event_id UUID NOT NULL,
   discord_user_sid BIGINT UNSIGNED NOT NULL,
@@ -119,5 +123,6 @@ CREATE TABLE community_participants_discord
   participation_length INT UNSIGNED, -- in seconds
   FOREIGN KEY (community_event_id) REFERENCES community_events_discord (community_event_id),
   FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid),
+  FOREIGN KEY (discord_user_sid) REFERENCES poap_claims_discord (assigned_discord_user_sid),
   PRIMARY KEY (community_event_id, discord_user_sid)
 );

@@ -13,7 +13,7 @@ export class CommonTypeOrmModule {
           imports: [ConfigModule],
           name: 'default',
           inject: [ConfigService],
-          useFactory: async (configService: ConfigService) => ({
+          useFactory: (configService: ConfigService) => ({
             type: 'mysql',
             host: configService.get('MARIADB_HOST'),
             port: Number(configService.get('MARIADB_PORT')),

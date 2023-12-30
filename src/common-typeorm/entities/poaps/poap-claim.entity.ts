@@ -6,13 +6,13 @@ import {
   ManyToOne,
   OneToOne,
   PrimaryGeneratedColumn,
-  Relation
+  Relation,
 } from 'typeorm';
 import { CommunityEventEntity } from '../community-events/community-event.entity';
-import { PoapDiscordClaimsEntity } from './poap-discord-claims.entity';
+import { PoapClaimDiscordEntity } from './poap-claim-discord.entity';
 
-@Entity('poap_links')
-export class PoapLinksEntity {
+@Entity('poap_claims')
+export class PoapClaimEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -38,12 +38,14 @@ export class PoapLinksEntity {
   })
   communityEventId: string;
 
-  @ManyToOne(() => CommunityEventEntity, (communityEvent) => communityEvent.poapLinks, {
-    cascade: ['insert', 'update']
+  // Relations
+
+  @ManyToOne(() => CommunityEventEntity, {
+    cascade: ['insert', 'update'],
   })
   @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
   communityEvent: Relation<CommunityEventEntity>;
 
-  @OneToOne(() => PoapDiscordClaimsEntity, (poapClaim) => poapClaim.poapLink)
-  poapDiscordClaim?: Relation<PoapDiscordClaimsEntity>;
+  @OneToOne(() => PoapClaimDiscordEntity, (poapClaim) => poapClaim.poapClaim)
+  discordPoapClaim?: Relation<PoapClaimDiscordEntity>;
 }

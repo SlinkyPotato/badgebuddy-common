@@ -1,6 +1,11 @@
-import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import {
+  Column,
+  Entity,
+  OneToOne,
+  PrimaryGeneratedColumn,
+  Relation,
+} from 'typeorm';
 import { CommunityEventDiscordEntity } from './community-event-discord.entity';
-import { PoapLinksEntity } from '../poaps/poap-links.entity';
 
 @Entity('community_events')
 export class CommunityEventEntity {
@@ -57,9 +62,11 @@ export class CommunityEventEntity {
   })
   poapEventId?: number;
 
-  @OneToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.communityEvent)
-  discordCommunityEvent?: Relation<CommunityEventDiscordEntity>;
+  // Relations
 
-  @OneToMany(() => PoapLinksEntity, (poapLinks) => poapLinks.communityEvent)
-  poapLinks?: Relation<PoapLinksEntity[]>;
+  @OneToOne(
+    () => CommunityEventDiscordEntity,
+    (discordCommunityEvent) => discordCommunityEvent.communityEvent,
+  )
+  discordCommunityEvent?: Relation<CommunityEventDiscordEntity>;
 }

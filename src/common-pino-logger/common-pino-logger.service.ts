@@ -15,6 +15,7 @@ export class CommonPinoLoggerService implements LoggerService {
 
   log(message: any, ...optionalParams: any[]): any {
     if (optionalParams.length > 0) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       this.pinoLogger.info({ ...optionalParams }, message);
     } else {
       this.pinoLogger.info(message);
@@ -23,6 +24,7 @@ export class CommonPinoLoggerService implements LoggerService {
 
   warn(message: any, ...optionalParams: any[]): any {
     if (optionalParams.length > 0) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       this.pinoLogger.warn({ ...optionalParams }, message);
     } else {
       this.pinoLogger.warn(message);
@@ -31,6 +33,7 @@ export class CommonPinoLoggerService implements LoggerService {
 
   debug(message: any, ...optionalParams: any[]): any {
     if (optionalParams.length > 0) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       this.pinoLogger.debug({ ...optionalParams }, message);
     } else {
       this.pinoLogger.debug(message);
@@ -39,6 +42,7 @@ export class CommonPinoLoggerService implements LoggerService {
 
   verbose(message: any, ...optionalParams: any[]): any {
     if (optionalParams.length > 0) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       this.pinoLogger.trace({ ...optionalParams }, message);
     } else {
       this.pinoLogger.trace(message);

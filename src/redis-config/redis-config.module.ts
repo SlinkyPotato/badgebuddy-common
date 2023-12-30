@@ -13,7 +13,9 @@ import { RedisClientOptions } from 'redis';
  */
 @Module({})
 export class RedisConfigModule {
-  static forRootAsync(options: CacheManagerOptions & RedisClientOptions = {}): DynamicModule {
+  static forRootAsync(
+    options: CacheManagerOptions & RedisClientOptions = {},
+  ): DynamicModule {
     return {
       module: RedisConfigModule,
       imports: [
@@ -21,7 +23,7 @@ export class RedisConfigModule {
           imports: [ConfigModule],
           inject: [ConfigService],
           isGlobal: true,
-          useFactory: async (configService: ConfigService) => {
+          useFactory: (configService: ConfigService) => {
             switch (configService.get<string>('NODE_ENV')) {
               case NodeEnvs.PRODUCTION:
                 return {
@@ -30,7 +32,10 @@ export class RedisConfigModule {
                     path: '/app/redis/redis.sock',
                   },
                   database: 0,
-                  ttl: 1000 * 60 * configService.get<number>('REDIS_CACHE_MIN'),
+                  ttl:
+                    1000 *
+                    60 *
+                    Number(configService.get<string>('REDIS_CACHE_MIN')),
                   ...options,
                 };
               case NodeEnvs.STAGING:
@@ -40,7 +45,10 @@ export class RedisConfigModule {
                     path: '/app/redis/redis.sock',
                   },
                   database: 1,
-                  ttl: 1000 * 60 * configService.get<number>('REDIS_CACHE_MIN'),
+                  ttl:
+                    1000 *
+                    60 *
+                    Number(configService.get<string>('REDIS_CACHE_MIN')),
                   ...options,
                 };
               default:
@@ -50,7 +58,10 @@ export class RedisConfigModule {
                     host: configService.get<string>('REDIS_HOST'),
                     port: configService.get<number>('REDIS_PORT'),
                   },
-                  ttl: 1000 * 60 * configService.get<number>('REDIS_CACHE_MIN'),
+                  ttl:
+                    1000 *
+                    60 *
+                    Number(configService.get<string>('REDIS_CACHE_MIN')),
                   ...options,
                 };
             }

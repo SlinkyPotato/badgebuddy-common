@@ -1,16 +1,14 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, Relation } from 'typeorm';
-import { DiscordUserEntity } from '../discord/discord-user.entity';
+import { Column, Entity, PrimaryColumn } from 'typeorm';
 
-@Entity('community_participants_discord')
-export class CommunityParticipantDiscordEntity {
-
+@Entity('community_events_participants_discord')
+export class CommunityEventParticipantDiscordEntity {
   @PrimaryColumn({
     name: 'community_event_id',
-    type: 'uuid'
+    type: 'uuid',
   })
   communityEventId: string;
 
-  @Column({
+  @PrimaryColumn({
     name: 'discord_user_sid',
     type: 'bigint',
     unsigned: true,
@@ -39,9 +37,5 @@ export class CommunityParticipantDiscordEntity {
   })
   participationLength?: number;
 
-  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.userSId, {
-    cascade: ['insert', 'update'],
-  })
-  @JoinColumn({ name: 'discord_user_sid', referencedColumnName: 'id' })
-  discordUser: Relation<DiscordUserEntity>;
+  // Relations
 }
