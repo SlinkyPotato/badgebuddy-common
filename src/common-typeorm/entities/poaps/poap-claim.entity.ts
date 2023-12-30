@@ -38,6 +38,8 @@ export class PoapClaimEntity {
   })
   communityEventId: string;
 
+  // Relations
+
   @ManyToOne(() => CommunityEventEntity, {
     cascade: ['insert', 'update'],
   })

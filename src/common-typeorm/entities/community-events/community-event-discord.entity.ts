@@ -14,7 +14,7 @@ import { CommunityEventEntity } from './community-event.entity';
 import { DiscordBotSettingsEntity } from '../discord/discord-bot-settings.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { CommunityEventParticipantDiscordEntity } from './community-event-participant-discord.entity';
-import { PoapClaimEntity } from '../poaps/poap-claim.entity';
+import { PoapClaimDiscordEntity } from '../poaps/poap-claim-discord.entity';
 
 @Entity('community_events_discord')
 export class CommunityEventDiscordEntity {
@@ -40,6 +40,8 @@ export class CommunityEventDiscordEntity {
   @Index('voice_channel_sid_idx')
   voiceChannelSId: string;
 
+  // Relations
+
   @OneToOne(
     () => CommunityEventEntity,
     (communityEvent) => communityEvent.discordCommunityEvent,
@@ -64,10 +66,9 @@ export class CommunityEventDiscordEntity {
 
   @OneToMany(
     () => CommunityEventParticipantDiscordEntity,
-    (participant) => participant.communityEventId,
+    (participant) => participant.discordCommunityEvent,
   )
-  participants?: Relation<CommunityEventParticipantDiscordEntity[]>;
-
-  @OneToMany(() => PoapClaimEntity, (poapLinks) => poapLinks.communityEvent)
-  poapLinks?: Relation<PoapClaimEntity[]>;
+  discordCommunityEventParticipants?: Relation<
+    CommunityEventParticipantDiscordEntity[]
+  >;
 }

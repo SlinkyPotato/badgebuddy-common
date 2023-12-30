@@ -112,8 +112,6 @@ CREATE TABLE poap_claims_discord
   FOREIGN KEY (assigned_discord_user_sid) REFERENCES discord_users (user_sid)
 );
 
-DROP TABLE poap_claims_discord;
-
 -- Community Participants
 
 CREATE TABLE community_events_participants_discord
@@ -125,5 +123,6 @@ CREATE TABLE community_events_participants_discord
   participation_length INT UNSIGNED, -- in seconds
   FOREIGN KEY (community_event_id) REFERENCES community_events_discord (community_event_id),
   FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid),
+  FOREIGN KEY (discord_user_sid) REFERENCES poap_claims_discord (assigned_discord_user_sid),
   PRIMARY KEY (community_event_id, discord_user_sid)
 );
