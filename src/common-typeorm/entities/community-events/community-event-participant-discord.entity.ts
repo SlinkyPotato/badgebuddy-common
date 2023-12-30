@@ -6,7 +6,6 @@ import {
   PrimaryColumn,
   Relation,
 } from 'typeorm';
-import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { CommunityEventDiscordEntity } from './community-event-discord.entity';
 
 @Entity('community_events_participants_discord')
