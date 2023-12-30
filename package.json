@@ -1,6 +1,6 @@
 {
   "name": "@badgebuddy/common",
-  "version": "2.1.0-20",
+  "version": "2.1.0-21",
   "description": "A collection of common objects and utils.",
   "author": "SlinkyPotato <patinobrian@gmail.com>",
   "private": false,
