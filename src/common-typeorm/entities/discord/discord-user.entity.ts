@@ -50,11 +50,13 @@ export class DiscordUserEntity {
   })
   avatar?: string;
 
+  // Relations
+
   @ManyToOne(() => UserEntity, (authUser) => authUser.discordUser, {
     cascade: ['insert', 'update'],
   })
   @JoinColumn({ name: 'auth_user_id', referencedColumnName: 'id' })
-  authUser?: Relation<UserEntity[]>;
+  authUser?: Relation<UserEntity>;
 
   @OneToMany(
     () => CommunityEventDiscordEntity,
@@ -67,7 +69,7 @@ export class DiscordUserEntity {
 
   @OneToMany(
     () => CommunityEventParticipantDiscordEntity,
-    (communityParticipantsDiscord) => communityParticipantsDiscord.discordUser,
+    (participant) => participant.discordUser,
     {
       cascade: ['insert', 'update'],
     },
@@ -80,5 +82,5 @@ export class DiscordUserEntity {
     () => PoapClaimDiscordEntity,
     (poapClaims) => poapClaims.assignedDiscordUser,
   )
-  poaps?: Relation<PoapClaimDiscordEntity[]>;
+  poapClaims?: Relation<PoapClaimDiscordEntity[]>;
 }

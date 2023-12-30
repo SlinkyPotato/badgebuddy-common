@@ -50,7 +50,9 @@ export class PoapClaimDiscordEntity {
   })
   expiresOn?: Date;
 
-  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.poaps, {
+  // Relations
+
+  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.poapClaims, {
     cascade: ['insert', 'update'],
   })
   @JoinColumn({
@@ -59,7 +61,7 @@ export class PoapClaimDiscordEntity {
   })
   assignedDiscordUser?: Relation<DiscordUserEntity>;
 
-  @OneToOne(() => PoapClaimEntity, (poapLink) => poapLink.discordPoapClaim, {
+  @OneToOne(() => PoapClaimEntity, (poapClaim) => poapClaim.discordPoapClaim, {
     cascade: true,
     eager: true,
   })

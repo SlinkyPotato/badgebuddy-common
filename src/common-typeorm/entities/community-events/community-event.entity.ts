@@ -3,7 +3,7 @@ import {
   Entity,
   OneToOne,
   PrimaryGeneratedColumn,
-  Relation
+  Relation,
 } from 'typeorm';
 import { CommunityEventDiscordEntity } from './community-event-discord.entity';
 
@@ -62,7 +62,11 @@ export class CommunityEventEntity {
   })
   poapEventId?: number;
 
-  @OneToOne(() => CommunityEventDiscordEntity, (discordCommunityEvent) => discordCommunityEvent.communityEvent)
-  discordCommunityEvent?: Relation<CommunityEventDiscordEntity>;
+  // Relations
 
+  @OneToOne(
+    () => CommunityEventDiscordEntity,
+    (discordCommunityEvent) => discordCommunityEvent.communityEvent,
+  )
+  discordCommunityEvent?: Relation<CommunityEventDiscordEntity>;
 }

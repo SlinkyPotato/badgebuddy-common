@@ -7,7 +7,7 @@ import {
   Relation,
 } from 'typeorm';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
-import { PoapClaimDiscordEntity } from '../poaps/poap-claim-discord.entity';
+import { CommunityEventDiscordEntity } from './community-event-discord.entity';
 
 @Entity('community_events_participants_discord')
 export class CommunityEventParticipantDiscordEntity {
@@ -17,7 +17,7 @@ export class CommunityEventParticipantDiscordEntity {
   })
   communityEventId: string;
 
-  @Column({
+  @PrimaryColumn({
     name: 'discord_user_sid',
     type: 'bigint',
     unsigned: true,
@@ -46,16 +46,21 @@ export class CommunityEventParticipantDiscordEntity {
   })
   participationLength?: number;
 
+  // Relations
+
   @ManyToOne(() => DiscordUserEntity, {
     cascade: ['insert', 'update'],
   })
   @JoinColumn({ name: 'discord_user_sid', referencedColumnName: 'user_sid' })
   discordUser?: Relation<DiscordUserEntity>;
 
-  @ManyToOne(() => PoapClaimDiscordEntity)
+  @ManyToOne(
+    () => CommunityEventDiscordEntity,
+    (event) => event.discordCommunityEventParticipants,
+  )
   @JoinColumn({
-    name: 'discord_user_sid',
-    referencedColumnName: 'assigned_discord_user_sid',
+    name: 'community_event_id',
+    referencedColumnName: 'community_event_id',
   })
-  discordPoapClaim?: Relation<PoapClaimDiscordEntity>;
+  discordCommunityEvent?: Relation<CommunityEventDiscordEntity>;
 }
