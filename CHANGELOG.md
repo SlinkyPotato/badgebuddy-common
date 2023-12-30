@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-20](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-19...v2.1.0-20) (2023-12-30)
+
 ## [2.1.0-19](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-18...v2.1.0-19) (2023-12-29)
 
 ## [2.1.0-18](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-17...v2.1.0-18) (2023-12-29)
