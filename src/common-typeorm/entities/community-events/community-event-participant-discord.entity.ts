@@ -7,10 +7,10 @@ import {
   Relation,
 } from 'typeorm';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
-import { PoapDiscordClaimsEntity } from '../poaps/poap-discord-claims.entity';
+import { PoapClaimDiscordEntity } from '../poaps/poap-claim-discord.entity';
 
-@Entity('community_participants_discord')
-export class CommunityParticipantDiscordEntity {
+@Entity('community_events_participants_discord')
+export class CommunityEventParticipantDiscordEntity {
   @PrimaryColumn({
     name: 'community_event_id',
     type: 'uuid',
@@ -52,10 +52,10 @@ export class CommunityParticipantDiscordEntity {
   @JoinColumn({ name: 'discord_user_sid', referencedColumnName: 'user_sid' })
   discordUser?: Relation<DiscordUserEntity>;
 
-  @ManyToOne(() => PoapDiscordClaimsEntity)
+  @ManyToOne(() => PoapClaimDiscordEntity)
   @JoinColumn({
     name: 'discord_user_sid',
     referencedColumnName: 'assigned_discord_user_sid',
   })
-  poap?: Relation<PoapDiscordClaimsEntity>;
+  discordPoapClaim?: Relation<PoapClaimDiscordEntity>;
 }

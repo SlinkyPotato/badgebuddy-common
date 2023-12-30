@@ -13,8 +13,8 @@ import { SnowFlakeOption } from '../discord/discord.util';
 import { CommunityEventEntity } from './community-event.entity';
 import { DiscordBotSettingsEntity } from '../discord/discord-bot-settings.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
-import { CommunityParticipantDiscordEntity } from './community-participant-discord.entity';
-import { PoapLinksEntity } from '../poaps/poap-links.entity';
+import { CommunityEventParticipantDiscordEntity } from './community-event-participant-discord.entity';
+import { PoapClaimEntity } from '../poaps/poap-claim.entity';
 
 @Entity('community_events_discord')
 export class CommunityEventDiscordEntity {
@@ -43,24 +43,18 @@ export class CommunityEventDiscordEntity {
   @OneToOne(
     () => CommunityEventEntity,
     (communityEvent) => communityEvent.discordCommunityEvent,
-    {
-      cascade: true,
-      eager: true,
-    },
+    { cascade: true, eager: true },
   )
   @JoinColumn({ name: 'community_event_id', referencedColumnName: 'id' })
   communityEvent: Relation<CommunityEventEntity>;
 
-  @ManyToOne(
-    () => DiscordBotSettingsEntity,
-    (discordBotSettings) => discordBotSettings.communityEvents,
-  )
+  @ManyToOne(() => DiscordBotSettingsEntity)
   @JoinColumn({ name: 'bot_settings_id', referencedColumnName: 'id' })
   botSettings?: Relation<DiscordBotSettingsEntity>;
 
   @ManyToOne(
     () => DiscordUserEntity,
-    (organizer) => organizer.organizedEvents,
+    (organizer) => organizer.communityEventsOrganized,
     {
       cascade: ['insert', 'update'],
     },
@@ -69,11 +63,11 @@ export class CommunityEventDiscordEntity {
   organizer?: Relation<DiscordUserEntity>;
 
   @OneToMany(
-    () => CommunityParticipantDiscordEntity,
+    () => CommunityEventParticipantDiscordEntity,
     (participant) => participant.communityEventId,
   )
-  participants?: Relation<CommunityParticipantDiscordEntity[]>;
+  participants?: Relation<CommunityEventParticipantDiscordEntity[]>;
 
-  @OneToMany(() => PoapLinksEntity, (poapLinks) => poapLinks.communityEvent)
-  poapLinks?: Relation<PoapLinksEntity[]>;
+  @OneToMany(() => PoapClaimEntity, (poapLinks) => poapLinks.communityEvent)
+  poapLinks?: Relation<PoapClaimEntity[]>;
 }

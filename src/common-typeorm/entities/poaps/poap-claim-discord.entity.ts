@@ -8,16 +8,16 @@ import {
   Relation,
 } from 'typeorm';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
-import { PoapLinksEntity } from './poap-links.entity';
+import { PoapClaimEntity } from './poap-claim.entity';
 import { SnowFlakeOption } from '../discord/discord.util';
 
-@Entity('poap_discord_claims')
-export class PoapDiscordClaimsEntity {
+@Entity('poap_claims_discord')
+export class PoapClaimDiscordEntity {
   @PrimaryColumn({
-    name: 'poap_link_id',
+    name: 'poap_claim_id',
     type: 'uuid',
   })
-  poapLinkId: string;
+  poapClaimId: string;
 
   @Column(SnowFlakeOption('assigned_discord_user_sid'))
   assignedDiscordUserSId: string;
@@ -59,10 +59,10 @@ export class PoapDiscordClaimsEntity {
   })
   assignedDiscordUser?: Relation<DiscordUserEntity>;
 
-  @OneToOne(() => PoapLinksEntity, (poapLink) => poapLink.poapDiscordClaim, {
+  @OneToOne(() => PoapClaimEntity, (poapLink) => poapLink.discordPoapClaim, {
     cascade: true,
     eager: true,
   })
-  @JoinColumn({ name: 'poap_link_id', referencedColumnName: 'id' })
-  poapLink: Relation<PoapLinksEntity>;
+  @JoinColumn({ name: 'poap_claim_id', referencedColumnName: 'id' })
+  poapClaim: Relation<PoapClaimEntity>;
 }
