@@ -1,13 +1,4 @@
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  ManyToOne,
-  PrimaryColumn,
-  Relation,
-} from 'typeorm';
-import { DiscordUserEntity } from '../discord/discord-user.entity';
-import { CommunityEventDiscordEntity } from './community-event-discord.entity';
+import { Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity('community_events_participants_discord')
 export class CommunityEventParticipantDiscordEntity {
@@ -47,14 +38,4 @@ export class CommunityEventParticipantDiscordEntity {
   participationLength?: number;
 
   // Relations
-
-  @ManyToOne(
-    () => CommunityEventDiscordEntity,
-    (event) => event.discordCommunityEventParticipants,
-  )
-  @JoinColumn({
-    name: 'community_event_id',
-    referencedColumnName: 'community_event_id',
-  })
-  discordCommunityEvent?: Relation<CommunityEventDiscordEntity>;
 }

@@ -4,7 +4,6 @@ import {
   Index,
   JoinColumn,
   ManyToOne,
-  OneToMany,
   OneToOne,
   PrimaryColumn,
   Relation,
@@ -13,7 +12,6 @@ import { SnowFlakeOption } from '../discord/discord.util';
 import { CommunityEventEntity } from './community-event.entity';
 import { DiscordBotSettingsEntity } from '../discord/discord-bot-settings.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
-import { CommunityEventParticipantDiscordEntity } from './community-event-participant-discord.entity';
 
 @Entity('community_events_discord')
 export class CommunityEventDiscordEntity {
@@ -62,12 +60,4 @@ export class CommunityEventDiscordEntity {
   )
   @JoinColumn({ name: 'organizer_id', referencedColumnName: 'id' })
   organizer?: Relation<DiscordUserEntity>;
-
-  @OneToMany(
-    () => CommunityEventParticipantDiscordEntity,
-    (participant) => participant.discordCommunityEvent,
-  )
-  discordCommunityEventParticipants?: Relation<
-    CommunityEventParticipantDiscordEntity[]
-  >;
 }

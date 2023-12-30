@@ -9,7 +9,6 @@ import {
 } from 'typeorm';
 import { SnowFlakeOption } from './discord.util';
 import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
-import { CommunityEventParticipantDiscordEntity } from '../community-events/community-event-participant-discord.entity';
 import { PoapClaimDiscordEntity } from '../poaps/poap-claim-discord.entity';
 import { UserEntity } from '../auth/user.entity';
 
