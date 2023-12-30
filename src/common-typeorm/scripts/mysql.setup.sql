@@ -72,7 +72,8 @@ CREATE TABLE community_events
   end_date DATETIME NOT NULL,
   image TEXT,
   website TEXT,
-  poap_event_id INT -- https://documentation.poap.tech/reference/geteventsid
+  poap_event_id INT, -- https://documentation.poap.tech/reference/geteventsid
+  disbanded_date DATETIME
 );
 
 CREATE TABLE community_events_discord
