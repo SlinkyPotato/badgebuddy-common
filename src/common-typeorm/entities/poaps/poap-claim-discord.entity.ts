@@ -2,12 +2,10 @@ import {
   Column,
   Entity,
   JoinColumn,
-  ManyToOne,
   OneToOne,
   PrimaryColumn,
   Relation,
 } from 'typeorm';
-import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { PoapClaimEntity } from './poap-claim.entity';
 import { SnowFlakeOption } from '../discord/discord.util';
 
@@ -51,15 +49,6 @@ export class PoapClaimDiscordEntity {
   expiresOn?: Date;
 
   // Relations
-
-  @ManyToOne(() => DiscordUserEntity, (discordUser) => discordUser.poapClaims, {
-    cascade: ['insert', 'update'],
-  })
-  @JoinColumn({
-    name: 'assigned_discord_user_id',
-    referencedColumnName: 'id',
-  })
-  assignedDiscordUser?: Relation<DiscordUserEntity>;
 
   @OneToOne(() => PoapClaimEntity, (poapClaim) => poapClaim.discordPoapClaim, {
     cascade: true,

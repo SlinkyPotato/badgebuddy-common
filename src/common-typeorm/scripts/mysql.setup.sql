@@ -108,9 +108,7 @@ CREATE TABLE poap_claims_discord
   assigned_on DATETIME,
   claimed_on DATETIME,
   expires_on DATETIME,
-  FOREIGN KEY (poap_claim_id) REFERENCES poap_claims (id),
-  FOREIGN KEY (assigned_discord_user_id) REFERENCES discord_users (id),
-  FOREIGN KEY (assigned_discord_user_sid) REFERENCES discord_users (user_sid)
+  FOREIGN KEY (poap_claim_id) REFERENCES poap_claims (id)
 );
 
 -- Community Participants
@@ -123,7 +121,5 @@ CREATE TABLE community_events_participants_discord
   end_date DATETIME,
   participation_length INT UNSIGNED, -- in seconds
   FOREIGN KEY (community_event_id) REFERENCES community_events_discord (community_event_id),
-  FOREIGN KEY (discord_user_sid) REFERENCES discord_users (user_sid),
-  FOREIGN KEY (discord_user_sid) REFERENCES poap_claims_discord (assigned_discord_user_sid),
   PRIMARY KEY (community_event_id, discord_user_sid)
 );
