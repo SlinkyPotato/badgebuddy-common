@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-24](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-23...v2.1.0-24) (2023-12-30)
+
+
+### Refactor
+
+* remove discord_user_sid relation ([98a7298](https://github.com/SlinkyPotato/badge-buddy-common/commit/98a729848a052897f236352378d86e1a0dccf8fb))
+
 ## [2.1.0-23](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-22...v2.1.0-23) (2023-12-30)
 
 ## [2.1.0-22](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-21...v2.1.0-22) (2023-12-30)
