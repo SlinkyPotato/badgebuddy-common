@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0-25](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-24...v2.1.0-25) (2023-12-30)
+
+
+### Refactor
+
+* remove last relation from community events participants discord ([8e1b43b](https://github.com/SlinkyPotato/badge-buddy-common/commit/8e1b43ba85dfaf5ba80d50edcb2df056d0e8b55d))
+
 ## [2.1.0-24](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0-23...v2.1.0-24) (2023-12-30)
 
 
