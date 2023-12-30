@@ -50,13 +50,13 @@ export class DiscordUserEntity {
   })
   avatar?: string;
 
+  // Relations
+
   @ManyToOne(() => UserEntity, (authUser) => authUser.discordUser, {
     cascade: ['insert', 'update'],
   })
   @JoinColumn({ name: 'auth_user_id', referencedColumnName: 'id' })
   authUser?: Relation<UserEntity>;
-
-  // Relations - discord
 
   @OneToMany(
     () => CommunityEventDiscordEntity,

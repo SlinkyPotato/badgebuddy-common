@@ -14,7 +14,6 @@ import { CommunityEventEntity } from './community-event.entity';
 import { DiscordBotSettingsEntity } from '../discord/discord-bot-settings.entity';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { CommunityEventParticipantDiscordEntity } from './community-event-participant-discord.entity';
-import { PoapClaimDiscordEntity } from '../poaps/poap-claim-discord.entity';
 
 @Entity('community_events_discord')
 export class CommunityEventDiscordEntity {

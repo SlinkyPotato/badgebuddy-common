@@ -10,8 +10,6 @@ import {
 import { DiscordUserEntity } from '../discord/discord-user.entity';
 import { PoapClaimEntity } from './poap-claim.entity';
 import { SnowFlakeOption } from '../discord/discord.util';
-import { CommunityEventParticipantDiscordEntity } from '../community-events/community-event-participant-discord.entity';
-import { CommunityEventDiscordEntity } from '../community-events/community-event-discord.entity';
 
 @Entity('poap_claims_discord')
 export class PoapClaimDiscordEntity {
@@ -69,7 +67,4 @@ export class PoapClaimDiscordEntity {
   })
   @JoinColumn({ name: 'poap_claim_id', referencedColumnName: 'id' })
   poapClaim: Relation<PoapClaimEntity>;
-
-  @OneToOne(() => PoapClaimDiscordEntity)
-  discordCommunityEventParticipant?: Relation<CommunityEventParticipantDiscordEntity>;
 }

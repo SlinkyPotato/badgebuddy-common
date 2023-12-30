@@ -3,12 +3,10 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
-  OneToOne,
   PrimaryColumn,
   Relation,
 } from 'typeorm';
 import { DiscordUserEntity } from '../discord/discord-user.entity';
-import { PoapClaimDiscordEntity } from '../poaps/poap-claim-discord.entity';
 import { CommunityEventDiscordEntity } from './community-event-discord.entity';
 
 @Entity('community_events_participants_discord')
@@ -53,13 +51,8 @@ export class CommunityEventParticipantDiscordEntity {
   @ManyToOne(() => DiscordUserEntity, {
     cascade: ['insert', 'update'],
   })
+  @JoinColumn({ name: 'discord_user_sid', referencedColumnName: 'user_sid' })
   discordUser?: Relation<DiscordUserEntity>;
-
-  @OneToOne(
-    () => PoapClaimDiscordEntity,
-    (poapClaim) => poapClaim.discordCommunityEventParticipant,
-  )
-  discordPoapClaim?: Relation<PoapClaimDiscordEntity>;
 
   @ManyToOne(
     () => CommunityEventDiscordEntity,
