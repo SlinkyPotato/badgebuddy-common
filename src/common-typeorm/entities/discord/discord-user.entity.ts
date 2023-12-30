@@ -70,9 +70,6 @@ export class DiscordUserEntity {
   @OneToMany(
     () => CommunityEventParticipantDiscordEntity,
     (participant) => participant.discordUser,
-    {
-      cascade: ['insert', 'update'],
-    },
   )
   communityEventsParticipated?: Relation<
     CommunityEventParticipantDiscordEntity[]
