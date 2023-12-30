@@ -18,7 +18,12 @@ export class DiscordUserEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column(SnowFlakeOption('user_sid'))
+  @Column({
+    name: 'user_sid',
+    unique: true,
+    type: 'bigint',
+    unsigned: true,
+  })
   userSId: string;
 
   @Column({
