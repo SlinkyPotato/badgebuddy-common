@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0-0](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0...v2.2.0-0) (2023-12-30)
+
+
+### Features
+
+* add disbanded_date column to community events ([ba028ec](https://github.com/SlinkyPotato/badge-buddy-common/commit/ba028ec5149d29567957db057f0eb091924a8688))
+
 ## [2.1.0](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.0.0...v2.1.0) (2023-12-30)
 
 
