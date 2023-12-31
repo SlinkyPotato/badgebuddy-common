@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0-3](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.2.0-2...v2.2.0-3) (2023-12-31)
+
+
+### Features
+
+* add request/response for poap-store ([161cbb8](https://github.com/SlinkyPotato/badge-buddy-common/commit/161cbb8e39bb861ba847e9eb85f299754ff4e4ad))
+
 ## [2.2.0-2](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.2.0-1...v2.2.0-2) (2023-12-30)
 
 
