@@ -31,5 +31,4 @@ export class TokenGetResponseDto {
     required: false,
   })
   scope?: string;
-
 }

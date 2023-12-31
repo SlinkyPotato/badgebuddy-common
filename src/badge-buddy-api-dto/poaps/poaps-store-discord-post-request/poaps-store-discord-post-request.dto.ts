@@ -1,7 +1,7 @@
 import { IsString, IsUrl, IsUUID } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
-export class PoapsDistributeDiscordPostRequestDto {
+export class PoapsStoreDiscordPostRequestDto {
   @IsString()
   @IsUUID()
   @ApiProperty({

@@ -15,5 +15,4 @@ export class RegisterPostRequestDto {
     type: String,
   })
   passwordHash: string;
-
 }

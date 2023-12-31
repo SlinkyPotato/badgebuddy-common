@@ -29,4 +29,4 @@ export type { TokenType } from './common-typeorm/entities/auth/token.entity';
 export * from './common-typeorm/common-typeorm.constants';
 
 // API DTOs
-export * from './badge-buddy-api-dto'; 
+export * from './badge-buddy-api-dto';

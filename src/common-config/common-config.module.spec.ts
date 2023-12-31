@@ -7,10 +7,8 @@ describe('CommonConfigModule', () => {
 
   beforeEach(async () => {
     module = await Test.createTestingModule({
-      imports: [
-        CommonConfigModule.forRoot()
-      ],
-      providers: []
+      imports: [CommonConfigModule.forRoot()],
+      providers: [],
     }).compile();
   });
 
@@ -25,5 +23,4 @@ describe('CommonConfigModule', () => {
   it('should be defined', () => {
     expect(module).toBeDefined();
   });
-
 });

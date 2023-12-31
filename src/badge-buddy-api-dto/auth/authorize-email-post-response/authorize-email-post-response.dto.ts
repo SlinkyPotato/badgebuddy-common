@@ -6,8 +6,8 @@ export class AuthorizeEmailPostResponseDto {
   @IsNotEmpty()
   @IsOptional()
   @ApiProperty({
-      description: 'The state of the request',
-      type: String,
+    description: 'The state of the request',
+    type: String,
   })
   state?: string;
 }

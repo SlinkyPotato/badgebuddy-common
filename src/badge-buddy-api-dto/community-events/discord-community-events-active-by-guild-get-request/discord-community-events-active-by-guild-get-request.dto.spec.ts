@@ -3,6 +3,8 @@ import { describe, it, expect } from '@jest/globals';
 
 describe('CommunityEventsActiveByGuildGetRequestDto', () => {
   it('should be defined', () => {
-    expect(new DiscordCommunityEventsActiveByGuildGetRequestDto()).toBeDefined();
+    expect(
+      new DiscordCommunityEventsActiveByGuildGetRequestDto(),
+    ).toBeDefined();
   });
 });
