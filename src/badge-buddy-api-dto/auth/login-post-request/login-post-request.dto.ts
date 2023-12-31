@@ -17,5 +17,4 @@ export class LoginPostRequestDto {
     type: String,
   })
   passwordHash: string;
-
 }

@@ -11,13 +11,13 @@ export class DiscordBotPostResponseDto {
 
   @IsString()
   @ApiProperty({
-    description: 'The snowflake ID of the poapManagerRoleSId'
+    description: 'The snowflake ID of the poapManagerRoleSId',
   })
   poapManagerRoleSId: string;
 
   @IsString()
   @ApiProperty({
-    description: 'The snowflake ID of the privateChannelSId'
+    description: 'The snowflake ID of the privateChannelSId',
   })
   privateChannelSId: string;
 
@@ -28,5 +28,4 @@ export class DiscordBotPostResponseDto {
     required: false,
   })
   newsChannelSId?: string;
-
 }

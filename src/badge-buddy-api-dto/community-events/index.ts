@@ -1,4 +1,3 @@
-
 // community-events
 export { DiscordActiveCommunityEventsGetResponseDto } from './discord-active-community-event-get-response/discord-active-community-events-get-response.dto';
 export { DiscordActiveCommunityEventDto } from './discord-active-community-event-get-response/discord-active-community-event.dto';

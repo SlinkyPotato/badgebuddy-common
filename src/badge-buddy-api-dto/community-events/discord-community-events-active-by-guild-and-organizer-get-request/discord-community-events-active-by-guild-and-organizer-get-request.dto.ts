@@ -10,7 +10,8 @@ export class DiscordCommunityEventsActiveByGuildAndOrganizerGetRequestDto {
   guildSId: string;
 
   @ApiProperty({
-    description: 'The organizerSId of the organizer to retrieve active events for.',
+    description:
+      'The organizerSId of the organizer to retrieve active events for.',
     type: String,
   })
   @IsNotEmpty()

@@ -7,10 +7,8 @@ describe('DiscordConfigModule', () => {
 
   beforeEach(async () => {
     module = await Test.createTestingModule({
-      imports: [
-        DiscordConfigModule.forRootAsync()
-      ],
-      providers: []
+      imports: [DiscordConfigModule.forRootAsync()],
+      providers: [],
     }).compile();
   });
 
@@ -25,5 +23,4 @@ describe('DiscordConfigModule', () => {
   it('should be defined', () => {
     expect(module).toBeDefined();
   });
-
 });

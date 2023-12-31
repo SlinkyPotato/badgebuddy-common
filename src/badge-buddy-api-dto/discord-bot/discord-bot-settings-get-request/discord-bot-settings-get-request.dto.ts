@@ -7,7 +7,7 @@ export class DiscordBoSettingsGetRequestDto {
   @IsOptional()
   @ApiProperty({
     name: 'guildSId',
-    description: 'The snowflake ID of the guild',    
+    description: 'The snowflake ID of the guild',
   })
   guildSId?: string;
 

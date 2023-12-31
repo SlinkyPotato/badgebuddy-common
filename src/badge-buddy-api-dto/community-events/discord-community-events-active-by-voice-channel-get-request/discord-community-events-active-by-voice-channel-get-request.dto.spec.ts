@@ -3,6 +3,8 @@ import { describe, it, expect } from '@jest/globals';
 
 describe('CommunityEventsActiveByVoiceChannelGetRequestDto', () => {
   it('should be defined', () => {
-    expect(new DiscordCommunityEventsActiveByVoiceChannelGetRequestDto()).toBeDefined();
+    expect(
+      new DiscordCommunityEventsActiveByVoiceChannelGetRequestDto(),
+    ).toBeDefined();
   });
 });

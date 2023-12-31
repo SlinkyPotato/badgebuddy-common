@@ -1,9 +1,20 @@
-import { Column, Entity, Index, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, Relation } from 'typeorm';
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  Relation,
+} from 'typeorm';
 import { UserEntity } from './user.entity';
 import { TokenEntity } from './token.entity';
 
 @Entity({ name: 'accounts' })
-@Index('unique_account_provider', ['provider', 'providerAccountId'], { unique: true })
+@Index('unique_account_provider', ['provider', 'providerAccountId'], {
+  unique: true,
+})
 export class AccountEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;

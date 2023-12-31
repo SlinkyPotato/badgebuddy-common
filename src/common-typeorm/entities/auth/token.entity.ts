@@ -1,12 +1,18 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn, Relation } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryColumn,
+  Relation,
+} from 'typeorm';
 import { AccountEntity } from './account.entity';
 
 const TokenType = ['access_token', 'refresh_token', 'id_token'] as const;
-export type TokenType = typeof TokenType[number];
+export type TokenType = (typeof TokenType)[number];
 
 @Entity({ name: 'tokens' })
 export class TokenEntity {
-  
   @PrimaryColumn({
     type: 'uuid',
     name: 'account_id',

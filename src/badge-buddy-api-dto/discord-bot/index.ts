@@ -5,4 +5,3 @@ export { DiscordBotPostRequestDto } from './discord-bot-post-request/discord-bot
 export { DiscordBotPostResponseDto } from './discord-bot-post-response/discord-bot-post-response.dto';
 export { DiscordBoSettingsGetRequestDto } from './discord-bot-settings-get-request/discord-bot-settings-get-request.dto';
 export { DiscordBotSettingsGetResponseDto } from './discord-bot-settings-get-response/discord-bot-settings-get-response.dto';
-
