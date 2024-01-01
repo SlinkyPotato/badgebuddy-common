@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0-4](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.2.0-3...v2.2.0-4) (2024-01-01)
+
+
+### Refactor
+
+* rename END_JOB to DISCORD_COMMUNITY_EVENTS_DISBAND_JOB ([6e9822e](https://github.com/SlinkyPotato/badge-buddy-common/commit/6e9822e079f481f14d51287f6d017e373ad75f29))
+
 ## [2.2.0-3](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.2.0-2...v2.2.0-3) (2023-12-31)
 
 
