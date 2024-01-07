@@ -37,6 +37,7 @@ jobs:
       - run: pnpm standard-version --dry-run > changes.md | exit 0
       - run: pnpm standard-version
       - run: pnpm build
+      - run: pnpm lint
       - run: pnpm test
       - name: Retrieve package.json
         id: package

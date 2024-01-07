@@ -31,6 +31,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm standard-version --prerelease
       - run: pnpm build
+      - run: pnpm lint
       - run: pnpm test
       - name: Retrieve package.json
         id: package
