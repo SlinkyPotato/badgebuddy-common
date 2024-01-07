@@ -1,5 +1,4 @@
-CREATE DATABASE badge_buddy;
-DROP DATABASE badge_buddy;
+USE badge_buddy;
 
 -- Auth
 
