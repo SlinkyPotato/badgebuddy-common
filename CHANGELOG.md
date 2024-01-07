@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0-6](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.2.0-5...v2.2.0-6) (2024-01-07)
+
+
+### Performance
+
+* add pnpm lint to pipeline ([0802afd](https://github.com/SlinkyPotato/badge-buddy-common/commit/0802afd5122a56328d592a39b6d5e73b17cce57d))
+
 ## [2.2.0-5](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.2.0-4...v2.2.0-5) (2024-01-03)
 
 
