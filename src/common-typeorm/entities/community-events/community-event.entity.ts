@@ -62,6 +62,13 @@ export class CommunityEventEntity {
   })
   poapEventId?: number;
 
+  @Column({
+    name: 'disbanded_date',
+    type: 'datetime',
+    nullable: true,
+  })
+  disbandedDate?: Date; // set when event participants have been processed
+
   // Relations
 
   @OneToOne(
