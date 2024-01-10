@@ -1,6 +1,5 @@
-import { describe, it } from '@jest/globals';
 import { NodeEnvs } from './node-envs.enum';
-
+import { describe, it, expect } from '@jest/globals';
 describe('NodeEnv', () => {
   it('should have the correct values', () => {
     expect(NodeEnvs.DEVELOPMENT).toBe('development');

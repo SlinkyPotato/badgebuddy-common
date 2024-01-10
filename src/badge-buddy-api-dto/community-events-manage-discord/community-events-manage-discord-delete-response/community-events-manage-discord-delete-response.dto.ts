@@ -1,11 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import {
-  IsISO8601,
-  IsNumber,
-  IsOptional,
-  IsString,
-  IsUUID,
-} from 'class-validator';
+import { IsISO8601, IsOptional, IsString, IsUUID } from 'class-validator';
 
 export class CommunityEventsManageDiscordDeleteResponseDto {
   @ApiProperty({
@@ -46,10 +40,4 @@ export class CommunityEventsManageDiscordDeleteResponseDto {
   })
   @IsISO8601()
   endDate: string;
-
-  @IsNumber()
-  @ApiProperty({
-    description: 'The number of available poaps',
-  })
-  availablePOAPs = 0;
 }

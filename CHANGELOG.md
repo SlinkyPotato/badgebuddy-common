@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.1.0...v2.2.0) (2024-01-08)
+
+
+### Features
+
+* add disbanded_date column to community events ([ba028ec](https://github.com/SlinkyPotato/badge-buddy-common/commit/ba028ec5149d29567957db057f0eb091924a8688))
+* add request/response for poap-store ([161cbb8](https://github.com/SlinkyPotato/badge-buddy-common/commit/161cbb8e39bb861ba847e9eb85f299754ff4e4ad))
+
+
+### Refactor
+
+* remove extra foreign key constraints ([0ed6dab](https://github.com/SlinkyPotato/badge-buddy-common/commit/0ed6dabe5aa8663241cc8970230fd2eac1604696))
+* rename badge-buddy-api dtos ([d394b88](https://github.com/SlinkyPotato/badge-buddy-common/commit/d394b881923eab31d2a41f9d7061f72007d689a8))
+* rename END_JOB to DISCORD_COMMUNITY_EVENTS_DISBAND_JOB ([6e9822e](https://github.com/SlinkyPotato/badge-buddy-common/commit/6e9822e079f481f14d51287f6d017e373ad75f29))
+
+
+### Performance
+
+* add index to columns ([d0c72d3](https://github.com/SlinkyPotato/badge-buddy-common/commit/d0c72d3cffd5e0ffc2d1051c06a756674d9e7738))
+* add pnpm lint to pipeline ([0802afd](https://github.com/SlinkyPotato/badge-buddy-common/commit/0802afd5122a56328d592a39b6d5e73b17cce57d))
+
 ## [2.2.0-6](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.2.0-5...v2.2.0-6) (2024-01-07)
 
 

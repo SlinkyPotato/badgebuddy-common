@@ -1,4 +1,4 @@
-USE badge_buddy;
+USE badgebuddy;
 
 -- Auth
 
