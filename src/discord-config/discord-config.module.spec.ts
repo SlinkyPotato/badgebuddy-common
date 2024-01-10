@@ -1,6 +1,14 @@
-import { afterEach, beforeEach, describe } from '@jest/globals';
 import { Test, TestingModule } from '@nestjs/testing';
 import { DiscordConfigModule } from './discord-config.module';
+import {
+  describe,
+  it,
+  expect,
+  beforeEach,
+  afterEach,
+  jest,
+  afterAll,
+} from '@jest/globals';
 
 describe('DiscordConfigModule', () => {
   let module: TestingModule;

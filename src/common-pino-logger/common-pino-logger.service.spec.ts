@@ -2,7 +2,7 @@ import { CommonPinoLoggerService } from './common-pino-logger.service';
 import { CommonPinoLogger } from './common-pino.logger';
 import { Test } from '@nestjs/testing';
 import { CommonPinoLoggerModule } from './common-pino-logger.module';
-import { describe, it, expect, beforeEach } from '@jest/globals';
+import { describe, it, expect, beforeEach, jest } from '@jest/globals';
 
 describe('CommonPinoLoggerService', () => {
   const logger = {

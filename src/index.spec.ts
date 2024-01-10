@@ -1,6 +1,6 @@
-import { describe, it } from '@jest/globals';
 import * as index from './index';
 
+import { describe, it, expect } from '@jest/globals';
 describe('index', () => {
   it('index should be defined', () => {
     expect(index).toBeDefined();

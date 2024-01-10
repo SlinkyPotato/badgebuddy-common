@@ -1,5 +1,5 @@
-import { describe } from '@jest/globals';
 import { EventType } from './event-type.enum';
+import { describe, it, expect } from '@jest/globals';
 
 describe('EventType', () => {
   it('should have the correct values', () => {
