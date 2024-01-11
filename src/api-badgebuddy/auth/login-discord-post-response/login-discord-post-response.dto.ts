@@ -1,9 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsString } from 'class-validator';
-import { UserDto } from '../user.dto';
-import { TokenDto } from '../token.dto';
+import { TokenDto } from '../token/token.dto';
+import { UserDto } from '../user/user.dto';
 
-export class LoginEmailPostResponseDto {
+export class LoginDiscordPostResponseDto {
   @IsString()
   @ApiProperty({
     description: 'The access token.',
