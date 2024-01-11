@@ -1,0 +1,25 @@
+name: common_badgebuddy
+services:
+  redis:
+    image: redis:latest
+    networks:
+      - local_server
+    ports:
+      - 6379:6379
+
+  mariadb:
+    image: mariadb:latest
+    networks:
+      - local_server
+    environment:
+      MARIADB_ROOT_USER: root
+      MARIADB_ROOT_PASSWORD: local-pass
+      MARIADB_DATABASE: badgebuddy
+    volumes:
+      - ./src/common-typeorm/scripts/mysql.setup.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 3306:3306
+
+networks:
+  local_server:
+    external: true
