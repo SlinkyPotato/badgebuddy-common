@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0-3](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-2...v2.3.0-3) (2024-01-11)
+
+
+### Refactor
+
+* rename ProcessorToken -> ProcessorTokenDto ([19c8622](https://github.com/SlinkyPotato/badge-buddy-common/commit/19c86227111238ffe6e64f49f8d2e2268b9949cb))
+
 ## [2.3.0-2](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-1...v2.3.0-2) (2024-01-11)
 
 
