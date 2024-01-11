@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0-2](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-1...v2.3.0-2) (2024-01-11)
+
+
+### Features
+
+* add common docker compose ([17be112](https://github.com/SlinkyPotato/badge-buddy-common/commit/17be112023ff0e7b75f3adcfe8398231bc7f7b0b))
+
+
+### Performance
+
+* upgrade node ([69c01a0](https://github.com/SlinkyPotato/badge-buddy-common/commit/69c01a07d0da0e15cdee2743c6c1de33ae14b9b6))
+
+
+### Refactor
+
+* rename badge-buddy-api-dto to api-badgebadge ([32e821f](https://github.com/SlinkyPotato/badge-buddy-common/commit/32e821f41ff34f7c1caaa48628ef44da1624e8e9))
+
 ## [2.3.0-1](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-0...v2.3.0-1) (2024-01-10)
 
 
