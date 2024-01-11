@@ -12,9 +12,9 @@ services:
     networks:
       - local_server
     environment:
-      MARIADB_ROOT_USER: root
-      MARIADB_ROOT_PASSWORD: local-pass
-      MARIADB_DATABASE: badgebuddy
+      MARIADB_ROOT_USER: "root"
+      MARIADB_ROOT_PASSWORD: "local-pass"
+      MARIADB_DATABASE: "badgebuddy"
     volumes:
       - ./src/common-typeorm/scripts/mysql.setup.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
