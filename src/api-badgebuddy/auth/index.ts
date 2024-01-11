@@ -23,3 +23,4 @@ export { TokenGetRequestDto } from './token-get-request/token-get-request.dto';
 export { TokenGetResponseDto } from './token-get-response/token-get-response.dto';
 export { TokenDto } from './token/token.dto';
 export { UserDto } from './user/user.dto';
+export { ProcessorTokenDto } from './processor-token/processor-token-dto';
