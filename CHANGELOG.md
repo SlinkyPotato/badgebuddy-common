@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0-5](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-4...v2.3.0-5) (2024-01-13)
+
+
+### Refactor
+
+* remove discordSId from ProcessorToken ([1a84a91](https://github.com/SlinkyPotato/badge-buddy-common/commit/1a84a9172ff253c0201ccd1cdd38adde2b0f8d07))
+
 ## [2.3.0-4](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-3...v2.3.0-4) (2024-01-11)
 
 ## [2.3.0-3](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-2...v2.3.0-3) (2024-01-11)
