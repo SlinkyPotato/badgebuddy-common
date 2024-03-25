@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0-6](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-5...v2.3.0-6) (2024-03-25)
+
+
+### Performance
+
+* update package.json deps ([693d06e](https://github.com/SlinkyPotato/badge-buddy-common/commit/693d06e7dff930567475093fce38920fffe8a6ef))
+* upgrade node ([839d8af](https://github.com/SlinkyPotato/badge-buddy-common/commit/839d8af2e816638715edd06bebbd4cf583719ec2))
+
 ## [2.3.0-5](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-4...v2.3.0-5) (2024-01-13)
 
 
