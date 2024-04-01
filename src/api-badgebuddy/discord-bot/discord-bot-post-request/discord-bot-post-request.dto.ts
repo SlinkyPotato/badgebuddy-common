@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsString, IsNotEmpty } from 'class-validator';
+import { IsString, IsNotEmpty, IsBoolean, IsOptional } from 'class-validator';
 
 export class DiscordBotPostRequestDto {
   @IsString()
@@ -9,4 +9,12 @@ export class DiscordBotPostRequestDto {
     description: 'The ID of the guild given from discord.',
   })
   guildSId: string;
+
+  @IsBoolean()
+  @IsOptional()
+  @ApiProperty({
+    required: false,
+    description: 'Force add the bot to the guild.',
+  })
+  force: boolean;
 }
