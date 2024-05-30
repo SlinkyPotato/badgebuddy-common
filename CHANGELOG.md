@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0-8](https://github.com/SlinkyPotato/badgebuddy-common/compare/v2.3.0-7...v2.3.0-8) (2024-05-30)
+
+
+### Bug Fixes
+
+* set force field as optional ([979a205](https://github.com/SlinkyPotato/badgebuddy-common/commit/979a205f60f9c5fd4dc1fd4701116167de8a24ce))
+
 ## [2.3.0-7](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-6...v2.3.0-7) (2024-04-01)
 
 ## [2.3.0-6](https://github.com/SlinkyPotato/badge-buddy-common/compare/v2.3.0-5...v2.3.0-6) (2024-03-25)
