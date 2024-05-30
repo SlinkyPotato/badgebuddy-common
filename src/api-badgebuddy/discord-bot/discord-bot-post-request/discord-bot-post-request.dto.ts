@@ -16,5 +16,5 @@ export class DiscordBotPostRequestDto {
     required: false,
     description: 'Force add the bot to the guild.',
   })
-  force: boolean;
+  force?: boolean;
 }
