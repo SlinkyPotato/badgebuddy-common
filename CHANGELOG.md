@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0-10](https://github.com/SlinkyPotato/badgebuddy-common/compare/v2.3.0-9...v2.3.0-10) (2024-06-06)
+
+
+### Refactor
+
+* pnpm up ([d217e20](https://github.com/SlinkyPotato/badgebuddy-common/commit/d217e20d6555dbd5e8794a58a2d7c241ef6e0bf2))
+
 ## [2.3.0-9](https://github.com/SlinkyPotato/badgebuddy-common/compare/v2.3.0-8...v2.3.0-9) (2024-06-06)
 
 
