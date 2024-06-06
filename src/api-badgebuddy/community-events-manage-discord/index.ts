@@ -1,4 +1,4 @@
-export { CommunityEventsManageDiscordDeleteRequestDto } from './community-events-manage-discord-delete-request/community-events-manage-discord-delete-request.dto';
-export { CommunityEventsManageDiscordDeleteResponseDto } from './community-events-manage-discord-delete-response/community-events-manage-discord-delete-response.dto';
-export { CommunityEventsManageDiscordPostRequestDto } from './community-events-manage-discord-post-request/community-events-manage-discord-post-request.dto';
-export { CommunityEventsManageDiscordPostResponseDto } from './community-events-manage-discord-post-response/community-events-manage-discord-post-response.dto';
+export { CommunityEventsManageDiscordEndEventRequestDto } from './end-event-request/community-events-manage-discord-end-event-request.dto';
+export { CommunityEventsManageDiscordEndEventResponseDto } from './end-event-response/community-events-manage-discord-end-event-response.dto';
+export { CommunityEventsManageDiscordStartEventRequestDto } from './start-event-request/community-events-manage-discord-start-event-request.dto';
+export { CommunityEventsManageDiscordStartEventResponseDto } from './start-event-response/community-events-manage-discord-start-event-response.dto';
