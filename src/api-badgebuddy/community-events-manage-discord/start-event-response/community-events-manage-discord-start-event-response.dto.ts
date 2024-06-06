@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsISO8601, IsNumber, IsString, IsUUID } from 'class-validator';
 
-export class CommunityEventsManageDiscordPostResponseDto {
+export class CommunityEventsManageDiscordStartEventResponseDto {
   @ApiProperty({
     description: 'The uuid of the community event',
   })

@@ -6,7 +6,7 @@ import {
   IsISO8601,
 } from 'class-validator';
 
-export class CommunityEventsManageDiscordPostRequestDto {
+export class CommunityEventsManageDiscordStartEventRequestDto {
   @ApiProperty({
     description: 'The snowflake ID of the guild',
   })
