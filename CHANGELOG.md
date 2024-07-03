@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.1](https://github.com/SlinkyPotato/badgebuddy-common/compare/v2.3.0...v2.3.1) (2024-07-03)
+
+
+### Refactor
+
+* set to stable typescript 5.3.3 ([0728ddf](https://github.com/SlinkyPotato/badgebuddy-common/commit/0728ddf5e19c8d1ede931657af46a740c95b937f))
+
 ### [2.3.1-0](https://github.com/SlinkyPotato/badgebuddy-common/compare/v2.3.0...v2.3.1-0) (2024-07-03)
 
 
