@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/SlinkyPotato/badgebuddy-common/compare/v2.2.0...v2.3.0) (2024-07-03)
+
+
+### Features
+
+* add common docker compose ([17be112](https://github.com/SlinkyPotato/badgebuddy-common/commit/17be112023ff0e7b75f3adcfe8398231bc7f7b0b))
+* add poap claims dto ([2b0fe6c](https://github.com/SlinkyPotato/badgebuddy-common/commit/2b0fe6cc133724eef0ca1f3cc477d49e18496496))
+
+
+### Bug Fixes
+
+* add missing exports ([7fb7d6a](https://github.com/SlinkyPotato/badgebuddy-common/commit/7fb7d6a264afb253a31f05987ded93703c103a0c))
+* set force field as optional ([979a205](https://github.com/SlinkyPotato/badgebuddy-common/commit/979a205f60f9c5fd4dc1fd4701116167de8a24ce))
+
+
+### Performance
+
+* update package.json deps ([693d06e](https://github.com/SlinkyPotato/badgebuddy-common/commit/693d06e7dff930567475093fce38920fffe8a6ef))
+* upgrade node ([839d8af](https://github.com/SlinkyPotato/badgebuddy-common/commit/839d8af2e816638715edd06bebbd4cf583719ec2))
+* upgrade node ([69c01a0](https://github.com/SlinkyPotato/badgebuddy-common/commit/69c01a07d0da0e15cdee2743c6c1de33ae14b9b6))
+
+
+### Refactor
+
+* pnpm up ([d217e20](https://github.com/SlinkyPotato/badgebuddy-common/commit/d217e20d6555dbd5e8794a58a2d7c241ef6e0bf2))
+* remove discordSId from ProcessorToken ([1a84a91](https://github.com/SlinkyPotato/badgebuddy-common/commit/1a84a9172ff253c0201ccd1cdd38adde2b0f8d07))
+* rename badge-buddy-api-dto to api-badgebadge ([32e821f](https://github.com/SlinkyPotato/badgebuddy-common/commit/32e821f41ff34f7c1caaa48628ef44da1624e8e9))
+* rename ProcessorToken -> ProcessorTokenDto ([19c8622](https://github.com/SlinkyPotato/badgebuddy-common/commit/19c86227111238ffe6e64f49f8d2e2268b9949cb))
+* startEvent endEvent payloads ([6d95811](https://github.com/SlinkyPotato/badgebuddy-common/commit/6d958115154383e345813902e21a75e4bf237d89))
+
 ## [2.3.0-10](https://github.com/SlinkyPotato/badgebuddy-common/compare/v2.3.0-9...v2.3.0-10) (2024-06-06)
 
 
