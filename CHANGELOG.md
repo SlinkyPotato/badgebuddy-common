@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.2](https://github.com/SlinkyPotato/badgebuddy-common/compare/v2.3.1...v2.3.2) (2024-07-23)
+
+
+### Refactor
+
+* print to console by boolean ([1ab1d43](https://github.com/SlinkyPotato/badgebuddy-common/commit/1ab1d43015c4862905957a10f3a3d98a7d109b96))
+
 ### [2.3.2-0](https://github.com/SlinkyPotato/badgebuddy-common/compare/v2.3.1...v2.3.2-0) (2024-07-23)
 
 
