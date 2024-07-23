@@ -1,6 +1,5 @@
 import { PinoLogger } from 'nestjs-pino';
 import { Injectable } from '@nestjs/common';
-import { NodeEnvs } from '../enums/node-envs.enum';
 import { TransportTargetOptions } from 'pino';
 
 @Injectable()
@@ -40,7 +39,7 @@ export class CommonPinoLogger extends PinoLogger {
         },
       ];
     }
-    if (process.env.NODE_ENV !== NodeEnvs.PRODUCTION) {
+    if (process.env.LOG_PRINT_CLI !== 'false') {
       // https://github.com/pinojs/pino-pretty
       // skip printing to console for production
       targets = [
